@@ -99,6 +99,8 @@ quando a empresa é parte, o item precisa de fontes de dois partidos, e o canal 
 index.html                 a página única: Painel, Arquivo, Régua e Método
 assets/app.js              a lógica do site (JavaScript puro, sem biblioteca e sem etapa de build)
 assets/estilo.css          o visual
+assets/icone-*.png         os ícones: da aba e do app instalado no celular
+manifest.webmanifest       o manifesto: deixa o navegador do celular instalar o site como app (sem gravar nada no aparelho)
 dados/regua.json           temas, partidos, times, níveis de alerta e domínios
 dados/players.json         os players (partido fixo, posições); a rotina só acrescenta
 dados/veiculos.json        o mapa de veículos por lado, com os feeds

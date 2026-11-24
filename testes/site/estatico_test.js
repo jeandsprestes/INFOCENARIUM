@@ -6,6 +6,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
+const path = require('node:path');
 const { ARQUIVO_APP, ARQUIVO_HTML, ARQUIVO_CSS } = require('./apoio.js');
 const { leHtml } = require('./dom_falso.js');
 
@@ -68,20 +69,26 @@ test('index.html: o esqueleto da especificação do site', () => {
   });
   assert.deepEqual(cabeca, [
     'meta:charset', 'meta:viewport', 'meta:color-scheme', 'meta:referrer', 'meta:Content-Security-Policy',
-    'title', 'meta:description', 'link:alternate', 'link:icon', 'link:stylesheet', 'script'
+    'title', 'meta:description', 'link:alternate', 'link:icon', 'link:manifest', 'link:apple-touch-icon',
+    'meta:theme-color', 'link:stylesheet', 'script'
   ]);
   assert.equal(doc.querySelector('meta[charset]').getAttribute('charset'), 'utf-8');
   assert.equal(doc.querySelector('meta[name="viewport"]').getAttribute('content'), 'width=device-width, initial-scale=1');
   assert.equal(doc.querySelector('meta[name="color-scheme"]').getAttribute('content'), 'dark');
   assert.equal(doc.querySelector('meta[name="referrer"]').getAttribute('content'), 'no-referrer');
   assert.equal(doc.querySelector('meta[http-equiv]').getAttribute('content'),
-    "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'");
+    "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; manifest-src 'self'; " +
+    "base-uri 'none'; form-action 'none'");
   assert.equal(doc.querySelector('title').textContent, 'INFOCENARIUM · monitor geopolítico e de IA');
   assert.equal(doc.querySelector('meta[name="description"]').getAttribute('content'),
     'Monitor diário de geopolítica e de IA: o que aconteceu, quem atirou, quem ganha e o que muda para quem se prepara.');
   assert.equal(doc.querySelector('link[rel="alternate"]').getAttribute('href'), 'feed.xml');
   assert.equal(doc.querySelector('link[rel="alternate"]').getAttribute('type'), 'application/atom+xml');
-  assert.equal(doc.querySelector('link[rel="icon"]').getAttribute('href'), 'data:,');
+  assert.equal(doc.querySelector('link[rel="icon"]').getAttribute('href'), 'assets/icone-192.png');
+  assert.equal(doc.querySelector('link[rel="icon"]').getAttribute('type'), 'image/png');
+  assert.equal(doc.querySelector('link[rel="manifest"]').getAttribute('href'), 'manifest.webmanifest');
+  assert.equal(doc.querySelector('link[rel="apple-touch-icon"]').getAttribute('href'), 'assets/icone-180.png');
+  assert.equal(doc.querySelector('meta[name="theme-color"]').getAttribute('content'), '#0b0e11');
   assert.equal(doc.querySelector('link[rel="stylesheet"]').getAttribute('href'), 'assets/estilo.css');
 
   /* corpo: pular, símbolos, header com nav, região aria-live, main, footer, noscript */
@@ -324,4 +331,34 @@ test('estilo.css: chaves e parênteses fecham', () => {
   assert.equal((semComentario.match(/\{/g) || []).length, (semComentario.match(/\}/g) || []).length);
   assert.equal((semComentario.match(/\(/g) || []).length, (semComentario.match(/\)/g) || []).length);
   assert.equal(/;;|\{\s*;|:\s*;/.test(semComentario), false, 'declaração vazia');
+});
+
+test('manifest.webmanifest: deixa o navegador do celular instalar o site como app', () => {
+  /* O navegador só oferece "Instalar app" a site com manifesto: nome, idioma, endereço de partida, forma de
+   * abrir e ícones de 192 e de 512 pixels. Não há service worker: nada se grava no aparelho. */
+  const pasta = path.dirname(ARQUIVO_HTML);
+  const manifesto = JSON.parse(fs.readFileSync(path.join(pasta, 'manifest.webmanifest'), 'utf8'));
+  const pagina = leHtml(HTML);
+  assert.equal(manifesto.name, pagina.querySelector('title').textContent);
+  assert.equal(manifesto.short_name, 'INFOCENARIUM');
+  assert.equal(manifesto.description, pagina.querySelector('meta[name="description"]').getAttribute('content'));
+  assert.equal(manifesto.lang, pagina.documentElement.getAttribute('lang'));
+  assert.equal(manifesto.start_url, './');
+  assert.equal(manifesto.scope, './');
+  assert.equal(manifesto.display, 'standalone');
+  assert.equal(manifesto.theme_color, pagina.querySelector('meta[name="theme-color"]').getAttribute('content'));
+  assert.match(manifesto.background_color, /^#[0-9a-f]{6}$/);
+  assert.deepEqual(manifesto.icons.map((icone) => [icone.sizes, icone.purpose]),
+    [['192x192', 'any'], ['512x512', 'any'], ['512x512', 'maskable']]);
+  /* cada ícone existe, é PNG e tem o tamanho que declara */
+  for (const icone of manifesto.icons) {
+    assert.equal(icone.type, 'image/png');
+    assert.ok(!icone.src.includes('..') && !icone.src.includes(':'), icone.src);
+    const arquivo = fs.readFileSync(path.join(pasta, icone.src));
+    assert.ok(arquivo.subarray(0, 8).equals(Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a])), icone.src);
+    assert.equal(arquivo.readUInt32BE(16) + 'x' + arquivo.readUInt32BE(20), icone.sizes, icone.src);
+  }
+  const daAba = pagina.querySelector('link[rel="icon"]').getAttribute('href');
+  const daTelaInicial = pagina.querySelector('link[rel="apple-touch-icon"]').getAttribute('href');
+  assert.ok(fs.existsSync(path.join(pasta, daAba)) && fs.existsSync(path.join(pasta, daTelaInicial)));
 });
