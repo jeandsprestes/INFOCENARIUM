@@ -4247,7 +4247,7 @@ def confere_agente(raiz):
                                   "relate."))
             continue
         achados.append(Achado(ERRO, "AGENTE", rotulo, "arquivo que dá ordem a agente de IA (o agente da rotina o "
-                              "carrega sozinha, antes do manual), acompanhado pelo git. O INFOCENARIUM não tem "
+                              "carrega sozinho, antes do manual), acompanhado pelo git. O INFOCENARIUM não tem "
                               "nenhum: pare, sem commit, e relate. Quem tira é o dono."))
     return achados
 
