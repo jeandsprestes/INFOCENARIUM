@@ -20,10 +20,15 @@ leem os arquivos JSON deste repositório. É publicado pelo GitHub Pages a parti
 - **Não é** neutro no método: a régua e o mapa de veículos são escolhas (veja abaixo). O método está todo
   escrito e o site o mostra na página "Método".
 
+## Quem fez
+
+O INFOCENARIUM foi construído entre 20 e 24/11/2026 pelos modelos Claude Fable e Claude Opus, da Anthropic. Desde 24/11/2026 é
+mantido pelo GLM, da Z.ai, que também escreve as edições do dia.
+
 ## Aviso de conflito de interesse
 
-As edições são escritas por um modelo de IA da Anthropic (Claude). A Anthropic e outras empresas de IA são
-players da própria régua: aparecem nas notícias e no placar. Por isso, toda notícia de IA, ou que envolva a
+As edições são escritas por um modelo de IA: o GLM, da Z.ai. O INFOCENARIUM foi construído pelo Claude Fable e pelo
+Claude Opus, da Anthropic. A Anthropic e outras empresas de IA são players da própria régua: aparecem nas notícias e no placar. Por isso, toda notícia de IA, ou que envolva a
 Anthropic ou um concorrente, leva a marca de conflito de interesse e fica com a confiança no máximo em "média";
 quando a empresa é parte, o item precisa de fontes de dois partidos, e o canal dela nunca é a única fonte
 (`ROTINA.md`, defesa D6; `docs/ESQUEMA.md`, regra R19). Leia com isso em mente.
@@ -43,12 +48,12 @@ quando a empresa é parte, o item precisa de fontes de dois partidos, e o canal 
 
 ## Como sai a edição de cada dia
 
-1. **A rotina na nuvem.** Uma tarefa agendada do Claude Code roda às 18:07 de Brasília, numa máquina limpa, com
-   este repositório clonado. O agente lê e executa o `ROTINA.md`: prepara o dia, baixa as manchetes dos feeds
+1. **A rotina.** Às 18h07 de Brasília, no computador do dono do site, um agente com o modelo GLM (da Z.ai) trabalha
+   numa sessão limpa, com este repositório na versão da `main`. O agente lê e executa o `ROTINA.md`: prepara o dia, baixa as manchetes dos feeds
    e os preços (`ferramentas/coleta.py` e `ferramentas/indicadores.py`), escolhe as 3 principais e o radar, lê
    as páginas, escreve um rascunho e chama o `ferramentas/publica.py`, que calcula o que é conta, valida e grava
    a edição (`edicoes/AAAA-MM-DD.json`, o `.md`, o índice e o `feed.xml`). Não há memória entre um dia e outro:
-   o que precisa persistir está nos arquivos do repositório. Nenhuma chave de API é usada.
+   o que precisa persistir está nos arquivos do repositório. O custo é o do plano de uso do GLM do dono do site.
 2. **A branch de edição.** A rotina faz um commit e empurra na branch `claude/edicao-AAAA-MM-DD`. Ela não
    empurra na `main`, a não ser na reserva (passo 5).
 3. **O workflow de publicação** (`.github/workflows/publica-edicao.yml`). O push toca a campainha

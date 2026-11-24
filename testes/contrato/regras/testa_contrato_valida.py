@@ -30,8 +30,9 @@ DIA_EX = apoio.DIA_DO_EXEMPLO
 ONTEM, ANTEONTEM, TRES_ANTES = apoio.ONTEM, apoio.ANTEONTEM, apoio.TRES_ANTES
 AMANHA = mais_dias(DIA, 1)
 ENERGIA, ALIMENTOS, CAMBIO, SUPRIMENTOS, CONFLITO = range(5)
-AVISO_FIXO = ("Aviso: o INFOCENARIUM é escrito por um modelo de IA da Anthropic, que é do setor de IA e pode ser parte "
-              "ou concorrente nesta notícia.")
+AVISO_FIXO = ("Aviso: o INFOCENARIUM é escrito por modelos de IA, do setor de IA, que podem ser parte ou concorrente "
+              "nesta notícia: foi construído pelo Claude Fable e pelo Claude Opus, da Anthropic, e hoje quem escreve é o "
+              "GLM, da Z.ai.")
 
 def P(edicao, i):
     return edicao["principais"][i]

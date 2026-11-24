@@ -31,8 +31,9 @@ AMANHA = mais_dias(DIA, 1)
 NS = "{%s}" % apoio.ATOM
 BASE = "https://exemplo.invalid/INFOCENARIUM/"
 MOTIVO = "Nada funcionou neste dia fictício: sem feed e sem busca."
-AVISO_FIXO = ("Aviso: o INFOCENARIUM é escrito por um modelo de IA da Anthropic, que é do setor de IA e pode ser parte "
-              "ou concorrente nesta notícia.")
+AVISO_FIXO = ("Aviso: o INFOCENARIUM é escrito por modelos de IA, do setor de IA, que podem ser parte ou concorrente "
+              "nesta notícia: foi construído pelo Claude Fable e pelo Claude Opus, da Anthropic, e hoje quem escreve é o "
+              "GLM, da Z.ai.")
 SINAIS_DE_MARKDOWN = ["\\", "[", "]", "(", ")", "*", "_", "`", "#", "|"]
 ARQUIVOS_DA_PUBLICACAO = ["dados/players.json", "dados/vetores.json", "edicoes/%s.json" % DIA,
                           "edicoes/%s.md" % DIA, "edicoes/indice.json", "feed.xml"]
@@ -2035,8 +2036,9 @@ class FormatoDoTexto(CasoDePublica):
 
     def test_md_aviso_de_conflito_de_interesse(self):
         """CONTRATO, seção 4.5: "Item com `conflito_de_interesse: true` leva a linha `Aviso: o INFOCENARIUM é
-        escrito por um modelo de IA da Anthropic, que é do setor de IA e pode ser parte ou concorrente
-        nesta notícia.`" (4 itens têm a marca no cenário)."""
+        escrito por modelos de IA, do setor de IA, que podem ser parte ou concorrente
+        nesta notícia: foi construído pelo Claude Fable e pelo Claude Opus, da Anthropic, e hoje quem escreve é o
+        GLM, da Z.ai.`" (4 itens têm a marca no cenário)."""
         md, _ = self._md_com()
         self.assertGreaterEqual(md.split("\n").count(AVISO_FIXO), 4)
 

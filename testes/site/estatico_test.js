@@ -104,7 +104,7 @@ test('index.html: o esqueleto da especificação do site', () => {
   });
   assert.equal(avisos[0].textContent.trim(), avisos[1].textContent.trim(), 'as duas cópias dizem o mesmo');
   assert.match(doc.querySelector('footer').textContent.replace(/\s+/g, ' '),
-    /Análises escritas por IA: o Claude, da Anthropic, que é um dos players da régua\. Leia o aviso em Método\. Sem cookies, sem rastreador, nada de terceiros\./);
+    /Análises escritas por IA: o GLM, da Z\.ai\. O INFOCENARIUM foi construído pelo Claude Fable e pelo Claude Opus, da Anthropic, que é um dos players da régua\. Leia o aviso em Método\. Sem cookies, sem rastreador, nada de terceiros\./);
 });
 
 test('index.html: a moldura do Painel traz os títulos das seções 01 a 09 e travessões', () => {

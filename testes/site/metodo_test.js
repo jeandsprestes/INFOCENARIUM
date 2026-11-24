@@ -18,8 +18,8 @@ const semNumero = (texto) => texto.replace(/^\d\. /, '');
    do app.js: se um dos dois lados mudar uma palavra, o teste acusa. */
 const TEXTOS = {
   "Aviso de conflito de interesse": [
-    "As análises do INFOCENARIUM são escritas por um modelo de inteligência artificial (IA): o Claude, da empresa Anthropic. A Anthropic é um dos players da régua do INFOCENARIUM. Ou seja: quem escreve é parte interessada em uma das disputas que este site acompanha, a da IA.",
-    "O risco é concreto. O modelo pode poupar quem o fez, pesar a mão contra concorrentes ou tratar como neutra a visão de mundo da empresa.",
+    "As análises do INFOCENARIUM são escritas por um modelo de inteligência artificial (IA): o GLM, da empresa Z.ai. O INFOCENARIUM foi construído por outros modelos de IA, o Claude Fable e o Claude Opus, da empresa Anthropic. A Anthropic é um dos players da régua do INFOCENARIUM. Ou seja: quem construiu o site é parte interessada em uma das disputas que ele acompanha, a da IA, e quem escreve também é um modelo de IA.",
+    "O risco é concreto. Um modelo pode poupar quem o fez, pesar a mão contra concorrentes ou tratar como neutra a visão de mundo da empresa. Por isso todo item de IA leva a marca, inclusive o que envolva a Z.ai, dona do modelo que escreve.",
     "O que o INFOCENARIUM faz para reduzir o risco:",
     "1. Leva a marca CONFLITO DE INTERESSE todo item de IA. Leva também todo item que tem alguém da lista abaixo como alvo ou como player em movimento, que cita um termo da lista, ou que usa fonte de veículo ligado à Anthropic. A marca é ligada por programa, e ninguém a desliga.",
     "2. Nesses itens, a confiança nunca passa de média.",

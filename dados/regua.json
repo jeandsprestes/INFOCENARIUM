@@ -653,7 +653,7 @@
     "nao_move": "Preço que sobe e contrato comum não movem time: nesses casos, não se cita time."
   },
   "conflito": {
-    "regra": "O INFOCENARIUM é escrito por um modelo de IA da Anthropic. Item de IA, ou item que envolva um destes players ou cite um destes termos, sai com aviso de conflito de interesse e confiança no máximo média. Lista inicial de 23/11/2026; em 24/11/2026 entraram a Nvidia, a AWS (Amazon Web Services) e os nomes novos da antiga xAI. O dono confere e acrescenta investidores e fornecedores da Anthropic.",
+    "regra": "O INFOCENARIUM é escrito por um modelo de IA, o GLM, da Z.ai, e foi construído por modelos da Anthropic. Item de IA, ou item que envolva um destes players ou cite um destes termos, sai com aviso de conflito de interesse e confiança no máximo média. Lista inicial de 23/11/2026; em 24/11/2026 entraram a Nvidia, a AWS (Amazon Web Services) e os nomes novos da antiga xAI. O dono confere e acrescenta investidores e fornecedores da Anthropic e da Z.ai.",
     "players": [
       "anthropic",
       "altman",

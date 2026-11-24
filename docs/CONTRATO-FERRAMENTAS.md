@@ -1174,7 +1174,7 @@ prática, no Brasil, eixo, placar ou a frase de `sem_placar`, vetores, vigiar, f
 
 - Edição com `exemplo: true` abre com a linha `EDIÇÃO DE EXEMPLO · dados fictícios`.
 - Item com `conflito_de_interesse: true` leva a linha
-  `Aviso: o INFOCENARIUM é escrito por um modelo de IA da Anthropic, que é do setor de IA e pode ser parte ou concorrente nesta notícia.`
+  `Aviso: o INFOCENARIUM é escrito por modelos de IA, do setor de IA, que podem ser parte ou concorrente nesta notícia: foi construído pelo Claude Fable e pelo Claude Opus, da Anthropic, e hoje quem escreve é o GLM, da Z.ai.`
   e, numa linha à parte, `Por isso a confiança deste item não passa de média.`. Quando a lista `conflito` da
   régua conhece o vínculo (regra R19, casos b e c), uma terceira linha o nomeia, com o texto e a regra do site
   (ESPEC-SITE, seção 8.3): "Este item envolve nomes da lista de conflito da régua: NOMES.", na ordem da lista,

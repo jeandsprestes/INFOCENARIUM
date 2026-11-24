@@ -452,8 +452,9 @@ class TestaOTexto(apoio.Bancada):
         edicao, texto = self.publicada()
         blocos = self.blocos_dos_itens(texto)
         self.assertEqual(sorted(blocos), ["p1", "p2", "p3", "r1", "r2", "r3", "r4", "r5", "r6"])
-        aviso = ("Aviso: o INFOCENARIUM é escrito por um modelo de IA da Anthropic, que é do setor de IA e pode ser parte ou "
-                 "concorrente nesta notícia.")
+        aviso = ("Aviso: o INFOCENARIUM é escrito por modelos de IA, do setor de IA, que podem ser parte ou "
+                 "concorrente nesta notícia: foi construído pelo Claude Fable e pelo Claude Opus, da Anthropic, e hoje "
+                 "quem escreve é o GLM, da Z.ai.")
         for item in apoio.itens(edicao):
             linhas = blocos[item["id"]].splitlines()
             tem = aviso in linhas

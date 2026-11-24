@@ -707,8 +707,8 @@ test('08 radar: a linha aberta usa as mesmas linhas do dossiê', async () => {
   /* r2: item com conflito de interesse traz o aviso fixo no topo do item aberto */
   const aviso = m.um('#item-r2 .radar__corpo').children[0];
   assert.ok(aviso.classList.contains('aviso'));
-  assert.equal(textoDe(aviso), 'CONFLITO DE INTERESSE Aviso: o INFOCENARIUM é escrito por um modelo de IA da Anthropic, que é do setor de IA e pode ser parte ou ' +
-    'concorrente nesta notícia. Este item envolve nomes da lista de conflito da régua: Google. ' +
+  assert.equal(textoDe(aviso), 'CONFLITO DE INTERESSE Aviso: o INFOCENARIUM é escrito por modelos de IA, do setor de IA, que podem ser parte ou ' +
+    'concorrente nesta notícia: foi construído pelo Claude Fable e pelo Claude Opus, da Anthropic, e hoje quem escreve é o GLM, da Z.ai. Este item envolve nomes da lista de conflito da régua: Google. ' +
     'Por isso a confiança deste item não passa de média. Ver Método.');
   assert.equal(aviso.querySelector('a').getAttribute('href'), '#/metodo/conflito');
 });

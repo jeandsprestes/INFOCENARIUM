@@ -629,10 +629,10 @@ test('conflito de interesse: etiqueta no cartão e na linha do radar, aviso no i
     .map((el) => el.getAttribute('id')), ['item-r1', 'item-r2', 'item-r3']);
   const aviso = m.um('#item-p2 .dossie').children[0];
   assert.ok(aviso.classList.contains('aviso'));
-  assert.match(textoDe(aviso), /^CONFLITO DE INTERESSE Aviso: o INFOCENARIUM é escrito por um modelo de IA da Anthropic, que é do setor de IA e pode ser parte ou concorrente nesta notícia\. Este item envolve nomes da lista de conflito da régua: Sam Altman \(OpenAI\), Anthropic, Google\. Por isso a confiança deste item não passa de média\. Ver Método\.$/);
+  assert.match(textoDe(aviso), /^CONFLITO DE INTERESSE Aviso: o INFOCENARIUM é escrito por modelos de IA, do setor de IA, que podem ser parte ou concorrente nesta notícia: foi construído pelo Claude Fable e pelo Claude Opus, da Anthropic, e hoje quem escreve é o GLM, da Z.ai\. Este item envolve nomes da lista de conflito da régua: Sam Altman \(OpenAI\), Anthropic, Google\. Por isso a confiança deste item não passa de média\. Ver Método\.$/);
   /* o termo OpenAI já está no nome do player, e não se repete; r3 é só "notícia de IA": só o aviso fixo */
-  assert.equal(textoDe(m.um('#item-r3 .radar__corpo .aviso')), 'CONFLITO DE INTERESSE Aviso: o INFOCENARIUM é escrito por um modelo de IA da Anthropic, ' +
-    'que é do setor de IA e pode ser parte ou concorrente nesta notícia. Por isso a confiança deste item não passa de média. Ver Método.');
+  assert.equal(textoDe(m.um('#item-r3 .radar__corpo .aviso')), 'CONFLITO DE INTERESSE Aviso: o INFOCENARIUM é escrito por modelos de IA, do setor de IA, que podem ser parte ou ' +
+    'concorrente nesta notícia: foi construído pelo Claude Fable e pelo Claude Opus, da Anthropic, e hoje quem escreve é o GLM, da Z.ai. Por isso a confiança deste item não passa de média. Ver Método.');
   assert.equal(m.um('#item-p1 .dossie').children[0].localName, 'h4', 'item sem a marca não leva o aviso');
   assert.match(textoDe(m.um('#item-r2 .radar__corpo .vetor__cabeca')), /CONFLITO DE INTERESSE$/);
   assert.equal(/CONFLITO DE INTERESSE/.test(textoDe(m.um('#item-p1 .dossie .vetor__cabeca'))), false);
@@ -645,14 +645,14 @@ test('conflito de interesse: o aviso nomeia o vínculo que a lista da régua con
   tabela['dados/regua.json'].conflito.termos.push('Nvidia', 'G..gle');
   const m = await abre({ arquivos: tabela });
   assert.match(textoDe(m.um('#item-r1 .radar__corpo .aviso')),
-    /nesta notícia\. Este item envolve nomes da lista de conflito da régua: Jensen Huang \(Nvidia\)\. Por isso/);
+    /da Z\.ai\. Este item envolve nomes da lista de conflito da régua: Jensen Huang \(Nvidia\)\. Por isso/);
   /* termo com ponto é texto, não expressão: "G..gle" não casa com "Google" */
   assert.match(textoDe(m.um('#item-r2 .radar__corpo .aviso')), /régua: Google\. Por isso/);
   /* sem a lista na régua: só o aviso fixo, nunca erro */
   const semLista = arquivos();
   delete semLista['dados/regua.json'].conflito;
   const m2 = await abre({ arquivos: semLista });
-  assert.match(textoDe(m2.um('#item-p2 .dossie .aviso')), /nesta notícia\. Por isso a confiança/);
+  assert.match(textoDe(m2.um('#item-p2 .dossie .aviso')), /da Z\.ai\. Por isso a confiança/);
 });
 
 test('conflito de interesse: navegador sem \\p{L} (de antes de 2018) monta a edição, e o termo segue palavra inteira', async () => {
@@ -661,7 +661,7 @@ test('conflito de interesse: navegador sem \\p{L} (de antes de 2018) monta a edi
     tabela['dados/regua.json'].conflito.termos.push('Nvidia', 'SuperNvidia');
     return tabela;
   };
-  const esperado = /nesta notícia\. Este item envolve nomes da lista de conflito da régua: Nvidia\. Por isso/;
+  const esperado = /da Z\.ai\. Este item envolve nomes da lista de conflito da régua: Nvidia\. Por isso/;
   const novo = await abre({ arquivos: comNvidia() });
   assert.match(textoDe(novo.um('#item-r3 .radar__corpo .aviso')), esperado);
   const velho = await abre({ arquivos: comNvidia(), esperar: false });

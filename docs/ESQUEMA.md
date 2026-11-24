@@ -389,7 +389,8 @@ forma deste esquema, e o que depende de `players.json` e `vetores.json`, registr
   menos que o teto, nunca mais.
 - **R09.** `publicado_em` fica entre `data` menos 2 dias e `data` mais 1 dia (a folga cobre o fuso).
   Fonte `primaria` pode ser mais antiga, nunca depois de `data` mais 1.
-- **R19.** Conflito de interesse. O modelo que escreve o INFOCENARIUM é da Anthropic. `conflito_de_interesse` tem de
+- **R19.** Conflito de interesse. O INFOCENARIUM foi construído por modelos da Anthropic, player da régua, e é escrito por
+  outro modelo de IA, o GLM, da Z.ai. `conflito_de_interesse` tem de
   ser `true` se:
   - (a) a `categoria` do item é `ia`; ou
   - (b) **(dia)** algum `alvo` de ataque ou `player` de vetor do item está em `regua.json`, lista
@@ -565,7 +566,7 @@ forma deste esquema, e o que depende de `players.json` e `vetores.json`, registr
 **Arquivo que dá ordem a agente** (em `valida.py --tudo`, com ou sem `--base`, e em `--dados`; código `AGENTE`)
 
 - Nenhum arquivo acompanhado pelo git se chama `CLAUDE.md`, `CLAUDE.local.md`, `AGENTS.md` ou `.mcp.json`, em
-  qualquer pasta, nem fica dentro de uma pasta `.claude/`. A sessão da nuvem carrega esses arquivos sozinha,
+  qualquer pasta, nem fica dentro de uma pasta `.claude/`. O agente da rotina carrega esses arquivos sozinho,
   antes do manual: um deles plantado transforma o sequestro de um dia em instrução de todo dia. Exceção única:
   `.claude/settings.json` com uma chave só, `attribution` (o texto de atribuição dos commits). A lista é a do
   git (`git ls-files`, o que vai no commit; o conteúdo do `settings.json` também é o do índice do git), nunca a
@@ -831,8 +832,9 @@ Quando a fonte não está no mapa:
 
 Dois avisos fixos, que o agente não escreve:
 
-- em item com `conflito_de_interesse: true`: "Aviso: o INFOCENARIUM é escrito por um modelo de IA da Anthropic, que é
-  do setor de IA e pode ser parte ou concorrente nesta notícia.";
+- em item com `conflito_de_interesse: true`: "Aviso: o INFOCENARIUM é escrito por modelos de IA, do setor de IA, que
+  podem ser parte ou concorrente nesta notícia: foi construído pelo Claude Fable e pelo Claude Opus, da Anthropic,
+  e hoje quem escreve é o GLM, da Z.ai.";
 - na tela de método: "O INFOCENARIUM não é recomendação de investimento, nem orientação de saúde ou de segurança."
 
 Edição `falha`: o site mostra "sem edição hoje" com o `resumo`, e os níveis repetidos da edição anterior.

@@ -51,8 +51,9 @@ TITULO_DO_FEED = "INFOCENARIUM · monitor geopolítico e de IA"
 BASE_PADRAO = "./"  # o último endereço base da lista: relativo, serve em qualquer lugar
 UPDATED_SEM_ENTRADA = "1970-01-01T00:00:00Z"  # o updated do feed que não tem entrada (CONTRATO, seção 4.5)
 LINHA_DE_EXEMPLO = "EDIÇÃO DE EXEMPLO · dados fictícios"
-AVISO_DE_CONFLITO = ("Aviso: o INFOCENARIUM é escrito por um modelo de IA da Anthropic, que é do setor de IA e pode ser "
-                     "parte ou concorrente nesta notícia.")
+AVISO_DE_CONFLITO = ("Aviso: o INFOCENARIUM é escrito por modelos de IA, do setor de IA, que podem ser parte ou "
+                     "concorrente nesta notícia: foi construído pelo Claude Fable e pelo Claude Opus, da Anthropic, e hoje "
+                     "quem escreve é o GLM, da Z.ai.")
 # Os textos abaixo são os do site, palavra por palavra (ESPEC-SITE, seções 2.2, 5.1 e 8.3): o .md e o site dizem o mesmo.
 TETO_DO_CONFLITO = "Por isso a confiança deste item não passa de média."
 NOTA_DE_RASCUNHO = "Mapa de veículos em rascunho, ainda sem revisão do dono."

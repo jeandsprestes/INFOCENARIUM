@@ -204,7 +204,7 @@ anterior +1,3%  │ anterior +1,1%  │                 │ anterior +0,3%  │ 
 09 BASTIDORES  coleta normal · 19 veículos · 61 feeds lidos, 7 falharam · 11 páginas · 24 min
 O que não deu para conferir: texto de limites.     Atores sem ficha (1) ▸   Veículos em falta (1) ▸
 ───────────────────────────────────────────────────────────────────────────────────────────────
-Análises escritas por IA (Claude, da Anthropic, que é player da régua). Ver Método.
+Análises escritas por IA (o GLM, da Z.ai; o site foi construído pelo Claude Fable e pelo Claude Opus, da Anthropic, que é player da régua). Ver Método.
 ```
 
 Painel no celular (até 420 px, uma coluna, navegação presa na base):
@@ -645,7 +645,7 @@ Entre chaves, o que o site preenche. Datas: "20/11/2026" por extenso, "20/11" na
 | Placas | EM DIA · ATRASADA · REDUZIDA · SEM EDIÇÃO · EXEMPLO · ARQUIVO |
 | Vizinhas | Edição anterior, de {data} · Edição seguinte, de {data} · Ir para a mais recente. Na tela, o botão mostra só a seta e a data curta ("‹ 18/11", "20/11 ›"); a frase inteira é o nome acessível |
 | Links | texto · JSON · feed |
-| Rodapé | Análises escritas por IA: o Claude, da Anthropic, que é um dos players da régua. Leia o aviso em Método. Sem cookies, sem rastreador, nada de terceiros. |
+| Rodapé | Análises escritas por IA: o GLM, da Z.ai. O INFOCENARIUM foi construído pelo Claude Fable e pelo Claude Opus, da Anthropic, que é um dos players da régua. Leia o aviso em Método. Sem cookies, sem rastreador, nada de terceiros. |
 
 ### 8.2 Avisos
 
@@ -684,7 +684,7 @@ Entre chaves, o que o site preenche. Datas: "20/11/2026" por extenso, "20/11" na
 | Indicadores | anterior (dica: "Variação sobre o ponto anterior da série.") · 7 dias · sem dado · DE {data} · GATILHO · Fonte: {nome} · Fonte prevista: {nome} |
 | Principais | GEOPOLÍTICA · IA · CONFIANÇA ALTA · CONFIANÇA MÉDIA · CONFIANÇA BAIXA · CONFLITO DE INTERESSE · CONTINUAÇÃO DE {data} · Atirou: · Placar: · {SIGLA} +{força} (ganha) · {SIGLA} −{força} (perde) · narrativa (depois do número, em linha de evidência `narrativa`: "SO +1 narrativa") · sem ganhador · sem alvo · Abrir dossiê · Fechar dossiê |
 | Dossiê | O QUE ACONTECEU · NÃO CONFIRMADO · QUEM ATIROU ({N}) · sem alvo (dica: "O texto só relata, ou só promove alguém. Não ataca ninguém.") · Deixou de fora: · Segundo a leitura do INFOCENARIUM em {data}. · ler no veículo · LADO INCERTO · FOGO AMIGO · FORA DO MAPA · O QUE ESTÁ REALMENTE ACONTECENDO · NA PRÁTICA · O ATO NA RÉGUA · empurra para: · QUEM GANHA E QUEM PERDE · ganha · perde · força {N} de 3 · MOVIMENTOS · prova · {N}ª vez em 30 dias · ANULADO · Anulado em {data}: {motivo} · fonte da correção · PARA QUEM SE PREPARA · No Brasil: · Domínios: · Vigiar: · PERGUNTA-CHAVE (dica: "É a pergunta que derruba esta leitura. O INFOCENARIUM responde quando a data vencer.") · FONTES ({N}) · FONTE PRIMÁRIA |
-| Conflito no item | CONFLITO DE INTERESSE · Aviso: o INFOCENARIUM é escrito por um modelo de IA da Anthropic, que é do setor de IA e pode ser parte ou concorrente nesta notícia. · Este item envolve nomes da lista de conflito da régua: {nomes}. · Por isso a confiança deste item não passa de média. Ver Método. (A primeira frase é o aviso fixo do ESQUEMA, palavra por palavra. A frase dos nomes só aparece quando a lista `conflito` da régua conhece o vínculo: o nome do player de `conflito.players` citado como alvo ou em vetor, e o termo de `conflito.termos` escrito em algum texto do item, palavra inteira, como a regra R19 lê; termo que já está no nome de um player listado não se repete. Item marcado só por ser de IA leva só o aviso fixo. Os nomes vêm da régua de hoje, não da do dia da edição.) |
+| Conflito no item | CONFLITO DE INTERESSE · Aviso: o INFOCENARIUM é escrito por modelos de IA, do setor de IA, que podem ser parte ou concorrente nesta notícia: foi construído pelo Claude Fable e pelo Claude Opus, da Anthropic, e hoje quem escreve é o GLM, da Z.ai. · Este item envolve nomes da lista de conflito da régua: {nomes}. · Por isso a confiança deste item não passa de média. Ver Método. (A primeira frase é o aviso fixo do ESQUEMA, palavra por palavra. A frase dos nomes só aparece quando a lista `conflito` da régua conhece o vínculo: o nome do player de `conflito.players` citado como alvo ou em vetor, e o termo de `conflito.termos` escrito em algum texto do item, palavra inteira, como a regra R19 lê; termo que já está no nome de um player listado não se repete. Item marcado só por ser de IA leva só o aviso fixo. Os nomes vêm da régua de hoje, não da do dia da edição.) |
 | Placar do dia | Saldo é a soma das forças do dia: ganhar soma, perder subtrai. Ganho só de narrativa não entra no saldo: aparece à parte. Barra à direita, ganhou. À esquerda, perdeu. · narrativa {+N ou −N} · sem movimento hoje · 30 dias {saldo} |
 | O que vigiar | SINAIS · Sinais que mudariam o quadro. Cada pergunta tem data. · {Nome do domínio}: · Principal {N}: · RESPOSTAS ({N}) · O INFOCENARIUM responde às próprias perguntas quando a data vence. · SIM · NÃO · SEM DADO · fonte · perguntado em {data}, principal {N} |
 | Movimentos | Ninguém muda de partido. O vetor mostra para onde o player se desloca. · NOVO PLAYER · Por que entrou: · Fontes das posições: · time discutível · posição em dúvida · Ver a ficha na Régua |
@@ -735,9 +735,9 @@ Títulos: Método · 01 AVISO DE CONFLITO DE INTERESSE · 02 AS QUATRO PERGUNTAS
 
 **Aviso de conflito de interesse** (caixa no topo, texto integral):
 
-> As análises do INFOCENARIUM são escritas por um modelo de inteligência artificial (IA): o Claude, da empresa Anthropic. A Anthropic é um dos players da régua do INFOCENARIUM. Ou seja: quem escreve é parte interessada em uma das disputas que este site acompanha, a da IA.
+> As análises do INFOCENARIUM são escritas por um modelo de inteligência artificial (IA): o GLM, da empresa Z.ai. O INFOCENARIUM foi construído por outros modelos de IA, o Claude Fable e o Claude Opus, da empresa Anthropic. A Anthropic é um dos players da régua do INFOCENARIUM. Ou seja: quem construiu o site é parte interessada em uma das disputas que ele acompanha, a da IA, e quem escreve também é um modelo de IA.
 >
-> O risco é concreto. O modelo pode poupar quem o fez, pesar a mão contra concorrentes ou tratar como neutra a visão de mundo da empresa.
+> O risco é concreto. Um modelo pode poupar quem o fez, pesar a mão contra concorrentes ou tratar como neutra a visão de mundo da empresa. Por isso todo item de IA leva a marca, inclusive o que envolva a Z.ai, dona do modelo que escreve.
 >
 > O que o INFOCENARIUM faz para reduzir o risco:
 >
