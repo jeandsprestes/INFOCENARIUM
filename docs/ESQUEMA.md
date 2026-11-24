@@ -565,8 +565,9 @@ forma deste esquema, e o que depende de `players.json` e `vetores.json`, registr
 
 **Arquivo que dá ordem a agente** (em `valida.py --tudo`, com ou sem `--base`, e em `--dados`; código `AGENTE`)
 
-- Nenhum arquivo acompanhado pelo git se chama `CLAUDE.md`, `CLAUDE.local.md`, `AGENTS.md` ou `.mcp.json`, em
-  qualquer pasta, nem fica dentro de uma pasta `.claude/`. O agente da rotina carrega esses arquivos sozinho,
+- Nenhum arquivo acompanhado pelo git se chama `CLAUDE.md`, `CLAUDE.local.md`, `AGENTS.md`, `.mcp.json`,
+  `opencode.json` ou `opencode.jsonc`, em qualquer pasta, nem fica dentro de uma pasta `.claude/` ou `.opencode/`. O
+  agente da rotina carrega esses arquivos sozinho,
   antes do manual: um deles plantado transforma o sequestro de um dia em instrução de todo dia. Exceção única:
   `.claude/settings.json` com uma chave só, `attribution` (o texto de atribuição dos commits). A lista é a do
   git (`git ls-files`, o que vai no commit; o conteúdo do `settings.json` também é o do índice do git), nunca a

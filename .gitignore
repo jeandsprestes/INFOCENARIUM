@@ -20,3 +20,9 @@ node_modules/
 # O validador só aceita esse arquivo com a chave "attribution".
 .claude/*
 !.claude/settings.json
+
+# Arquivos que o OpenCode lê como ordem ao agente (configuração do projeto, agentes, comandos, habilidades).
+# Não vão a público: a regra AGENTE do validador barra qualquer um que esteja no git.
+.opencode/
+opencode.json
+opencode.jsonc

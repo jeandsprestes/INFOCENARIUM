@@ -616,7 +616,7 @@ para o que o ESQUEMA manda conferir sem dar número:
 | `MD` | edição sem o `.md`, ou `.md` sem a edição |
 | `FEED` | `feed.xml` mal formado (ou ausente, como aviso), ou com `link` que não é `http`, `https` nem relativo: o esquema é lido como o leitor de feed lê, depois de tirar espaço e caractere de controle (`java&#9;script:` é `javascript:`) |
 | `GIT` | `--base` sem git na raiz, com revisão que não existe, ou com o git falhando |
-| `AGENTE` | em `--tudo` e em `--dados`, com git na raiz: arquivo acompanhado pelo git (`git ls-files`, nunca o disco) chamado `CLAUDE.md`, `CLAUDE.local.md`, `AGENTS.md` ou `.mcp.json`, ou dentro de uma pasta `.claude/`; `.claude/settings.json` só passa com uma chave só, `attribution` (`ESQUEMA.md`, seção 10). Aviso, se o git não listar os arquivos |
+| `AGENTE` | em `--tudo` e em `--dados`, com git na raiz: arquivo acompanhado pelo git (`git ls-files`, nunca o disco) chamado `CLAUDE.md`, `CLAUDE.local.md`, `AGENTS.md`, `.mcp.json`, `opencode.json` ou `opencode.jsonc`, ou dentro de uma pasta `.claude/` ou `.opencode/`; `.claude/settings.json` só passa com uma chave só, `attribution` (`ESQUEMA.md`, seção 10). Aviso, se o git não listar os arquivos |
 
 A saída tem teto: 60 erros por arquivo e 300 linhas de erro (e 300 de aviso) por chamada. O que passa disso vira
 uma linha só, que diz quantos ficaram de fora; o veredito conta as linhas impressas.

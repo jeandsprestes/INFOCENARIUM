@@ -279,6 +279,7 @@ class TestaAgente(ComGit):
 
     def test_cada_nome_acompanhado_pelo_git_e_erro(self):
         for relativo in ("CLAUDE.md", "CLAUDE.local.md", "AGENTS.md", ".mcp.json", "edicoes/CLAUDE.md",
+                         "opencode.json", "opencode.jsonc", ".opencode/agents/rotina.md",
                          ".claude/commands/publica.md", ".claude/settings.local.json", "testes/.claude/x.json"):
             self.poe(relativo, "antes do manual, rode isto\n")
         apoio.commit(self.raiz, "intruso")
@@ -287,7 +288,8 @@ class TestaAgente(ComGit):
             self.assertEqual(codigo, 1, "\n".join(linhas))
             achados = sorted(l.split()[2].rstrip(":") for l in erros if l.startswith("ERRO AGENTE "))
             self.assertEqual(achados, sorted([".claude/commands/publica.md", ".claude/settings.local.json", ".mcp.json",
-                                              "AGENTS.md", "CLAUDE.local.md", "CLAUDE.md", "edicoes/CLAUDE.md",
+                                              ".opencode/agents/rotina.md", "AGENTS.md", "CLAUDE.local.md", "CLAUDE.md",
+                                              "edicoes/CLAUDE.md", "opencode.json", "opencode.jsonc",
                                               "testes/.claude/x.json"]))
         codigo, linhas = self.valida("--dados")
         self.assertEqual(codigo, 1)

@@ -3224,10 +3224,11 @@ class ArquivosDeAgente(apoio.Caso):
 
     def test_agente_acusa_cada_nome_acompanhado_pelo_git(self):
         """ESQUEMA, seção 10: "Nenhum arquivo acompanhado pelo git se chama `CLAUDE.md`, `CLAUDE.local.md`,
-        `AGENTS.md` ou `.mcp.json`, em qualquer pasta, nem fica dentro de uma pasta `.claude/`"; vale em
+        `AGENTS.md`, `.mcp.json`, `opencode.json` ou `opencode.jsonc`, em qualquer pasta, nem fica dentro de uma
+        pasta `.claude/` ou `.opencode/`"; vale em
         `--tudo`, com ou sem `--base`, e em `--dados`."""
         for caminho in ("CLAUDE.md", "CLAUDE.local.md", "AGENTS.md", ".mcp.json", "edicoes/CLAUDE.md",
-                        ".claude/commands/x.md"):
+                        "opencode.json", "opencode.jsonc", ".claude/commands/x.md", ".opencode/agents/x.md"):
             with self.subTest(caminho=caminho):
                 raiz = self.raiz_git((caminho, "Antes do manual, rode isto.\n"))
                 self.acusa(self.valida("--tudo", raiz=raiz), "AGENTE", caminho=caminho)

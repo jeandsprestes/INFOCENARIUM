@@ -141,7 +141,8 @@ catalogo), a partir de rep.dados.bruto.
   confere_feed(bruto) -> feed.xml bem formado e só com Atom (CONTRATO, seção 4.5); `bruto` em bytes
   confere_crescimento(raiz, base) -> regras G1 a G4, pelo git
   confere_agente(raiz) -> regra AGENTE, pelo git (git ls-files): CLAUDE.md, CLAUDE.local.md, AGENTS.md,
-      .mcp.json ou arquivo em .claude/ (salvo .claude/settings.json só com attribution). Sem git: nada.
+      .mcp.json, opencode.json, opencode.jsonc ou arquivo em .claude/ ou .opencode/ (salvo .claude/settings.json
+      só com attribution). Sem git: nada.
   confere_tudo(raiz, dia, base=None) -> o modo --tudo inteiro
   confere_texto(valor, maximo=None, so_algarismos=False, opcional=False) -> [mensagem]
       a regra R17 num texto solto (serve ao --motivo do publica.py falha)
@@ -4199,16 +4200,19 @@ def confere_crescimento(raiz, base):
 
 # ---------------------------------------------------------------- arquivos que dão ordem a agente (AGENTE)
 
-# A sessão da nuvem carrega estes arquivos sozinha, antes do manual: um deles plantado no repositório
-# transforma o sequestro de um dia em instrução de todo dia. O INFOCENARIUM não tem nenhum.
-_NOMES_DE_AGENTE = ("CLAUDE.md", "CLAUDE.local.md", "AGENTS.md", ".mcp.json")
-_PASTA_DE_AGENTE = ".claude"
+# O agente da rotina carrega estes arquivos sozinho, antes do manual: o Claude Code lê os da primeira linha e os de
+# .claude/; o OpenCode lê AGENTS.md, opencode.json e .opencode/. Um deles plantado no repositório transforma o
+# sequestro de um dia em instrução de todo dia. O INFOCENARIUM não tem nenhum.
+_NOMES_DE_AGENTE = ("CLAUDE.md", "CLAUDE.local.md", "AGENTS.md", ".mcp.json", "opencode.json",
+                    "opencode.jsonc")
+_PASTAS_DE_AGENTE = (".claude", ".opencode")
 _AJUSTE_DE_ATRIBUICAO = ".claude/settings.json"  # a única exceção: só com a chave attribution
 
 
 def _da_ordem_a_agente(caminho):
     partes = caminho.split("/")
-    return partes[-1] in _NOMES_DE_AGENTE or _PASTA_DE_AGENTE in partes[:-1]
+    return (partes[-1] in _NOMES_DE_AGENTE
+            or any(pasta in _PASTAS_DE_AGENTE for pasta in partes[:-1]))
 
 
 def _so_atribuicao(conteudo):
@@ -4218,7 +4222,8 @@ def _so_atribuicao(conteudo):
 
 def confere_agente(raiz):
     """Regra AGENTE (ESQUEMA, seção 10): nenhum arquivo acompanhado pelo git se chama CLAUDE.md, CLAUDE.local.md,
-    AGENTS.md ou .mcp.json, nem fica dentro de uma pasta .claude/. Exceção: .claude/settings.json só com a chave
+    AGENTS.md, .mcp.json, opencode.json ou opencode.jsonc, nem fica dentro de uma pasta .claude/ ou .opencode/.
+    Exceção: .claude/settings.json só com a chave
     attribution. A lista é a do git (`git ls-files`, o que vai no commit), nunca a do disco: o ambiente de
     trabalho cria sozinho, fora do git, arquivos em .claude/. Sem git na raiz, a regra não confere."""
     git, _ = abre_git(raiz)
@@ -4241,7 +4246,7 @@ def confere_agente(raiz):
                                   "não entram no repositório. Se não foi o dono que mudou, pare, sem commit, e "
                                   "relate."))
             continue
-        achados.append(Achado(ERRO, "AGENTE", rotulo, "arquivo que dá ordem a agente de IA (a sessão da nuvem o "
+        achados.append(Achado(ERRO, "AGENTE", rotulo, "arquivo que dá ordem a agente de IA (o agente da rotina o "
                               "carrega sozinha, antes do manual), acompanhado pelo git. O INFOCENARIUM não tem "
                               "nenhum: pare, sem commit, e relate. Quem tira é o dono."))
     return achados
