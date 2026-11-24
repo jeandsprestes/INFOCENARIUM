@@ -1,0 +1,985 @@
+{
+  "versao": 1,
+  "data": "2026-11-19",
+  "gerada_em": "2026-11-19T21:14:03Z",
+  "estado": "completa",
+  "exemplo": true,
+  "resumo": "[EXEMPLO] Edição fictícia: um ataque inventado a um terminal de petróleo leva energia e risco de conflito ao nível 3.",
+  "alerta": {
+    "nivel": 3,
+    "tendencia": "subindo",
+    "motivo": "Texto fictício. Nível 3 por um ataque de 19/11, que parou um terminal de petróleo: pesa em energia e em risco de conflito. O petróleo Brent subiu 6,1% em 7 dias. Câmbio segue em 2 pela alta do dólar de 17/11.",
+    "dominios": [
+      {
+        "id": "energia",
+        "nivel": 3,
+        "tendencia": "subindo",
+        "desde": "2026-11-19",
+        "sem_preco": [],
+        "gatilhos": [
+          {
+            "criterio": "energia.2",
+            "ref": "brent",
+            "texto": "Texto fictício. Petróleo Brent subiu 6,1% em 7 dias, até 19/11 (limiar: 5%)."
+          },
+          {
+            "criterio": "energia.3",
+            "ref": "p1",
+            "texto": "Texto fictício. Ataque de 19/11 parou um terminal de exportação de petróleo."
+          }
+        ],
+        "leitura": "Texto fictício. Petróleo mais caro lá fora encarece o diesel e a gasolina importados; o repasse à bomba depende da Petrobras e dos importadores. O ataque de 19/11 tirou 400 mil barris por dia do mercado. Nenhuma fonte de 19/11 dá prazo.",
+        "vigiar": "O Brent passa de 10% de alta em 7 dias?"
+      },
+      {
+        "id": "alimentos",
+        "nivel": 1,
+        "tendencia": "estavel",
+        "desde": "2026-11-10",
+        "sem_preco": [
+          "milho"
+        ],
+        "gatilhos": [],
+        "leitura": "Texto fictício. Trigo e soja sem alta fora do comum, e nenhuma restrição nova de exportação. Sem base de 7 dias para o milho em 19/11: esse preço o INFOCENARIUM não mediu.",
+        "vigiar": "Algum grande exportador anuncia restrição de grão ou de fertilizante?"
+      },
+      {
+        "id": "cambio",
+        "nivel": 2,
+        "tendencia": "estavel",
+        "desde": "2026-11-17",
+        "sem_preco": [],
+        "gatilhos": [],
+        "leitura": "Texto fictício. Em 17/11 o dólar subiu 1,8% no dia. Desde então ficou parado: 0,4% em 19/11. Dólar mais caro encarece o que é importado: combustível, trigo, fertilizante, remédio e eletrônico.",
+        "vigiar": "O dólar sobe 1,5% ou mais num dia?"
+      },
+      {
+        "id": "suprimentos",
+        "nivel": 2,
+        "tendencia": "subindo",
+        "desde": "2026-11-19",
+        "sem_preco": [],
+        "gatilhos": [
+          {
+            "criterio": "suprimentos.2",
+            "ref": "r4",
+            "texto": "Texto fictício. Seguradoras anunciaram em 19/11 o fim da cobertura no Estreito de Exemplo a partir de 25/11. Não está na tabela; equivale a ameaça oficial a rota marítima.",
+            "excecao": true
+          }
+        ],
+        "leitura": "Texto fictício. Rota desviada ou porto parado atrasa peça, chip, remédio e fertilizante, e encarece o frete. Em 19/11 há só o anúncio das seguradoras: nenhum navio foi desviado.",
+        "vigiar": "Algum armador desvia navios do Estreito de Exemplo até 25/11?"
+      },
+      {
+        "id": "conflito",
+        "nivel": 3,
+        "tendencia": "subindo",
+        "desde": "2026-11-19",
+        "sem_preco": [],
+        "gatilhos": [
+          {
+            "criterio": "conflito.3",
+            "ref": "p1",
+            "texto": "Texto fictício. Ataque de 19/11 parou um terminal de petróleo de país que não está em guerra aberta. Os dois governos confirmam a autoria."
+          }
+        ],
+        "leitura": "Texto fictício. Guerra longe chega ao Brasil pelos outros quatro domínios. Aqui, pelo petróleo: o ataque de 19/11 parou um terminal. Não há tropa em movimento.",
+        "vigiar": "O Reino de Amostra responde com ataque militar até 22/11?"
+      }
+    ]
+  },
+  "indicadores": [
+    {
+      "id": "brent",
+      "nome": "Petróleo Brent",
+      "dominio": "energia",
+      "valor": 78.4,
+      "unidade": "US$ por barril",
+      "variacao_pct": 1.3,
+      "variacao_7d_pct": 6.1,
+      "data": "2026-11-19",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Fonte fictícia de exemplo",
+        "url": "https://exemplo.invalid/indicadores/brent"
+      }
+    },
+    {
+      "id": "wti",
+      "nome": "Petróleo WTI (EUA)",
+      "dominio": "energia",
+      "valor": 74.1,
+      "unidade": "US$ por barril",
+      "variacao_pct": 1.1,
+      "variacao_7d_pct": 5.4,
+      "data": "2026-11-19",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Fonte fictícia de exemplo",
+        "url": "https://exemplo.invalid/indicadores/wti"
+      }
+    },
+    {
+      "id": "gas_natural",
+      "nome": "Gás natural nos EUA",
+      "dominio": "energia",
+      "valor": null,
+      "unidade": "US$ por milhão de BTU",
+      "variacao_pct": null,
+      "variacao_7d_pct": null,
+      "data": null,
+      "defasado": true,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Fonte fictícia de exemplo",
+        "url": "https://exemplo.invalid/indicadores/gas_natural"
+      }
+    },
+    {
+      "id": "trigo",
+      "nome": "Trigo",
+      "dominio": "alimentos",
+      "valor": 216.9,
+      "unidade": "US$ por tonelada",
+      "variacao_pct": 0.3,
+      "variacao_7d_pct": 1.0,
+      "data": "2026-11-19",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Fonte fictícia de exemplo",
+        "url": "https://exemplo.invalid/indicadores/trigo"
+      }
+    },
+    {
+      "id": "milho",
+      "nome": "Milho",
+      "dominio": "alimentos",
+      "valor": 179.3,
+      "unidade": "US$ por tonelada",
+      "variacao_pct": -0.1,
+      "variacao_7d_pct": null,
+      "data": "2026-11-19",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Fonte fictícia de exemplo",
+        "url": "https://exemplo.invalid/indicadores/milho"
+      }
+    },
+    {
+      "id": "soja",
+      "nome": "Soja",
+      "dominio": "alimentos",
+      "valor": 383.1,
+      "unidade": "US$ por tonelada",
+      "variacao_pct": 0.5,
+      "variacao_7d_pct": 2.2,
+      "data": "2026-11-19",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Fonte fictícia de exemplo",
+        "url": "https://exemplo.invalid/indicadores/soja"
+      }
+    },
+    {
+      "id": "fao_ffpi",
+      "nome": "Índice de preços de alimentos da FAO",
+      "dominio": "alimentos",
+      "valor": 126.4,
+      "unidade": "pontos",
+      "variacao_pct": -0.8,
+      "variacao_7d_pct": null,
+      "data": "2026-11-01",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Fonte fictícia de exemplo",
+        "url": "https://exemplo.invalid/indicadores/fao_ffpi"
+      }
+    },
+    {
+      "id": "usd_brl",
+      "nome": "Dólar em reais",
+      "dominio": "cambio",
+      "valor": 5.4321,
+      "unidade": "R$ por US$",
+      "variacao_pct": 0.4,
+      "variacao_7d_pct": 1.1,
+      "data": "2026-11-19",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Fonte fictícia de exemplo",
+        "url": "https://exemplo.invalid/indicadores/usd_brl"
+      }
+    },
+    {
+      "id": "dxy",
+      "nome": "Índice do dólar contra outras moedas",
+      "dominio": "cambio",
+      "valor": 103.2,
+      "unidade": "pontos",
+      "variacao_pct": 0.1,
+      "variacao_7d_pct": 0.6,
+      "data": "2026-11-19",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Fonte fictícia de exemplo",
+        "url": "https://exemplo.invalid/indicadores/dxy"
+      }
+    },
+    {
+      "id": "ouro",
+      "nome": "Ouro",
+      "dominio": "cambio",
+      "valor": 2650.0,
+      "unidade": "US$ por onça (31,1 g)",
+      "variacao_pct": -0.2,
+      "variacao_7d_pct": 0.9,
+      "data": "2026-11-19",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Fonte fictícia de exemplo",
+        "url": "https://exemplo.invalid/indicadores/ouro"
+      }
+    },
+    {
+      "id": "vix",
+      "nome": "Índice de medo da bolsa americana (VIX)",
+      "dominio": "cambio",
+      "valor": 18.4,
+      "unidade": "pontos",
+      "variacao_pct": 2.2,
+      "variacao_7d_pct": 9.5,
+      "data": "2026-11-19",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Fonte fictícia de exemplo",
+        "url": "https://exemplo.invalid/indicadores/vix"
+      }
+    },
+    {
+      "id": "frete_seco",
+      "nome": "Frete marítimo de grãos e minério",
+      "dominio": "suprimentos",
+      "valor": 12.12,
+      "unidade": "US$ por cota",
+      "variacao_pct": -0.7,
+      "variacao_7d_pct": -3.8,
+      "data": "2026-11-12",
+      "defasado": true,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Fonte fictícia de exemplo",
+        "url": "https://exemplo.invalid/indicadores/frete_seco"
+      }
+    }
+  ],
+  "principais": [
+    {
+      "id": "p1",
+      "categoria": "geopolitica",
+      "titulo": "[EXEMPLO] País fictício ataca terminal de petróleo no Estreito de Exemplo",
+      "fato": "Texto fictício. Em 19/11, drones da República de Exemplo, país que não existe, atingiram o terminal de petróleo do Reino de Amostra, também inventado. O terminal parou de embarcar 400 mil barris por dia. Os dois governos confirmaram o ataque. Não houve mortos.",
+      "nao_confirmado": [
+        "Segundo o governo do Reino de Amostra, os drones partiram de um terceiro país. A República de Exemplo nega.",
+        "Segundo veículos do campo da contestação, o ataque respondeu a sanções. Os do campo da ordem dizem que não houve causa."
+      ],
+      "ataques": [
+        {
+          "veiculo": "nyt",
+          "lado": "ordem_global",
+          "alvo": "republica_exemplo",
+          "enquadramento": "Texto fictício. Chama o ataque de \"agressão\" e destaca o risco para civis e para o preço da gasolina.",
+          "omite": "Texto fictício. Não diz que o terminal já operava com metade da capacidade.",
+          "url": "https://exemplo.invalid/nyt/terminal-atacado"
+        },
+        {
+          "veiculo": "fox_news",
+          "lado": "soberanistas",
+          "alvo": "ue",
+          "enquadramento": "Texto fictício. Culpa a política de energia da Europa pela dependência do terminal.",
+          "url": "https://exemplo.invalid/fox_news/europa-dependente"
+        },
+        {
+          "veiculo": "xinhua",
+          "lado": "eixo_revisionista",
+          "alvo": "outro",
+          "alvo_nome": "Reino de Amostra (fictício)",
+          "enquadramento": "Texto fictício. Trata o ataque como \"resposta\" e destaca as sanções anteriores do Reino de Amostra.",
+          "omite": "Texto fictício. Não cita o decreto que autorizou o ataque.",
+          "url": "https://exemplo.invalid/xinhua/resposta-a-sancoes"
+        }
+      ],
+      "realmente": "Texto fictício. As manchetes brigam por um nome, agressão ou resposta, e nenhuma dá o tamanho real do estrago: o terminal já operava pela metade antes do ataque. Nenhuma rota fechou e não há tropa em movimento. Até aqui é choque de preço, não é guerra. Quem levou o quê: no Eixo Revisionista, a Rússia e o Irã vendem o barril mais caro, e a China, do mesmo partido, compra e paga a conta junto com a Europa. A União Europeia foi quem cedeu algo medido: suspendeu por 90 dias uma meta de clima. A República de Exemplo não obteve nada medido, e o Reino de Amostra ficou só com o prejuízo. Na assembleia, soberanistas e Eixo Revisionista usam o mesmo fato contra a política de energia da Europa, como costumam fazer em clima. Nenhuma instituição foi chamada a decidir, então nenhum time avançou. Esta leitura cai se o Reino de Amostra responder com ataque militar até 22/11: aí o caso deixa de ser preço e vira conflito entre Estados.",
+      "na_pratica": [
+        "Texto fictício. Terminal parado: 400 mil barris por dia fora do mercado.",
+        "Texto fictício. O petróleo Brent, referência de preço no mundo, subiu 6,1% em 7 dias.",
+        "Texto fictício. Comissão Europeia suspendeu por 90 dias uma meta de corte de emissões."
+      ],
+      "no_brasil": "Texto fictício. Tende a encarecer o diesel e a gasolina importados, pelo preço do petróleo lá fora. O repasse à bomba depende da Petrobras e dos importadores.",
+      "eixo": {
+        "tema": "clima",
+        "sentido": "vermelho",
+        "porque": "Texto fictício. A Comissão Europeia suspendeu por 90 dias uma meta de corte de emissões."
+      },
+      "placar": [
+        {
+          "partido": "eixo_revisionista",
+          "efeito": "ganha",
+          "forca": 2,
+          "evidencia": "preco",
+          "porque": "Texto fictício. Rússia e Irã: barril 6,1% mais caro em 7 dias. A China, do mesmo partido, compra e paga mais."
+        },
+        {
+          "partido": "centro_atlantico",
+          "efeito": "perde",
+          "forca": 2,
+          "evidencia": "preco",
+          "porque": "Texto fictício. União Europeia: paga mais pelo petróleo e suspendeu uma meta de clima."
+        },
+        {
+          "partido": "soberanistas",
+          "efeito": "ganha",
+          "forca": 1,
+          "evidencia": "narrativa",
+          "porque": "Texto fictício. A Fox News usa o caso a favor de petróleo e gás próprios. Nada material mudou."
+        }
+      ],
+      "vetores": [
+        {
+          "player": "ue",
+          "para": "soberanistas",
+          "forca": 2,
+          "tema": "clima",
+          "porque": "Texto fictício. A Comissão Europeia suspendeu por decreto, por 90 dias, uma meta de corte de emissões. É ato formal e reversível, contra a posição de costume do Centro Atlântico em clima e no sentido da posição soberanista.",
+          "url": "https://exemplo.invalid/comissao_europeia/decreto-suspende-meta"
+        }
+      ],
+      "dominios": [
+        "energia",
+        "conflito"
+      ],
+      "vigiar": [
+        "O Reino de Amostra responde com ataque militar até 22/11?",
+        "O terminal fictício volta a embarcar petróleo até 26/11?"
+      ],
+      "confianca": "alta",
+      "fontes": [
+        {
+          "veiculo": "reuters",
+          "titulo": "[EXEMPLO] Sample Kingdom oil terminal halts loading after drone strike",
+          "url": "https://exemplo.invalid/reuters/terminal-para",
+          "publicado_em": "2026-11-19"
+        },
+        {
+          "veiculo": "nyt",
+          "titulo": "[EXEMPLO] Drone strike on Sample terminal raises fears for civilians",
+          "url": "https://exemplo.invalid/nyt/terminal-atacado",
+          "publicado_em": "2026-11-19"
+        },
+        {
+          "veiculo": "fox_news",
+          "titulo": "[EXEMPLO] Europe's energy policy left it exposed to Sample terminal",
+          "url": "https://exemplo.invalid/fox_news/europa-dependente",
+          "publicado_em": "2026-11-19"
+        },
+        {
+          "veiculo": "xinhua",
+          "titulo": "[EXEMPLO] Example Republic says strike answers earlier sanctions",
+          "url": "https://exemplo.invalid/xinhua/resposta-a-sancoes",
+          "publicado_em": "2026-11-19"
+        },
+        {
+          "veiculo": "comissao_europeia",
+          "titulo": "[EXEMPLO] Commission suspends emissions target for 90 days",
+          "url": "https://exemplo.invalid/comissao_europeia/decreto-suspende-meta",
+          "publicado_em": "2026-11-19",
+          "primaria": true
+        },
+        {
+          "veiculo": "outro",
+          "nome": "Diário Oficial da República de Exemplo (fictício)",
+          "titulo": "[EXEMPLO] Decreto 1/2026 da República de Exemplo",
+          "url": "https://diario.oficial.exemplo.invalid/decreto-1-2026",
+          "publicado_em": "2026-11-18",
+          "primaria": true
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "categoria": "ia",
+      "titulo": "[EXEMPLO] Lei fictícia obriga registro de modelos avançados de IA",
+      "fato": "Texto fictício. O parlamento da República de Exemplo aprovou em 19/11, por 210 votos a 95, uma lei que obriga o registro de modelos avançados de IA (inteligência artificial) antes do lançamento. O texto cita Anthropic, OpenAI e Google. A lei ainda depende de sanção.",
+      "ataques": [
+        {
+          "veiculo": "fox_news",
+          "lado": "soberanistas",
+          "alvo": "republica_exemplo",
+          "enquadramento": "Texto fictício. Chama a lei de \"freio à inovação\" e destaca o custo para empresas novas.",
+          "omite": "Texto fictício. Não diz que empresas pequenas ficam isentas.",
+          "url": "https://exemplo.invalid/fox_news/lei-freia-inovacao"
+        },
+        {
+          "veiculo": "wired",
+          "lado": "ordem_global",
+          "alvo": "altman",
+          "enquadramento": "Texto fictício. Destaca a pressão das empresas de IA contra o registro.",
+          "url": "https://exemplo.invalid/wired/pressao-contra-registro"
+        }
+      ],
+      "realmente": "Texto fictício. Uma manchete fala em freio à inovação e a outra em pressão das empresas, mas o chão é mais estreito: a lei ainda não vale, depende de sanção, e isenta empresas pequenas, ponto que quase ninguém pôs no título. Quem levou o quê: o governo da República de Exemplo obteve do parlamento o poder de exigir registro antes do lançamento. As empresas de IA ainda não cederam nada, porque nada entrou em vigor. Ficaram fora da mesa os usuários e os laboratórios de fora do país, que a lei também alcança. Na assembleia, a Ordem Global fica de um lado, o de pôr limite à IA, e a Bancada do Talento do outro: é a divisão de costume neste tema. A novidade é uma voz soberanista atacar a regra pelo custo, do mesmo lado das grandes empresas que esse partido costuma criticar. Se houver sanção, então lançar modelo nesse país passa a depender de registro. Esta leitura cai se a lei for vetada até 30/11: aí o voto terá sido só um recado.",
+      "na_pratica": [
+        "Texto fictício. Lei aprovada no parlamento por 210 votos a 95; falta a sanção."
+      ],
+      "eixo": {
+        "tema": "ia_depois",
+        "sentido": "azul",
+        "porque": "Texto fictício. Lei de registro de modelos de IA aprovada no parlamento."
+      },
+      "placar": [
+        {
+          "partido": "ordem_global",
+          "efeito": "ganha",
+          "forca": 2,
+          "evidencia": "lei",
+          "porque": "Texto fictício. Na pauta de IA: a regra de registro põe limite antes do lançamento."
+        },
+        {
+          "partido": "bancada_talento",
+          "efeito": "perde",
+          "forca": 2,
+          "evidencia": "lei",
+          "porque": "Texto fictício. Google e OpenAI: passam a depender de registro para lançar modelos nesse país, se houver sanção."
+        }
+      ],
+      "vetores": [],
+      "dominios": [],
+      "vigiar": [
+        "A lei fictícia é sancionada até 30/11?"
+      ],
+      "confianca": "media",
+      "conflito_de_interesse": true,
+      "continuacao_de": "2026-11-18/p2",
+      "fontes": [
+        {
+          "veiculo": "bloomberg",
+          "titulo": "[EXEMPLO] Example Republic lawmakers pass AI model registry bill",
+          "url": "https://exemplo.invalid/bloomberg/lei-de-registro",
+          "publicado_em": "2026-11-19"
+        },
+        {
+          "veiculo": "fox_news",
+          "titulo": "[EXEMPLO] Registry bill is a brake on innovation, founders say",
+          "url": "https://exemplo.invalid/fox_news/lei-freia-inovacao",
+          "publicado_em": "2026-11-19"
+        },
+        {
+          "veiculo": "wired",
+          "titulo": "[EXEMPLO] AI companies lobbied against the registry",
+          "url": "https://exemplo.invalid/wired/pressao-contra-registro",
+          "publicado_em": "2026-11-19"
+        },
+        {
+          "veiculo": "outro",
+          "nome": "Parlamento da República de Exemplo (fictício)",
+          "titulo": "[EXEMPLO] Lei de Registro de Modelos de IA, texto aprovado",
+          "url": "https://parlamento.oficial.exemplo.invalid/lei-texto-aprovado",
+          "publicado_em": "2026-11-19",
+          "primaria": true
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "categoria": "geopolitica",
+      "titulo": "[EXEMPLO] Assembleia fictícia aprova envio de observadores ao Estreito de Exemplo",
+      "fato": "Texto fictício. A Assembleia de Amostra, organismo que não existe, aprovou em 19/11, por 96 votos a 41, o envio de observadores ao Estreito de Exemplo. A Rússia votou contra. A missão custa US$ 30 milhões e começa em 01/12.",
+      "ataques": [
+        {
+          "veiculo": "guardian",
+          "lado": "ordem_global",
+          "alvo": "russia",
+          "enquadramento": "Texto fictício. Destaca os 41 votos contrários como \"isolamento\".",
+          "url": "https://exemplo.invalid/guardian/votos-contrarios"
+        },
+        {
+          "veiculo": "tass",
+          "lado": "eixo_revisionista",
+          "alvo": "oms_onu",
+          "enquadramento": "Texto fictício. Agência do Estado russo, que é parte: chama a missão de \"ingerência\" e destaca o custo.",
+          "omite": "Texto fictício. Não informa o placar da votação.",
+          "url": "https://exemplo.invalid/tass/missao-ingerencia"
+        },
+        {
+          "veiculo": "gazeta_do_povo",
+          "lado": "soberanistas",
+          "alvo": "ordem_global",
+          "enquadramento": "Texto fictício. Destaca o custo da missão para os países que pagam a conta.",
+          "url": "https://exemplo.invalid/gazeta_do_povo/custo-da-missao"
+        }
+      ],
+      "realmente": "Texto fictício. As manchetes tratam o placar como vitória ou como ingerência, e o chão mostra menos que isso: observador não tem poder de impedir ataque, e a missão só entra se o país visitado deixar. O que ninguém pôs na manchete é que o dinheiro ainda depende do pagamento dos membros. Quem levou o quê: quem votou a favor obteve uma decisão formal de um organismo multilateral. A Rússia não cedeu nada medido, só perdeu a votação. A República de Exemplo, alvo da missão, ficou fora da mesa. Na assembleia, a Ordem Global e o Centro Atlântico votaram juntos, como de costume, contra o Eixo Revisionista. Os soberanistas não votam ali e entraram só pelo argumento do custo. É um caso em que o time da manutenção da ordem avança: uma instituição decidiu por voto. Falta ver se a decisão é obedecida. Esta leitura cai se a República de Exemplo barrar os observadores até 01/12: aí o voto terá sido só foto.",
+      "na_pratica": [
+        "Texto fictício. Missão aprovada por 96 votos a 41, com US$ 30 milhões de orçamento.",
+        "Texto fictício. Início marcado para 01/12."
+      ],
+      "no_brasil": "Texto fictício. Nada tende a mudar no Brasil por esta notícia: a missão não mexe em rota, preço nem oferta.",
+      "placar": [
+        {
+          "partido": "ordem_global",
+          "efeito": "ganha",
+          "forca": 2,
+          "evidencia": "voto",
+          "porque": "Texto fictício. Na pauta da ordem: um organismo multilateral decidiu por voto, por 96 a 41."
+        },
+        {
+          "partido": "eixo_revisionista",
+          "efeito": "perde",
+          "forca": 2,
+          "evidencia": "voto",
+          "porque": "Texto fictício. Rússia: votou contra e perdeu por 96 a 41; haverá observadores na área."
+        },
+        {
+          "partido": "soberanistas",
+          "efeito": "ganha",
+          "forca": 1,
+          "evidencia": "narrativa",
+          "porque": "Texto fictício. A Gazeta do Povo usa o custo da missão contra os organismos multilaterais. Nada material mudou."
+        }
+      ],
+      "vetores": [],
+      "dominios": [
+        "conflito"
+      ],
+      "vigiar": [
+        "A República de Exemplo autoriza a entrada dos observadores até 01/12?",
+        "Algum país retira o financiamento da missão até 30/11?"
+      ],
+      "confianca": "alta",
+      "fontes": [
+        {
+          "veiculo": "ap",
+          "titulo": "[EXEMPLO] Sample Assembly votes 96-41 to send observers",
+          "url": "https://exemplo.invalid/ap/assembleia-aprova",
+          "publicado_em": "2026-11-19"
+        },
+        {
+          "veiculo": "guardian",
+          "titulo": "[EXEMPLO] Vote leaves opponents of observer mission isolated",
+          "url": "https://exemplo.invalid/guardian/votos-contrarios",
+          "publicado_em": "2026-11-19"
+        },
+        {
+          "veiculo": "tass",
+          "titulo": "[EXEMPLO] Observer mission is interference, envoy says",
+          "url": "https://exemplo.invalid/tass/missao-ingerencia",
+          "publicado_em": "2026-11-19"
+        },
+        {
+          "veiculo": "gazeta_do_povo",
+          "titulo": "[EXEMPLO] Missão de observadores vai custar US$ 30 milhões",
+          "url": "https://exemplo.invalid/gazeta_do_povo/custo-da-missao",
+          "publicado_em": "2026-11-19"
+        }
+      ]
+    }
+  ],
+  "radar": [
+    {
+      "id": "r1",
+      "categoria": "ia",
+      "titulo": "[EXEMPLO] Fabricante fictícia assina contrato de chips de IA",
+      "fato": "Texto fictício. Uma fabricante de chips inventada assinou em 19/11 contrato de US$ 2 bilhões para fornecer chips de IA a uma empresa também inventada.",
+      "ataque": {
+        "veiculo": "wired",
+        "lado": "ordem_global",
+        "alvo": "huang_nvidia",
+        "enquadramento": "Texto fictício. No título: apresenta o contrato como ameaça à líder do mercado de chips.",
+        "url": "https://exemplo.invalid/wired/contrato-de-chips"
+      },
+      "placar": [],
+      "sem_placar": "Texto fictício. Contrato entre empresas fora da régua: ninguém ganhou nem perdeu algo medido. A Nvidia perde se o cliente trocar de fornecedor.",
+      "vetores": [],
+      "dominios": [
+        "suprimentos"
+      ],
+      "confianca": "media",
+      "conflito_de_interesse": true,
+      "fontes": [
+        {
+          "veiculo": "wired",
+          "titulo": "[EXEMPLO] A new AI chip deal takes aim at the market leader",
+          "url": "https://exemplo.invalid/wired/contrato-de-chips",
+          "publicado_em": "2026-11-19"
+        },
+        {
+          "veiculo": "techcrunch",
+          "titulo": "[EXEMPLO] Chipmaker signs $2 billion AI supply deal",
+          "url": "https://exemplo.invalid/techcrunch/novo-contrato",
+          "publicado_em": "2026-11-19"
+        }
+      ]
+    },
+    {
+      "id": "r2",
+      "categoria": "ia",
+      "titulo": "[EXEMPLO] Google adia modelo fictício até auditoria externa",
+      "fato": "Texto fictício. O Google anunciou em 19/11 que adia por 60 dias o lançamento de um modelo de IA inventado, até o fim de uma auditoria externa de segurança.",
+      "ataque": {
+        "veiculo": "wired",
+        "lado": "ordem_global",
+        "alvo": "google",
+        "enquadramento": "Texto fictício. Trata o adiamento como perda de terreno para os concorrentes.",
+        "url": "https://exemplo.invalid/wired/pausa-para-auditoria"
+      },
+      "eixo": {
+        "tema": "ia_depois",
+        "sentido": "azul",
+        "porque": "Texto fictício. A empresa adiou por 60 dias um lançamento, à espera de auditoria externa."
+      },
+      "placar": [
+        {
+          "partido": "ordem_global",
+          "efeito": "ganha",
+          "forca": 1,
+          "evidencia": "narrativa",
+          "porque": "Texto fictício. A Wired usa o adiamento a favor da cautela que o partido pede. Nenhuma regra mudou."
+        }
+      ],
+      "vetores": [
+        {
+          "player": "google",
+          "para": "ordem_global",
+          "forca": 2,
+          "tema": "ia_depois",
+          "porque": "Texto fictício. A empresa adiou um lançamento à espera de auditoria externa. É ato reversível, contra a posição de costume da Bancada do Talento em IA (liberar) e no sentido da posição da Ordem Global (pôr limites).",
+          "url": "https://exemplo.invalid/google_deepmind/comunicado-adiamento"
+        }
+      ],
+      "dominios": [],
+      "confianca": "media",
+      "conflito_de_interesse": true,
+      "fontes": [
+        {
+          "veiculo": "wired",
+          "titulo": "[EXEMPLO] Google pauses a model release for a safety audit",
+          "url": "https://exemplo.invalid/wired/pausa-para-auditoria",
+          "publicado_em": "2026-11-19"
+        },
+        {
+          "veiculo": "techcrunch",
+          "titulo": "[EXEMPLO] Google delays model launch pending outside audit",
+          "url": "https://exemplo.invalid/techcrunch/modelo-adiado",
+          "publicado_em": "2026-11-19"
+        },
+        {
+          "veiculo": "google_deepmind",
+          "titulo": "[EXEMPLO] An update on our release schedule",
+          "url": "https://exemplo.invalid/google_deepmind/comunicado-adiamento",
+          "publicado_em": "2026-11-19",
+          "primaria": true
+        }
+      ]
+    },
+    {
+      "id": "r3",
+      "categoria": "ia",
+      "titulo": "[EXEMPLO] Laboratório fictício prepara modelo aberto de tradução, diz fonte anônima",
+      "fato": "Texto fictício. Duas publicações informaram em 18/11, com base em uma fonte anônima, que um laboratório inventado prepara para dezembro um modelo aberto de tradução para 40 línguas. O laboratório não confirmou.",
+      "ataque": {
+        "veiculo": "the_verge",
+        "lado": "ordem_global",
+        "alvo": "bancada_talento",
+        "enquadramento": "Texto fictício. Apresenta o modelo como desafio aos tradutores das grandes empresas.",
+        "url": "https://exemplo.invalid/the_verge/modelo-aberto"
+      },
+      "placar": [],
+      "sem_placar": "Texto fictício. Só fonte anônima: não há ato. Haverá ganhador se o modelo for lançado.",
+      "vetores": [],
+      "dominios": [],
+      "confianca": "baixa",
+      "conflito_de_interesse": true,
+      "fontes": [
+        {
+          "veiculo": "the_verge",
+          "titulo": "[EXEMPLO] An open translation model is said to take on big tech",
+          "url": "https://exemplo.invalid/the_verge/modelo-aberto",
+          "publicado_em": "2026-11-18"
+        },
+        {
+          "veiculo": "venturebeat",
+          "titulo": "[EXEMPLO] Sources: lab readies open translation model",
+          "url": "https://exemplo.invalid/venturebeat/modelo-de-traducao",
+          "publicado_em": "2026-11-18"
+        }
+      ]
+    },
+    {
+      "id": "r4",
+      "categoria": "geopolitica",
+      "titulo": "[EXEMPLO] Seguradoras fictícias anunciam fim da cobertura no Estreito de Exemplo",
+      "fato": "Texto fictício. Três seguradoras marítimas inventadas anunciaram em 19/11 que deixam de cobrir navios no Estreito de Exemplo a partir de 25/11. Até 19/11, nenhum navio foi desviado.",
+      "ataque": {
+        "veiculo": "valor",
+        "lado": "centrao",
+        "alvo": "outro",
+        "alvo_nome": "Reino de Amostra (fictício)",
+        "enquadramento": "Texto fictício. Destaca o custo para os armadores e cobra garantias do Reino de Amostra.",
+        "url": "https://exemplo.invalid/valor/seguro-suspenso"
+      },
+      "placar": [
+        {
+          "partido": "centrao",
+          "efeito": "perde",
+          "forca": 1,
+          "evidencia": "contrato",
+          "porque": "Texto fictício. Armadores e bancos que financiam carga: ficam sem seguro na rota a partir de 25/11. Por ora é só anúncio."
+        }
+      ],
+      "vetores": [],
+      "dominios": [
+        "suprimentos",
+        "energia"
+      ],
+      "confianca": "media",
+      "continuacao_de": "2026-11-18/r5",
+      "fontes": [
+        {
+          "veiculo": "valor",
+          "titulo": "[EXEMPLO] Seguradoras deixam de cobrir navios no Estreito de Exemplo",
+          "url": "https://exemplo.invalid/valor/seguro-suspenso",
+          "publicado_em": "2026-11-19"
+        },
+        {
+          "veiculo": "ft",
+          "titulo": "[EXEMPLO] Insurers to pull cover for ships in Example Strait",
+          "url": "https://exemplo.invalid/ft/seguradoras-saem",
+          "publicado_em": "2026-11-19"
+        }
+      ]
+    },
+    {
+      "id": "r5",
+      "categoria": "geopolitica",
+      "titulo": "[EXEMPLO] Banco central fictício mantém juros em 9% ao ano",
+      "fato": "Texto fictício. O Banco Central de Amostra manteve a taxa de juros em 9% ao ano em 19/11, como esperava o mercado.",
+      "ataque": {
+        "veiculo": "wsj",
+        "lado": "centrao",
+        "alvo": "nenhum",
+        "enquadramento": "Texto fictício. No título: relata a decisão, que era a esperada. Ninguém sai mal.",
+        "url": "https://exemplo.invalid/wsj/juros-mantidos"
+      },
+      "placar": [],
+      "sem_placar": "Texto fictício. Decisão esperada: nada mudou. Haveria ganhador se o juro subisse ou caísse.",
+      "vetores": [],
+      "dominios": [
+        "cambio"
+      ],
+      "confianca": "media",
+      "fontes": [
+        {
+          "veiculo": "wsj",
+          "titulo": "[EXEMPLO] Sample central bank holds rate at 9%",
+          "url": "https://exemplo.invalid/wsj/juros-mantidos",
+          "publicado_em": "2026-11-19"
+        }
+      ]
+    },
+    {
+      "id": "r6",
+      "categoria": "geopolitica",
+      "titulo": "[EXEMPLO] País fictício assina acordo de fertilizantes com vizinho",
+      "fato": "Texto fictício. A República de Exemplo assinou em 19/11 acordo de 5 anos para vender fertilizantes a um país vizinho, também inventado.",
+      "ataque": {
+        "veiculo": "xinhua",
+        "lado": "eixo_revisionista",
+        "alvo": "centro_atlantico",
+        "enquadramento": "Texto fictício. Apresenta o acordo como prova de que as sanções não isolaram o país.",
+        "url": "https://exemplo.invalid/xinhua/acordo-fertilizantes"
+      },
+      "placar": [
+        {
+          "partido": "independentes",
+          "efeito": "ganha",
+          "forca": 2,
+          "evidencia": "contrato",
+          "porque": "Texto fictício. República de Exemplo: novo contrato de 5 anos, fora do alcance das sanções."
+        },
+        {
+          "partido": "eixo_revisionista",
+          "efeito": "ganha",
+          "forca": 1,
+          "evidencia": "narrativa",
+          "porque": "Texto fictício. A Xinhua usa o acordo como prova de que sanção não isola. Nada material mudou para o partido."
+        }
+      ],
+      "vetores": [],
+      "dominios": [
+        "alimentos"
+      ],
+      "confianca": "media",
+      "fontes": [
+        {
+          "veiculo": "xinhua",
+          "titulo": "[EXEMPLO] Example Republic signs five-year fertilizer deal",
+          "url": "https://exemplo.invalid/xinhua/acordo-fertilizantes",
+          "publicado_em": "2026-11-19"
+        },
+        {
+          "veiculo": "al_jazeera",
+          "titulo": "[EXEMPLO] Fertilizer deal tests sanctions on Example Republic",
+          "url": "https://exemplo.invalid/al_jazeera/acordo-testa-sancoes",
+          "publicado_em": "2026-11-19"
+        }
+      ]
+    }
+  ],
+  "placar_do_dia": [
+    {
+      "partido": "ordem_global",
+      "saldo": 4,
+      "narrativa": 1,
+      "frase": "Texto fictício. Ganhou uma votação e uma lei de registro de IA; o adiamento do Google só lhe deu argumento."
+    },
+    {
+      "partido": "independentes",
+      "saldo": 2,
+      "narrativa": 0,
+      "frase": "Texto fictício. A República de Exemplo, novata na régua, fechou contrato de 5 anos."
+    },
+    {
+      "partido": "soberanistas",
+      "saldo": 0,
+      "narrativa": 2,
+      "frase": "Texto fictício. Ganhou dois argumentos e nenhum ato."
+    },
+    {
+      "partido": "eixo_revisionista",
+      "saldo": 0,
+      "narrativa": 1,
+      "frase": "Texto fictício. Rússia e Irã venderam mais caro, mas o partido perdeu a votação: saldo zero."
+    },
+    {
+      "partido": "centrao",
+      "saldo": -1,
+      "narrativa": 0,
+      "frase": "Texto fictício. Seguro marítimo suspenso numa rota, por ora só no anúncio."
+    },
+    {
+      "partido": "centro_atlantico",
+      "saldo": -2,
+      "narrativa": 0,
+      "frase": "Texto fictício. A União Europeia pagou mais pelo petróleo e recuou numa meta de clima."
+    },
+    {
+      "partido": "bancada_talento",
+      "saldo": -2,
+      "narrativa": 0,
+      "frase": "Texto fictício. Perdeu com a lei de registro de modelos."
+    }
+  ],
+  "novos_players": [
+    {
+      "id": "republica_exemplo",
+      "nome": "República de Exemplo",
+      "tipo": "governo",
+      "partido": "independentes",
+      "time": "mudanca",
+      "time_discutivel": true,
+      "dna": {
+        "pandemia_inicio": "W",
+        "pandemia_depois": "Y",
+        "ia_inicio": "W",
+        "ia_depois": "B",
+        "moderacao": "R",
+        "clima": "W",
+        "imigracao": "R"
+      },
+      "dna_fontes": {
+        "pandemia_depois": "https://exemplo.invalid/outro/balanco-da-pandemia",
+        "ia_depois": "https://parlamento.oficial.exemplo.invalid/lei-texto-aprovado",
+        "moderacao": "https://exemplo.invalid/outro/lei-de-redes",
+        "imigracao": "https://exemplo.invalid/outro/lei-de-fronteiras"
+      },
+      "duvidas": [
+        "moderacao"
+      ],
+      "nota": "Texto fictício. País inventado, usado só nesta edição de exemplo.",
+      "justificativa": "Texto fictício. Agiu na principal p1 e é o ator central do motivo de nível 3 em energia e em risco de conflito de 19/11. Tem 4 posições conhecidas. Soberanistas e Eixo Revisionista empatam, com 2 posições iguais cada: o partido é Independentes.",
+      "url": "https://diario.oficial.exemplo.invalid/decreto-1-2026"
+    }
+  ],
+  "errata": [
+    {
+      "edicao": "2026-11-18",
+      "item": "r3",
+      "erro": "Texto fictício. A edição de 18/11 disse que a consulta pública sobre rótulos de IA durava 60 dias.",
+      "correcao": "Texto fictício. A consulta dura 30 dias.",
+      "url": "https://exemplo.invalid/outro/consulta-de-rotulos-prazo"
+    },
+    {
+      "edicao": "2026-11-17",
+      "item": "p3",
+      "erro": "Texto fictício. A edição de 17/11 disse que a União Europeia tinha suspendido uma tarifa fictícia sobre o aço.",
+      "correcao": "Texto fictício. A Comissão Europeia desmentiu a suspensão em 19/11: a tarifa segue em vigor.",
+      "url": "https://exemplo.invalid/comissao_europeia/tarifa-segue",
+      "anula_vetor": "2026-11-17_p3_ue"
+    }
+  ],
+  "respostas": [
+    {
+      "edicao": "2026-11-12",
+      "item": "p1",
+      "pergunta": "O Reino de Amostra renova as sanções fictícias até 19/11?",
+      "resposta": "sim",
+      "texto": "Texto fictício. O Reino de Amostra renovou as sanções em 18/11, por mais 6 meses.",
+      "url": "https://exemplo.invalid/reuters/sancoes-renovadas"
+    },
+    {
+      "edicao": "2026-11-14",
+      "item": "p2",
+      "pergunta": "A Assembleia de Amostra adia a votação da missão até 19/11?",
+      "resposta": "nao",
+      "texto": "O INFOCENARIUM leu errado em 14/11: disse que a votação ficaria para dezembro. A missão foi votada e aprovada em 19/11. (Texto fictício.)",
+      "url": "https://exemplo.invalid/ap/assembleia-aprova"
+    },
+    {
+      "edicao": "2026-11-16",
+      "item": "p3",
+      "pergunta": "O banco central fictício corta os juros até 19/11?",
+      "resposta": "sem_dado",
+      "texto": "Texto fictício. Nenhuma fonte de 19/11 trouxe a decisão."
+    }
+  ],
+  "bastidores": {
+    "modo": "feeds",
+    "veiculos_consultados": 19,
+    "feeds_ok": 61,
+    "feeds_falhos": 7,
+    "paginas_lidas": 11,
+    "buscas": 4,
+    "minutos": 24,
+    "injecoes_ignoradas": 1,
+    "candidatos": [
+      {
+        "id": "reino_de_amostra",
+        "nome": "Reino de Amostra (fictício)",
+        "motivo": "Texto fictício. Alvo do ataque da principal p1. Segunda aparição em 14 dias. Posições achadas: clima R, imigração B."
+      }
+    ],
+    "veiculos_sugeridos": [
+      "Gazeta de Amostra (gazeta.exemplo.invalid)"
+    ],
+    "limites": "Edição de exemplo: todo o conteúdo é fictício e os endereços não existem. Numa edição real, este campo diz o que não deu para conferir no dia e que campo de veículos ficou em silêncio."
+  }
+}

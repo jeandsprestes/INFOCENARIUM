@@ -1,0 +1,661 @@
+{
+  "versao": 1,
+  "atualizado_em": "2026-11-24",
+  "regra": "Ninguém muda de partido. Movimento se registra em dados/vetores.json. A rotina pode acrescentar players novos (origem: rotina), nunca apagar nem reclassificar.",
+  "players": [
+    {
+      "id": "oms_onu",
+      "nome": "OMS/ONU",
+      "tipo": "instituicao",
+      "partido": "ordem_global",
+      "time": "manutencao",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "B",
+        "pandemia_depois": "B",
+        "ia_inicio": "B",
+        "ia_depois": "B",
+        "moderacao": "B",
+        "clima": "B",
+        "imigracao": "B"
+      },
+      "duvidas": [],
+      "nota": "O sistema multilateral: saúde, regras para IA, clima e migração. Sem os EUA na OMS desde jan/2026; sucessão de Guterres em disputa em nov/2026.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "nyt",
+      "nome": "The New York Times",
+      "tipo": "instituicao",
+      "partido": "ordem_global",
+      "time": "manutencao",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "B",
+        "pandemia_depois": "B",
+        "ia_inicio": "B",
+        "ia_depois": "B",
+        "moderacao": "B",
+        "clima": "B",
+        "imigracao": "B"
+      },
+      "duvidas": [],
+      "nota": "Jornal de referência do establishment americano; processa a OpenAI por direito autoral.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "igreja",
+      "nome": "Igreja Católica",
+      "tipo": "instituicao",
+      "partido": "ordem_global",
+      "time": "manutencao",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "B",
+        "pandemia_depois": "B",
+        "ia_inicio": "B",
+        "ia_depois": "B",
+        "moderacao": "B",
+        "clima": "B",
+        "imigracao": "B"
+      },
+      "duvidas": [],
+      "nota": "Voz moral global: encíclica de 2026 pede 'desarmar' a IA e frear o poder das big techs; defende o clima e o acolhimento a migrantes.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "globo",
+      "nome": "TV Globo",
+      "tipo": "instituicao",
+      "partido": "ordem_global",
+      "time": "manutencao",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "B",
+        "pandemia_depois": "B",
+        "ia_inicio": "W",
+        "ia_depois": "B",
+        "moderacao": "B",
+        "clima": "B",
+        "imigracao": "W"
+      },
+      "duvidas": [
+        "ia_depois"
+      ],
+      "nota": "Maior grupo de mídia do Brasil; fez a campanha do 'fique em casa' e faz checagem de fatos.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "fox",
+      "nome": "Fox News",
+      "tipo": "instituicao",
+      "partido": "soberanistas",
+      "time": "mudanca",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "R",
+        "pandemia_depois": "R",
+        "ia_inicio": "B",
+        "ia_depois": "R",
+        "moderacao": "R",
+        "clima": "R",
+        "imigracao": "R"
+      },
+      "duvidas": [
+        "ia_inicio",
+        "ia_depois"
+      ],
+      "nota": "Principal canal conservador dos EUA; minimizou a pandemia e combate a moderação de conteúdo.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "lula",
+      "nome": "Lula",
+      "tipo": "governo",
+      "partido": "ordem_global",
+      "time": "manutencao",
+      "time_discutivel": true,
+      "dna": {
+        "pandemia_inicio": "B",
+        "pandemia_depois": "B",
+        "ia_inicio": "B",
+        "ia_depois": "B",
+        "moderacao": "B",
+        "clima": "B",
+        "imigracao": "B"
+      },
+      "duvidas": [],
+      "nota": "Reeleito em 2026. Defende regular IA e redes e a agenda do clima, com a contradição do petróleo; quer reformar a ordem por dentro.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "biden",
+      "nome": "Joe Biden",
+      "tipo": "governo",
+      "partido": "centro_atlantico",
+      "time": "manutencao",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "B",
+        "pandemia_depois": "B",
+        "ia_inicio": "B",
+        "ia_depois": "K",
+        "moderacao": "B",
+        "clima": "B",
+        "imigracao": "BR"
+      },
+      "duvidas": [],
+      "nota": "Presidente dos EUA até jan/2025; regulou a IA por decreto e endureceu o asilo no fim do mandato.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "ue",
+      "nome": "União Europeia",
+      "tipo": "governo",
+      "partido": "centro_atlantico",
+      "time": "manutencao",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "B",
+        "pandemia_depois": "B",
+        "ia_inicio": "B",
+        "ia_depois": "Y",
+        "moderacao": "B",
+        "clima": "BY",
+        "imigracao": "YR"
+      },
+      "duvidas": [],
+      "nota": "AI Act, Lei de Serviços Digitais e Pacto Verde; em 2026 adiou regras de IA de alto risco e endureceu a política de retorno de migrantes.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "macron",
+      "nome": "Emmanuel Macron",
+      "tipo": "governo",
+      "partido": "centro_atlantico",
+      "time": "manutencao",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "B",
+        "pandemia_depois": "B",
+        "ia_inicio": "R",
+        "ia_depois": "R",
+        "moderacao": "B",
+        "clima": "B",
+        "imigracao": "YR"
+      },
+      "duvidas": [],
+      "nota": "Freia na saúde e na fala, libera na IA (Mistral) e endureceu a imigração.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "boris",
+      "nome": "Boris Johnson",
+      "tipo": "governo",
+      "partido": "independentes",
+      "time": "mudanca",
+      "time_discutivel": true,
+      "dna": {
+        "pandemia_inicio": "R",
+        "pandemia_depois": "B",
+        "ia_inicio": "W",
+        "ia_depois": "W",
+        "moderacao": "B",
+        "clima": "B",
+        "imigracao": "Y"
+      },
+      "duvidas": [
+        "moderacao"
+      ],
+      "nota": "Ex-premiê britânico: Brexit, virada na pandemia, COP26; fora do cargo desde 2022.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "meloni",
+      "nome": "Giorgia Meloni",
+      "tipo": "governo",
+      "partido": "independentes",
+      "time": "manutencao",
+      "time_discutivel": true,
+      "dna": {
+        "pandemia_inicio": "B",
+        "pandemia_depois": "R",
+        "ia_inicio": "B",
+        "ia_depois": "B",
+        "moderacao": "Y",
+        "clima": "Y",
+        "imigracao": "R"
+      },
+      "duvidas": [
+        "pandemia_inicio",
+        "moderacao",
+        "clima"
+      ],
+      "nota": "Chegou com discurso de ruptura e governa dentro da OTAN e da UE; fez a 1ª lei nacional de IA da UE.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "modi",
+      "nome": "Narendra Modi",
+      "tipo": "governo",
+      "partido": "independentes",
+      "time": "mudanca",
+      "time_discutivel": true,
+      "dna": {
+        "pandemia_inicio": "B",
+        "pandemia_depois": "Y",
+        "ia_inicio": "R",
+        "ia_depois": "Y",
+        "moderacao": "B",
+        "clima": "Y",
+        "imigracao": "R"
+      },
+      "duvidas": [],
+      "nota": "Multialinhado: vota ora com o Ocidente, ora com Rússia e China.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "trump",
+      "nome": "Donald Trump",
+      "tipo": "governo",
+      "partido": "soberanistas",
+      "time": "mudanca",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "R",
+        "pandemia_depois": "Y",
+        "ia_inicio": "W",
+        "ia_depois": "R",
+        "moderacao": "R",
+        "clima": "R",
+        "imigracao": "R"
+      },
+      "duvidas": [],
+      "nota": "Tarifas (derrubadas na Suprema Corte em fev/2026, refeitas por outras leis), saída da OMS e de Paris, aceleração da IA e deportações; perdeu o Congresso na eleição de nov/2026.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "bolsonaro",
+      "nome": "Jair Bolsonaro",
+      "tipo": "governo",
+      "partido": "soberanistas",
+      "time": "mudanca",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "R",
+        "pandemia_depois": "R",
+        "ia_inicio": "W",
+        "ia_depois": "R",
+        "moderacao": "R",
+        "clima": "R",
+        "imigracao": "R"
+      },
+      "duvidas": [
+        "ia_depois"
+      ],
+      "nota": "Condenado em 2025 por tentativa de golpe e em prisão domiciliar desde mar/2026; minimizou a pandemia; aliados combatem a regulação das redes e da IA.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "china",
+      "nome": "China",
+      "tipo": "regime",
+      "partido": "eixo_revisionista",
+      "time": "mudanca",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "R",
+        "pandemia_depois": "B",
+        "ia_inicio": "B",
+        "ia_depois": "Y",
+        "moderacao": "B",
+        "clima": "Y",
+        "imigracao": "R"
+      },
+      "duvidas": [],
+      "nota": "Controle estatal em casa, IA própria (DeepSeek), líder em renováveis e em carvão; 'IA Plus' no plano 2026-2030, com regras de segurança.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "russia",
+      "nome": "Rússia",
+      "tipo": "regime",
+      "partido": "eixo_revisionista",
+      "time": "mudanca",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "B",
+        "pandemia_depois": "Y",
+        "ia_inicio": "Y",
+        "ia_depois": "R",
+        "moderacao": "B",
+        "clima": "R",
+        "imigracao": "YR"
+      },
+      "duvidas": [
+        "ia_inicio"
+      ],
+      "nota": "Potência revisionista: guerra na Ucrânia, IA soberana, economia de petróleo e gás.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "lukashenko",
+      "nome": "Lukashenko (Bielorrússia)",
+      "tipo": "regime",
+      "partido": "eixo_revisionista",
+      "time": "mudanca",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "R",
+        "pandemia_depois": "R",
+        "ia_inicio": "W",
+        "ia_depois": "W",
+        "moderacao": "B",
+        "clima": "W",
+        "imigracao": "B"
+      },
+      "duvidas": [],
+      "nota": "Aliado de Moscou; usou migrantes como arma contra a UE em 2021.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "ira",
+      "nome": "Irã",
+      "tipo": "regime",
+      "partido": "eixo_revisionista",
+      "time": "mudanca",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "R",
+        "pandemia_depois": "Y",
+        "ia_inicio": "W",
+        "ia_depois": "Y",
+        "moderacao": "B",
+        "clima": "R",
+        "imigracao": "R"
+      },
+      "duvidas": [
+        "ia_depois"
+      ],
+      "nota": "República Islâmica em guerra com EUA e Israel desde fev/2026; líder supremo é Mojtaba Khamenei desde mar/2026; sanções, programa nuclear e censura.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "coreia_do_norte",
+      "nome": "Coreia do Norte",
+      "tipo": "regime",
+      "partido": "eixo_revisionista",
+      "time": "mudanca",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "R",
+        "pandemia_depois": "R",
+        "ia_inicio": "W",
+        "ia_depois": "W",
+        "moderacao": "B",
+        "clima": "W",
+        "imigracao": "R"
+      },
+      "duvidas": [],
+      "nota": "Regime fechado; armas nucleares e operações cibernéticas.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "apple",
+      "nome": "Apple",
+      "tipo": "empresa",
+      "partido": "ordem_global",
+      "time": "manutencao",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "B",
+        "pandemia_depois": "B",
+        "ia_inicio": "B",
+        "ia_depois": "R",
+        "moderacao": "B",
+        "clima": "B",
+        "imigracao": "B"
+      },
+      "duvidas": [],
+      "nota": "Big tech estabelecida: privacidade, metas climáticas e adoção cautelosa da IA. Desde set/2026 o CEO é John Ternus.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "gates",
+      "nome": "Bill Gates",
+      "tipo": "empresa",
+      "partido": "bancada_talento",
+      "time": "manutencao",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "B",
+        "pandemia_depois": "B",
+        "ia_inicio": "R",
+        "ia_depois": "R",
+        "moderacao": "B",
+        "clima": "BY",
+        "imigracao": "B"
+      },
+      "duvidas": [],
+      "nota": "Alarme na pandemia, entusiasmo com a IA e clima relativizado em 2025.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "google",
+      "nome": "Google",
+      "tipo": "empresa",
+      "partido": "bancada_talento",
+      "time": "manutencao",
+      "time_discutivel": true,
+      "dna": {
+        "pandemia_inicio": "B",
+        "pandemia_depois": "Y",
+        "ia_inicio": "B",
+        "ia_depois": "R",
+        "moderacao": "BY",
+        "clima": "BY",
+        "imigracao": "B"
+      },
+      "duvidas": [],
+      "nota": "De cauteloso a acelerador na IA (Gemini); afrouxou a moderação em 2025.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "anthropic",
+      "nome": "Anthropic",
+      "tipo": "empresa",
+      "partido": "independentes",
+      "time": "mudanca",
+      "time_discutivel": true,
+      "dna": {
+        "pandemia_inicio": "W",
+        "pandemia_depois": "W",
+        "ia_inicio": "B",
+        "ia_depois": "B",
+        "moderacao": "W",
+        "clima": "W",
+        "imigracao": "W"
+      },
+      "duvidas": [],
+      "nota": "Laboratório de IA na Nasdaq desde 19/11/2026; defende regulação e contesta na Justiça o rótulo de risco à cadeia de suprimentos dado pelo Pentágono em 2026. Faz o modelo que escreve o INFOCENARIUM.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "samsung",
+      "nome": "Samsung",
+      "tipo": "empresa",
+      "partido": "centrao",
+      "time": "manutencao",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "W",
+        "pandemia_depois": "B",
+        "ia_inicio": "B",
+        "ia_depois": "R",
+        "moderacao": "W",
+        "clima": "Y",
+        "imigracao": "W"
+      },
+      "duvidas": [
+        "clima"
+      ],
+      "nota": "Conglomerado coreano de chips e aparelhos; só se posiciona quando o negócio é afetado.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "altman",
+      "nome": "Sam Altman (OpenAI)",
+      "tipo": "empresa",
+      "partido": "bancada_talento",
+      "time": "mudanca",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "W",
+        "pandemia_depois": "W",
+        "ia_inicio": "Y",
+        "ia_depois": "R",
+        "moderacao": "W",
+        "clima": "W",
+        "imigracao": "B"
+      },
+      "duvidas": [
+        "pandemia_inicio"
+      ],
+      "nota": "Lançou o ChatGPT; passou de pedir regulação a acelerar.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "meta",
+      "nome": "Meta",
+      "tipo": "empresa",
+      "partido": "bancada_talento",
+      "time": "mudanca",
+      "time_discutivel": true,
+      "dna": {
+        "pandemia_inicio": "B",
+        "pandemia_depois": "Y",
+        "ia_inicio": "R",
+        "ia_depois": "R",
+        "moderacao": "BR",
+        "clima": "BY",
+        "imigracao": "B"
+      },
+      "duvidas": [],
+      "nota": "IA aberta (LLaMA); encerrou a checagem de fatos nos EUA em 2025.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "huang_nvidia",
+      "nome": "Jensen Huang (Nvidia)",
+      "tipo": "empresa",
+      "partido": "bancada_talento",
+      "time": "mudanca",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "W",
+        "pandemia_depois": "W",
+        "ia_inicio": "R",
+        "ia_depois": "R",
+        "moderacao": "W",
+        "clima": "Y",
+        "imigracao": "B"
+      },
+      "duvidas": [],
+      "nota": "Cofundador e presidente-executivo da Nvidia, que fornece os chips da IA. Renunciou em nov/2026 e o conselho o reconduziu em 23/11/2026. Há anos defende vender chips à China.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "morgan_stanley",
+      "nome": "Morgan Stanley",
+      "tipo": "empresa",
+      "partido": "centrao",
+      "time": "manutencao",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "W",
+        "pandemia_depois": "Y",
+        "ia_inicio": "R",
+        "ia_depois": "R",
+        "moderacao": "W",
+        "clima": "BY",
+        "imigracao": "W"
+      },
+      "duvidas": [],
+      "nota": "Banco de Wall Street; adotou a IA cedo e saiu da aliança climática dos bancos.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "musk",
+      "nome": "Elon Musk",
+      "tipo": "empresa",
+      "partido": "soberanistas",
+      "time": "mudanca",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "R",
+        "pandemia_depois": "R",
+        "ia_inicio": "B",
+        "ia_depois": "R",
+        "moderacao": "R",
+        "clima": "BY",
+        "imigracao": "Y"
+      },
+      "duvidas": [],
+      "nota": "SpaceX (com xAI e X) e Tesla; 'absolutista' da liberdade de expressão; rival da OpenAI. SpaceX tem ações na bolsa desde jun/2026.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    },
+    {
+      "id": "thiel",
+      "nome": "Peter Thiel",
+      "tipo": "empresa",
+      "partido": "soberanistas",
+      "time": "mudanca",
+      "time_discutivel": false,
+      "dna": {
+        "pandemia_inicio": "W",
+        "pandemia_depois": "W",
+        "ia_inicio": "R",
+        "ia_depois": "R",
+        "moderacao": "R",
+        "clima": "R",
+        "imigracao": "R"
+      },
+      "duvidas": [
+        "pandemia_inicio",
+        "pandemia_depois"
+      ],
+      "nota": "Investidor (Palantir); polo extremo da liberação tecnológica.",
+      "origem": "regua",
+      "incluido_em": "2026-11-20"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<title>Feed de exemplo</title>
+<link>https://feed.exemplo.invalid/</link>
+<description>Feed fictício, para teste.</description>
+<item>
+<title>ARMADILHA feed de formato html não é lido</title>
+<link>https://portal-in.exemplo.invalid/armadilha</link>
+<description>Esta manchete não pode aparecer.</description>
+<pubDate>Fri, 20 Nov 2026 20:00:00 +0000</pubDate>
+</item>
+</channel>
+</rss>

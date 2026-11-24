@@ -1,0 +1,2432 @@
+/* INFOCENARIUM · estilo do site
+ *
+ * Um arquivo só, sem fonte, imagem nem folha de fora.
+ * Regra de ouro: uma vista, um trabalho de cor. No Painel, no Arquivo e no
+ * Método, a única cor de dado é a do nível de alerta. Na Régua, a única cor de
+ * dado é a da posição do DNA. As cores abaixo foram validadas por script:
+ * trocar qualquer uma pede nova validação.
+ *
+ * Nomes das classes: bloco, bloco__parte, bloco--variante.
+ * O arquivo é dividido em blocos numerados. Componente novo entra em bloco
+ * novo, antes dos blocos de tamanho de tela, de acessibilidade e de impressão.
+ *
+ *  1. Variáveis                  13. Placar do dia
+ *  2. Base e tipografia          14. Vigiar, respostas e movimentos
+ *  3. Utilitários                15. Radar e filtros
+ *  4. Página, topo e navegação   16. Bastidores e rodapé
+ *  5. Carimbo, placas e avisos   17. Tabela
+ *  6. Seções e grade do Painel   18. Arquivo
+ *  7. Controles                  19. Régua
+ *  8. Etiquetas, selo e medidor  20. Método
+ *  9. Bloco de alerta e fita     21. Tamanhos de tela
+ * 10. Domínios                   22. Preferências de acessibilidade
+ * 11. Indicadores                23. Impressão
+ * 12. Principais, dossiê e linhas de item
+ */
+
+/* ==========================================================================
+   1. Variáveis
+   ========================================================================== */
+
+:root {
+  color-scheme: dark;
+
+  /* superfícies */
+  --plano: #0b0e11;            /* fundo da página */
+  --painel: #12161b;           /* cartões, fichas, barra de navegação */
+  --relevo: #1a2027;           /* cabeçalho de tabela, linha sob o ponteiro, avisos */
+  --fio: #222a32;              /* grade e divisória fina (decorativo) */
+  --fio-forte: #313a44;        /* borda de cartão, eixo, linha de base (decorativo) */
+  --borda-controle: #6f7b88;   /* borda de botão, campo, etiqueta de partido, células W e K */
+
+  /* texto */
+  --texto: #e6ebf0;
+  --texto-2: #b3bcc6;
+  --texto-3: #8d98a4;          /* rótulos, eixos, "sem dado" */
+  --tinta-escura: #0b0e11;     /* letra sobre preenchimento claro */
+  --tinta-clara: #ffffff;      /* letra sobre preenchimento escuro */
+
+  /* destaque: só interação (link, foco, vista ativa, botão principal) */
+  --destaque: #6cc5d6;
+
+  /* dado neutro: barras do placar, fitas, mini-linhas, pontos de força */
+  --tinta-dado: #8d98a4;
+  --tinta-dado-forte: #e6ebf0; /* a coluna da edição em tela; o ponto final da mini-linha */
+
+  /* níveis de alerta: cor só em ícone, medidor e filete; trilho = segmento apagado */
+  --alerta-1: #04896e;  --alerta-1-trilho: #0e3632;   /* ROTINA */
+  --alerta-2: #a39700;  --alerta-2-trilho: #3b3a13;   /* ATENÇÃO */
+  --alerta-3: #9f5910;  --alerta-3-trilho: #392918;   /* TENSÃO */
+  --alerta-4: #e13d62;  --alerta-4-trilho: #4c212f;   /* CRISE */
+  --alerta-5: #b15bdd;  --alerta-5-trilho: #3f2951;   /* EMERGÊNCIA */
+
+  /* posições do DNA: só na Régua */
+  --dna-b: #256abf;  --dna-b-letra: #ffffff;   /* B, polo azul */
+  --dna-y: #c98500;  --dna-y-letra: #0b0e11;   /* Y, misto */
+  --dna-r: #d1273f;  --dna-r-letra: #ffffff;   /* R, polo vermelho */
+  --dna-w: transparent;                        /* W, sem posição: vazia, com borda */
+  --dna-k: #000000;                            /* K, saiu do cargo: preta, com borda */
+  --dna-wk-borda: #6f7b88;
+  --dna-wk-letra: #b3bcc6;
+
+  /* partidos: sigla, sem matiz */
+  --partido-fundo: transparent;
+  --partido-borda: #6f7b88;
+  --partido-letra: #e6ebf0;
+
+  /* placar: ganha e perde usam a mesma tinta, de propósito */
+  --placar-ganha: #8d98a4;
+  --placar-perde: #8d98a4;
+  --placar-eixo: #313a44;
+
+  /* tipografia: só fontes do sistema */
+  --fonte-texto: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Liberation Sans", Arial, sans-serif;
+  --fonte-mono: ui-monospace, "SF Mono", "Cascadia Mono", "Roboto Mono", "DejaVu Sans Mono", "Liberation Mono", Menlo, Consolas, monospace;
+  --t-rotulo: 0.75rem;     /* 12 px: rótulos, etiquetas, siglas (mono, caixa alta, 600, espaço 0.08em) */
+  --t-meta: 0.8125rem;     /* 13 px: variações, datas, rodapés de ficha */
+  --t-pequeno: 0.875rem;   /* 14 px: texto de apoio */
+  --t-corpo: 1rem;         /* 16 px: corpo; entrelinha 1.55 */
+  --t-leitura: 1.0625rem;  /* 17 px: texto "realmente"; entrelinha 1.6; medida máxima 68ch */
+  --t-item: 1.125rem;      /* 18 px: título de linha do radar e de cartão no celular */
+  --t-titulo: 1.375rem;    /* 22 px: frase do dia, título de principal, rótulo do nível; entrelinha 1.3 */
+  --t-valor: 1.25rem;      /* 20 px: valor de indicador; peso 600 */
+  --t-heroi: 4rem;         /* 64 px: numeral do alerta; peso 600; entrelinha 1; um só por vista */
+
+  /* espaços */
+  --e1: 4px; --e2: 8px; --e3: 12px; --e4: 16px; --e5: 24px; --e6: 32px; --e7: 48px; --e8: 72px;
+
+  /* bordas e raios */
+  --borda: 1px solid var(--fio-forte);
+  --raio-1: 2px;           /* etiquetas, células, segmentos */
+  --raio-2: 4px;           /* cartões, botões, avisos */
+  --foco: 2px solid var(--destaque);   /* com outline-offset de 2px */
+
+  /* medidas de apoio (derivadas das tabelas de componentes) */
+  --margem: var(--e4);     /* margem lateral: 16 px no compacto, 24 px nos outros */
+  --largura-max: 1240px;   /* largura máxima do conteúdo */
+  --altura-topo: 56px;
+  --altura-nav: 56px;
+  --toque: 36px;           /* altura de botão; 44 px em tela de toque */
+}
+
+/* ==========================================================================
+   2. Base e tipografia
+   ========================================================================== */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--plano);
+  color: var(--texto);
+  font-family: var(--fonte-texto);
+  font-size: var(--t-corpo);
+  line-height: 1.55;
+  /* texto longo sem espaço (endereço, id) quebra em vez de vazar para o lado */
+  overflow-wrap: anywhere;
+}
+
+h1, h2, h3, h4, p, ul, ol, dl, dd, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+h1, h2, h3, h4 { font-size: inherit; font-weight: 600; line-height: 1.3; }
+
+a {
+  color: var(--destaque);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+abbr[title] { text-decoration: none; }
+
+svg { flex: none; }
+
+/* O atributo hidden manda sempre: dobra fechada, filtro que tirou a linha. */
+[hidden] { display: none !important; }
+
+:focus {
+  outline: var(--foco);
+  outline-offset: 2px;
+}
+
+/* ==========================================================================
+   3. Utilitários
+   ========================================================================== */
+
+/* Fica fora da vista e continua lido pelo leitor de tela. */
+.so-leitor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Só existe no papel (bloco 23). */
+.so-impressao { display: none; }
+
+.simbolos {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.mono {
+  font-family: var(--fonte-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Rótulo: mono de 12 px, caixa alta, peso 600. */
+.rotulo {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-3);
+}
+
+.icone {
+  width: 16px;
+  height: 16px;
+  vertical-align: -3px;
+}
+.icone--14 { width: 14px; height: 14px; vertical-align: -2px; }
+.icone--28 { width: 28px; height: 28px; }
+/* seta de tendência e seta entre origem e destino */
+.icone--seta { color: var(--texto-2); }
+/* a mesma dobra serve de "anterior" quando virada */
+.icone--volta { transform: rotate(180deg); }
+
+.texto-2 { color: var(--texto-2); }
+.texto-3 { color: var(--texto-3); }
+.vazio { color: var(--texto-3); font-size: var(--t-pequeno); }
+
+/* id cru, quando a referência não existe no arquivo de apoio */
+.id-cru {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-meta);
+  color: var(--texto-2);
+}
+
+.pular {
+  position: absolute;
+  left: var(--e2);
+  top: -100px;
+  z-index: 30;
+  padding: var(--e2) var(--e4);
+  background: var(--painel);
+  border: 1px solid var(--borda-controle);
+  border-radius: var(--raio-2);
+}
+.pular:focus { top: var(--e2); }
+
+/* ==========================================================================
+   4. Página, topo e navegação
+   ========================================================================== */
+
+.topo {
+  background: var(--painel);
+  border-bottom: 1px solid var(--fio-forte);
+}
+
+.topo__dentro,
+.pagina,
+.rodape__dentro {
+  width: 100%;
+  max-width: calc(var(--largura-max) + 2 * var(--margem));
+  margin: 0 auto;
+  padding-left: var(--margem);
+  padding-right: var(--margem);
+}
+
+.topo__dentro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--e5);
+  min-height: var(--altura-topo);
+}
+
+.marca {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: var(--e3);
+  min-width: 0;
+}
+.marca__nome {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-item);
+  font-weight: 700;
+  color: var(--texto);
+  text-decoration: none;
+}
+.marca__sub {
+  font-size: var(--t-meta);
+  color: var(--texto-2);
+}
+
+/* Compacto: a navegação é a única peça presa à tela, na base. */
+.nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  height: calc(var(--altura-nav) + env(safe-area-inset-bottom, 0px));
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  background: var(--painel);
+  border-top: 1px solid var(--fio-forte);
+}
+.nav__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  border-top: 2px solid transparent;
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--texto-2);
+}
+.nav__link[aria-current="page"] {
+  color: var(--texto);
+  border-top-color: var(--destaque);
+}
+.nav__link:focus { outline-offset: -4px; }
+
+.pagina {
+  display: block;
+  padding-top: var(--e2);
+  padding-bottom: var(--e6);
+}
+/* o contorno do conteúdo fica para dentro, para não criar rolagem lateral */
+.pagina:focus { outline-offset: -2px; }
+
+.vista { min-width: 0; }
+
+/* Título visível das vistas Arquivo, Régua e Método (22 px). */
+.vista__titulo {
+  font-size: var(--t-titulo);
+  margin: var(--e5) 0 var(--e4);
+}
+/* o título escondido da edição recebe o foco na troca de rota; fora da
+   vista, o contorno dele seria um ponto solto no canto */
+.so-leitor:focus { outline: none; }
+
+/* ==========================================================================
+   5. Carimbo, placas e avisos
+   ========================================================================== */
+
+.cabeca { min-width: 0; }
+
+.cabeca__linha {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: var(--e4);
+  row-gap: var(--e1);
+  min-height: 40px;
+}
+
+.carimbo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: var(--e3);
+  row-gap: var(--e1);
+  min-height: 40px;
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--texto-2);
+}
+
+.cabeca__acoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: var(--e4);
+  row-gap: var(--e1);
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+}
+.cabeca__acoes a { display: inline-flex; align-items: center; gap: var(--e1); min-height: var(--toque); }
+
+.vizinha { white-space: nowrap; }
+
+/* Placa de estado: 20 px de altura. Grave é invertida. */
+.placa {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e1);
+  min-height: 20px;
+  padding: 0 6px;
+  border: 1px solid var(--borda-controle);
+  border-radius: var(--raio-1);
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto);
+  white-space: nowrap;
+}
+.placa--grave {
+  background: var(--texto);
+  border-color: var(--texto);
+  color: var(--tinta-escura);
+}
+.placa .icone { width: 12px; height: 12px; vertical-align: 0; }
+
+.avisos {
+  display: grid;
+  gap: var(--e2);
+  min-width: 0;
+}
+.avisos:empty { display: none; }
+#avisos-gerais { margin-top: var(--e2); }
+#avisos-edicao { margin-top: var(--e1); }
+
+/* Aviso: nunca usa cor de alerta. */
+.aviso {
+  min-width: 0;
+  padding: var(--e3) var(--e4);
+  background: var(--relevo);
+  border: var(--borda);
+  border-left: 3px solid var(--texto-2);
+  border-radius: var(--raio-2);
+  font-size: var(--t-pequeno);
+}
+.aviso__linha {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: var(--e2);
+  row-gap: var(--e1);
+}
+.aviso__linha > .icone { align-self: center; color: var(--texto); }
+.aviso__rotulo {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto);
+}
+.aviso__texto { flex: 1 1 16em; min-width: 0; color: var(--texto); }
+.aviso__acoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--e3);
+}
+.aviso__corpo { margin-top: var(--e3); }
+
+.errata__item {
+  padding: var(--e2) 0;
+  border-top: 1px solid var(--fio-forte);
+}
+.errata__item p + p { margin-top: var(--e1); }
+.errata__onde { color: var(--texto); font-weight: 600; }
+
+/* Nota de seção: uma linha logo abaixo do título, sem fundo e sem borda. */
+.nota-secao {
+  margin: calc(-1 * var(--e2)) 0 var(--e3);
+  font-size: var(--t-meta);
+  color: var(--texto-2);
+}
+.nota-secao .icone { margin-right: var(--e1); }
+
+/* ==========================================================================
+   6. Seções e grade do Painel
+   ========================================================================== */
+
+.secao { min-width: 0; }
+
+.secao__titulo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: var(--e2);
+  row-gap: var(--e1);
+  margin: var(--e6) 0 var(--e4);
+  padding-bottom: var(--e2);
+  border-bottom: 1px solid var(--fio);
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-3);
+}
+.secao__num { color: var(--texto-3); }
+.secao__corpo { min-width: 0; }
+
+.secao__intro {
+  margin-bottom: var(--e3);
+  font-size: var(--t-meta);
+  color: var(--texto-2);
+}
+
+.subtitulo {
+  margin: var(--e5) 0 var(--e2);
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-3);
+}
+.subtitulo:first-child { margin-top: 0; }
+
+/* Compacto e médio: uma coluna, na ordem das seções. */
+.grade-painel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  column-gap: var(--e5);
+}
+
+.coluna-lateral { min-width: 0; }
+
+.sem-itens {
+  margin-top: var(--e6);
+  padding: var(--e4) 0;
+  border-top: 1px solid var(--fio);
+  border-bottom: 1px solid var(--fio);
+  color: var(--texto-2);
+}
+
+/* ==========================================================================
+   7. Controles
+   ========================================================================== */
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--e2);
+  min-height: var(--toque);
+  padding: 0 var(--e3);
+  background: transparent;
+  border: 1px solid var(--borda-controle);
+  border-radius: var(--raio-2);
+  color: var(--texto);
+  font: inherit;
+  font-size: var(--t-pequeno);
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+}
+.botao:hover { background: var(--relevo); }
+.botao--principal {
+  background: var(--destaque);
+  border-color: var(--destaque);
+  color: var(--tinta-escura);
+  font-weight: 600;
+}
+.botao--principal:hover { background: var(--destaque); }
+
+/* Botão de abrir e fechar de linha: quadrado de 44 px, só com o ícone. */
+.botao--dobra {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
+  padding: 0;
+}
+.botao[aria-expanded="true"] .icone--dobra,
+.titulo-dobra[aria-expanded="true"] .icone--dobra { transform: rotate(90deg); }
+
+/* Título que abre e fecha uma dobra ("COMO LER", um mês antigo do Arquivo).
+   É um botão, mas não é desenhado como botão: no papel os botões somem, e
+   este título fica. */
+.titulo-dobra {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e2);
+  min-height: 44px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Botão que parece link ("Ver tabela"). */
+.botao--texto {
+  min-height: var(--toque);
+  padding: 0;
+  border: 0;
+  color: var(--destaque);
+  font-size: var(--t-meta);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.botao--texto:hover { background: transparent; }
+
+.campo {
+  min-height: var(--toque);
+  max-width: 100%;
+  padding: 0 var(--e2);
+  background: var(--plano);
+  border: 1px solid var(--borda-controle);
+  border-radius: var(--raio-2);
+  color: var(--texto);
+  font: inherit;
+  font-size: var(--t-pequeno);
+}
+
+/* Campo de busca da Régua, com o rótulo à vista. */
+.campo--busca { width: 14em; }
+.filtros__busca {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--e1) var(--e2);
+  max-width: 100%;
+}
+.filtros__rotulo { font-size: var(--t-meta); color: var(--texto-2); }
+
+/* Conteúdo de dobra: a única coisa que se move no site (opacidade, 120 ms). */
+.dobra__corpo { animation: abre-dobra 120ms ease-out; }
+@keyframes abre-dobra {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Link externo: ícone depois do texto. */
+.externo { white-space: normal; }
+.externo .icone { margin-left: var(--e1); }
+
+/* Dica flutuante. O gatilho recebe foco; a caixa fica presa à largura do
+   componente (.com-dicas), para nunca vazar da tela. */
+.com-dicas { position: relative; }
+.tem-dica { cursor: help; }
+.dica {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: 15;
+  width: fit-content;
+  max-width: min(280px, 100%);
+  margin-top: var(--e1);
+  padding: var(--e2);
+  background: var(--relevo);
+  border: 1px solid var(--borda-controle);
+  border-radius: var(--raio-2);
+  font-family: var(--fonte-texto);
+  font-size: var(--t-meta);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.4;
+  text-transform: none;
+  text-decoration: none;
+  white-space: normal;
+  color: var(--texto-2);
+  cursor: default;
+}
+.dica__valor { color: var(--texto); }
+.tem-dica:hover > .dica,
+.tem-dica:focus > .dica,
+.dica--aberta { display: block; }
+.tem-dica.dica-fechada > .dica { display: none; }
+
+/* ==========================================================================
+   8. Etiquetas, selo e medidor
+   ========================================================================== */
+
+.etiqueta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 20px;
+  max-width: 100%;
+  padding: 0 5px;
+  border: 1px solid var(--fio-forte);
+  border-radius: var(--raio-1);
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--texto-2);
+}
+a.etiqueta { text-decoration: none; }
+a.etiqueta:hover { background: var(--relevo); }
+
+/* Sigla de partido: sem cor, de propósito. */
+.etiqueta--partido {
+  justify-content: center;
+  min-width: 30px;
+  background: var(--partido-fundo);
+  border-color: var(--partido-borda);
+  color: var(--partido-letra);
+  font-weight: 600;
+}
+
+.marcas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--e1) var(--e2);
+  min-width: 0;
+}
+
+/* A cor do nível só pinta ícone, segmento aceso e filete. */
+.nivel-0 { --cor-nivel: var(--texto-3); --cor-trilho: var(--fio-forte); }
+.nivel-1 { --cor-nivel: var(--alerta-1); --cor-trilho: var(--alerta-1-trilho); }
+.nivel-2 { --cor-nivel: var(--alerta-2); --cor-trilho: var(--alerta-2-trilho); }
+.nivel-3 { --cor-nivel: var(--alerta-3); --cor-trilho: var(--alerta-3-trilho); }
+.nivel-4 { --cor-nivel: var(--alerta-4); --cor-trilho: var(--alerta-4-trilho); }
+.nivel-5 { --cor-nivel: var(--alerta-5); --cor-trilho: var(--alerta-5-trilho); }
+
+.selo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  color: var(--texto);
+}
+.selo__icone { color: var(--cor-nivel); }
+.selo__num {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-pequeno);
+  font-weight: 600;
+}
+.selo__rotulo {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.medidor {
+  display: inline-flex;
+  gap: 2px;
+  vertical-align: middle;
+}
+.medidor__seg {
+  width: 20px;
+  height: 6px;
+  border-radius: 1px;
+  background: var(--cor-trilho);
+}
+.medidor__seg--aceso { background: var(--cor-nivel); }
+.medidor--grande .medidor__seg { width: 32px; height: 8px; }
+
+.tendencia {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e1);
+  font-size: var(--t-meta);
+  color: var(--texto-2);
+  white-space: nowrap;
+}
+
+/* Força: 3 pontos de 6 px, cheios ou vazados, na tinta neutra. */
+.forca {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--e1);
+  font-size: var(--t-meta);
+  color: var(--texto-2);
+  white-space: nowrap;
+}
+.forca__pontos { display: inline-flex; gap: 3px; }
+.forca__ponto {
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--tinta-dado);
+  border-radius: 50%;
+}
+.forca__ponto--cheio { background: var(--tinta-dado); }
+
+/* Célula de DNA: 36 x 28 px. A tira de 7 mede 264 px. Dentro de um cartão
+   mais estreito que isso (tela de 320 px), as células cedem por igual. */
+.dna {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 36px));
+  gap: 2px;
+  width: 264px;
+  max-width: 100%;
+}
+.dna__sigla {
+  min-width: 0;
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+  line-height: 16px;
+  text-align: center;
+  white-space: nowrap;
+  color: var(--texto-3);
+}
+.dna__celula {
+  display: flex;
+  gap: 2px;
+  min-width: 0;
+  height: 28px;
+}
+.dna__metade {
+  position: relative;
+  display: flex;
+  flex: 1 1 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  border: 1px solid transparent;
+  border-radius: var(--raio-1);
+  font-family: var(--fonte-mono);
+  font-size: var(--t-meta);
+  font-weight: 700;
+  line-height: 1;
+}
+.dna__metade--b { background: var(--dna-b); color: var(--dna-b-letra); }
+.dna__metade--y { background: var(--dna-y); color: var(--dna-y-letra); }
+.dna__metade--r { background: var(--dna-r); color: var(--dna-r-letra); }
+.dna__metade--w { background: var(--dna-w); border-color: var(--dna-wk-borda); color: var(--dna-wk-letra); }
+.dna__metade--k { background: var(--dna-k); border-color: var(--dna-wk-borda); color: var(--dna-wk-letra); }
+.dna__duvida {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  font-family: var(--fonte-mono);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: inherit;   /* a cor da letra da metade onde está */
+}
+/* Variante sem cor: Painel e impressão. Toda célula vazia, com borda. */
+.dna--tinta .dna__metade {
+  background: transparent;
+  border-color: var(--borda-controle);
+  color: var(--texto);
+}
+
+/* ==========================================================================
+   9. Bloco de alerta e fita de histórico
+   ========================================================================== */
+
+.alerta {
+  min-width: 0;
+  padding: var(--e4);
+  background: var(--painel);
+  border: var(--borda);
+  border-left: 3px solid var(--cor-nivel);
+  border-radius: var(--raio-2);
+}
+.alerta__topo {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  column-gap: var(--e4);
+}
+.alerta__numero { text-align: center; }
+/* O único numeral gigante da vista. */
+.alerta__numeral {
+  display: block;
+  font-size: var(--t-heroi);
+  font-weight: 600;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--texto);
+}
+.alerta__de {
+  display: block;
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+  color: var(--texto-3);
+}
+.alerta__rotulo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: var(--e2);
+  row-gap: var(--e1);
+  margin-bottom: var(--e2);
+  font-size: var(--t-titulo);
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--texto);
+}
+.alerta__rotulo .icone--28 { color: var(--cor-nivel); }
+.alerta__rotulo .tendencia { margin-left: var(--e2); font-weight: 400; }
+.alerta__linha {
+  margin-top: var(--e2);
+  font-size: var(--t-pequeno);
+  color: var(--texto-2);
+}
+.alerta__resumo {
+  margin-top: var(--e4);
+  font-size: var(--t-titulo);
+  line-height: 1.3;
+}
+.alerta__motivo { margin-top: var(--e2); }
+.alerta__significado {
+  margin-top: var(--e2);
+  font-size: var(--t-meta);
+  color: var(--texto-3);
+}
+
+.historico { margin-top: var(--e5); }
+.historico__topo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: var(--e3);
+}
+.historico .tabela { margin-top: var(--e2); }
+
+/* Fita: 30 dias, 8 px por dia; 8 px de altura por nível. Sem cor de nível. */
+.fita {
+  position: relative;
+  width: 240px;
+  max-width: 100%;
+  margin-top: var(--e1);
+}
+.fita__desenho {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  height: 40px;
+  border-bottom: 1px solid var(--fio-forte);
+  overflow: hidden;
+}
+.fita__fio {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--fio);
+}
+.fita__fio--1 { bottom: 8px; }
+.fita__fio--2 { bottom: 16px; }
+.fita__fio--3 { bottom: 24px; }
+.fita__fio--4 { bottom: 32px; }
+.fita__fio--5 { bottom: 39px; }
+.fita__dia {
+  position: relative;
+  display: flex;
+  flex: 0 0 8px;
+  align-items: flex-end;
+  height: 100%;
+}
+.fita__coluna {
+  width: 6px;
+  background: var(--tinta-dado);
+}
+.fita__coluna--n1 { height: 8px; }
+.fita__coluna--n2 { height: 16px; }
+.fita__coluna--n3 { height: 24px; }
+.fita__coluna--n4 { height: 32px; }
+.fita__coluna--n5 { height: 40px; }
+.fita__coluna--falha { height: 2px; }
+.fita__coluna--atual,
+.fita__dia:hover .fita__coluna { background: var(--tinta-dado-forte); }
+.fita__datas {
+  display: flex;
+  justify-content: space-between;
+  height: 16px;
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+  line-height: 16px;
+  color: var(--texto-3);
+}
+
+/* ==========================================================================
+   10. Domínios
+   ========================================================================== */
+
+.dominio {
+  min-width: 0;
+  padding: var(--e1) 0 var(--e3);
+  border-bottom: 1px solid var(--fio);
+}
+/* Compacto: nome, selo e botão na primeira linha; medidor e tendência na segunda. */
+.dominio__cabeca {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: var(--e3);
+  row-gap: var(--e1);
+  min-height: 56px;
+  cursor: pointer;
+}
+.dominio__nome { order: 1; flex: 1 1 0; min-width: 5em; font-size: var(--t-corpo); font-weight: 600; }
+.dominio__selo { order: 2; }
+.dominio__botao { order: 3; }
+/* quebra de linha da fileira: sem ela, numa tela compacta mais larga o
+   medidor subiria para depois do botão */
+.dominio__cabeca::before {
+  content: "";
+  order: 4;
+  flex-basis: 100%;
+  height: 0;
+}
+.dominio__medidor { order: 5; display: inline-flex; }
+.dominio__tendencia {
+  order: 6;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: var(--e2);
+  font-size: var(--t-meta);
+  color: var(--texto-2);
+}
+.dominio__sem-preco {
+  margin-top: var(--e1);
+  font-size: var(--t-meta);
+  color: var(--texto-3);
+}
+.dominio__sem-preco .icone { margin-right: var(--e1); }
+.dominio__leitura {
+  margin-top: var(--e1);
+  font-size: var(--t-pequeno);
+  color: var(--texto);
+}
+.dominio__leitura .etiqueta { margin-right: var(--e2); }
+/* Compacto: fechada, a leitura mostra 2 linhas. */
+.dominio--fechado .dominio__leitura {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+.dominio__corpo { padding-top: var(--e2); font-size: var(--t-pequeno); }
+.dominio__corpo .subtitulo { margin-top: var(--e4); }
+.dominio__corpo .subtitulo:first-child { margin-top: var(--e2); }
+
+.gatilho {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: var(--e3);
+  row-gap: var(--e1);
+  padding: var(--e2) 0;
+  border-top: 1px solid var(--fio);
+  font-size: var(--t-pequeno);
+}
+.gatilho:first-child { border-top: 0; }
+.gatilho__criterio {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+}
+.gatilho__texto { flex: 1 1 16em; min-width: 0; }
+.gatilho__ref { margin-left: auto; font-size: var(--t-meta); }
+
+/* ==========================================================================
+   11. Indicadores
+   ========================================================================== */
+
+.fichas {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--e3);
+}
+.ficha {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 112px;
+  padding: var(--e3);
+  background: var(--painel);
+  border: var(--borda);
+  border-radius: var(--raio-2);
+}
+.ficha__nome {
+  font-size: var(--t-meta);
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--texto-2);
+}
+.ficha__valor {
+  margin-top: var(--e1);
+  font-size: var(--t-valor);
+  font-weight: 600;
+  line-height: 1.3;
+  font-variant-numeric: tabular-nums;
+}
+.ficha__valor--sem { font-weight: 400; color: var(--texto-3); }
+.ficha__unidade { font-size: var(--t-rotulo); color: var(--texto-3); }
+.ficha__variacoes {
+  position: relative;   /* a dica de "anterior" abre logo abaixo das variações */
+  margin-top: var(--e2);
+  font-family: var(--fonte-mono);
+  font-size: var(--t-meta);
+  font-variant-numeric: tabular-nums;
+}
+.ficha__variacao {
+  display: flex;
+  justify-content: space-between;
+  column-gap: var(--e2);
+}
+.ficha__variacao dt { color: var(--texto-2); }
+.ficha__pe {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--e1) var(--e2);
+  margin-top: auto;
+  padding-top: var(--e2);
+  font-size: var(--t-meta);
+}
+
+/* ==========================================================================
+   12. Principais, dossiê e linhas de item
+   ========================================================================== */
+
+.principal {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  column-gap: var(--e3);
+  min-width: 0;
+  padding: var(--e4);
+  background: var(--painel);
+  border: var(--borda);
+  border-radius: var(--raio-2);
+}
+.principal + .principal { margin-top: var(--e4); }
+.principal__num {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-titulo);
+  line-height: 1.3;
+  color: var(--texto-3);
+}
+.principal__corpo { min-width: 0; }
+.principal__titulo {
+  margin: var(--e2) 0;
+  font-size: var(--t-item);
+  line-height: 1.3;
+}
+.principal__titulo:focus,
+.radar__titulo:focus { outline-offset: 4px; }
+.principal__fato { color: var(--texto-2); }
+.principal__linha {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--e1) var(--e2);
+  margin-top: var(--e2);
+  font-size: var(--t-pequeno);
+}
+.principal__pe { margin-top: var(--e3); }
+.principal__pe .botao { width: 100%; }
+
+.item-rotulo { color: var(--texto-2); }
+.separador { color: var(--texto-3); }
+
+.dossie {
+  grid-column: 1 / -1;
+  min-width: 0;
+  margin-top: var(--e4);
+  border-top: 1px solid var(--fio-forte);
+}
+.dossie__titulo {
+  margin: var(--e5) 0 var(--e2);
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-3);
+}
+.dossie__realmente {
+  max-width: 68ch;
+  font-size: var(--t-leitura);
+  line-height: 1.6;
+}
+.dossie__rotulo { color: var(--texto-2); }
+.dossie p + p { margin-top: var(--e2); }
+
+.lista {
+  padding-left: 1.2em;
+  list-style: disc;
+}
+.lista li + li { margin-top: var(--e1); }
+.lista li::marker { color: var(--texto-3); }
+
+.conflito-aviso { margin-top: var(--e4); }
+
+.ataque,
+.placar-item,
+.vetor,
+.fonte,
+.resposta,
+.sinal {
+  position: relative;
+  min-width: 0;
+  padding: var(--e2) 0;
+  border-top: 1px solid var(--fio);
+}
+.ataque:first-child,
+.placar-item:first-child,
+.vetor:first-child,
+.fonte:first-child,
+.resposta:first-child,
+.sinal:first-child { border-top: 0; }
+
+.ataque__cabeca,
+.placar-item__cabeca,
+.vetor__cabeca,
+.fonte__cabeca,
+.eixo__cabeca {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--e1) var(--e2);
+}
+/* a dica de "sem alvo" abre logo abaixo desta linha */
+.ataque__cabeca { position: relative; }
+.ataque__veiculo { font-weight: 600; }
+.ataque__enquadramento { margin-top: var(--e1); }
+.ataque__omite { margin-top: var(--e1); font-size: var(--t-pequeno); color: var(--texto-2); }
+.ataque__leitura { font-size: var(--t-meta); color: var(--texto-3); }
+.ataque__link,
+.vetor__link {
+  font-size: var(--t-meta);
+  text-align: right;
+}
+
+.eixo__tema { font-size: var(--t-corpo); }
+.eixo__polo { color: var(--texto); }
+.eixo__porque,
+.placar-item__porque,
+.vetor__porque {
+  margin-top: var(--e1);
+  font-size: var(--t-pequeno);
+  color: var(--texto-2);
+}
+
+.placar-item__nome { font-weight: 600; }
+.placar-item__efeito { font-family: var(--fonte-mono); font-size: var(--t-pequeno); }
+
+.vetor__player { font-weight: 600; }
+/* Anulado: riscado e em cinza. A etiqueta e o motivo não são riscados. */
+.vetor__riscado {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--e1) var(--e2);
+  min-width: 0;
+}
+.vetor--anulado .vetor__riscado,
+.vetor--anulado .vetor__riscado .etiqueta,
+.vetor--anulado .vetor__riscado .forca,
+.vetor--anulado .vetor__porque {
+  text-decoration: line-through;
+  color: var(--texto-3);
+}
+.vetor--anulado .vetor__riscado a { color: var(--texto-3); }
+.vetor__anulacao {
+  margin-top: var(--e1);
+  font-size: var(--t-pequeno);
+  color: var(--texto);
+}
+
+.fonte__titulo { flex: 1 1 14em; min-width: 0; font-size: var(--t-pequeno); }
+.fonte__data { font-family: var(--fonte-mono); font-size: var(--t-meta); color: var(--texto-2); }
+
+/* ==========================================================================
+   13. Placar do dia
+   ========================================================================== */
+
+.placar__linha {
+  min-width: 0;
+  padding: var(--e2) 0;
+  border-top: 1px solid var(--fio);
+}
+.placar__linha:first-child { border-top: 0; }
+.placar__topo {
+  display: grid;
+  grid-template-columns: 40px 145px 40px;
+  align-items: center;
+  column-gap: var(--e2);
+}
+/* 72 px para cada lado do eixo: direita ganha, esquerda perde. */
+.placar__area {
+  position: relative;
+  width: 145px;
+  height: 16px;
+}
+.placar__eixo {
+  position: absolute;
+  left: 72px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--placar-eixo);
+}
+.placar__barra {
+  position: absolute;
+  top: 4px;
+  height: 8px;
+}
+/* à direita do eixo: ganhou (placar) ou o segundo polo (atos por tema) */
+.placar__barra--ganha,
+.ato__barra--direita {
+  left: 73px;
+  background: var(--placar-ganha);
+  border-radius: 0 4px 4px 0;
+}
+/* à esquerda do eixo: perdeu (placar) ou o primeiro polo (atos por tema) */
+.placar__barra--perde,
+.ato__barra--esquerda {
+  right: 73px;
+  background: var(--placar-perde);
+  border-radius: 4px 0 0 4px;
+}
+.placar__saldo {
+  font-family: var(--fonte-mono);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.placar__nota {
+  margin-top: var(--e1);
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+  color: var(--texto-3);
+}
+.placar__frase { margin-top: var(--e1); font-size: var(--t-pequeno); }
+
+/* ==========================================================================
+   14. O que vigiar, respostas e movimentos
+   ========================================================================== */
+
+.sinal { font-size: var(--t-pequeno); }
+.sinal__origem { font-weight: 600; }
+
+.resposta__cabeca {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--e1) var(--e2);
+}
+.resposta__pergunta { flex: 1 1 12em; min-width: 0; font-size: var(--t-corpo); }
+.resposta__texto { margin-top: var(--e1); font-size: var(--t-pequeno); color: var(--texto-2); }
+.resposta__pe {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e1) var(--e3);
+  margin-top: var(--e1);
+  font-size: var(--t-meta);
+}
+
+.novo-player {
+  min-width: 0;
+  margin-top: var(--e4);
+  padding: var(--e4);
+  background: var(--painel);
+  border: var(--borda);
+  border-radius: var(--raio-2);
+  font-size: var(--t-pequeno);
+}
+.novo-player__nome { margin: var(--e2) 0 var(--e1); font-size: var(--t-item); }
+.novo-player__id {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+  color: var(--texto-3);
+}
+.novo-player .dna { margin: var(--e3) 0; }
+.novo-player p + p { margin-top: var(--e2); }
+.novo-player__fontes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e1) var(--e3);
+}
+
+/* ==========================================================================
+   15. Radar e filtros
+   ========================================================================== */
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--e2) var(--e3);
+  margin-bottom: var(--e3);
+}
+/* Botões juntos: a categoria. */
+.filtros__grupo { display: inline-flex; flex-wrap: wrap; }
+.filtros__grupo .botao {
+  padding: 0 var(--e2);
+  border-radius: 0;
+  margin-left: -1px;
+}
+.filtros__grupo .botao:first-child { margin-left: 0; border-radius: var(--raio-2) 0 0 var(--raio-2); }
+.filtros__grupo .botao:last-child { border-radius: 0 var(--raio-2) var(--raio-2) 0; }
+.filtros__grupo .botao[aria-pressed="true"] {
+  position: relative;
+  background: var(--relevo);
+  border-bottom: 2px solid var(--destaque);
+}
+.filtros__contagem { font-size: var(--t-meta); color: var(--texto-2); }
+.filtros__vazio {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--e3);
+  padding: var(--e3) 0;
+  color: var(--texto-2);
+}
+
+.radar__item {
+  min-width: 0;
+  padding: var(--e2) 0;
+  border-bottom: 1px solid var(--fio);
+}
+.radar__cabeca {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 44px;
+  align-items: start;
+  column-gap: var(--e3);
+  min-height: 56px;
+  cursor: pointer;
+}
+.radar__titulo {
+  margin: var(--e1) 0;
+  font-size: var(--t-item);
+  line-height: 1.3;
+}
+.radar__apoio {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--e1) var(--e2);
+  font-size: var(--t-pequeno);
+  color: var(--texto-2);
+}
+.radar__corpo { padding-bottom: var(--e2); }
+.radar__corpo .dossie__titulo:first-child { margin-top: var(--e3); }
+
+/* ==========================================================================
+   16. Bastidores e rodapé
+   ========================================================================== */
+
+.bastidores__numeros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e1) var(--e4);
+  font-size: var(--t-pequeno);
+  color: var(--texto-2);
+}
+.bastidores__numero {
+  display: flex;
+  align-items: baseline;
+  column-gap: var(--e2);
+}
+.bastidores__numero dd {
+  font-family: var(--fonte-mono);
+  font-variant-numeric: tabular-nums;
+  color: var(--texto);
+}
+.bastidores__limites { max-width: 68ch; font-size: var(--t-pequeno); }
+.bastidores__lista { font-size: var(--t-pequeno); }
+.bastidores__lista li + li { margin-top: var(--e1); }
+
+.rodape {
+  margin-top: var(--e6);
+  border-top: 1px solid var(--fio-forte);
+  font-size: var(--t-meta);
+  color: var(--texto-2);
+}
+.rodape__dentro {
+  padding-top: var(--e5);
+  padding-bottom: var(--e5);
+}
+.rodape__texto { max-width: 68ch; }
+.rodape__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e1) var(--e4);
+  margin-top: var(--e2);
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+}
+.rodape__links span { display: contents; }
+
+.sem-script {
+  max-width: 68ch;
+  margin: var(--e5) auto;
+  padding: var(--e4);
+  border: 1px solid var(--borda-controle);
+  border-radius: var(--raio-2);
+}
+
+/* ==========================================================================
+   17. Tabela
+   ========================================================================== */
+
+.tabela,
+.matriz {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--t-pequeno);
+}
+.tabela caption {
+  padding-bottom: var(--e2);
+  text-align: left;
+  font-size: var(--t-meta);
+  color: var(--texto-2);
+}
+.tabela th,
+.tabela td {
+  padding: var(--e2) var(--e3);
+  text-align: left;
+  vertical-align: top;
+}
+.tabela thead th,
+.matriz thead th {
+  background: var(--relevo);
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-2);
+}
+.tabela tbody th { font-weight: 400; }
+.tabela tbody tr { border-top: 1px solid var(--fio); }
+.tabela tbody th,
+.tabela tbody td { height: 44px; vertical-align: middle; }
+/* linha com texto corrido ou lista: tudo alinhado em cima */
+.tabela--larga tbody th,
+.tabela--larga tbody td,
+.tabela--edicoes tbody th,
+.tabela--edicoes tbody td,
+.tabela--criterios tbody th,
+.tabela--criterios tbody td { vertical-align: top; }
+.tabela .num {
+  text-align: right;
+  font-family: var(--fonte-mono);
+  font-variant-numeric: tabular-nums;
+}
+/* o conteúdo de cada célula vai num bloco só (ver a forma estreita, bloco 21) */
+.tabela__valor { min-width: 0; }
+/* dentro de célula, a força pode quebrar de linha */
+.tabela .forca { flex-wrap: wrap; white-space: normal; }
+
+/* ==========================================================================
+   18. Arquivo: figuras do histórico e lista de edições
+   Como no Painel, a única cor de dado aqui é a do nível de alerta.
+   ========================================================================== */
+
+.vista__corpo,
+.aba { min-width: 0; }
+
+/* Cinco cartões: 1 coluna no compacto, 2 no médio, 3 no largo (bloco 21). */
+.figuras {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--e5);
+}
+.figura {
+  min-width: 0;
+  padding: var(--e4);
+  background: var(--painel);
+  border: var(--borda);
+  border-radius: var(--raio-2);
+}
+.figura__topo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: var(--e3);
+  margin-bottom: var(--e1);
+}
+.figura__titulo { font-size: var(--t-corpo); }
+.figura__tabela { margin-top: var(--e3); }
+/* a tabela gêmea mora num cartão estreito: menos respiro nos lados */
+.figura .tabela th,
+.figura .tabela td { padding-left: var(--e1); padding-right: var(--e1); }
+
+/* Fita pequena, a de um domínio: 4 px por dia, coluna de 3 px, 120 x 20 px,
+   4 px por nível. Sem grade, sem dica e sem clique. */
+.fita--pequena { width: 120px; margin-top: 0; }
+.fita--pequena .fita__desenho { height: 20px; }
+.fita--pequena .fita__dia { flex-basis: 4px; }
+.fita--pequena .fita__coluna { width: 3px; }
+.fita--pequena .fita__coluna--n1 { height: 4px; }
+.fita--pequena .fita__coluna--n2 { height: 8px; }
+.fita--pequena .fita__coluna--n3 { height: 12px; }
+.fita--pequena .fita__coluna--n4 { height: 16px; }
+.fita--pequena .fita__coluna--n5 { height: 20px; }
+.fita--pequena .fita__coluna--falha { height: 2px; }
+
+/* Compacto e médio: nome e nível numa linha, a fita na de baixo. */
+.fitinha {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: var(--e3);
+  row-gap: var(--e1);
+  padding: var(--e2) 0;
+  border-top: 1px solid var(--fio);
+}
+.fitinha:first-child { border-top: 0; }
+.fitinha__nome { grid-column: 1; grid-row: 1; font-size: var(--t-pequeno); }
+.fitinha__nivel { grid-column: 2; grid-row: 1; }
+.fitinha .fita { grid-column: 1 / -1; grid-row: 2; }
+
+.saldos .placar__topo { padding: var(--e1) 0; }
+
+/* Atos por tema: o nome do tema (132 px) e, ao lado ou embaixo, as duas
+   barras da mesma tinta, uma para cada lado do eixo. Sem cor de polo. */
+.ato {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  column-gap: var(--e2);
+  row-gap: var(--e1);
+  padding: var(--e2) 0;
+  border-top: 1px solid var(--fio);
+}
+.ato:first-child { border-top: 0; }
+.ato__tema { flex: 0 0 132px; font-size: var(--t-pequeno); }
+.ato__lados { flex: none; width: 201px; max-width: 100%; }
+.ato__barras {
+  display: grid;
+  grid-template-columns: 24px 145px 24px;
+  align-items: center;
+  column-gap: var(--e1);
+}
+.ato__conta {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-meta);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+.ato__conta:last-child { text-align: left; }
+.ato__polos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: var(--e2);
+  margin-top: var(--e1);
+  font-size: var(--t-rotulo);
+  line-height: 1.3;
+  color: var(--texto-3);
+}
+.ato__polo { min-width: 0; }
+.ato__polo--esquerda { text-align: right; }
+
+/* Mini-linhas dos indicadores: grade de 2, 4 ou 6 colunas. */
+.minis {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--e4) var(--e3);
+}
+.mini { min-width: 0; }
+.mini__nome {
+  font-size: var(--t-meta);
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--texto-2);
+}
+.mini__unidade { font-size: var(--t-rotulo); color: var(--texto-3); }
+/* 120 x 28 px. O anel do ponto final pode passar da caixa: não é cortado. */
+.mini__desenho {
+  display: block;
+  width: 120px;
+  max-width: 100%;
+  height: 28px;
+  margin: var(--e1) 0;
+  overflow: visible;
+}
+.mini__traco {
+  fill: none;
+  stroke: var(--tinta-dado);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.mini__solto { fill: var(--tinta-dado); }
+/* ponto final: raio de 4 px, com anel de 2 px na cor do cartão */
+.mini__ponto {
+  fill: var(--tinta-dado-forte);
+  stroke: var(--painel);
+  stroke-width: 2;
+}
+.mini__so {
+  margin: var(--e1) 0;
+  font-size: var(--t-valor);
+  font-weight: 600;
+  line-height: 1.3;
+  font-variant-numeric: tabular-nums;
+}
+.mini__pontas {
+  max-width: 120px;
+  font-family: var(--fonte-mono);
+  font-size: var(--t-meta);
+  font-variant-numeric: tabular-nums;
+}
+.mini__ponta {
+  display: flex;
+  justify-content: space-between;
+  column-gap: var(--e2);
+}
+.mini__ponta dt { color: var(--texto-2); }
+
+/* Lista de edições: um bloco por mês. */
+.mes { min-width: 0; margin-top: var(--e5); }
+.mes__titulo { font-size: var(--t-corpo); }
+.mes .tabela { margin-top: var(--e2); }
+.edicao__hora,
+.edicao__dominio {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-meta);
+  white-space: nowrap;
+  color: var(--texto-2);
+}
+.edicao__hora { margin-left: var(--e1); color: var(--texto-3); }
+.edicao__corrigida { font-size: var(--t-meta); }
+.edicao__links {
+  display: block;
+  margin-top: var(--e1);
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+}
+.arquivo__atualizado {
+  margin-top: var(--e5);
+  font-size: var(--t-meta);
+  color: var(--texto-3);
+}
+
+/* ==========================================================================
+   19. Régua: abas, legenda, fichas, matriz de players, veículos e vetores
+   Aqui a única cor de dado é a da posição do DNA.
+   ========================================================================== */
+
+/* Fileira de 4 links. No compacto ela rola para o lado dentro dela mesma. */
+.abas {
+  display: flex;
+  gap: var(--e5);
+  overflow-x: auto;
+  border-bottom: 1px solid var(--fio);
+}
+.abas__link {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  height: 44px;
+  border-bottom: 2px solid transparent;
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  color: var(--texto-2);
+}
+.abas__link[aria-current="page"] {
+  color: var(--texto);
+  border-bottom-color: var(--destaque);
+}
+/* a fileira corta o que passa dela: o contorno fica para dentro */
+.abas__link:focus { outline-offset: -2px; }
+
+.legenda {
+  display: grid;
+  gap: var(--e3);
+  min-width: 0;
+  margin: var(--e4) 0 var(--e5);
+}
+.legenda__descricao { max-width: 68ch; }
+.legenda__letras {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e2) var(--e5);
+}
+.legenda__item {
+  display: flex;
+  align-items: center;
+  gap: var(--e2);
+  min-width: 0;
+  font-size: var(--t-meta);
+  color: var(--texto-2);
+}
+/* célula solta, fora da tira de 7: a legenda e a matriz */
+.legenda .dna__celula,
+.matriz .dna__celula { flex: none; width: 36px; }
+.legenda__abre .titulo-dobra {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--texto-2);
+}
+.legenda__como {
+  display: grid;
+  gap: var(--e3);
+  min-width: 0;
+}
+.legenda__criada { font-size: var(--t-meta); color: var(--texto-3); }
+
+/* Fichas de partido e de time: 1 coluna no compacto, 2 ou 3 depois. */
+.partidos,
+.times {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--e5);
+}
+.partido,
+.time {
+  min-width: 0;
+  padding: var(--e4);
+  background: var(--painel);
+  border: var(--borda);
+  border-radius: var(--raio-2);
+  font-size: var(--t-pequeno);
+}
+.partido__nome,
+.time__nome { margin: var(--e2) 0; font-size: var(--t-item); }
+.time__nome { margin-top: 0; }
+.partido__nome:focus,
+.veiculo__nome:focus { outline-offset: 4px; }
+.partido .rotulo,
+.time .rotulo { margin-top: var(--e3); }
+.partido .dna,
+.partido__texto { margin-top: var(--e1); }
+.partido__saldo { margin-top: var(--e3); }
+.aba__regra {
+  max-width: 68ch;
+  margin-top: var(--e5);
+  font-size: var(--t-meta);
+  color: var(--texto-2);
+}
+.aba__mais { margin-top: var(--e4); }
+
+/* Matriz de players. No médio e no largo é tabela de verdade, com cabeçalho
+   preso (bloco 21). No compacto, cada linha vira uma ficha. */
+.matriz th,
+.matriz td {
+  padding: var(--e2) var(--e1);
+  text-align: left;
+  vertical-align: middle;
+}
+.matriz thead .num { text-align: right; }
+/* sigla do tema: 5 letras em mono de 12 px cabem nos 36 px da célula */
+.matriz .matriz__tema {
+  padding-left: 0;
+  padding-right: 0;
+  letter-spacing: 0;
+  text-align: center;
+}
+.matriz__grupo th {
+  padding-top: var(--e5);
+  border-bottom: 1px solid var(--fio-forte);
+  font-size: var(--t-corpo);
+  font-weight: 600;
+}
+.matriz__linha { border-top: 1px solid var(--fio); }
+.matriz__linha th,
+.matriz__linha td { height: 44px; }
+.matriz__nome { font-weight: 600; }
+.matriz__texto { font-size: var(--t-meta); color: var(--texto-2); }
+.matriz__discutivel {
+  display: block;
+  font-size: var(--t-rotulo);
+  color: var(--texto-3);
+}
+.matriz .matriz__dna { padding-left: 1px; padding-right: 1px; }
+.matriz__vetores {
+  text-align: right;
+  font-family: var(--fonte-mono);
+  font-variant-numeric: tabular-nums;
+}
+.matriz .matriz__acao { width: 44px; padding: 0; }
+/* fechada, a linha de detalhe não ocupa lugar */
+.matriz .matriz__detalhe > td { padding: 0; }
+.player__corpo {
+  padding: var(--e2) var(--e1) var(--e4);
+  font-size: var(--t-pequeno);
+}
+.player__corpo > * + * { margin-top: var(--e2); }
+
+/* Veículos: um grupo por lado. */
+.grupo { min-width: 0; margin-top: var(--e5); }
+.grupo__titulo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--e1) var(--e2);
+  padding-bottom: var(--e2);
+  border-bottom: 1px solid var(--fio-forte);
+  font-size: var(--t-corpo);
+}
+.veiculo {
+  min-width: 0;
+  padding: var(--e2) 0;
+  border-bottom: 1px solid var(--fio);
+}
+.veiculo__cabeca {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 44px;
+  align-items: start;
+  column-gap: var(--e3);
+  min-height: 56px;
+}
+.veiculo__resumo { min-width: 0; }
+.veiculo__nome { font-size: var(--t-corpo); font-weight: 600; }
+.veiculo__meta { font-size: var(--t-meta); color: var(--texto-2); }
+.veiculo__corpo { padding: var(--e2) 0 var(--e3); font-size: var(--t-pequeno); }
+
+/* Pares de rótulo e valor da ficha aberta. Compacto: o rótulo em cima. */
+.dados { display: grid; row-gap: var(--e3); }
+.dados__par {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 2px;
+}
+.dados dt {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-3);
+}
+.dados dd { min-width: 0; }
+.feed { padding: var(--e1) 0; }
+.feed + .feed { border-top: 1px solid var(--fio); }
+.feed__url { font-family: var(--fonte-mono); font-size: var(--t-meta); }
+.feed__nota { margin-top: var(--e1); color: var(--texto-2); }
+
+/* ==========================================================================
+   20. Método: texto corrido, caixas, quadros e catálogo
+   Coluna única. O texto corrido tem medida máxima de 68 caracteres.
+   ========================================================================== */
+
+.prosa { max-width: 68ch; }
+.prosa > * + * { margin-top: var(--e3); }
+.lista--numerada { padding-left: 1.6em; list-style: decimal; }
+
+/* Caixa do aviso de conflito de interesse: o mesmo desenho do aviso, com
+   texto de corpo. */
+.caixa {
+  min-width: 0;
+  padding: var(--e4);
+  background: var(--relevo);
+  border: var(--borda);
+  border-left: 3px solid var(--texto-2);
+  border-radius: var(--raio-2);
+}
+.caixa > * { max-width: 68ch; }
+.caixa > * + * { margin-top: var(--e3); }
+
+.quadro,
+.nivel-ficha,
+.catalogo__item {
+  min-width: 0;
+  padding: var(--e4);
+  background: var(--painel);
+  border: var(--borda);
+  border-radius: var(--raio-2);
+  font-size: var(--t-pequeno);
+}
+.quadro { margin-top: var(--e5); }
+.quadro > p + p { margin-top: var(--e2); }
+.quadro__linha { padding: var(--e2) 0; border-top: 1px solid var(--fio); }
+.subtitulo + .quadro__linha { border-top: 0; }
+.quadro__termo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--e1) var(--e2);
+  color: var(--texto);
+}
+.quadro__texto { max-width: 68ch; }
+.quadro__linha .quadro__texto { margin-top: var(--e1); color: var(--texto-2); }
+
+.niveis,
+.catalogo {
+  display: grid;
+  gap: var(--e3);
+  margin-top: var(--e4);
+}
+.nivel-ficha { padding: var(--e3) var(--e4); }
+.nivel-ficha__texto { max-width: 68ch; margin-top: var(--e1); }
+.metodo__dominio { margin: var(--e6) 0 var(--e2); font-size: var(--t-item); }
+.metodo__texto {
+  max-width: 68ch;
+  margin-bottom: var(--e2);
+  font-size: var(--t-pequeno);
+}
+.criterio__codigo,
+.criterio__detalhe {
+  font-family: var(--fonte-mono);
+  font-size: var(--t-rotulo);
+  color: var(--texto-2);
+}
+.criterio__detalhe { display: block; color: var(--texto-3); }
+
+.catalogo__nome { margin-bottom: var(--e1); font-size: var(--t-corpo); }
+.catalogo__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e1) var(--e4);
+  margin-top: var(--e1);
+  font-size: var(--t-meta);
+  color: var(--texto-2);
+}
+.catalogo__fontes { margin-top: var(--e3); }
+.catalogo__fonte { padding: var(--e2) 0; border-top: 1px solid var(--fio); }
+.catalogo__leitor { font-size: var(--t-meta); color: var(--texto-2); }
+
+/* ==========================================================================
+   21. Tamanhos de tela
+   compacto: até 719 px · médio: de 720 a 1099 px · largo: 1100 px ou mais
+   ========================================================================== */
+
+/* Só no compacto. */
+@media (max-width: 719.98px) {
+  /* respiro para a navegação presa na base */
+  body { padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px)); }
+  /* o foco do Tab que rola até a base da tela não fica sob a navegação presa
+     (WCAG 2.2, critério 2.4.11; técnica C43 do W3C) */
+  html { scroll-padding-bottom: calc(var(--altura-nav) + env(safe-area-inset-bottom, 0px) + var(--e2)); }
+
+  /* cada linha de tabela vira um bloco: o rótulo numa coluna, o valor na
+     outra. O rótulo quebra de linha se for comprido, e nada vaza para o lado. */
+  .tabela thead,
+  .matriz thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+  }
+  .tabela tbody tr { display: block; padding: var(--e2) 0; }
+  .tabela tbody th,
+  .tabela tbody td {
+    display: grid;
+    grid-template-columns: minmax(0, 7.5em) minmax(0, 1fr);
+    column-gap: var(--e3);
+    height: auto;
+    padding: var(--e1) 0;
+  }
+  .tabela tbody th::before,
+  .tabela tbody td::before {
+    content: attr(data-rotulo);
+    font-family: var(--fonte-mono);
+    font-size: var(--t-rotulo);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: left;
+    color: var(--texto-3);
+  }
+  /* texto corrido: o rótulo em cima, e o texto na largura toda */
+  .tabela tbody .tabela__longa { grid-template-columns: minmax(0, 1fr); row-gap: 2px; }
+
+  /* matriz de players: uma ficha por player, com a tira de 7 células e as
+     siglas dos temas em cima */
+  .matriz,
+  .matriz tbody,
+  .matriz__grupo,
+  .matriz__grupo th,
+  .matriz__detalhe,
+  .matriz__detalhe > td { display: block; }
+  .matriz__linha {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 36px)) minmax(0, 1fr);
+    column-gap: 2px;
+    row-gap: var(--e1);
+    padding: var(--e3) 0;
+  }
+  .matriz .matriz__linha th,
+  .matriz .matriz__linha td {
+    display: block;
+    height: auto;
+    padding: 0;
+  }
+  .matriz__nome,
+  .matriz__texto,
+  .matriz__vetores { grid-column: 1 / -1; }
+  /* o botão de abrir fica no canto da ficha, ao lado do nome */
+  .matriz .matriz__linha .matriz__nome { min-height: 28px; padding-right: 52px; }
+  .matriz .matriz__linha .matriz__acao {
+    position: absolute;
+    top: var(--e2);
+    right: 0;
+  }
+  .matriz__discutivel { display: inline; margin-left: var(--e2); }
+  .matriz__dna::before {
+    content: attr(data-rotulo);
+    display: block;
+    font-family: var(--fonte-mono);
+    font-size: var(--t-rotulo);
+    line-height: 16px;
+    text-align: center;
+    white-space: nowrap;
+    color: var(--texto-3);
+  }
+  .matriz .matriz__dna .dna__celula { width: auto; }
+  .matriz__vetores { text-align: left; }
+  .matriz__vetores::before {
+    content: attr(data-rotulo) " ";
+    font-size: var(--t-rotulo);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--texto-3);
+  }
+}
+
+/* Compacto e médio: tabela de muitas colunas (o registro de vetores, com 9;
+   a dos indicadores, com uma por indicador) só cabe como tabela no largo.
+   Abaixo dele, usa a mesma forma de bloco das tabelas no compacto. */
+@media (min-width: 720px) and (max-width: 1099.98px) {
+  .tabela--larga thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+  }
+  .tabela--larga tbody tr { display: block; padding: var(--e2) 0; }
+  .tabela--larga tbody th,
+  .tabela--larga tbody td {
+    display: grid;
+    grid-template-columns: minmax(0, 7.5em) minmax(0, 1fr);
+    column-gap: var(--e3);
+    height: auto;
+    padding: var(--e1) 0;
+  }
+  .tabela--larga tbody th::before,
+  .tabela--larga tbody td::before {
+    content: attr(data-rotulo);
+    font-family: var(--fonte-mono);
+    font-size: var(--t-rotulo);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: left;
+    color: var(--texto-3);
+  }
+  .tabela--larga tbody .tabela__longa { grid-template-columns: minmax(0, 1fr); row-gap: 2px; }
+}
+
+/* Médio e largo. */
+@media (min-width: 720px) {
+  :root { --margem: var(--e5); }
+
+  /* a barra de topo fica presa, com a navegação dentro dela */
+  .topo {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+  .nav {
+    position: static;
+    display: flex;
+    gap: var(--e5);
+    height: var(--altura-topo);
+    padding-bottom: 0;
+    background: transparent;
+    border-top: 0;
+  }
+  .nav__link {
+    height: var(--altura-topo);
+    border-top: 0;
+    border-bottom: 2px solid transparent;
+  }
+  .nav__link[aria-current="page"] { border-bottom-color: var(--destaque); }
+
+  /* o foco do Tab que rola até o alto da tela não fica sob a barra de topo
+     presa (WCAG 2.2, critério 2.4.11; técnica C43 do W3C) */
+  html { scroll-padding-top: calc(var(--altura-topo) + var(--e2)); }
+
+  /* o que recebe foco por rota não fica escondido atrás da barra. A margem
+     soma com o scroll-padding do html: 64 + 8 dá os mesmos 72 px de antes */
+  .secao__titulo,
+  .principal,
+  .principal__titulo,
+  .radar__item,
+  .radar__titulo,
+  .dominio,
+  .ficha,
+  .vista__titulo,
+  .partido,
+  .partido__nome,
+  .veiculo,
+  .veiculo__nome,
+  .tabela tbody tr,
+  .tabela tbody th { scroll-margin-top: var(--e2); }
+  /* na matriz, o cabeçalho preso também cobre o alto da tela: 64 + 64 dá os
+     mesmos 128 px de antes; o botão de dobra com foco desce o bastante para
+     não ficar sob o cabeçalho */
+  .matriz__linha,
+  .matriz__nome { scroll-margin-top: calc(var(--e8) - var(--e2)); }
+  .matriz .botao--dobra { scroll-margin-top: var(--e7); }
+
+  .alerta { padding: var(--e5); }
+  .principal { padding: var(--e5); column-gap: var(--e4); }
+  .principal__titulo { font-size: var(--t-titulo); }
+  .principal__pe { display: flex; justify-content: flex-end; }
+  .principal__pe .botao { width: auto; }
+
+  .fichas { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+  /* Arquivo: 2 cartões por linha; o de indicadores ocupa a linha inteira */
+  .figuras { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .figura--indicadores { grid-column: 1 / -1; }
+  .figura { padding: var(--e5); }
+  .minis { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+  /* Régua */
+  .partidos,
+  .times { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .partido,
+  .time { padding: var(--e5); }
+  .dados__par { grid-template-columns: 11em minmax(0, 1fr); column-gap: var(--e4); }
+  /* o cabeçalho da matriz fica preso logo abaixo da barra de topo */
+  .matriz thead th {
+    position: sticky;
+    top: var(--altura-topo);
+    z-index: 5;
+  }
+
+  /* linha de domínio: nome, medidor, selo, tendência e botão na mesma linha */
+  .dominio__cabeca {
+    display: grid;
+    grid-template-columns: 132px auto auto minmax(0, 1fr) 44px;
+  }
+  .dominio__cabeca::before { display: none; }
+  .dominio__nome,
+  .dominio__selo,
+  .dominio__botao,
+  .dominio__medidor,
+  .dominio__tendencia { order: 0; min-width: 0; }
+  .dominio--fechado .dominio__leitura { display: block; overflow: visible; }
+}
+
+/* Só no largo: 12 colunas, com vão de 24 px. */
+@media (min-width: 1100px) {
+  .secao__titulo { margin-top: var(--e7); }
+
+  .grade-painel {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    /* a última fileira de itens é flexível: a coluna lateral, mais alta ou
+       mais baixa, nunca abre buraco entre Principais e Radar */
+    grid-template-rows: auto auto auto minmax(0, 1fr) auto;
+  }
+  .secao--hoje { grid-column: 1 / span 5; grid-row: 1; }
+  .secao--dominios { grid-column: 6 / span 7; grid-row: 1; }
+  .secao--indicadores { grid-column: 1 / -1; grid-row: 2; }
+  .secao--principais { grid-column: 1 / span 8; grid-row: 3; }
+  .coluna-lateral { grid-column: 9 / span 4; grid-row: 3 / span 2; }
+  .secao--radar { grid-column: 1 / span 8; grid-row: 4; }
+  .sem-itens { grid-column: 1 / -1; grid-row: 3; }
+  .secao--bastidores { grid-column: 1 / -1; grid-row: 5; }
+
+  .fichas { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+
+  /* Arquivo: 3 cartões por linha; nome, fita e nível do domínio na mesma linha */
+  .figuras { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .minis { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .fitinha { grid-template-columns: minmax(0, 1fr) 120px auto; }
+  .fitinha .fita { grid-column: 2; grid-row: 1; }
+  .fitinha__nivel { grid-column: 3; }
+
+  .partidos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Tela de toque: alvo de 44 px. */
+@media (pointer: coarse) {
+  :root { --toque: 44px; }
+}
+
+/* ==========================================================================
+   22. Preferências de acessibilidade
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --texto-3: #b3bcc6;
+    --fio: #313a44;
+    --fio-forte: #6f7b88;
+  }
+}
+
+/* Cores forçadas pelo sistema: a forma, a letra e o rótulo dispensam a cor.
+   Fundo é apagado pelo sistema, então toda marca cheia é redesenhada. */
+@media (forced-colors: active) {
+  .medidor__seg { background: Canvas; border: 1px solid CanvasText; }
+  .medidor__seg--aceso { background: CanvasText; }
+  .dna__metade,
+  .dna--tinta .dna__metade { background: Canvas; border-color: CanvasText; color: CanvasText; }
+  .fita__coluna,
+  .placar__barra,
+  .forca__ponto--cheio { background: CanvasText; }
+  .placar__eixo,
+  .fita__fio { background: GrayText; }
+  .placa--grave { border-color: CanvasText; }
+  /* a mini-linha é desenho: sem isto, ela ficaria com a tinta da tela escura */
+  .mini__traco { stroke: CanvasText; }
+  .mini__solto,
+  .mini__ponto { fill: CanvasText; }
+  .mini__ponto { stroke: Canvas; }
+  /* neste modo a borda transparente ganha cor: sem isto, todo link da
+     navegação e das abas pareceria o ativo */
+  .nav__link,
+  .abas__link { border-color: Canvas; }
+  .nav__link[aria-current="page"],
+  .abas__link[aria-current="page"] { border-color: Highlight; }
+}
+
+/* ==========================================================================
+   23. Impressão
+   ========================================================================== */
+
+@page { margin: 15mm; }
+
+@media print {
+  :root {
+    --plano: #ffffff; --painel: #ffffff; --relevo: #ffffff;
+    --fio: #bbbbbb; --fio-forte: #767676; --borda-controle: #767676;
+    --texto: #111111; --texto-2: #444444; --texto-3: #444444;
+    --destaque: #111111; --tinta-dado: #444444; --tinta-dado-forte: #111111;
+    --alerta-1: #111111; --alerta-2: #111111; --alerta-3: #111111; --alerta-4: #111111; --alerta-5: #111111;
+    --alerta-1-trilho: #ffffff; --alerta-2-trilho: #ffffff; --alerta-3-trilho: #ffffff;
+    --alerta-4-trilho: #ffffff; --alerta-5-trilho: #ffffff;
+    --dna-b: #ffffff; --dna-y: #ffffff; --dna-r: #ffffff; --dna-k: #ffffff;
+    --dna-b-letra: #111111; --dna-y-letra: #111111; --dna-r-letra: #111111; --dna-wk-letra: #111111;
+    --dna-wk-borda: #767676; --partido-borda: #767676; --partido-letra: #111111;
+    --placar-ganha: #444444; --placar-perde: #444444; --placar-eixo: #767676;
+    --tinta-escura: #ffffff;   /* no papel, a placa invertida fica preta com letra branca */
+    color-scheme: light;
+  }
+
+  body {
+    padding-bottom: 0;
+    font-size: 11pt;
+  }
+
+  /* somem: navegação, filtros, botões, dicas e o aviso de edição nova */
+  .pular,
+  .nav,
+  .abas,
+  .filtros,
+  .botao,
+  .dica,
+  .cabeca__acoes,
+  .aviso--edicao-nova,
+  .aviso__acoes { display: none !important; }
+  /* o título de dobra fica, sem a seta: no papel está tudo aberto */
+  .titulo-dobra .icone { display: none; }
+
+  .topo { position: static; border-bottom: 1px solid var(--fio-forte); }
+  .so-impressao { display: block; }
+  .cabeca-impressao { margin-bottom: 8pt; font-weight: 600; }
+
+  /* tudo aberto, sem depender de script */
+  .dobra__corpo[hidden] { display: block !important; }
+  /* com o dossiê aberto, o resumo do cartão seria repetição */
+  .principal__resumo { display: none !important; }
+  .dominio--fechado .dominio__leitura { display: block; overflow: visible; }
+
+  /* o papel não tem colunas largas: uma seção abaixo da outra */
+  .grade-painel,
+  .figuras,
+  .partidos,
+  .times { display: block; }
+  .secao__titulo { margin-top: 18pt; }
+  .figura + .figura,
+  .partido + .partido,
+  .time + .time { margin-top: 12pt; }
+  /* nada fica preso à tela no papel */
+  .matriz thead th { position: static; }
+
+  /* depois de cada link externo, o endereço por extenso */
+  a.externo::after {
+    content: " (" attr(href) ")";
+    font-family: var(--fonte-mono);
+    font-size: 8pt;
+    word-break: break-all;
+  }
+  .externo .icone { display: none; }
+  /* o endereço do feed já é o texto do link: não se repete */
+  a.feed__url::after { content: none; }
+
+  .alerta,
+  .principal,
+  .dominio,
+  .ficha,
+  .radar__item,
+  .novo-player,
+  .aviso,
+  .figura,
+  .mini,
+  .partido,
+  .time,
+  .matriz__linha,
+  .veiculo,
+  .caixa,
+  .quadro,
+  .nivel-ficha,
+  .catalogo__item { break-inside: avoid; }
+
+  /* Por padrão o navegador não imprime cor de fundo. Sem esta linha somem do
+     papel o segmento aceso do medidor, as barras do placar e dos atos, as
+     colunas da fita, os pontos cheios da força, e a placa invertida
+     (EXEMPLO, ATRASADA, SEM EDIÇÃO) perde o fundo preto. No papel essas cores
+     já são preto, cinza ou branco (variáveis acima). */
+  .medidor__seg,
+  .placa--grave,
+  .placar__barra,
+  .placar__eixo,
+  .fita__coluna,
+  .fita__fio,
+  .forca__ponto {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* segmento apagado: só borda. DNA sem cor: borda e letra. */
+  .medidor__seg { border: 1px solid var(--fio-forte); }
+  .medidor__seg--aceso { border-color: var(--texto); }
+  .dna__metade { border-color: var(--dna-wk-borda); }
+  .placa--grave { background: var(--texto); border-color: var(--texto); }
+}

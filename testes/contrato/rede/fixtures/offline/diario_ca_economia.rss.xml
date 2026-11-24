@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<title>Feed de exemplo</title>
+<link>https://feed.exemplo.invalid/</link>
+<description>Feed fictício, para teste.</description>
+<item>
+<title>Lei de inteligência artificial de Nordélia passa com 312 votos e divide empresas</title>
+<link>https://diario-ca.exemplo.invalid/economia/nordelia-lei-ia-empresas</link>
+<description>Fabricantes pedem prazo maior; sindicatos apoiam o registro público.</description>
+<pubDate>Fri, 20 Nov 2026 11:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Banco de Tavória mantém juros em 9,5%</title>
+<link>https://diario-ca.exemplo.invalid/economia/tavoria-juros</link>
+<description>A decisão foi unânime.</description>
+<pubDate>Fri, 20 Nov 2026 06:00:00 +0000</pubDate>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>Feed de exemplo</title>
+<id>https://feed.exemplo.invalid/</id>
+<updated>2026-11-20T21:00:00Z</updated>
+<entry>
+<title>Tavória impõe tarifa de 25% ao aço de Quelmar e abre disputa</title>
+<link rel="alternate" href="https://canal-ca.exemplo.invalid/pt/tavoria-tarifa-disputa"/>
+<id>tag:feed.exemplo.invalid,2026:1</id>
+<published>2026-11-20T16:00:00+01:00</published>
+<updated>2026-11-20T16:00:00+01:00</updated>
+<summary>Quelmar promete recorrer.</summary>
+</entry>
+<entry>
+<title>Zarvônia e Brumal: o que muda em 17 dias de estreito fechado</title>
+<link rel="alternate" href="https://canal-ca.exemplo.invalid/pt/zarvonia-brumal-17-dias"/>
+<id>tag:feed.exemplo.invalid,2026:2</id>
+<published>2026-11-20T18:00:00Z</published>
+<updated>2026-11-20T18:00:00Z</updated>
+<summary>Rotas alternativas somam 9 dias de viagem.</summary>
+</entry>
+</feed>

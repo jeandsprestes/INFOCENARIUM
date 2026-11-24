@@ -1,0 +1,103 @@
+{
+  "https://gazeta-og.exemplo.invalid/rss.xml": "gazeta_og.rss.xml",
+  "https://painel-og.exemplo.invalid/atom.xml": "painel_og.atom.xml",
+  "https://diario-ca.exemplo.invalid/mundo/rss.xml": {
+    "arquivo": "diario_ca_mundo.rss.xml",
+    "tipo": "application/rss+xml; charset=utf-8"
+  },
+  "https://diario-ca.exemplo.invalid/economia/rss.xml": {
+    "status": 301,
+    "para": "https://diario-ca.exemplo.invalid/feeds/economia.xml"
+  },
+  "https://diario-ca.exemplo.invalid/feeds/economia.xml": "diario_ca_economia.rss.xml",
+  "https://canal-ca.exemplo.invalid/atom.xml": {
+    "arquivo": "canal_ca.atom.xml",
+    "tipo": "application/atom+xml"
+  },
+  "https://revista-ca.exemplo.invalid/rss.xml": "revista_ca.rss.xml",
+  "https://tecno-bt.exemplo.invalid/atom.xml": "tecno_bt.atom.xml",
+  "https://chip-bt.exemplo.invalid/rss.xml": "chip_bt.rss.xml",
+  "https://nuvem-bt.exemplo.invalid/rss.xml": {
+    "arquivo": "nao_achado.html",
+    "status": 404,
+    "tipo": "text/html; charset=utf-8"
+  },
+  "https://tribuna-so.exemplo.invalid/rss.xml": "tribuna_so.rss.xml",
+  "https://voz-so.exemplo.invalid/atom.xml": "voz_so.atom.xml",
+  "https://folha-so.exemplo.invalid/rss.xml": {
+    "arquivo": "recusado.html",
+    "status": 403,
+    "tipo": "text/html; charset=utf-8"
+  },
+  "https://agencia-er.exemplo.invalid/rss.xml": "agencia_er.rss.xml",
+  "https://jornal-er.exemplo.invalid/atom.xml": "jornal_er.atom.xml",
+  "https://radio-er.exemplo.invalid/rss.xml": "radio_er.rss.xml",
+  "https://mercado-ce.exemplo.invalid/rss.xml": {
+    "arquivo": "mercado_ce.rss.xml",
+    "tipo": "text/xml"
+  },
+  "https://bolsa-ce.exemplo.invalid/atom.xml": "bolsa_ce.atom.xml",
+  "https://sul-in.exemplo.invalid/rss.xml": "sul_in.rss.xml",
+  "https://ponte-in.exemplo.invalid/atom.xml": "ponte_in.atom.xml",
+  "https://portal-in.exemplo.invalid/ultimas.html": "portal_in_armadilha.xml",
+  "https://gazeta-og.exemplo.invalid/analise/brumal-com-meta": {
+    "arquivo": "pagina_meta.html",
+    "tipo": "text/html; charset=utf-8"
+  },
+  "https://tribuna-so.exemplo.invalid/analise/brumal-com-jsonld": {
+    "arquivo": "pagina_jsonld.html",
+    "tipo": "text/html; charset=utf-8"
+  },
+  "https://agencia-er.exemplo.invalid/analise/brumal-com-os-dois": {
+    "arquivo": "pagina_dois.html",
+    "tipo": "text/html"
+  },
+  "https://mercado-ce.exemplo.invalid/analise/sem-data": {
+    "arquivo": "pagina_sem_data.html",
+    "tipo": "text/html"
+  },
+  "https://painel-og.exemplo.invalid/documentos/relatorio.pdf": {
+    "arquivo": "documento.pdf",
+    "tipo": "application/pdf"
+  },
+  "https://folha-so.exemplo.invalid/analise/pagina-recusada": {
+    "arquivo": "recusado.html",
+    "status": 403,
+    "tipo": "text/html; charset=utf-8"
+  },
+  "https://nuvem-bt.exemplo.invalid/analise/pagina-que-sumiu": {
+    "status": 404
+  },
+  "https://sul-in.exemplo.invalid/analise/pagina-forma-simples": "pagina_simples.html",
+  "https://canal-ca.exemplo.invalid/analise/endereco-antigo": {
+    "status": 302,
+    "para": "https://canal-ca.exemplo.invalid/analise/endereco-novo"
+  },
+  "https://canal-ca.exemplo.invalid/analise/endereco-novo": {
+    "arquivo": "pagina_redirecionada.html",
+    "tipo": "text/html; charset=utf-8"
+  },
+  "https://cotacoes.exemplo.invalid/chart/brent": {
+    "arquivo": "brent_yahoo.json",
+    "tipo": "application/json"
+  },
+  "https://series.exemplo.invalid/csv/brent.csv": "brent_fred.csv",
+  "https://energia.exemplo.invalid/v2/brent": "brent_eia.json",
+  "https://cotacoes.exemplo.invalid/chart/trigo": "trigo_yahoo.json",
+  "https://series.exemplo.invalid/csv/trigo.csv": "trigo_fred.csv",
+  "https://series.exemplo.invalid/csv/milho.csv": "milho_fred.csv",
+  "https://cotacoes.exemplo.invalid/chart/milho": {
+    "arquivo": "milho_yahoo.json",
+    "tipo": "application/json"
+  },
+  "https://cotacoes.exemplo.invalid/chart/soja": "soja_yahoo.json",
+  "https://series.exemplo.invalid/csv/soja.csv": "soja_fred.csv",
+  "https://banco.exemplo.invalid/sgs/dolar": {
+    "arquivo": "usd_brl_bcb.json",
+    "tipo": "application/json; charset=utf-8"
+  },
+  "https://cotacoes.exemplo.invalid/chart/usdbrl": "usd_brl_yahoo.json",
+  "https://series.exemplo.invalid/csv/usdbrl.csv": "usd_brl_fred.csv",
+  "https://energia.exemplo.invalid/v2/gas": "gas_eia.json",
+  "https://alimentos.exemplo.invalid/indice.csv": "indice_fao.csv"
+}

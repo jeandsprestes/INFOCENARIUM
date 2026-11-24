@@ -1,0 +1,621 @@
+{
+  "versao": 1,
+  "data": "2026-11-23",
+  "gerada_em": "2026-11-24T17:05:12Z",
+  "estado": "reduzida",
+  "resumo": "De 21 a 23/11: petroleiros atingidos em Ormuz, ataque do Irã ao Bahrein e nova sanção dos Estados Unidos ao Irã; a COP31 acabou sem acordo sobre combustíveis fósseis; a Nvidia trouxe Jensen Huang de volta.",
+  "alerta": {
+    "nivel": 2,
+    "tendencia": "estavel",
+    "motivo": "Nível 2 (atenção) pela energia: em 23/11, os Estados Unidos sancionaram casas de câmbio, empresas de fachada e pessoas que movimentam dinheiro do Irã, grande exportador de petróleo. Em 21/11, petroleiros foram atingidos em Ormuz. Sem rede para medir preços e conferir datas, nenhum motivo passou do nível 2 nesta edição.",
+    "dominios": [
+      {
+        "id": "energia",
+        "nivel": 2,
+        "tendencia": "estavel",
+        "desde": "2026-11-23",
+        "sem_preco": [
+          "brent"
+        ],
+        "gatilhos": [
+          {
+            "criterio": "energia.2",
+            "ref": "p1",
+            "texto": "Em 23/11, os Estados Unidos sancionaram mais de duas dezenas de casas de câmbio, empresas de fachada e pessoas da rede bancária paralela do Irã, grande exportador de petróleo."
+          }
+        ],
+        "leitura": "Petróleo mais caro lá fora encarece o diesel e a gasolina importados; o repasse depende da Petrobras e dos importadores. Em 21/11, petroleiros atingidos em Ormuz; sem rede para conferir datas, o alerta fica em 2. Faltou o preço do Brent, a referência internacional.",
+        "vigiar": "Petroleiro parado por ataque em Ormuz, confirmado por veículos dos dois campos, ou Brent com alta de 10% ou mais em 7 dias."
+      },
+      {
+        "id": "alimentos",
+        "nivel": 1,
+        "tendencia": "estavel",
+        "desde": "2026-11-23",
+        "sem_preco": [
+          "trigo",
+          "milho",
+          "soja"
+        ],
+        "gatilhos": [],
+        "leitura": "Trigo e fertilizante o Brasil compra de fora: alta ou falta lá chega ao pão e à safra seguinte. Em 23/11, o Conselho de Segurança das Nações Unidas tratou de ataques a navios no mar Negro, rota de grãos; um navio com trigo afundou em meados de novembro. Faltou o preço dos grãos.",
+        "vigiar": "Rota de grãos do mar Negro interrompida, ou trigo com alta de 5% ou mais em 7 dias."
+      },
+      {
+        "id": "cambio",
+        "nivel": 1,
+        "tendencia": "estavel",
+        "desde": "2026-11-23",
+        "sem_preco": [
+          "usd_brl"
+        ],
+        "gatilhos": [],
+        "leitura": "Dólar mais caro encarece o que é importado: combustível, trigo, fertilizante, remédio e eletrônico. De 21 a 23/11, nas páginas lidas, nenhuma tarifa nem sanção nova contra o Brasil. O dólar não foi medido em 23/11: faltou rede.",
+        "vigiar": "Dólar com alta de 1,5% ou mais no dia, ou tarifa ou sanção anunciada contra o Brasil."
+      },
+      {
+        "id": "suprimentos",
+        "nivel": 1,
+        "tendencia": "estavel",
+        "desde": "2026-11-23",
+        "sem_preco": [],
+        "gatilhos": [],
+        "leitura": "Rota desviada ou porto parado atrasa peça, chip, remédio e fertilizante, e encarece o frete. Em Ormuz, o Irã restringe a passagem desde o início da guerra, e petroleiros foram atingidos lá em 21/11. Em 16/11, os Estados Unidos criaram exigência de licença para vender chips avançados ao Brasil.",
+        "vigiar": "Grandes armadores anunciando desvio de rota no mar Negro, ou restrição nova em Ormuz, além das que o Irã impõe desde o início da guerra, confirmada por veículos dos dois campos."
+      },
+      {
+        "id": "conflito",
+        "nivel": 1,
+        "tendencia": "estavel",
+        "desde": "2026-11-23",
+        "sem_preco": [],
+        "gatilhos": [],
+        "leitura": "Guerra longe chega ao Brasil pelos outros quatro domínios: petróleo, grãos, dólar e rotas. O ataque do Irã ao Bahrein em 21/11 segue a guerra iniciada em fevereiro. A Ucrânia diz ter afundado uma corveta (navio de guerra) russa na Líbia em 22/11: seria frente nova, mas sem rede o nível não sobe.",
+        "vigiar": "Ataque a navio ou porto russo em mar ou país aonde a guerra ainda não tinha chegado, confirmado por veículos dos dois campos."
+      }
+    ]
+  },
+  "indicadores": [
+    {
+      "id": "brent",
+      "nome": "Petróleo Brent",
+      "dominio": "energia",
+      "valor": null,
+      "unidade": "US$ por barril",
+      "variacao_pct": null,
+      "variacao_7d_pct": null,
+      "data": null,
+      "defasado": true,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Yahoo Finance",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/BZ=F?range=1mo&interval=1d"
+      }
+    },
+    {
+      "id": "wti",
+      "nome": "Petróleo WTI (EUA)",
+      "dominio": "energia",
+      "valor": null,
+      "unidade": "US$ por barril",
+      "variacao_pct": null,
+      "variacao_7d_pct": null,
+      "data": null,
+      "defasado": true,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Yahoo Finance",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/CL=F?range=1mo&interval=1d"
+      }
+    },
+    {
+      "id": "gas_natural",
+      "nome": "Gás natural nos EUA",
+      "dominio": "energia",
+      "valor": null,
+      "unidade": "US$ por milhão de BTU",
+      "variacao_pct": null,
+      "variacao_7d_pct": null,
+      "data": null,
+      "defasado": true,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Yahoo Finance",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/NG=F?range=1mo&interval=1d"
+      }
+    },
+    {
+      "id": "trigo",
+      "nome": "Trigo",
+      "dominio": "alimentos",
+      "valor": null,
+      "unidade": "US$ por tonelada",
+      "variacao_pct": null,
+      "variacao_7d_pct": null,
+      "data": null,
+      "defasado": true,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Yahoo Finance",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/ZW=F?range=1mo&interval=1d"
+      }
+    },
+    {
+      "id": "milho",
+      "nome": "Milho",
+      "dominio": "alimentos",
+      "valor": null,
+      "unidade": "US$ por tonelada",
+      "variacao_pct": null,
+      "variacao_7d_pct": null,
+      "data": null,
+      "defasado": true,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Yahoo Finance",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/ZC=F?range=1mo&interval=1d"
+      }
+    },
+    {
+      "id": "soja",
+      "nome": "Soja",
+      "dominio": "alimentos",
+      "valor": null,
+      "unidade": "US$ por tonelada",
+      "variacao_pct": null,
+      "variacao_7d_pct": null,
+      "data": null,
+      "defasado": true,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Yahoo Finance",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/ZS=F?range=1mo&interval=1d"
+      }
+    },
+    {
+      "id": "fao_ffpi",
+      "nome": "Índice de preços de alimentos da FAO",
+      "dominio": "alimentos",
+      "valor": null,
+      "unidade": "pontos",
+      "variacao_pct": null,
+      "variacao_7d_pct": null,
+      "data": null,
+      "defasado": true,
+      "confirmado": false,
+      "fonte": {
+        "nome": "FAO (agência da ONU para a alimentação)",
+        "url": "https://www.fao.org/media/docs/worldfoodsituationlibraries/wfs-library/food_price_indices_data.csv"
+      }
+    },
+    {
+      "id": "usd_brl",
+      "nome": "Dólar em reais",
+      "dominio": "cambio",
+      "valor": null,
+      "unidade": "R$ por US$",
+      "variacao_pct": null,
+      "variacao_7d_pct": null,
+      "data": null,
+      "defasado": true,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Banco Central do Brasil",
+        "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados/ultimos/20?formato=json"
+      }
+    },
+    {
+      "id": "dxy",
+      "nome": "Índice do dólar contra outras moedas",
+      "dominio": "cambio",
+      "valor": null,
+      "unidade": "pontos",
+      "variacao_pct": null,
+      "variacao_7d_pct": null,
+      "data": null,
+      "defasado": true,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Yahoo Finance",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=1mo&interval=1d"
+      }
+    },
+    {
+      "id": "ouro",
+      "nome": "Ouro",
+      "dominio": "cambio",
+      "valor": null,
+      "unidade": "US$ por onça (31,1 g)",
+      "variacao_pct": null,
+      "variacao_7d_pct": null,
+      "data": null,
+      "defasado": true,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Yahoo Finance",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/GC=F?range=1mo&interval=1d"
+      }
+    },
+    {
+      "id": "vix",
+      "nome": "Índice de medo da bolsa americana (VIX)",
+      "dominio": "cambio",
+      "valor": null,
+      "unidade": "pontos",
+      "variacao_pct": null,
+      "variacao_7d_pct": null,
+      "data": null,
+      "defasado": true,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Yahoo Finance",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?range=1mo&interval=1d"
+      }
+    },
+    {
+      "id": "frete_seco",
+      "nome": "Frete marítimo de grãos e minério",
+      "dominio": "suprimentos",
+      "valor": null,
+      "unidade": "US$ por cota",
+      "variacao_pct": null,
+      "variacao_7d_pct": null,
+      "data": null,
+      "defasado": true,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Yahoo Finance",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/BDRY?range=1mo&interval=1d"
+      }
+    }
+  ],
+  "principais": [
+    {
+      "id": "p1",
+      "categoria": "geopolitica",
+      "titulo": "Guerra no Golfo: petroleiros atingidos em Ormuz, ataque do Irã ao Bahrein e nova sanção dos Estados Unidos ao Irã",
+      "fato": "Em 21/11, petroleiros foram atingidos no estreito de Ormuz; as fontes não dão nome nem bandeira, divergem sobre o número e não dizem se falam dos mesmos navios. No mesmo dia, o Irã atacou o Bahrein: o governo bareinita e a Guarda Revolucionária, força armada do regime iraniano à parte do Exército, confirmam o ataque e divergem sobre o alvo. Em 23/11, o Tesouro dos Estados Unidos sancionou mais de duas dezenas de casas de câmbio, empresas de fachada e pessoas da rede bancária paralela do Irã.",
+      "nao_confirmado": [
+        "Segundo o governo do Bahrein, o ataque de 21/11 atingiu uma instalação industrial civil, com 2 feridos; segundo a Guarda Revolucionária, os alvos foram posições militares dos Estados Unidos em Al-Riffa e Awali.",
+        "Segundo a UKMTO, agência marítima britânica, citada pela CNBC, em 21/11 projéteis de origem desconhecida atingiram petroleiro perto de Khasab, em Omã, em dois alertas talvez de um navio só; o Irã falou em mina, sem ligar aos alertas.",
+        "Segundo a Marinha do Irã, na Press TV, do Estado iraniano, em 22/11 dois petroleiros infratores (violating) pegaram fogo ao bater em minas numa área que o Irã proíbe, a leste de Ormuz; ninguém fora do Irã confirmou."
+      ],
+      "ataques": [
+        {
+          "veiculo": "times_of_israel",
+          "lado": "centro_atlantico",
+          "alvo": "ira",
+          "enquadramento": "Despacho de agências que chama as redes de supostas (alleged) no título e conta a sanção pelas palavras do Tesouro: Scott Bessent chama a rede de última tábua financeira (last financial lifeline) do regime. Dá Ormuz como rota disputada.",
+          "omite": "Não traz os petroleiros atingidos em Ormuz nem o ataque ao Bahrein.",
+          "url": "https://www.timesofisrael.com/us-sanctions-dozens-of-alleged-iranian-shadow-banking-networks/"
+        },
+        {
+          "veiculo": "fox_news",
+          "lado": "soberanistas",
+          "alvo": "ira",
+          "enquadramento": "Emissora que o mapa liga a Trump, cujo governo é parte: põe no título o governo Trump e uma medida ampla (sweeping) para cortar a última tábua financeira do Irã; a única voz é a do secretário do Tesouro, Scott Bessent.",
+          "omite": "Não traz os petroleiros atingidos em Ormuz nem o ataque ao Bahrein.",
+          "url": "https://www.foxnews.com/politics/trump-admin-announces-sweeping-measure-cut-iran-last-financial-lifeline"
+        },
+        {
+          "veiculo": "arab_news",
+          "lado": "centrao",
+          "alvo": "ira",
+          "enquadramento": "Abre pelo Bahrein: 2 feridos em ataque iraniano a instalação industrial civil. Dá a condenação da Arábia Saudita e da Liga Árabe e as exigências do Irã para encerrar a guerra.",
+          "omite": "Não dá nome, bandeira nem autoria do que atingiu os dois petroleiros.",
+          "url": "https://www.arabnews.com/middle-east/bahrain-says-two-injured-in-iranian-attack-on-industrial-site-as-tankers-hit-in-hormuz-3013503"
+        },
+        {
+          "veiculo": "press_tv",
+          "lado": "eixo_revisionista",
+          "alvo": "outro",
+          "alvo_nome": "Petroleiros em Ormuz",
+          "enquadramento": "Emissora do Estado iraniano, que é parte: chama de infratores (violating) os petroleiros que pegaram fogo e diz que, pela nova regra do Irã para Ormuz, só passa com segurança quem tem autorização iraniana.",
+          "url": "https://www.presstv.co.uk/Detail/2026/11/22/781348/irans-army-two-violating-tankers-catch-fire-after-striking-naval-mines-in-strait-of-hormuz"
+        }
+      ],
+      "realmente": "A Guarda Revolucionária diz ter mirado posições militares dos Estados Unidos no Bahrein; o governo bareinita fala em instalação industrial civil, e nenhuma página lida mostra dano a base. Em Ormuz, o que as notícias mostram aos pedaços é uma regra do Irã: ele chama de infratores os petroleiros que passam sem a sua autorização, diz que eles bateram em minas numa área que proíbe e avisa os armadores de que desobedecer pode trazer pesadas perdas financeiras e até falência. Fora do Irã, ninguém confirmou as minas. A outra frente é o dinheiro: um estudo do Tesouro achou US$ 14,7 bilhões em transações de janeiro de 2025 a agosto de 2026 possivelmente ligadas à rede bancária paralela do Irã, a partir de alertas de bancos dos Estados Unidos. Ninguém cedeu nada que se possa medir. O Irã não obteve nenhuma das exigências que a Arab News lista, como ativos descongelados, fim das sanções ao petróleo e fim do bloqueio americano aos seus portos, e os Estados Unidos não cederam nada. Uma delegação do Catar conversou em Teerã: por enquanto, é foto. Na régua, é a disputa de costume desde fevereiro: os Soberanistas, que governam os Estados Unidos, contra o Eixo Revisionista. A Arábia Saudita e a Liga Árabe, fora da régua, condenaram o Irã. Se Estados Unidos e Irã anunciarem trégua ou acordo sobre a passagem em Ormuz, cai esta leitura, a de um desgaste sem concessão.",
+      "na_pratica": [
+        "Em 23/11, mais de duas dezenas de casas de câmbio, empresas de fachada e pessoas ligadas ao Irã entraram na lista de sanções dos Estados Unidos.",
+        "Em 21/11, uma instalação industrial no Bahrein foi atingida, com 2 feridos, segundo o governo bareinita.",
+        "Em 21/11, petroleiros atingidos no estreito de Ormuz, em número que as fontes não fecham."
+      ],
+      "no_brasil": "Antes da guerra, cerca de 1/5 do petróleo do mundo passava por Ormuz. Se o petróleo subir, chega ao Brasil pelo diesel e pela gasolina importados, e depois pelo frete e pela comida. O preço não foi medido em 23/11; não há fonte para prazo.",
+      "placar": [
+        {
+          "partido": "eixo_revisionista",
+          "efeito": "perde",
+          "forca": 2,
+          "evidencia": "sancao",
+          "porque": "Irã: mais de duas dezenas de casas de câmbio, empresas de fachada e pessoas da sua rede bancária paralela sancionadas pelos Estados Unidos em 23/11."
+        }
+      ],
+      "vetores": [],
+      "dominios": [
+        "energia",
+        "suprimentos",
+        "conflito"
+      ],
+      "vigiar": [
+        "Estados Unidos e Irã anunciarão, até 07/12, trégua ou acordo para a passagem de navios em Ormuz?",
+        "Até 07/12, algum petroleiro atingido em Ormuz desde 21/11 será identificado por nome e bandeira por fonte fora do Irã?",
+        "O Irã voltará a atacar o Bahrein até 07/12?"
+      ],
+      "confianca": "media",
+      "fontes": [
+        {
+          "veiculo": "times_of_israel",
+          "titulo": "US sanctions dozens of alleged Iranian ‘shadow banking’ networks",
+          "url": "https://www.timesofisrael.com/us-sanctions-dozens-of-alleged-iranian-shadow-banking-networks/",
+          "publicado_em": "2026-11-23"
+        },
+        {
+          "veiculo": "fox_news",
+          "titulo": "Trump admin announces sweeping measure to cut Iran's 'last financial lifeline'",
+          "url": "https://www.foxnews.com/politics/trump-admin-announces-sweeping-measure-cut-iran-last-financial-lifeline",
+          "publicado_em": "2026-11-23"
+        },
+        {
+          "veiculo": "outro",
+          "nome": "Departamento do Tesouro dos Estados Unidos",
+          "titulo": "Operation Economic Outcast Disrupts Iran's Global Shadow Banking Networks",
+          "url": "https://home.treasury.gov/news/press-releases/sb0699",
+          "publicado_em": "2026-11-23",
+          "primaria": true
+        },
+        {
+          "veiculo": "outro",
+          "nome": "FinCEN, unidade de crimes financeiros do Tesouro dos Estados Unidos",
+          "titulo": "Treasury Identifies Nearly $15 Billion in Potential Iranian Shadow Banking",
+          "url": "https://www.fincen.gov/news/news-releases/treasury-identifies-nearly-15-billion-potential-iranian-shadow-banking",
+          "publicado_em": "2026-11-23",
+          "primaria": true
+        },
+        {
+          "veiculo": "arab_news",
+          "titulo": "Bahrain says two injured in Iranian attack on industrial site, as tankers hit in Hormuz",
+          "url": "https://www.arabnews.com/middle-east/bahrain-says-two-injured-in-iranian-attack-on-industrial-site-as-tankers-hit-in-hormuz-3013503",
+          "publicado_em": "2026-11-22"
+        },
+        {
+          "veiculo": "press_tv",
+          "titulo": "Iran Navy: Two violating tankers catch fire after striking naval mines in Strait of Hormuz",
+          "url": "https://www.presstv.co.uk/Detail/2026/11/22/781348/irans-army-two-violating-tankers-catch-fire-after-striking-naval-mines-in-strait-of-hormuz",
+          "publicado_em": "2026-11-22"
+        },
+        {
+          "veiculo": "press_tv",
+          "titulo": "IRGC Navy says two oil supertankers hit naval mines in Strait of Hormuz, issues warning to shipping firms",
+          "url": "https://www.presstv.co.uk/Detail/2026/11/22/781364/two-oil-supertankers-explode-in-strait-of-hormuz-irgc-navy-warns-shipping-companies",
+          "publicado_em": "2026-11-22"
+        },
+        {
+          "veiculo": "outro",
+          "nome": "CNBC",
+          "titulo": "UK maritime agency reports two tanker attacks near Oman; Iran says vessel hit mine east of Hormuz",
+          "url": "https://www.cnbc.com/2026/11/21/two-tanker-attacks-reported-near-omans-khasab-ukmto-says.html",
+          "publicado_em": "2026-11-21"
+        }
+      ]
+    }
+  ],
+  "radar": [
+    {
+      "id": "r1",
+      "categoria": "geopolitica",
+      "titulo": "COP31, a conferência do clima das Nações Unidas, acaba sem acordo sobre combustíveis fósseis",
+      "fato": "Em 22/11, a COP31, conferência do clima das Nações Unidas (ONU), em Antália, Turquia, acabou sem acordo, após 2 dias de prorrogação. União Europeia, Panamá e Ilhas Marshall não aceitaram o texto, que omitia combustíveis fósseis; a Arábia Saudita, pela Liga Árabe, defendeu nele a captura de carbono.",
+      "ataque": {
+        "veiculo": "onu_news",
+        "lado": "ordem_global",
+        "alvo": "nenhum",
+        "enquadramento": "Site da ONU, que organiza a COP31 e é parte: promove o secretário-geral António Guterres, que dá no título a frase de que não há ambiguidade na ciência, e trata o fim sem acordo como revés.",
+        "url": "https://news.un.org/feed/view/en/story/2026/11/1168855"
+      },
+      "placar": [],
+      "sem_placar": "A decisão principal da COP31 não foi adotada em 22/11; haveria placar com ela adotada, a favor de quem ela favorecesse.",
+      "vetores": [],
+      "dominios": [],
+      "confianca": "media",
+      "fontes": [
+        {
+          "veiculo": "onu_news",
+          "titulo": "COP31 ends without climate pact as UN chief warns there is 'no ambiguity in the science'",
+          "url": "https://news.un.org/feed/view/en/story/2026/11/1168855",
+          "publicado_em": "2026-11-22",
+          "primaria": true
+        }
+      ]
+    },
+    {
+      "id": "r2",
+      "categoria": "geopolitica",
+      "titulo": "Ucrânia diz ter afundado corveta russa na Líbia; cargueiro russo é atingido no golfo da Finlândia",
+      "fato": "A Ucrânia diz ter afundado com drones navais, em 22/11, uma corveta (navio de guerra) russa em Benghazi, na Líbia; a missão das Nações Unidas pediu investigação. Em 21/11, um cargueiro russo rumo a Kaliningrado foi atingido por dois drones no golfo da Finlândia, segundo a Finlândia e a Rússia.",
+      "ataque": {
+        "veiculo": "onu_news",
+        "lado": "ordem_global",
+        "alvo": "russia",
+        "enquadramento": "Põe os ataques na Líbia e no Báltico num texto sobre ataques russos à rede elétrica da Ucrânia; trata o papel ucraniano como alegação e cita a Finlândia, para quem a Ucrânia provavelmente está por trás.",
+        "url": "https://news.un.org/feed/view/en/story/2026/11/1168859"
+      },
+      "placar": [
+        {
+          "partido": "eixo_revisionista",
+          "efeito": "perde",
+          "forca": 2,
+          "evidencia": "tropa",
+          "porque": "Rússia: cargueiro de bandeira russa atingido por dois drones no golfo da Finlândia em 21/11; em 22/11, a Ucrânia diz ter afundado uma corveta russa em Benghazi, na Líbia."
+        }
+      ],
+      "vetores": [],
+      "dominios": [
+        "conflito"
+      ],
+      "confianca": "media",
+      "fontes": [
+        {
+          "veiculo": "onu_news",
+          "titulo": "Security Council LIVE: Winter attacks on Ukraine's power grid and Black Sea shipping threaten lives and global food supplies",
+          "url": "https://news.un.org/feed/view/en/story/2026/11/1168859",
+          "publicado_em": "2026-11-23"
+        },
+        {
+          "veiculo": "al_jazeera",
+          "titulo": "Crew evacuated amid battle to put out fire on Russian ship hit by drones",
+          "url": "https://www.aljazeera.com/news/2026/11/21/russia-says-kaliningrad-bound-ship-struck-by-drones-in-gulf-of-finland",
+          "publicado_em": "2026-11-21"
+        }
+      ]
+    },
+    {
+      "id": "r3",
+      "categoria": "geopolitica",
+      "titulo": "Conselho de Segurança das Nações Unidas discute ataques russos à rede elétrica ucraniana e ataques a navios no mar Negro",
+      "fato": "Em 23/11, o Conselho de Segurança tratou de ataques russos à rede elétrica da Ucrânia, que deixam civis sem luz e aquecimento, e de ataques sem autor apontado a navios no mar Negro: em meados de novembro, navios com bandeira da Grécia, Libéria e Somália foram atingidos; dois afundaram, um com trigo.",
+      "ataque": {
+        "veiculo": "onu_news",
+        "lado": "ordem_global",
+        "alvo": "russia",
+        "enquadramento": "Abre pelo inverno: ataques russos deixam civis ucranianos sem aquecimento, luz e água, e ataques no mar Negro ameaçam o trigo de países importadores, longe da frente.",
+        "url": "https://news.un.org/feed/view/en/story/2026/11/1168859"
+      },
+      "placar": [],
+      "sem_placar": "Reunião sem decisão em 23/11: haveria placar com resolução do Conselho ou com a rota de grãos fechada.",
+      "vetores": [],
+      "dominios": [
+        "alimentos",
+        "conflito"
+      ],
+      "confianca": "media",
+      "fontes": [
+        {
+          "veiculo": "onu_news",
+          "titulo": "Security Council LIVE: Winter attacks on Ukraine's power grid and Black Sea shipping threaten lives and global food supplies",
+          "url": "https://news.un.org/feed/view/en/story/2026/11/1168859",
+          "publicado_em": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "r4",
+      "categoria": "ia",
+      "titulo": "Nvidia, fornecedora de chips para a inteligência artificial, devolve o comando a Jensen Huang",
+      "fato": "Em 23/11, a Nvidia trouxe Jensen Huang de volta ao comando, após ouvir o governo americano; Trump pedira a volta. Huang renunciara em 12/11, após casos extraconjugais, um deles com empresária que os Estados Unidos suspeitam de espionar para a China; Pequim nega. As ações fecharam em alta de 31,5%.",
+      "ataque": {
+        "veiculo": "times_of_israel",
+        "lado": "centro_atlantico",
+        "alvo": "huang_nvidia",
+        "enquadramento": "Põe o escândalo no título: Huang volta apesar dos casos e da suspeita de espionagem. Diz que a volta veio sob pressão de investidores e de Trump e que as ações saltaram 35%, e põe no subtítulo a comemoração de Netanyahu e Herzog.",
+        "url": "https://www.timesofisrael.com/nvidia-reinstates-jensen-huang-as-ceo-despite-spy-scandal/"
+      },
+      "placar": [
+        {
+          "partido": "bancada_talento",
+          "efeito": "ganha",
+          "forca": 2,
+          "evidencia": "preco",
+          "porque": "Jensen Huang (Nvidia): volta a presidente-executivo em 23/11, por voto unânime do conselho, e as ações da empresa fecham o dia em alta de 31,5%."
+        }
+      ],
+      "vetores": [],
+      "dominios": [],
+      "confianca": "media",
+      "conflito_de_interesse": true,
+      "fontes": [
+        {
+          "veiculo": "times_of_israel",
+          "titulo": "Nvidia reinstates Jensen Huang as CEO despite affairs, spy scandal",
+          "url": "https://www.timesofisrael.com/nvidia-reinstates-jensen-huang-as-ceo-despite-spy-scandal/",
+          "publicado_em": "2026-11-23"
+        },
+        {
+          "veiculo": "fox_news",
+          "titulo": "Jensen Huang reinstated as Nvidia CEO after security review",
+          "url": "https://www.foxnews.com/live-news/ai-news-tech-markets-nvidia-11-23-26",
+          "publicado_em": "2026-11-23"
+        }
+      ]
+    },
+    {
+      "id": "r5",
+      "categoria": "ia",
+      "titulo": "Guterres pede que os países comecem a negociar um quadro comum de segurança da inteligência artificial",
+      "fato": "Em 23/11, ao fim de uma cúpula de segurança da inteligência artificial (IA) em Bridgetown, Barbados, o secretário-geral das Nações Unidas, António Guterres, pediu um quadro comum para riscos da IA, com testes comuns e supervisão independente; o chamado final pede o quadro em um ano. Nada se decidiu.",
+      "ataque": {
+        "veiculo": "onu_news",
+        "lado": "ordem_global",
+        "alvo": "nenhum",
+        "enquadramento": "Site da ONU, que coorganiza a cúpula e é parte: promove o pedido do secretário-geral, que fala na maior transferência de poder da história humana, e não registra decisão da cúpula.",
+        "url": "https://news.un.org/feed/view/en/story/2026/11/1168861"
+      },
+      "placar": [],
+      "sem_placar": "Só pedido em 23/11: a página não registra adesão de nenhum Estado; haveria placar se os países abrissem a negociação de um quadro comum.",
+      "vetores": [],
+      "dominios": [],
+      "confianca": "media",
+      "conflito_de_interesse": true,
+      "fontes": [
+        {
+          "veiculo": "onu_news",
+          "titulo": "UN chief urges talks on global AI safety framework, warns of historic shift in power",
+          "url": "https://news.un.org/feed/view/en/story/2026/11/1168861",
+          "publicado_em": "2026-11-23",
+          "primaria": true
+        }
+      ]
+    }
+  ],
+  "placar_do_dia": [
+    {
+      "partido": "bancada_talento",
+      "saldo": 2,
+      "narrativa": 0,
+      "frase": "Jensen Huang volta ao comando da Nvidia em 23/11, e as ações da empresa fecham o dia em alta de 31,5%."
+    },
+    {
+      "partido": "eixo_revisionista",
+      "saldo": -4,
+      "narrativa": 0,
+      "frase": "Irã: rede bancária paralela sancionada pelos Estados Unidos em 23/11; Rússia: cargueiro atingido por dois drones no golfo da Finlândia em 21/11."
+    }
+  ],
+  "novos_players": [],
+  "errata": [],
+  "respostas": [],
+  "bastidores": {
+    "modo": "busca",
+    "veiculos_consultados": 6,
+    "feeds_ok": 0,
+    "feeds_falhos": 122,
+    "paginas_lidas": 25,
+    "buscas": 10,
+    "minutos": 21,
+    "injecoes_ignoradas": 0,
+    "candidatos": [
+      {
+        "id": "bahrein",
+        "nome": "Bahrein",
+        "motivo": "Alvo de ataques do Irã em 21/11 e sede de posições militares dos Estados Unidos; sem ficha na régua."
+      },
+      {
+        "id": "ucrania",
+        "nome": "Ucrânia",
+        "motivo": "Diz ter afundado corveta russa na Líbia em 22/11: age fora da frente; sem ficha na régua."
+      },
+      {
+        "id": "arabia_saudita",
+        "nome": "Arábia Saudita",
+        "motivo": "Condenou o ataque ao Bahrein e, pela Liga Árabe, defendeu a captura de carbono na COP31; sem ficha na régua."
+      }
+    ],
+    "veiculos_sugeridos": [
+      "France 24 (france24.com)",
+      "Mehr News (mehrnews.com)",
+      "Tehran Times (tehrantimes.com)",
+      "UKMTO (ukmto.org)",
+      "NPR (npr.org)"
+    ],
+    "limites": "Sem rede no terminal, a coleta automática falhou: Brent, grãos e dólar sem medida em 23/11, e nenhum motivo passou do nível 2. A pauta saiu de 4 feeds lidos pela web (Times of Israel, IRNA, ONU News e Press TV); os do Irã eram anteriores à sanção de 23/11. O campo da ordem não trouxe os petroleiros nas páginas lidas e deu quase todo o radar. Com data conferida, os petroleiros e o ataque ucraniano na Líbia seriam candidatos a nível 3. Só 2 itens de IA. Revista em 24/11 por duas checagens."
+  }
+}

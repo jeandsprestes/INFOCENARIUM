@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<title>Feed de exemplo</title>
+<link>https://feed.exemplo.invalid/</link>
+<description>Feed fictício, para teste.</description>
+<item>
+<title>Zarvônia fecha o estreito de Brumal por 17 dias</title>
+<link>https://gazeta-og.exemplo.invalid/mundo/zarvonia-fecha-brumal</link>
+<description>A Marinha da Zarvônia anunciou o fechamento do estreito de Brumal a navios de carga por 17 dias.</description>
+<pubDate>Fri, 20 Nov 2026 17:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Parlamento de Nordélia aprova lei de inteligência artificial com 312 votos</title>
+<link>https://gazeta-og.exemplo.invalid/mundo/nordelia-lei-ia</link>
+<description>A lei cria um registro público de modelos e vale a partir de 2027.</description>
+<pubDate>Fri, 20 Nov 2026 12:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Conselho de Tavória discute orçamento de 2027</title>
+<link>https://gazeta-og.exemplo.invalid/mundo/tavoria-orcamento</link>
+<description>A sessão terminou sem votação.</description>
+<pubDate>Fri, 20 Nov 2026 01:00:00 +0000</pubDate>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,50 @@
+# INFOCENARIUM · valida edição e dados. Só avisa: não publica nada, não escreve nada.
+#
+# Destino no repositório: .github/workflows/valida.yml
+# Como funciona e por quê: veja o README.md do repositório.
+#
+# Roda quando o dono (ou a reserva da rotina) empurra direto na main, em pull request
+# e pelo botão "Run workflow".
+# Atenção: o push que o publica-edicao faz na main usa o GITHUB_TOKEN e por isso NÃO
+# dispara este workflow. Lá a validação já roda antes de empurrar.
+# Em pull request vindo de bifurcação (fork) roda o validador do fork, sem permissão
+# nenhuma e sem segredos. Nunca trocar o gatilho por pull_request_target.
+# Nenhuma action de terceiros: o repositório é público e é baixado só com git.
+
+name: valida
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:   # botão "Run workflow": o dono roda à mão quando quiser
+
+permissions: {}
+
+# Um push novo na mesma ref cancela a validação antiga, que ficou sem sentido.
+concurrency:
+  group: valida-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  valida:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - name: Baixa o repositório (sem credencial)
+        run: |
+          set -u
+          git init --quiet --initial-branch=main .
+          git remote add origin "${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git"
+          git fetch --quiet --no-tags --depth=1 origin "$GITHUB_SHA"
+          git checkout --quiet --detach FETCH_HEAD
+
+      - name: Roda o validador
+        run: python3 ferramentas/valida.py   # sem opção nenhuma vale --tudo (CONTRATO, seção 3)

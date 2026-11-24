@@ -1,0 +1,189 @@
+{
+  "versao": 1,
+  "atualizado_em": "2026-11-23",
+  "regra": "Catálogo fictício, só para os testes de contrato. Nenhum endereço daqui existe.",
+  "indicadores": [
+    {
+      "id": "brent",
+      "nome": "Petróleo Brent",
+      "unidade": "US$ por barril",
+      "dominio": "energia",
+      "obrigatorio": true,
+      "frequencia": "diaria",
+      "faixa": {
+        "min": 10,
+        "max": 400
+      },
+      "casas": 2,
+      "fontes": [
+        {
+          "nome": "Cotações de Exemplo",
+          "url": "https://cotacoes.exemplo.invalid/chart/brent",
+          "leitor": "yahoo_chart",
+          "nota": "Contrato futuro."
+        },
+        {
+          "nome": "Séries de Exemplo",
+          "url": "https://series.exemplo.invalid/csv/brent.csv",
+          "leitor": "fred_csv",
+          "nota": "Preço à vista."
+        },
+        {
+          "nome": "Energia de Exemplo",
+          "url": "https://energia.exemplo.invalid/v2/brent",
+          "leitor": "eia_v2"
+        }
+      ]
+    },
+    {
+      "id": "trigo",
+      "nome": "Trigo",
+      "unidade": "US$ por bushel",
+      "dominio": "alimentos",
+      "obrigatorio": true,
+      "frequencia": "diaria",
+      "faixa": {
+        "min": 1,
+        "max": 30
+      },
+      "casas": 2,
+      "fontes": [
+        {
+          "nome": "Cotações de Exemplo",
+          "url": "https://cotacoes.exemplo.invalid/chart/trigo",
+          "leitor": "yahoo_chart",
+          "fator": 0.01,
+          "nota": "A fonte entrega centavos de dólar."
+        },
+        {
+          "nome": "Séries de Exemplo",
+          "url": "https://series.exemplo.invalid/csv/trigo.csv",
+          "leitor": "fred_csv"
+        }
+      ]
+    },
+    {
+      "id": "milho",
+      "nome": "Milho",
+      "unidade": "US$ por bushel",
+      "dominio": "alimentos",
+      "obrigatorio": true,
+      "frequencia": "diaria",
+      "faixa": {
+        "min": 1,
+        "max": 30
+      },
+      "casas": 2,
+      "fontes": [
+        {
+          "nome": "Séries de Exemplo",
+          "url": "https://series.exemplo.invalid/csv/milho.csv",
+          "leitor": "fred_csv"
+        },
+        {
+          "nome": "Cotações de Exemplo",
+          "url": "https://cotacoes.exemplo.invalid/chart/milho",
+          "leitor": "yahoo_chart",
+          "fator": 0.01,
+          "nota": "A fonte entrega centavos de dólar."
+        }
+      ]
+    },
+    {
+      "id": "soja",
+      "nome": "Soja",
+      "unidade": "US$ por bushel",
+      "dominio": "alimentos",
+      "obrigatorio": true,
+      "frequencia": "diaria",
+      "faixa": {
+        "min": 2,
+        "max": 60
+      },
+      "casas": 2,
+      "fontes": [
+        {
+          "nome": "Cotações de Exemplo",
+          "url": "https://cotacoes.exemplo.invalid/chart/soja",
+          "leitor": "yahoo_chart",
+          "fator": 0.01,
+          "nota": "A fonte entrega centavos de dólar."
+        },
+        {
+          "nome": "Séries de Exemplo",
+          "url": "https://series.exemplo.invalid/csv/soja.csv",
+          "leitor": "fred_csv"
+        }
+      ]
+    },
+    {
+      "id": "usd_brl",
+      "nome": "Dólar em reais",
+      "unidade": "R$ por US$",
+      "dominio": "cambio",
+      "obrigatorio": true,
+      "frequencia": "diaria",
+      "faixa": {
+        "min": 1,
+        "max": 20
+      },
+      "casas": 4,
+      "fontes": [
+        {
+          "nome": "Banco de Exemplo",
+          "url": "https://banco.exemplo.invalid/sgs/dolar",
+          "leitor": "bcb_sgs"
+        },
+        {
+          "nome": "Cotações de Exemplo",
+          "url": "https://cotacoes.exemplo.invalid/chart/usdbrl",
+          "leitor": "yahoo_chart"
+        },
+        {
+          "nome": "Séries de Exemplo",
+          "url": "https://series.exemplo.invalid/csv/usdbrl.csv",
+          "leitor": "fred_csv"
+        }
+      ]
+    },
+    {
+      "id": "gas_natural",
+      "nome": "Gás natural",
+      "unidade": "US$ por milhão de BTU",
+      "dominio": "energia",
+      "obrigatorio": false,
+      "frequencia": "diaria",
+      "faixa": {
+        "min": 0.5,
+        "max": 50
+      },
+      "fontes": [
+        {
+          "nome": "Energia de Exemplo",
+          "url": "https://energia.exemplo.invalid/v2/gas",
+          "leitor": "eia_v2"
+        }
+      ]
+    },
+    {
+      "id": "indice_fao",
+      "nome": "Índice de preços de alimentos",
+      "unidade": "pontos",
+      "dominio": "alimentos",
+      "obrigatorio": false,
+      "frequencia": "mensal",
+      "faixa": {
+        "min": 50,
+        "max": 300
+      },
+      "casas": 1,
+      "fontes": [
+        {
+          "nome": "Alimentos de Exemplo",
+          "url": "https://alimentos.exemplo.invalid/indice.csv",
+          "leitor": "fao_csv"
+        }
+      ]
+    }
+  ]
+}

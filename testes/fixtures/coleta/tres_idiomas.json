@@ -1,0 +1,246 @@
+{
+  "exemplo": true,
+  "aviso": "Manchetes fictícias, escritas para testar o agrupamento em histórias. Nenhuma é notícia. Marvânia, Zafira, Vilaverde, Nordhaven, Itaverá, Quirino, Dalva Moreno e Nebulosa Labs não existem.",
+  "manchetes": [
+    {
+      "veiculo": "og_um",
+      "idioma": "pt",
+      "historia": "A",
+      "titulo": "Marvânia fecha o Estreito de Zafira após ataque a petroleiro"
+    },
+    {
+      "veiculo": "ce_um",
+      "idioma": "pt",
+      "historia": "A",
+      "titulo": "Fechamento do Estreito de Zafira pela Marvânia faz petróleo subir 8%"
+    },
+    {
+      "veiculo": "ca_um",
+      "idioma": "en",
+      "historia": "A",
+      "titulo": "Marvania closes Zafira Strait after tanker attack"
+    },
+    {
+      "veiculo": "so_um",
+      "idioma": "en",
+      "historia": "A",
+      "titulo": "Oil jumps 8% as Marvania shuts Zafira Strait"
+    },
+    {
+      "veiculo": "er_um",
+      "idioma": "es",
+      "historia": "A",
+      "titulo": "Marvania cierra el Estrecho de Zafira tras ataque a petrolero"
+    },
+    {
+      "veiculo": "in_um",
+      "idioma": "es",
+      "historia": "A",
+      "titulo": "El petróleo sube 8% por el cierre del Estrecho de Zafira"
+    },
+    {
+      "veiculo": "og_dois",
+      "idioma": "pt",
+      "historia": "B",
+      "titulo": "EUA e China assinam o Tratado de Vilaverde sobre chips"
+    },
+    {
+      "veiculo": "ca_dois",
+      "idioma": "en",
+      "historia": "B",
+      "titulo": "US and China sign Vilaverde Treaty on chips in Nordhaven"
+    },
+    {
+      "veiculo": "er_dois",
+      "idioma": "es",
+      "historia": "B",
+      "titulo": "EE.UU. y China firman el Tratado de Vilaverde en Nordhaven"
+    },
+    {
+      "veiculo": "so_dois",
+      "idioma": "pt",
+      "historia": "B",
+      "titulo": "Tratado de Vilaverde: cúpula em Nordhaven termina com acordo"
+    },
+    {
+      "veiculo": "og_um",
+      "idioma": "pt",
+      "historia": null,
+      "titulo": "EUA acusam China de espionagem em porto do Pacífico"
+    },
+    {
+      "veiculo": "ca_um",
+      "idioma": "en",
+      "historia": null,
+      "titulo": "US accuses China of spying at Pacific port"
+    },
+    {
+      "veiculo": "er_um",
+      "idioma": "es",
+      "historia": null,
+      "titulo": "EE.UU. acusa a China de espionaje en un puerto del Atlántico"
+    },
+    {
+      "veiculo": "so_um",
+      "idioma": "en",
+      "historia": null,
+      "titulo": "China and US trade barbs over fishing fleets"
+    },
+    {
+      "veiculo": "in_um",
+      "idioma": "pt",
+      "historia": null,
+      "titulo": "China e EUA voltam a discutir tarifas sobre aço"
+    },
+    {
+      "veiculo": "bt_um",
+      "idioma": "en",
+      "historia": "C",
+      "titulo": "Nebulosa Labs unveils Orion-7 model, claims 40% fewer errors"
+    },
+    {
+      "veiculo": "og_dois",
+      "idioma": "pt",
+      "historia": "C",
+      "titulo": "Nebulosa Labs lança modelo de IA Orion-7 e promete 40% menos erros"
+    },
+    {
+      "veiculo": "er_dois",
+      "idioma": "es",
+      "historia": "C",
+      "titulo": "Nebulosa Labs presenta Orion-7, su nuevo modelo de inteligencia artificial"
+    },
+    {
+      "veiculo": "og_um",
+      "idioma": "pt",
+      "historia": null,
+      "titulo": "Quirino veta lei do Senado sobre mineração"
+    },
+    {
+      "veiculo": "ca_um",
+      "idioma": "pt",
+      "historia": null,
+      "titulo": "Senado aprova indicado de Quirino para o banco central"
+    },
+    {
+      "veiculo": "so_um",
+      "idioma": "pt",
+      "historia": null,
+      "titulo": "Quirino visita fábrica de ônibus em Itaverá"
+    },
+    {
+      "veiculo": "er_um",
+      "idioma": "pt",
+      "historia": null,
+      "titulo": "Oposição pede explicações a Quirino sobre viagem"
+    },
+    {
+      "veiculo": "in_um",
+      "idioma": "pt",
+      "historia": null,
+      "titulo": "Quirino recebe prefeitos e promete estradas"
+    },
+    {
+      "veiculo": "og_dois",
+      "idioma": "en",
+      "historia": null,
+      "titulo": "Quirino praises farmers at harvest fair"
+    },
+    {
+      "veiculo": "ca_dois",
+      "idioma": "en",
+      "historia": null,
+      "titulo": "Quirino skips debate, cites flu"
+    },
+    {
+      "veiculo": "so_dois",
+      "idioma": "en",
+      "historia": null,
+      "titulo": "Poll shows Quirino ahead in the north"
+    },
+    {
+      "veiculo": "er_dois",
+      "idioma": "en",
+      "historia": null,
+      "titulo": "Quirino to address students on Friday"
+    },
+    {
+      "veiculo": "ce_um",
+      "idioma": "es",
+      "historia": null,
+      "titulo": "Quirino inaugura un puente sobre el río Brava"
+    },
+    {
+      "veiculo": "bt_um",
+      "idioma": "es",
+      "historia": null,
+      "titulo": "Quirino defiende su plan de vivienda"
+    },
+    {
+      "veiculo": "og_um",
+      "idioma": "es",
+      "historia": null,
+      "titulo": "Sindicatos se reúnen con Quirino"
+    },
+    {
+      "veiculo": "ca_um",
+      "idioma": "pt",
+      "historia": null,
+      "titulo": "Ministra Dalva Moreno anuncia reforma dos portos"
+    },
+    {
+      "veiculo": "so_um",
+      "idioma": "pt",
+      "historia": null,
+      "titulo": "Dalva responde a críticas em audiência"
+    },
+    {
+      "veiculo": "er_um",
+      "idioma": "ru",
+      "historia": "D",
+      "titulo": "Марвания закрыла пролив Зафира после атаки на танкер"
+    },
+    {
+      "veiculo": "er_dois",
+      "idioma": "ru",
+      "historia": "D",
+      "titulo": "Пролив Зафира закрыт: Марвания обвиняет соседей"
+    },
+    {
+      "veiculo": "er_um",
+      "idioma": "zh",
+      "historia": "E",
+      "titulo": "马尔瓦尼亚关闭扎菲拉海峡"
+    },
+    {
+      "veiculo": "er_dois",
+      "idioma": "zh",
+      "historia": "E",
+      "titulo": "扎菲拉海峡关闭后油价上涨8%"
+    },
+    {
+      "veiculo": "in_um",
+      "idioma": "ar",
+      "historia": "F",
+      "titulo": "مارفانيا تغلق مضيق زافيرا بعد هجوم على ناقلة"
+    },
+    {
+      "veiculo": "ce_um",
+      "idioma": "ar",
+      "historia": "F",
+      "titulo": "إغلاق مضيق زافيرا: مارفانيا تتهم جيرانها"
+    },
+    {
+      "veiculo": "og_dois",
+      "idioma": "ar",
+      "historia": "F",
+      "titulo": "ارتفاع أسعار النفط بعد إغلاق مضيق زافيرا"
+    },
+    {
+      "veiculo": "so_dois",
+      "idioma": "ar",
+      "historia": null,
+      "titulo": "سفن تنتظر قرب مضيق زافيرا"
+    }
+  ]
+}

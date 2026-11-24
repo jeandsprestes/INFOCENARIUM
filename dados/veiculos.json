@@ -1,0 +1,5161 @@
+{
+  "versao": 1,
+  "revisado_em": null,
+  "veiculos": [
+    {
+      "id": "a16z",
+      "nome": "Andreessen Horowitz (a16z)",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "a16z.com"
+      ],
+      "controle": "Gestora de capital de risco, de Marc Andreessen e Ben Horowitz.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Andreessen_Horowitz",
+      "lado": "soberanistas",
+      "lado_confianca": "media",
+      "lado_porque": "Defende regra federal única e leve para a IA, contra leis estaduais. Os sócios doaram a super PAC pró-Trump em 2024 e financiam o super PAC de IA Leading the Future. Linha documentada em manifestos e em doações.",
+      "serve_a": [
+        "trump",
+        "thiel"
+      ],
+      "alvos": [
+        "ordem_global"
+      ],
+      "fatos": "baixa",
+      "fatos_nota": "Conteúdo de investidor com interesse nas empresas que apoia.",
+      "uso": "Linha pró-aceleração de IA.",
+      "feeds": [
+        {
+          "url": "https://a16z.com/feed/",
+          "secao": "IA",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site respondeu 403 (acesso barrado)."
+        }
+      ]
+    },
+    {
+      "id": "acled",
+      "nome": "ACLED (Armed Conflict Location & Event Data)",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "dados",
+      "sites": [
+        "acleddata.com"
+      ],
+      "controle": "Organização sem fins lucrativos registrada nos EUA (501(c)(3)). Entre os financiadores está o fundo CRAF'd da ONU. A lista completa de doadores não foi conferida.",
+      "controle_fonte": "https://acleddata.com/about-acled/",
+      "lado": "ordem_global",
+      "lado_confianca": "baixa",
+      "lado_porque": "Base de dados técnica. Financiamento ocidental e linha de direitos humanos põem o enquadramento perto da Ordem Global. Classificação fraca.",
+      "serve_a": [
+        "ordem_global"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Conta eventos de violência com data e local. Pontos fortes: método aberto. Os dados brutos exigem cadastro e chave pessoal, que o INFOCENARIUM não usa.",
+      "uso": "Mapa de conflitos e mortes por país.",
+      "feeds": [],
+      "feeds_nota": "Sem feed. Os endereços https://acleddata.com/feed/ e https://acleddata.com/rss.xml respondem 404 (página inexistente): visto em 20/11/2026 e de novo em 23/11/2026."
+    },
+    {
+      "id": "afp",
+      "nome": "Agence France-Presse (AFP)",
+      "pais": "França",
+      "idiomas": [
+        "fr",
+        "en",
+        "es",
+        "pt",
+        "de",
+        "ar"
+      ],
+      "tipo": "agencia",
+      "sites": [
+        "afp.com"
+      ],
+      "controle": "Organismo francês de estatuto próprio (lei de 1957), sem acionistas. Pelo contrato de objetivos e meios 2024-2028 com o Estado, os recursos públicos são cerca de 43% das receitas. Em 2025-26 roda um plano de economia de 12 a 14 milhões de euros, com cerca de 70 vagas cortadas.",
+      "controle_fonte": "https://questions.assemblee-nationale.fr/q17/17-9293QE.htm",
+      "lado": "centro_atlantico",
+      "lado_confianca": "media",
+      "lado_porque": "O estatuto garante independência editorial, mas o Estado francês paga cerca de 43% das receitas. A França de Macron está no Centro Atlântico na régua. Fonte do número: pergunta oficial na Assembleia Nacional francesa; o estatuto não foi lido no texto original.",
+      "serve_a": [
+        "ue",
+        "macron"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Boa em fato cru, com forte cobertura da África, do Oriente Médio e da Ásia. Tem equipe de checagem própria.",
+      "uso": "Fato cru com ótica francesa e europeia. Cobertura de África e Oriente Médio.",
+      "feeds": [],
+      "feeds_nota": "Sem feed público aberto. As notícias ficam no portal https://www.afp.com/en/news-hub, que não abriu para leitura automática em 20/11/2026."
+    },
+    {
+      "id": "agencia_brasil",
+      "nome": "Agência Brasil (EBC)",
+      "pais": "Brasil",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "estatal",
+      "sites": [
+        "agenciabrasil.ebc.com.br"
+      ],
+      "controle": "Empresa Brasil de Comunicação (EBC), empresa pública federal criada em 2007 e financiada pela União.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Ag%C3%AAncia_Brasil",
+      "lado": "ordem_global",
+      "lado_confianca": "alta",
+      "lado_porque": "Veículo estatal segue o partido do Estado que o controla. O governo federal é liderado por Lula, que a régua põe em ordem_global.",
+      "serve_a": [
+        "lula",
+        "ordem_global"
+      ],
+      "alvos": [
+        "bolsonaro",
+        "soberanistas"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Fato oficial (atos, números, cerimônias) é confiável; pauta e destaque refletem o governo.",
+      "uso": "Linha oficial do governo federal brasileiro e agenda do Planalto.",
+      "feeds": [
+        {
+          "url": "https://agenciabrasil.ebc.com.br/rss/ultimasnoticias/feed.xml",
+          "secao": "Últimas",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens do mesmo dia."
+        },
+        {
+          "url": "https://agenciabrasil.ebc.com.br/rss/internacional/feed.xml",
+          "secao": "Internacional",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "ai_now",
+      "nome": "AI Now Institute",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "think_tank",
+      "sites": [
+        "ainowinstitute.org"
+      ],
+      "controle": "Instituto de pesquisa sem fins lucrativos, financiado por fundações.",
+      "controle_fonte": "https://ainowinstitute.org/about",
+      "lado": "ordem_global",
+      "lado_confianca": "media",
+      "lado_porque": "Pede regulação e limites às big techs de IA; linha documentada em relatórios.",
+      "serve_a": [],
+      "alvos": [
+        "bancada_talento",
+        "altman"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Relatórios com fonte; advocacia explícita.",
+      "uso": "Visão crítica das big techs de IA.",
+      "feeds": [],
+      "feeds_nota": "Sem feed: o endereço /feed respondeu 404 em 20/11/2026. Ler https://ainowinstitute.org/news."
+    },
+    {
+      "id": "aie",
+      "nome": "AIE (Agência Internacional de Energia)",
+      "pais": "Organismo internacional (sede em Paris)",
+      "idiomas": [
+        "en",
+        "fr"
+      ],
+      "tipo": "dados",
+      "sites": [
+        "iea.org"
+      ],
+      "controle": "Criada pela OCDE; financiada pelos países-membros importadores.",
+      "controle_fonte": "https://www.iea.org/about",
+      "lado": "centro_atlantico",
+      "lado_confianca": "media",
+      "lado_porque": "Nasceu para proteger os países importadores de petróleo. Hoje empurra transição de energia, na linha das políticas ocidentais.",
+      "serve_a": [
+        "centro_atlantico",
+        "ue"
+      ],
+      "alvos": [
+        "eixo_revisionista"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Bom para balanço de petróleo, gás e eletricidade. Relatório mensal de petróleo e Gas Market Report.",
+      "uso": "Oferta e demanda de energia, estoque estratégico, segurança energética.",
+      "feeds": [
+        {
+          "url": "https://www.iea.org/rss/news.xml",
+          "secao": "Notícias",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site respondeu 403 (acesso barrado)."
+        }
+      ],
+      "feeds_nota": "O endereço https://www.iea.org/api/news/rss responde 404 (visto em 20/11/2026 e de novo em 23/11/2026) e saiu do mapa."
+    },
+    {
+      "id": "aiea",
+      "nome": "AIEA (Agência Internacional de Energia Atômica)",
+      "pais": "ONU (sede em Viena)",
+      "idiomas": [
+        "en",
+        "fr",
+        "es",
+        "ru",
+        "zh",
+        "ar"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "iaea.org"
+      ],
+      "controle": "Agência autônoma ligada à ONU, financiada pelos Estados-membros.",
+      "controle_fonte": "https://www.iaea.org/about/overview",
+      "lado": "ordem_global",
+      "lado_confianca": "media",
+      "lado_porque": "Cuida da não proliferação, na ótica multilateral. Mantém tom técnico e neutro.",
+      "serve_a": [
+        "oms_onu",
+        "ordem_global"
+      ],
+      "alvos": [
+        "ira"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Boa fonte para usinas na Ucrânia (Zaporíjia) e inspeção do Irã. Cuidado: relata o que consegue ver.",
+      "uso": "Risco nuclear, inspeções, segurança de usinas.",
+      "feeds": [
+        {
+          "url": "https://www.iaea.org/feeds/topnews",
+          "secao": "Destaques",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens de 18 e 19/11/2026."
+        }
+      ]
+    },
+    {
+      "id": "al_arabiya",
+      "nome": "Al Arabiya",
+      "pais": "Arábia Saudita",
+      "idiomas": [
+        "en",
+        "ar"
+      ],
+      "tipo": "estatal",
+      "sites": [
+        "alarabiya.net"
+      ],
+      "controle": "Grupo MBC. O fundo soberano saudita PIF comprou 54% em setembro de 2025, por cerca de US$ 2 bilhões.",
+      "controle_fonte": "https://www.arabianbusiness.com/industries/media/saudi-arabia-pif-stake-in-mbc-group",
+      "lado": "centrao",
+      "lado_confianca": "media",
+      "lado_porque": "Controle saudita via PIF. A Arábia Saudita não está na régua. O voto típico (negócio e energia, pouca posição pública, controle estatal em casa) aproxima do Centrão. Aproximação minha.",
+      "serve_a": [
+        "centrao"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Cobre fato com rapidez, mas poupa a casa real saudita e é duro com o Irã e a Irmandade.",
+      "uso": "Linha oficial saudita sobre Irã, Iêmen e Israel.",
+      "feeds": [],
+      "feeds_nota": "O feed do site respondeu 403 (acesso barrado) em 20/11/2026. Ler as últimas notícias em https://english.alarabiya.net/."
+    },
+    {
+      "id": "al_jazeera",
+      "nome": "Al Jazeera",
+      "pais": "Catar",
+      "idiomas": [
+        "en",
+        "ar"
+      ],
+      "tipo": "estatal",
+      "sites": [
+        "aljazeera.com",
+        "aljazeera.net"
+      ],
+      "controle": "Rede financiada pelo governo do Catar (emirado).",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Al_Jazeera",
+      "lado": "independentes",
+      "lado_confianca": "media",
+      "lado_porque": "O Catar financia a rede. O Catar fala com todos os lados (EUA, Hamas, Taliban, Irã), então o voto é pendular. A cobertura de Gaza é muito crítica a Israel e mais branda com o Catar e a Irmandade Muçulmana. O partido mais próximo pelo voto típico seria o Centrão ou os Independentes. Ficou nos Independentes.",
+      "serve_a": [
+        "independentes"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Boa em fato de campo no Oriente Médio e no Sul Global. Evita temas que expõem o Catar. Enquadramento forte em Israel e Gaza.",
+      "uso": "Linha oficial do Catar e do mundo árabe sunita; fato de campo em Gaza, Iraque e Sudão.",
+      "feeds": [
+        {
+          "url": "https://www.aljazeera.com/xml/rss/all.xml",
+          "secao": "Tudo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "allafrica",
+      "nome": "AllAfrica",
+      "pais": "EUA",
+      "idiomas": [
+        "en",
+        "fr",
+        "ar",
+        "pt"
+      ],
+      "tipo": "agencia",
+      "sites": [
+        "allafrica.com"
+      ],
+      "controle": "AllAfrica Global Media, empresa privada de Washington. Fundadores: Reed Kramer, Tami Hultman e Amadou Mahtar Ba.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/AllAfrica",
+      "lado": "independentes",
+      "lado_confianca": "baixa",
+      "lado_porque": "Agregador de centenas de jornais africanos, sem linha editorial própria. Cada nota tem a linha do veículo de origem.",
+      "serve_a": [
+        "independentes"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Reproduz textos de terceiros, incluindo jornais estatais. Conferir a fonte original.",
+      "uso": "Varredura da África em um só feed.",
+      "feeds": [
+        {
+          "url": "https://allafrica.com/tools/headlines/rdf/latest/headlines.rdf",
+          "secao": "Tudo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Formato RDF (RSS 1.0). Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "american_conservative",
+      "nome": "The American Conservative",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "think_tank",
+      "sites": [
+        "theamericanconservative.com"
+      ],
+      "controle": "American Ideas Institute, organização sem fins lucrativos (501(c)(3)). Não divulga doadores. Registros fiscais e da Fundação Charles Koch mostram doações da rede Koch de 2015 a 2020 (ao menos US$ 966 mil, segundo a Popular Information) e de fundos de doação depois disso.",
+      "controle_fonte": "https://www.influencewatch.org/non-profit/american-ideas-institute/",
+      "lado": "soberanistas",
+      "lado_confianca": "media",
+      "lado_porque": "Revista de direita nacionalista e favorável a restringir imigração e a limitar intervenções militares. Crítica de parte do círculo de política externa republicano. Voto próximo do soberanista, com a ressalva do isolacionismo.",
+      "serve_a": [
+        "soberanistas"
+      ],
+      "alvos": [
+        "centro_atlantico",
+        "ordem_global"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Opinião e análise. Referência para argumentos, não para notícias do dia.",
+      "uso": "Argumento da direita contrária a guerras e a alianças externas.",
+      "feeds": [
+        {
+          "url": "https://www.theamericanconservative.com/feed/",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS. Em 20/11/2026 trazia itens do mesmo dia, inclusive sobre IA e sobre a Anthropic."
+        }
+      ],
+      "feeds_nota": "Feed geral."
+    },
+    {
+      "id": "anadolu",
+      "nome": "Agência Anadolu",
+      "pais": "Turquia",
+      "idiomas": [
+        "en",
+        "tr",
+        "ar",
+        "pt"
+      ],
+      "tipo": "agencia",
+      "sites": [
+        "aa.com.tr"
+      ],
+      "controle": "Agência estatal turca, sociedade anônima criada pelo Estado. Desde 2019 fica sob a Diretoria de Comunicações da Presidência, que nomeia a direção. A maior parte da receita vem do orçamento dessa Diretoria.",
+      "controle_fonte": "https://statemediamonitor.com/2026/10/anadolu-agency/",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "baixa",
+      "lado_porque": "Agência do Estado, com linha do governo em política interna e externa. Mesma aproximação feita para TRT World.",
+      "serve_a": [
+        "eixo_revisionista"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Bom para comunicados e dados oficiais turcos. Seleção de temas segue o governo.",
+      "uso": "Fato cru e comunicado oficial da Turquia; cobertura de Gaza e África.",
+      "feeds": [
+        {
+          "url": "https://www.aa.com.tr/en/rss/default?cat=world",
+          "secao": "Mundo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "anthropic_news",
+      "nome": "Anthropic (sala de imprensa)",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "anthropic.com"
+      ],
+      "controle": "Anthropic, empresa de capital aberto: estreou na Nasdaq (código ANT) em 19/11/2026; a oferta pública foi fechada em 20/11/2026.",
+      "controle_fonte": "https://www.cnbc.com/2026/11/19/anthropic-ipo-ant-live-updates.html",
+      "lado": "independentes",
+      "lado_confianca": "alta",
+      "lado_porque": "Voz da Anthropic, que a régua põe nos Independentes. CONFLITO: o INFOCENARIUM é escrito por modelo da Anthropic.",
+      "serve_a": [
+        "anthropic"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Fatos da empresa úteis; desempenho e segurança são autodeclarados.",
+      "uso": "Linha oficial da Anthropic, citada com aviso de conflito.",
+      "feeds": [],
+      "feeds_nota": "Sem feed. Títulos e datas na página https://www.anthropic.com/news (em 20/11/2026, o item mais novo era do mesmo dia: o fechamento da oferta pública de ações)."
+    },
+    {
+      "id": "ap",
+      "nome": "Associated Press (AP)",
+      "pais": "EUA",
+      "idiomas": [
+        "en",
+        "es",
+        "ar"
+      ],
+      "tipo": "agencia",
+      "sites": [
+        "apnews.com"
+      ],
+      "controle": "Cooperativa sem fins lucrativos, de propriedade de jornais e emissoras dos EUA que a usam. Em 2026 anunciou reestruturação: menos cobertura local em papel, mais vídeo e temas nacionais.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Associated_Press",
+      "lado": "centro_atlantico",
+      "lado_confianca": "baixa",
+      "lado_porque": "Cooperativa de imprensa dos EUA, sem dono único e sem linha editorial declarada. Está em conflito de acesso com a Casa Branca de Trump desde fev/2025 (proibição na Sala Oval e no Air Force One), o que não prova lado, só mostra atrito.",
+      "serve_a": [
+        "centro_atlantico"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Agência de referência para fato cru. Usa o AP Stylebook, que também gerou disputa sobre nomes (caso 'Golfo da América').",
+      "uso": "Fato cru rápido sobre EUA, eleições e Congresso. Termômetro da relação entre a imprensa e a Casa Branca.",
+      "feeds": [],
+      "feeds_nota": "Sem feed RSS oficial ativo. Ler a página https://apnews.com/world-news, que não abriu para leitura automática em 20/11/2026."
+    },
+    {
+      "id": "arab_news",
+      "nome": "Arab News",
+      "pais": "Arábia Saudita",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "arabnews.com"
+      ],
+      "controle": "Saudi Research and Media Group (SRMG), listada em bolsa. O controle passa por fundos do Saudi National Bank (SNB), cujo controlador final é o fundo soberano PIF.",
+      "controle_fonte": "https://statemediamonitor.com/2026/06/saudi-research-and-media-group-srmg/",
+      "lado": "centrao",
+      "lado_confianca": "media",
+      "lado_porque": "O grupo SRMG é ligado ao Estado saudita e a linha segue a política externa do reino. Mesma aproximação com o Centrão usada para Al Arabiya.",
+      "serve_a": [
+        "centrao"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Reproduz bem comunicados e agenda do reino. Pouca crítica interna.",
+      "uso": "Voz oficial saudita em inglês; economia do Golfo e Visão 2030.",
+      "feeds": [
+        {
+          "url": "https://www.arabnews.com/rss.xml",
+          "secao": "Tudo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia, de títulos curtos e muita cultura: pouco útil para geopolítica."
+        }
+      ]
+    },
+    {
+      "id": "ars_technica",
+      "nome": "Ars Technica",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "arstechnica.com"
+      ],
+      "controle": "Condé Nast.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Ars_Technica",
+      "lado": "ordem_global",
+      "lado_confianca": "baixa",
+      "lado_porque": "Jornalismo técnico detalhado, sem linha política partidária marcada. Dono institucional ligado ao centro do jornalismo americano.",
+      "serve_a": [],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Boa leitura técnica de pesquisa, espaço e IA; corrige erros com transparência.",
+      "uso": "Explicação técnica de modelos, chips e políticas.",
+      "feeds": [
+        {
+          "url": "https://feeds.arstechnica.com/arstechnica/index",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        }
+      ]
+    },
+    {
+      "id": "axios",
+      "nome": "Axios",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "axios.com"
+      ],
+      "controle": "Cox Enterprises (cerca de 70%, compra de US$ 525 milhões em 2022); fundadores e funcionários têm o resto.",
+      "controle_fonte": "https://thehill.com/homenews/media/3592498-axios-sold-to-cox-enterprises-for-525-million/",
+      "lado": "centro_atlantico",
+      "lado_confianca": "baixa",
+      "lado_porque": "Formato de resumo curto, com ênfase em política, negócios e tecnologia, sem linha editorial marcada. Perfil de centro, com bom acesso a fontes da Casa Branca e do Vale do Silício.",
+      "serve_a": [
+        "centro_atlantico",
+        "bancada_talento"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Rápido e bem fonteado, mas muito resumido. Acesso a fontes tem custo: tende a repetir a versão de quem vazou.",
+      "uso": "Furo rápido de Washington, IA e big tech. Bom para ver o que o governo e as empresas querem anunciar.",
+      "feeds": [
+        {
+          "url": "https://api.axios.com/feed/",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens do mesmo dia. O feed é muito grande."
+        }
+      ],
+      "feeds_nota": "O feed é pesado (mais de 1 milhão de caracteres): vale ler só os primeiros itens."
+    },
+    {
+      "id": "banco_mundial",
+      "nome": "Banco Mundial",
+      "pais": "Organismo internacional (sede em Washington)",
+      "idiomas": [
+        "en",
+        "es",
+        "fr",
+        "pt"
+      ],
+      "tipo": "dados",
+      "sites": [
+        "worldbank.org",
+        "bancomundial.org",
+        "banquemondiale.org"
+      ],
+      "controle": "Organismo dos Estados-membros; os EUA são o maior acionista.",
+      "controle_fonte": "https://www.worldbank.org/en/about/leadership/directors",
+      "lado": "ordem_global",
+      "lado_confianca": "media",
+      "lado_porque": "Instituição da ordem global, com foco em desenvolvimento e crédito.",
+      "serve_a": [
+        "ordem_global",
+        "centro_atlantico"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Bom para pobreza, preço de commodities e crescimento (relatório Commodity Markets Outlook).",
+      "uso": "Projeção de commodities, pobreza e crédito a países.",
+      "feeds": [],
+      "feeds_nota": "Sem feed. O endereço https://www.worldbank.org/en/news/all?format=rss devolve a página de notícias, sem lista de itens (visto em 20/11/2026 e de novo em 23/11/2026)."
+    },
+    {
+      "id": "bbc",
+      "nome": "BBC News",
+      "pais": "Reino Unido",
+      "idiomas": [
+        "en",
+        "pt",
+        "es",
+        "fr",
+        "ar",
+        "ru",
+        "zh"
+      ],
+      "tipo": "publico",
+      "sites": [
+        "bbc.com",
+        "bbc.co.uk"
+      ],
+      "controle": "Emissora pública britânica, financiada em grande parte pela taxa de licença (£180 por ano desde abr/2026), sob Carta Real que vence em 31/12/2027. Nova direção-geral (Matt Brittin) após a saída de Tim Davie.",
+      "controle_fonte": "https://www.itv.com/news/2026-10-16/bbc-licence-fee-could-extend-to-streaming-services-under-youtube-tax-report",
+      "lado": "centro_atlantico",
+      "lado_confianca": "media",
+      "lado_porque": "Serviço público do Reino Unido, com mandato de imparcialidade e linha atlantista e multilateral em política externa. Críticas vêm dos dois lados. A crise de 2025-26 sobre padrões editoriais (memorando Prescott) derrubou a cúpula.",
+      "serve_a": [
+        "centro_atlantico"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Referência para fato cru, com checagem própria (BBC Verify). Há erros editoriais admitidos em 2025.",
+      "uso": "Fato cru e ótica oficial britânica. Cobertura global em muitos idiomas, inclusive português.",
+      "feeds": [
+        {
+          "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+          "secao": "Mundo",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        },
+        {
+          "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+          "secao": "Tecnologia",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        }
+      ],
+      "feeds_nota": "Página de apoio: https://www.bbc.com/news/world."
+    },
+    {
+      "id": "bbc_brasil",
+      "nome": "BBC News Brasil",
+      "pais": "Reino Unido",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "publico",
+      "sites": [
+        "bbc.com"
+      ],
+      "controle": "BBC World Service, financiado pela taxa de licença britânica (cerca de £221 milhões em 2025-26) e por verba do Foreign Office, o ministério do Exterior (£137 milhões). Em jan/2026 a BBC ainda não sabia a verba do ministério para 2026-27.",
+      "controle_fonte": "https://publications.parliament.uk/pa/cm5901/cmselect/cmpubacc/1299/report.html",
+      "lado": "centro_atlantico",
+      "lado_confianca": "media",
+      "lado_porque": "Público britânico com estatuto de imparcialidade. O Reino Unido não está na régua; o partido mais próximo do voto típico do país é o Centro Atlântico.",
+      "serve_a": [
+        "centro_atlantico",
+        "ue"
+      ],
+      "alvos": [
+        "russia",
+        "china"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Padrão alto de checagem; cobertura ampla do mundo.",
+      "uso": "Fato cru do mundo em português, com a ótica britânica.",
+      "feeds": [
+        {
+          "url": "https://feeds.bbci.co.uk/portuguese/rss.xml",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        }
+      ],
+      "feeds_nota": "Página de apoio: https://www.bbc.com/portuguese."
+    },
+    {
+      "id": "belta",
+      "nome": "BelTA (Agência de Notícias da Bielorrússia)",
+      "pais": "Bielorrússia",
+      "idiomas": [
+        "be",
+        "ru",
+        "en"
+      ],
+      "tipo": "agencia",
+      "sites": [
+        "belta.by"
+      ],
+      "controle": "Agência estatal de notícias da Bielorrússia, de propriedade do governo.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/BelTA",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "alta",
+      "lado_porque": "Propriedade estatal. Segue a linha de Lukashenko e do Estado da União com a Rússia.",
+      "serve_a": [
+        "lukashenko",
+        "russia"
+      ],
+      "alvos": [
+        "ue"
+      ],
+      "fatos": "baixa",
+      "fatos_nota": "Boa para comunicados oficiais. Cobertura da oposição e de protestos é nula.",
+      "uso": "Linha oficial de Minsk e posição frente à UE.",
+      "feeds": [],
+      "feeds_nota": "Sem feed. O endereço https://eng.belta.by/rss responde 404 (visto em 20/11/2026 e de novo em 23/11/2026). Ler https://eng.belta.by/, que listava notícias do dia em 20/11/2026."
+    },
+    {
+      "id": "bloomberg",
+      "nome": "Bloomberg News",
+      "pais": "EUA",
+      "idiomas": [
+        "en",
+        "pt",
+        "es",
+        "de",
+        "ja",
+        "zh"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "bloomberg.com"
+      ],
+      "controle": "Bloomberg L.P., empresa privada. Michael Bloomberg tem cerca de 88%. Em 2026 passou parte das ações à Bloomberg Philanthropies, sem número divulgado (Semafor, jul/2026); a empresa diz que ele não pretende vender. A receita vem dos terminais financeiros.",
+      "controle_fonte": "https://www.semafor.com/article/07/28/2026/bloombergs-post-mike-moves-are-in-motion",
+      "lado": "centrao",
+      "lado_confianca": "baixa",
+      "lado_porque": "O negócio é informar o mercado financeiro, o que combina com o Centrão. A redação não se alinha a partido. Mas o dono e sua fundação são atores fortes do polo azul em clima e saúde pública, e a empresa mantém a marca Bloomberg Green. Não dá para decidir entre Centrão e Ordem Global só com o que foi visto.",
+      "serve_a": [
+        "centrao"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Rápida e precisa em preços, bancos centrais, energia e commodities. Boa em furos econômicos.",
+      "uso": "Preço, juros, câmbio, petróleo e política econômica em tempo quase real.",
+      "feeds": [
+        {
+          "url": "https://www.bloomberg.com/feeds/politics/news.rss",
+          "secao": "Política",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens do mesmo dia."
+        },
+        {
+          "url": "https://www.bloomberg.com/feeds/technology/news.rss",
+          "secao": "Tecnologia",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens do mesmo dia. Os itens não vêm em ordem de data."
+        }
+      ],
+      "feeds_nota": "Os feeds ficam em bloomberg.com/feeds; o endereço antigo, feeds.bloomberg.com, redireciona para lá."
+    },
+    {
+      "id": "brasil_247",
+      "nome": "Brasil 247",
+      "pais": "Brasil",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "brasil247.com"
+      ],
+      "controle": "Editora 247, controlada por Leonardo Attuch. Vive de publicidade institucional, programática, assinaturas e apoio coletivo; recebeu verba federal.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Brasil_247",
+      "lado": "ordem_global",
+      "lado_confianca": "media",
+      "lado_porque": "Site de linha progressista declarada, favorável ao PT e a Lula. Levantamento da Folha com dados da Secom mostra R$ 697 mil de publicidade federal em 2023, nada sob Temer e Bolsonaro.",
+      "serve_a": [
+        "lula",
+        "ordem_global"
+      ],
+      "alvos": [
+        "bolsonaro",
+        "trump",
+        "soberanistas"
+      ],
+      "fatos": "baixa",
+      "fatos_nota": "Muita opinião e texto de militância; checar fato em fonte primária.",
+      "uso": "Voz da esquerda governista brasileira.",
+      "feeds": [
+        {
+          "url": "https://www.brasil247.com/rss",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "breitbart",
+      "nome": "Breitbart News",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "breitbart.com"
+      ],
+      "controle": "Empresa privada ligada a Larry Solov (CEO), à viúva do fundador e à família Mercer (relato da Wikipedia).",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Breitbart_News",
+      "lado": "soberanistas",
+      "lado_confianca": "alta",
+      "lado_porque": "Linha editorial nacionalista e anti-imigração documentada, com cobertura declaradamente pró-Trump. Foco forte em fronteira e em críticas à UE.",
+      "serve_a": [
+        "trump",
+        "soberanistas",
+        "bolsonaro"
+      ],
+      "alvos": [
+        "ordem_global",
+        "centro_atlantico",
+        "ue"
+      ],
+      "fatos": "baixa",
+      "fatos_nota": "Mistura notícia e campanha política; escolhe o fato que convém. Conferir em outra fonte antes de tratar como fato.",
+      "uso": "Termômetro do que a ala mais dura do movimento de Trump quer pautar.",
+      "feeds": [
+        {
+          "url": "https://feeds.feedburner.com/breitbart",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0, distribuído pelo FeedBurner. Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ],
+      "feeds_nota": "O feed é geral; não há filtro por seção confirmado."
+    },
+    {
+      "id": "caixin",
+      "nome": "Caixin Global",
+      "pais": "China",
+      "idiomas": [
+        "en",
+        "zh"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "caixinglobal.com",
+        "caixin.com"
+      ],
+      "controle": "Grupo de mídia de Pequim, presidido por Hu Shuli. O maior acionista conhecido é o fundo China Media Capital, criado com apoio do governo e chefiado por Li Ruigang, presidente do conselho da Caixin.",
+      "controle_fonte": "https://www.scmp.com/business/china-business/article/1385987/new-boss-and-backing-pipeline-hu-shulis-caixin-media-group",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "baixa",
+      "lado_porque": "Tradição de reportagem econômica investigativa, mas com acionista ligado ao Estado e sob censura chinesa. Lado inferido pelo ambiente e pela estrutura de capital, não por linha política. A divisão atual das ações não foi confirmada.",
+      "serve_a": [
+        "china"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Melhor fonte privada chinesa para finanças, dívida e política econômica. Parte dos textos fica atrás de assinatura.",
+      "uso": "Fato econômico da China com mais independência que a mídia estatal.",
+      "feeds": [
+        {
+          "url": "https://gateway.caixin.com/api/data/global/feedlyRss.xml",
+          "secao": "Economia",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Endereço achado no próprio site. Em 20/11/2026 respondeu 406 (pedido recusado): não confirmado."
+        }
+      ],
+      "feeds_nota": "Ler https://www.caixinglobal.com/."
+    },
+    {
+      "id": "casa_branca",
+      "nome": "Casa Branca (comunicados)",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "whitehouse.gov"
+      ],
+      "controle": "Governo dos EUA, Poder Executivo (gestão Trump).",
+      "controle_fonte": "https://www.whitehouse.gov/",
+      "lado": "soberanistas",
+      "lado_confianca": "alta",
+      "lado_porque": "Fonte oficial: o lado é o partido do governo, hoje o de Trump.",
+      "serve_a": [
+        "trump",
+        "soberanistas"
+      ],
+      "alvos": [
+        "ue",
+        "ordem_global",
+        "china"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Confiável para saber o que o governo decidiu e disse. Os números de economia e segurança são lidos de forma favorável.",
+      "uso": "Texto oficial de decreto, ordem executiva e discurso. Dá a posição do governo sem filtro de imprensa.",
+      "feeds": [
+        {
+          "url": "https://www.whitehouse.gov/news/feed/",
+          "secao": "Tudo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens de 19 e 20/11/2026. O endereço /feed/ simples respondia 404."
+        }
+      ]
+    },
+    {
+      "id": "cgtn",
+      "nome": "CGTN (China Global Television Network)",
+      "pais": "China",
+      "idiomas": [
+        "en",
+        "zh",
+        "es",
+        "fr",
+        "ar",
+        "ru"
+      ],
+      "tipo": "estatal",
+      "sites": [
+        "cgtn.com"
+      ],
+      "controle": "Emissora internacional da China Media Group, estatal sob o Partido Comunista.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/China_Global_Television_Network",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "alta",
+      "lado_porque": "Propriedade estatal. Cobertura de política externa espelha a posição oficial.",
+      "serve_a": [
+        "china"
+      ],
+      "alvos": [
+        "trump",
+        "ue"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Vídeo e agenda de reuniões são úteis. Temas sensíveis ao Partido não aparecem.",
+      "uso": "Linha oficial de Pequim em vídeo e agenda de cúpulas.",
+      "feeds": [
+        {
+          "url": "https://www.cgtn.com/subscribe/rss/section/world.xml",
+          "secao": "Mundo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "china_daily",
+      "nome": "China Daily",
+      "pais": "China",
+      "idiomas": [
+        "en",
+        "zh"
+      ],
+      "tipo": "estatal",
+      "sites": [
+        "chinadaily.com.cn"
+      ],
+      "controle": "Jornal em inglês do Departamento de Propaganda do Partido Comunista.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/China_Daily",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "alta",
+      "lado_porque": "Controle do Departamento de Propaganda. Voltado ao público estrangeiro.",
+      "serve_a": [
+        "china"
+      ],
+      "alvos": [
+        "trump",
+        "ue"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Confiável em dados econômicos oficiais. Enquadramento sempre favorável ao Estado.",
+      "uso": "Linha de Pequim para leitores de fora.",
+      "feeds": [],
+      "feeds_nota": "Sem feed. Os endereços http://www.chinadaily.com.cn/rss/world_rss.xml e https://www.chinadaily.com.cn/rss/china_rss.xml respondem 404 (visto em 20/11/2026 e de novo em 23/11/2026). Ler https://www.chinadaily.com.cn/."
+    },
+    {
+      "id": "clarin",
+      "nome": "Clarín",
+      "pais": "Argentina",
+      "idiomas": [
+        "es"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "clarin.com"
+      ],
+      "controle": "Grupo Clarín, controlado por Héctor Magnetto e sócios (herdeiros Noble, Pagliaro, Aranda). A Telecom não é do Grupo Clarín: pertence à Cablevisión Holding, separada em 2017, com os mesmos acionistas, junto com o fundo Fintech de David Martínez.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Clar%C3%ADn_Group",
+      "lado": "centrao",
+      "lado_confianca": "baixa",
+      "lado_porque": "Conglomerado de mídia e telecom com linha centro-direita e interesses comerciais. Em 2026 entrou em atrito aberto com Milei (caso Libra, disputa Telecom/Telefónica).",
+      "serve_a": [
+        "centrao"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Maior jornal argentino, com apuração própria e pauta de grupo econômico.",
+      "uso": "Política e economia argentinas; ponto de vista do grande capital local.",
+      "feeds": [
+        {
+          "url": "https://www.clarin.com/rss/lo-ultimo/",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        }
+      ],
+      "feeds_nota": "Página de apoio: https://www.clarin.com/ultimo-momento."
+    },
+    {
+      "id": "cnn",
+      "nome": "CNN",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "cnn.com"
+      ],
+      "controle": "Desde 06/10/2026, parte da Skydance, empresa que nasceu da compra da Warner Bros. Discovery pela Paramount Skydance (David Ellison, presidente-executivo). Um acordo judicial na Califórnia criou um conselho editorial independente para CNN e CBS News. Mark Thompson segue à frente da CNN. Musk é acionista da Skydance (confirmado por Ellison); o valor de cerca de US$ 1 bi vem do Semafor e não foi confirmado pela empresa.",
+      "controle_fonte": "https://www.aljazeera.com/economy/2026/10/6/cnn-cbs-news-now-under-one-roof-as-paramount-warner-bros-merger-closes",
+      "lado": "centro_atlantico",
+      "lado_confianca": "baixa",
+      "lado_porque": "Historicamente crítica de Trump, com linha de centro e centro-esquerda nos EUA. Em 18/09/2026 Trump anunciou o veto à CNN, ao MS NOW e ao Politico na Casa Branca, por “ficção e mentiras”; os três processaram o governo. O dono mudou há poucas semanas, e a mesma empresa pôs Bari Weiss à frente da CBS News. Lado em transição: reavaliar em 90 dias. Um vetor de mudança em direção aos Soberanistas é possível.",
+      "serve_a": [
+        "centro_atlantico",
+        "ordem_global"
+      ],
+      "alvos": [
+        "trump"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Bom em cobertura ao vivo e em notícia de última hora. Formato de painel e debate mistura fato e opinião.",
+      "uso": "Termômetro do que o centro americano dá como pauta e do que acontece com a imprensa sob pressão do dono e do governo.",
+      "feeds": [
+        {
+          "url": "http://rss.cnn.com/rss/edition_world.rss",
+          "secao": "Mundo",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Em 20/11/2026, duas tentativas ficaram sem resposta (conexão fechada). Pode estar desativado."
+        }
+      ],
+      "feeds_nota": "Página de apoio: https://edition.cnn.com/world."
+    },
+    {
+      "id": "cnn_brasil",
+      "nome": "CNN Brasil",
+      "pais": "Brasil",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "cnnbrasil.com.br"
+      ],
+      "controle": "Rubens Menin, único controlador (também dono do Banco Inter, da MRV e da Rádio Itatiaia). Opera como licença da marca CNN.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/CNN_Brasil",
+      "lado": "centrao",
+      "lado_confianca": "baixa",
+      "lado_porque": "Dono ligado a banco e construção, sem posições públicas fortes. A linha editorial varia por programa. Em out/2026 o ICL Notícias publicou mensagens em que o banqueiro Daniel Vorcaro (Banco Master) negociava entrar como sócio em 2024; a emissora nega que ele tenha sido sócio e diz que Menin é o único controlador.",
+      "serve_a": [
+        "centrao"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Cobertura rápida e ampla, com apresentadores de linhas diferentes; qualidade irregular.",
+      "uso": "Manchete rápida de TV; confirmar fato em segunda fonte.",
+      "feeds": [
+        {
+          "url": "https://admin.cnnbrasil.com.br/feed/",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Endereço final: www.cnnbrasil.com.br/feed/ redireciona para cá. Em 20/11/2026 trazia itens do mesmo dia, de todas as seções."
+        }
+      ],
+      "feeds_nota": "Feed geral, sem filtro de mundo ou política."
+    },
+    {
+      "id": "comissao_europeia",
+      "nome": "Comissão Europeia (sala de imprensa)",
+      "pais": "UE",
+      "idiomas": [
+        "en",
+        "fr",
+        "de"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "ec.europa.eu",
+        "commission.europa.eu"
+      ],
+      "controle": "Executivo da União Europeia, financiado pelos Estados-membros.",
+      "controle_fonte": "https://commission.europa.eu/",
+      "lado": "centro_atlantico",
+      "lado_confianca": "media",
+      "lado_porque": "A Comissão defende o projeto europeu e a ordem entre aliados, com regras fortes, como as de IA e clima. Por isso fica entre Centro Atlântico e Ordem Global.",
+      "serve_a": [
+        "ue",
+        "centro_atlantico"
+      ],
+      "alvos": [
+        "russia",
+        "china"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Muito confiável no texto de regra, verba e prazo. Deixa de fora o que a atrapalha.",
+      "uso": "Regulação, sanções, verba, acordos comerciais da UE.",
+      "feeds": [
+        {
+          "url": "https://ec.europa.eu/commission/presscorner/api/rss?language=en",
+          "secao": "Imprensa",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "crisis_group",
+      "nome": "International Crisis Group (CrisisWatch)",
+      "pais": "Bélgica",
+      "idiomas": [
+        "en",
+        "fr",
+        "es",
+        "ar",
+        "ru",
+        "zh"
+      ],
+      "tipo": "think_tank",
+      "sites": [
+        "crisisgroup.org"
+      ],
+      "controle": "ONG sem fins lucrativos com sede em Bruxelas, financiada por governos, fundações e empresas privadas.",
+      "controle_fonte": "https://www.crisisgroup.org/who-we-are/our-funding",
+      "lado": "ordem_global",
+      "lado_confianca": "media",
+      "lado_porque": "Busca prevenir guerras por mediação e diplomacia, e é bancada por governos e fundações do Ocidente.",
+      "serve_a": [
+        "ordem_global",
+        "oms_onu"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "CrisisWatch é o boletim mensal que diz, país a país, se o risco piorou ou melhorou. Boa leitura de tendência.",
+      "uso": "Risco de conflito por país, mensal.",
+      "feeds": [
+        {
+          "url": "https://www.crisisgroup.org/rss",
+          "secao": "Tudo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026, o item mais novo era de 13/11/2026. Mistura artigos e podcast. O boletim CrisisWatch sai no começo do mês; há dias sem item novo."
+        },
+        {
+          "url": "https://www.crisisgroup.org/rss-0",
+          "secao": "Tudo",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Em 20/11/2026 respondeu 403 (acesso barrado)."
+        }
+      ]
+    },
+    {
+      "id": "cset",
+      "nome": "CSET (Georgetown)",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "think_tank",
+      "sites": [
+        "cset.georgetown.edu"
+      ],
+      "controle": "Centro da Universidade de Georgetown. Maior financiador: Open Philanthropy (hoje Coefficient Giving), desde 2019; também Hewlett e Sloan.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Center_for_Security_and_Emerging_Technology",
+      "lado": "centro_atlantico",
+      "lado_confianca": "media",
+      "lado_porque": "Foco em segurança nacional: chips, China e dados. Perfil de centro do establishment de segurança dos EUA.",
+      "serve_a": [],
+      "alvos": [
+        "china"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Dados e análise com fonte.",
+      "uso": "Chips, controle de exportação e China.",
+      "feeds": [
+        {
+          "url": "https://cset.georgetown.edu/feed/",
+          "secao": "IA",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026, o item mais novo era de 19/11/2026."
+        }
+      ]
+    },
+    {
+      "id": "daily_mail",
+      "nome": "Daily Mail / Mail Online",
+      "pais": "Reino Unido",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "dailymail.com",
+        "dailymail.co.uk"
+      ],
+      "controle": "DMG Media, do Daily Mail and General Trust (DMGT), controlado pela família Harmsworth (Visconde Rothermere). Em 2026 perdeu a disputa pelo Telegraph.",
+      "controle_fonte": "https://pressgazette.co.uk/publishers/nationals/who-owns-daily-mail/",
+      "lado": "soberanistas",
+      "lado_confianca": "baixa",
+      "lado_porque": "Tabloide de direita, a favor do Brexit, contra imigração irregular e críticas à agenda de zero emissões. Não é alinhado a nenhum partido de forma fixa. Escolhido pelo voto típico.",
+      "serve_a": [
+        "soberanistas"
+      ],
+      "alvos": [
+        "ordem_global",
+        "ue"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Mail Online tem grande alcance e muitos furos, mas também correções frequentes. Ler o texto e não só o título.",
+      "uso": "Pauta da direita popular britânica e vídeos de crise.",
+      "feeds": [
+        {
+          "url": "https://www.dailymail.com/news/worldnews/index.rss",
+          "secao": "Mundo",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Endereço no domínio novo, dailymail.com, único desde abril de 2026. Consta de um diretório de feeds que o conferiu em 12/11/2026. Não aberto na conferência de 23/11/2026: o site barrou a leitura automática."
+        }
+      ],
+      "feeds_nota": "Endereço antigo do feed, no domínio .co.uk: https://www.dailymail.co.uk/news/worldnews/index.rss. Se o feed falhar, ler https://www.dailymail.com/news/worldnews/."
+    },
+    {
+      "id": "daily_maverick",
+      "nome": "Daily Maverick",
+      "pais": "África do Sul",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "dailymaverick.co.za"
+      ],
+      "controle": "Empresa privada sem dono majoritário: nenhum sócio tem mais de 50%. Fundada em 2009 por Branko Brkic e Styli Charalambous, que têm fatias pequenas. Receita de membros e anúncios.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Daily_Maverick",
+      "lado": "ordem_global",
+      "lado_confianca": "media",
+      "lado_porque": "Jornalismo liberal, de investigação, crítico de corrupção em governos africanos e do ANC. África do Sul não está na régua. Pelo voto típico, Ordem Global.",
+      "serve_a": [
+        "ordem_global"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Investigações respeitadas. Mistura opinião com notícia em algumas seções.",
+      "uso": "África do Sul, energia e política dos BRICS.",
+      "feeds": [
+        {
+          "url": "https://www.dailymaverick.co.za/dmrss/",
+          "secao": "Tudo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "daily_sabah",
+      "nome": "Daily Sabah",
+      "pais": "Turquia",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "dailysabah.com"
+      ],
+      "controle": "Turkuvaz Media Group, da Zirve Holding, do grupo Kalyon. O executivo-chefe da Turkuvaz é Serhat Albayrak, irmão do genro de Erdoğan.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Daily_Sabah",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "baixa",
+      "lado_porque": "Pró-governo documentado (Media Bias/Fact Check e Media Ownership Monitor). Mesma aproximação feita para a Turquia.",
+      "serve_a": [
+        "eixo_revisionista"
+      ],
+      "alvos": [
+        "centro_atlantico"
+      ],
+      "fatos": "baixa",
+      "fatos_nota": "Linha do governo misturada ao fato. Usar só como termômetro da linha de Ancara.",
+      "uso": "Linha pró-Erdoğan em inglês.",
+      "feeds": [
+        {
+          "url": "https://www.dailysabah.com/rssFeed/world",
+          "secao": "Mundo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "daily_wire",
+      "nome": "The Daily Wire",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "dailywire.com"
+      ],
+      "controle": "Empresa privada; fundada por Ben Shapiro e Jeremy Boreing com capital inicial dos irmãos Wilks. CEO Mike Richards desde 20/05/2026.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/The_Daily_Wire",
+      "lado": "soberanistas",
+      "lado_confianca": "media",
+      "lado_porque": "Linha conservadora de movimento, anti-regulação de fala e crítica ao progressismo. Mais ortodoxa e pró-Israel que a ala nacional-populista.",
+      "serve_a": [
+        "trump",
+        "soberanistas"
+      ],
+      "alvos": [
+        "ordem_global",
+        "centro_atlantico"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Notícia e opinião no mesmo site. O feed traz também textos de humor (sátira), que não são notícia.",
+      "uso": "Pauta do conservadorismo americano de massa e dos podcasts.",
+      "feeds": [
+        {
+          "url": "https://www.dailywire.com/feeds/rss.xml",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS. Em 20/11/2026 trazia itens do mesmo dia; um dos 3 primeiros parecia sátira."
+        }
+      ],
+      "feeds_nota": "O feed mistura notícia, opinião e sátira."
+    },
+    {
+      "id": "dawn",
+      "nome": "Dawn",
+      "pais": "Paquistão",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "dawn.com"
+      ],
+      "controle": "Dawn Media Group (Pakistan Herald Publications), das famílias Haroon e Saigol. CEO Hameed Haroon.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Dawn_(newspaper)",
+      "lado": "ordem_global",
+      "lado_confianca": "baixa",
+      "lado_porque": "Jornal liberal e crítico dos militares. O Paquistão não está na régua. O voto típico aproxima da Ordem Global, com cautela.",
+      "serve_a": [
+        "ordem_global"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Referência de imprensa do Paquistão.",
+      "uso": "Fato e linha civil do Paquistão.",
+      "feeds": [],
+      "feeds_nota": "Os feeds do site responderam 403 (acesso barrado) em 20/11/2026. Ler https://www.dawn.com/latest-news."
+    },
+    {
+      "id": "deepseek",
+      "nome": "DeepSeek (notícias da API)",
+      "pais": "China",
+      "idiomas": [
+        "en",
+        "zh"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "deepseek.com"
+      ],
+      "controle": "Empresa privada de Hangzhou, financiada pelo fundo quantitativo High-Flyer.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/DeepSeek",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "baixa",
+      "lado_porque": "Empresa privada, não estatal. A régua cita DeepSeek como IA própria da China, então ficou com o Eixo Revisionista por proximidade.",
+      "serve_a": [
+        "china"
+      ],
+      "alvos": [],
+      "fatos": "baixa",
+      "fatos_nota": "Notas técnicas curtas; números autodeclarados.",
+      "uso": "Linha oficial da IA chinesa aberta.",
+      "feeds": [],
+      "feeds_nota": "Sem feed. As novidades saem nas notas da documentação da API, como https://api-docs.deepseek.com/news/news261113, que liga às outras."
+    },
+    {
+      "id": "departamento_estado",
+      "nome": "Departamento de Estado dos EUA",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "state.gov"
+      ],
+      "controle": "Governo dos EUA, Poder Executivo (gestão Trump).",
+      "controle_fonte": "https://www.state.gov/",
+      "lado": "soberanistas",
+      "lado_confianca": "alta",
+      "lado_porque": "Fonte oficial: o lado é o partido do governo.",
+      "serve_a": [
+        "trump",
+        "soberanistas"
+      ],
+      "alvos": [
+        "china",
+        "ira",
+        "russia"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Bom para sanção, visto, acordo e posição diplomática. Conta o ponto de vista de Washington.",
+      "uso": "Sanções, viagens do secretário, notas sobre guerras e acordos.",
+      "feeds": [
+        {
+          "url": "https://www.state.gov/rss-feed/press-releases/feed/",
+          "secao": "Comunicados",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Respondeu 403 (acesso barrado a robôs) em todas as conferências, a última em 20/11/2026."
+        },
+        {
+          "url": "https://www.state.gov/feed/",
+          "secao": "Tudo",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Respondeu 403 (acesso barrado) na conferência de 20/11/2026."
+        }
+      ]
+    },
+    {
+      "id": "dw",
+      "nome": "Deutsche Welle (DW)",
+      "pais": "Alemanha",
+      "idiomas": [
+        "en",
+        "de",
+        "es",
+        "ar",
+        "pt",
+        "ru",
+        "uk",
+        "zh"
+      ],
+      "tipo": "estatal",
+      "sites": [
+        "dw.com"
+      ],
+      "controle": "Radiodifusora internacional da Alemanha, financiada pelo orçamento federal (€415 milhões em 2026, corte de €10 milhões). Anunciou em fev/2026 o corte de cerca de 160 vagas, sem demissões, e o fim do serviço em grego em 01/01/2027.",
+      "controle_fonte": "https://www.broadbandtvnews.com/2026/02/18/deutsche-welle-to-cut-160-posts-and-close-greek-service/",
+      "lado": "centro_atlantico",
+      "lado_confianca": "media",
+      "lado_porque": "Financiada pelo Estado alemão, mas por lei tem independência editorial. A Alemanha não está na régua; o mais próximo é a União Europeia (Centro Atlântico), pelo voto típico em IA, clima e fala, e pela imigração mais dura. Como a ligação é indireta, a confiança é média.",
+      "serve_a": [
+        "ue",
+        "centro_atlantico"
+      ],
+      "alvos": [
+        "russia",
+        "china"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Cobertura factual sóbria. Em temas que tocam a política externa alemã (Ucrânia, China, UE), usar com a ressalva de ser voz do Estado.",
+      "uso": "Linha oficial de Berlim. Leitura da Alemanha, da UE e do Leste Europeu em muitos idiomas, inclusive português.",
+      "feeds": [
+        {
+          "url": "https://rss.dw.com/xml/rss-en-all",
+          "secao": "Tudo (inglês)",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        }
+      ],
+      "feeds_nota": "Há feeds por idioma, inclusive em português."
+    },
+    {
+      "id": "economist",
+      "nome": "The Economist",
+      "pais": "Reino Unido",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "economist.com"
+      ],
+      "controle": "The Economist Group. A Exor (família Agnelli) tem 43,4% do capital, com todas as ações especiais “B”. Em 23/04/2026 o canadense Stephen Smith concluiu a compra dos 26,9% da família Rothschild. Quatro curadores independentes protegem a linha editorial.",
+      "controle_fonte": "https://www.irishtimes.com/business/2026/03/17/canadian-billionaire-stephen-smith-buys-27-stake-in-the-economist/",
+      "lado": "centro_atlantico",
+      "lado_confianca": "baixa",
+      "lado_porque": "Liberalismo clássico declarado: livre comércio e mercados abertos. Em geral defende a ordem liberal e critica populistas e regimes autoritários. Em imigração é historicamente favorável à abertura, o que puxa para a Ordem Global, não para o Centro Atlântico. Os artigos não têm autor assinado. Entre os dois partidos, a escolha fica em aberto.",
+      "serve_a": [
+        "centro_atlantico",
+        "ordem_global"
+      ],
+      "alvos": [
+        "trump",
+        "china",
+        "russia"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Boa síntese e dados. Menos furos, mais análise. A opinião vem misturada ao texto, então separar o fato do juízo.",
+      "uso": "Leitura de fundo do consenso liberal ocidental. Gráficos e dados.",
+      "feeds": [
+        {
+          "url": "https://www.economist.com/international/rss.xml",
+          "secao": "Internacional",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        }
+      ]
+    },
+    {
+      "id": "eia",
+      "nome": "EIA (Administração de Informação de Energia dos EUA)",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "dados",
+      "sites": [
+        "eia.gov"
+      ],
+      "controle": "Agência estatística do Departamento de Energia dos EUA.",
+      "controle_fonte": "https://www.eia.gov/about/",
+      "lado": "centro_atlantico",
+      "lado_confianca": "baixa",
+      "lado_porque": "Agência estatística do Departamento de Energia, independente por lei para coletar e analisar dados (não formula política). Desde 25/9/2025 é dirigida por Tristan Abbey, no governo Trump. Não há base para pôr um lado no enquadramento; o Centro Atlântico é um palpite fraco.",
+      "serve_a": [
+        "centro_atlantico"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Muito confiável para estoque, produção e preço de energia. É a fonte de dados mais limpa da lista.",
+      "uso": "Petróleo, gás, estoque, rota de petróleo. Tem API de dados.",
+      "feeds": [
+        {
+          "url": "https://www.eia.gov/rss/todayinenergy.xml",
+          "secao": "Energia hoje (Today in Energy)",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens de 17, 18 e 19/11/2026."
+        }
+      ]
+    },
+    {
+      "id": "el_pais_america",
+      "nome": "El País América",
+      "pais": "Espanha",
+      "idiomas": [
+        "es",
+        "pt"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "elpais.com"
+      ],
+      "controle": "Grupo Prisa, cujo maior acionista é Joseph Oughourlian (Amber Capital, cerca de 30%; mais de 40% após conversão de títulos, segundo o El Español). Em mai/2026 ele reduziu o conselho e tirou os conselheiros dissidentes. O diretor do El País é Jan Martínez Ahrens desde jun/2025.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/PRISA",
+      "lado": "ordem_global",
+      "lado_confianca": "media",
+      "lado_porque": "Jornal de centro progressista com linha de defesa de instituições, clima e imigração. Fica no mesmo lado do NYT na régua. Desde 2025 o maior acionista trocou a direção, e veículos críticos dizem que a linha pode mudar; ainda sem evidência clara.",
+      "serve_a": [
+        "ordem_global",
+        "ue"
+      ],
+      "alvos": [
+        "trump",
+        "soberanistas"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Reportagem própria forte na América Latina.",
+      "uso": "Leitura europeia e liberal da América Latina; contrapeso à imprensa regional.",
+      "feeds": [
+        {
+          "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/america/portada",
+          "secao": "América",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        }
+      ],
+      "feeds_nota": "Páginas de apoio: https://elpais.com/america/ e https://brasil.elpais.com/."
+    },
+    {
+      "id": "epoch_times",
+      "nome": "The Epoch Times",
+      "pais": "EUA",
+      "idiomas": [
+        "en",
+        "zh"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "theepochtimes.com",
+        "epochtimes.com",
+        "epochtimes.com.br",
+        "epochtimesbrasil.com.br"
+      ],
+      "controle": "Epoch Media Group, ligado a praticantes do Falun Gong. Estrutura em entidades sem fins lucrativos. O ex-CFO foi acusado de lavagem de US$ 67 mi em 2024.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/The_Epoch_Times",
+      "lado": "soberanistas",
+      "lado_confianca": "media",
+      "lado_porque": "Linha anti-Partido Comunista Chinês e pró-Trump, com cobertura crítica a pandemia, vacinas e a esquerda. A cobertura sobre a China é a mais original; a de EUA é alinhada.",
+      "serve_a": [
+        "trump",
+        "soberanistas"
+      ],
+      "alvos": [
+        "china",
+        "ordem_global"
+      ],
+      "fatos": "baixa",
+      "fatos_nota": "Boa em direitos humanos na China; histórico de desinformação documentado em eleições e pandemia.",
+      "uso": "Narrativa anti-Pequim a partir de dentro da direita ocidental.",
+      "feeds": [
+        {
+          "url": "https://www.theepochtimes.com/c-world/feed",
+          "secao": "Mundo",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Em 20/11/2026 o endereço devolveu a página de notícias em HTML, com itens do dia, e não um arquivo de feed: o formato não foi confirmado."
+        }
+      ],
+      "feeds_nota": "Página de apoio: https://www.theepochtimes.com/c-world."
+    },
+    {
+      "id": "estadao",
+      "nome": "O Estado de S. Paulo",
+      "pais": "Brasil",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "estadao.com.br"
+      ],
+      "controle": "Grupo Estado, controlado pela família Mesquita. Desde 2024 tem CEO de fora da família (Erick Bretas, ex-Globo) e dívida em debêntures vendidas a investidores; Francisco Mesquita Neto preside o conselho.",
+      "controle_fonte": "https://braziljournal.com/estadao-levanta-r-160-milhoes-com-investidores-e-a-propria-familia-mesquita/",
+      "lado": "centro_atlantico",
+      "lado_confianca": "baixa",
+      "lado_porque": "Linha liberal clássica (mercado, instituições), com editoriais duros contra os dois polos. Partido escolhido pelo voto típico mais próximo; a régua não tem um liberal-econômico brasileiro.",
+      "serve_a": [
+        "centro_atlantico",
+        "ue"
+      ],
+      "alvos": [
+        "bolsonaro",
+        "lula"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Jornalismo tradicional, com separação entre notícia e editorial. A página de opinião é marcadamente liberal.",
+      "uso": "Fato cru e leitura do liberalismo econômico brasileiro; bom para economia e política externa.",
+      "feeds": [
+        {
+          "url": "https://www.estadao.com.br/arc/outboundfeeds/feeds/rss/sections/internacional/",
+          "secao": "Internacional",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        }
+      ],
+      "feeds_nota": "Página de apoio: https://www.estadao.com.br/ultimas/."
+    },
+    {
+      "id": "eu_ai_office",
+      "nome": "Escritório de IA da UE",
+      "pais": "UE",
+      "idiomas": [
+        "en",
+        "fr",
+        "de"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "digital-strategy.ec.europa.eu"
+      ],
+      "controle": "Órgão da Comissão Europeia.",
+      "controle_fonte": "https://digital-strategy.ec.europa.eu/en/policies/ai-office",
+      "lado": "centro_atlantico",
+      "lado_confianca": "alta",
+      "lado_porque": "É o braço de aplicação do AI Act; a régua põe a UE no Centro Atlântico.",
+      "serve_a": [
+        "ue"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Fonte primária de regra e prazo.",
+      "uso": "Regra e prazo do AI Act.",
+      "feeds": [],
+      "feeds_nota": "Sem feed. As notícias saem na página https://digital-strategy.ec.europa.eu/en/policies/ai-office."
+    },
+    {
+      "id": "fao",
+      "nome": "FAO (Organização das Nações Unidas para Alimentação e Agricultura)",
+      "pais": "ONU (sede em Roma)",
+      "idiomas": [
+        "en",
+        "pt",
+        "es",
+        "fr",
+        "ar",
+        "ru",
+        "zh"
+      ],
+      "tipo": "dados",
+      "sites": [
+        "fao.org"
+      ],
+      "controle": "Agência da ONU, financiada pelos Estados-membros.",
+      "controle_fonte": "https://www.fao.org/about/en",
+      "lado": "ordem_global",
+      "lado_confianca": "alta",
+      "lado_porque": "Agência da ONU, na ótica multilateral.",
+      "serve_a": [
+        "oms_onu",
+        "ordem_global"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Fonte de referência do Índice de Preços de Alimentos (FFPI). Sai perto do começo de cada mês. Último: out/2026 em 133,9 pontos.",
+      "uso": "Preço de alimentos e alerta de fome. O índice entra em indicadores.json.",
+      "feeds": [
+        {
+          "url": "https://www.fao.org/worldfoodsituation/foodpricesindex/en/",
+          "secao": "Índice de preços",
+          "formato": "html",
+          "conferido": true,
+          "nota": "Página, não feed. Em 20/11/2026 trazia o último valor do índice de preços dos alimentos: 133,9 pontos em outubro de 2026, divulgado em 6/11/2026."
+        }
+      ],
+      "feeds_nota": "Sem feed de notícias. O endereço https://www.fao.org/newsroom/rss/en responde 404 (visto em 20/11/2026 e de novo em 23/11/2026)."
+    },
+    {
+      "id": "federalist",
+      "nome": "The Federalist",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "thefederalist.com"
+      ],
+      "controle": "FDRLST Media LLC, empresa privada; cofundadores Ben Domenech e Sean Davis (CEO desde 2022).",
+      "controle_fonte": "https://en.wikipedia.org/wiki/The_Federalist_(website)",
+      "lado": "soberanistas",
+      "lado_confianca": "alta",
+      "lado_porque": "Site de opinião e notícia de direita, alinhado ao movimento de Trump e crítico do que chama de establishment. A linha é assumida pelo próprio veículo.",
+      "serve_a": [
+        "trump",
+        "soberanistas"
+      ],
+      "alvos": [
+        "ordem_global",
+        "centro_atlantico"
+      ],
+      "fatos": "baixa",
+      "fatos_nota": "Predomina opinião. Já publicou afirmações contestadas por checadores.",
+      "uso": "Opinião da direita ligada ao movimento de Trump sobre a pauta do dia.",
+      "feeds": [
+        {
+          "url": "https://thefederalist.com/feed/",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ],
+      "feeds_nota": "Feed geral, quase só opinião."
+    },
+    {
+      "id": "fli",
+      "nome": "Future of Life Institute",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "think_tank",
+      "sites": [
+        "futureoflife.org"
+      ],
+      "controle": "ONG; já recebeu grandes doações de Elon Musk e de Vitalik Buterin.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Future_of_Life_Institute",
+      "lado": "ordem_global",
+      "lado_confianca": "media",
+      "lado_porque": "Pede pausa e limites à IA avançada; nota recente critica a Anthropic por autoaperfeiçoamento recursivo.",
+      "serve_a": [],
+      "alvos": [
+        "anthropic",
+        "altman",
+        "meta"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Posição de advocacia; usar com checagem.",
+      "uso": "Voz de quem pede freio à IA.",
+      "feeds": [
+        {
+          "url": "https://futureoflife.org/feed/",
+          "secao": "IA",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026, o item mais novo era de 18/11/2026."
+        }
+      ]
+    },
+    {
+      "id": "fmi",
+      "nome": "FMI (Fundo Monetário Internacional)",
+      "pais": "Organismo internacional (sede em Washington)",
+      "idiomas": [
+        "en",
+        "es",
+        "fr",
+        "pt"
+      ],
+      "tipo": "dados",
+      "sites": [
+        "imf.org"
+      ],
+      "controle": "Organismo de 191 países-membros; os EUA têm o maior peso de voto.",
+      "controle_fonte": "https://www.imf.org/en/About/Factsheets/IMF-at-a-Glance",
+      "lado": "ordem_global",
+      "lado_confianca": "media",
+      "lado_porque": "Defende a ordem financeira global, com regra fiscal e abertura de mercado.",
+      "serve_a": [
+        "ordem_global",
+        "centro_atlantico"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Muito bom para projeção de crescimento, dívida e inflação. As receitas de política têm viés de mercado.",
+      "uso": "World Economic Outlook, alertas de dívida e câmbio.",
+      "feeds": [],
+      "feeds_nota": "Sem feed. O endereço https://www.imf.org/en/News/rss respondeu 429 (excesso de pedidos) na primeira conferência e 404 depois (visto em 20/11/2026 e de novo em 23/11/2026)."
+    },
+    {
+      "id": "folha",
+      "nome": "Folha de S.Paulo",
+      "pais": "Brasil",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "folha.uol.com.br"
+      ],
+      "controle": "Grupo Folha, da família Frias (Luiz Frias à frente). Controla também o UOL, que por sua vez controla a PagSeguro.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Grupo_Folha",
+      "lado": "ordem_global",
+      "lado_confianca": "media",
+      "lado_porque": "Jornal de centro liberal, com pluralidade de colunistas e crítica frequente a governos de ambos os lados. Fica na ordem_global pela linha institucional, sem alinhamento a um governo.",
+      "serve_a": [
+        "ordem_global"
+      ],
+      "alvos": [
+        "bolsonaro",
+        "soberanistas"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Reportagem própria forte; erros são corrigidos em seção própria.",
+      "uso": "Fato cru e investigação sobre poder em Brasília; contrapeso crítico ao governo da vez.",
+      "feeds": [
+        {
+          "url": "https://feeds.folha.uol.com.br/mundo/rss091.xml",
+          "secao": "Mundo",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        },
+        {
+          "url": "https://feeds.folha.uol.com.br/poder/rss091.xml",
+          "secao": "Política (Poder)",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        }
+      ],
+      "feeds_nota": "Página de apoio: https://www1.folha.uol.com.br/ultimas-noticias/. Não se sabe se os feeds ainda existem."
+    },
+    {
+      "id": "foreign_affairs",
+      "nome": "Foreign Affairs",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "think_tank",
+      "sites": [
+        "foreignaffairs.com"
+      ],
+      "controle": "Publicada pelo Council on Foreign Relations (CFR), instituto privado sem fins lucrativos com membros da elite política, empresarial e acadêmica dos EUA.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Foreign_Affairs",
+      "lado": "ordem_global",
+      "lado_confianca": "media",
+      "lado_porque": "Voz do internacionalismo liberal e da política externa bipartidária dos EUA. Publica autores de linhas diversas, mas o conselho e a pauta são do establishment. Feed recente traz textos críticos ao governo (Venezuela, Congresso).",
+      "serve_a": [
+        "ordem_global",
+        "centro_atlantico"
+      ],
+      "alvos": [
+        "russia",
+        "china"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Ensaios de especialistas, não notícia. Bom para argumento e contexto, ruim para fato do dia.",
+      "uso": "Como o establishment de política externa dos EUA debate a si mesmo. Sinal de mudança de linha.",
+      "feeds": [
+        {
+          "url": "https://www.foreignaffairs.com/rss.xml",
+          "secao": "Artigos",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens de 19 e 20/11/2026. O mesmo identificador (guid) aparece repetido entre a versão em inglês e a em espanhol."
+        }
+      ],
+      "feeds_nota": "Poucos itens por dia. Muitos artigos são pagos."
+    },
+    {
+      "id": "foreign_policy",
+      "nome": "Foreign Policy",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "foreignpolicy.com"
+      ],
+      "controle": "FP Group, unidade da Graham Holdings (dona da Slate e da Kaplan). Comprada em 2008 pela Washington Post Company.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Foreign_Policy",
+      "lado": "ordem_global",
+      "lado_confianca": "baixa",
+      "lado_porque": "Linha internacionalista, com autores de várias correntes. Reportagem do Washington Free Beacon de 18/08/2026 afirma laços financeiros do FP com o Catar: parceria com o Fórum de Doha e com a série Doha Debates, da Qatar Foundation. É uma fonte só, de linha política oposta, repetida por veículos próximos; o FP não respondeu. Não verificado.",
+      "serve_a": [
+        "ordem_global"
+      ],
+      "alvos": [
+        "russia",
+        "china"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Análise e opinião, com algumas reportagens. Fato cru só com checagem em outra fonte.",
+      "uso": "Análise de política externa de linha liberal e realista. Pauta de segurança e de tecnologia.",
+      "feeds": [
+        {
+          "url": "https://foreignpolicy.com/feed/",
+          "secao": "Tudo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ],
+      "feeds_nota": "Feed vivo, com bom volume diário."
+    },
+    {
+      "id": "fox_news",
+      "nome": "Fox News",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "foxnews.com"
+      ],
+      "controle": "Fox Corporation, controlada em voto por Lachlan Murdoch desde o acordo familiar de set/2025.",
+      "controle_fonte": "https://variety.com/2025/tv/news/lachlan-murdoch-snares-fox-news-control-family-settlement-1236512157/",
+      "lado": "soberanistas",
+      "lado_confianca": "media",
+      "lado_porque": "Já está na régua como player soberanista (id fox). Apoiou o governo Trump e a guerra com o Irã durante quase todo 2026. Depois da derrota republicana nas eleições de meio de mandato (03/11/2026), Trump culpou a Fox, e a imprensa relata que os Murdoch esfriaram com ele. O partido não muda; o afastamento vira vetor de mudança, não troca de lado.",
+      "serve_a": [
+        "trump",
+        "soberanistas"
+      ],
+      "alvos": [
+        "biden",
+        "ordem_global",
+        "china"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Redação de notícias com checagem e correções; a programação de opinião mistura fato e posição. Em 2023 pagou US$ 787,5 milhões à Dominion para encerrar o processo por difamação, depois de a Justiça considerar falsas as afirmações sobre a eleição de 2020.",
+      "uso": "Linha da direita institucional dos EUA. Bom para medir a distância entre a Fox e a Casa Branca depois das eleições de 2026.",
+      "feeds": [
+        {
+          "url": "https://moxie.foxnews.com/google-publisher/world.xml",
+          "secao": "Mundo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens de 19 e 20/11/2026."
+        },
+        {
+          "url": "https://moxie.foxnews.com/google-publisher/politics.xml",
+          "secao": "Política",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens de 19 e 20/11/2026."
+        }
+      ],
+      "feeds_nota": "Há feeds por seção no mesmo endereço, moxie.foxnews.com/google-publisher/."
+    },
+    {
+      "id": "free_press",
+      "nome": "The Free Press",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "thefp.com"
+      ],
+      "controle": "Paramount Skydance (família Ellison) comprou o veículo por cerca de US$ 150 mi em out/2025. Bari Weiss segue como editora e dirige também o CBS News.",
+      "controle_fonte": "https://www.cnbc.com/2025/10/06/paramount-skydance-to-acquire-bari-weiss-founded-free-press.html",
+      "lado": "centro_atlantico",
+      "lado_confianca": "baixa",
+      "lado_porque": "Linha heterodoxa e crítica do progressismo e das restrições da pandemia, sem alinhamento total a Trump. Dono ligado à big tech (Oracle) poderia sugerir Bancada do Talento. Escolhido o Centro Atlântico pelo voto típico, com dúvida.",
+      "serve_a": [
+        "centro_atlantico"
+      ],
+      "alvos": [
+        "ordem_global"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Reportagem longa e opinião no mesmo produto. Boa em furos de temas culturais e de universidades.",
+      "uso": "Termômetro do centro-direita liberal que se afastou da esquerda.",
+      "feeds": [
+        {
+          "url": "https://www.thefp.com/feed",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS. Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ],
+      "feeds_nota": "Parte do conteúdo é exclusiva de assinantes."
+    },
+    {
+      "id": "ft",
+      "nome": "Financial Times",
+      "pais": "Reino Unido",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "ft.com"
+      ],
+      "controle": "Pertence ao grupo japonês Nikkei desde 2015, com compromisso de independência editorial.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Financial_Times",
+      "lado": "centro_atlantico",
+      "lado_confianca": "media",
+      "lado_porque": "Linha liberal em economia, pró-comércio e pró-aliança atlântica, crítica das tarifas e do isolacionismo. Fala para o capital global, perto do Centrão, mas o voto típico em clima e fala fica mais perto do Centro Atlântico.",
+      "serve_a": [
+        "centro_atlantico",
+        "centrao"
+      ],
+      "alvos": [
+        "trump"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Referência em finanças, dívida, energia e geopolítica econômica. Muito conteúdo é pago.",
+      "uso": "Leitura do mercado e da política econômica do Ocidente. Alertas de crédito, câmbio e energia.",
+      "feeds": [
+        {
+          "url": "https://www.ft.com/world?format=rss",
+          "secao": "Mundo",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        }
+      ],
+      "feeds_nota": "O feed traz só título e resumo (conteúdo pago)."
+    },
+    {
+      "id": "g1_globo",
+      "nome": "G1 e O Globo",
+      "pais": "Brasil",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "g1.globo.com",
+        "oglobo.globo.com"
+      ],
+      "controle": "Grupo Globo, controlado pela família Marinho. O G1 é o portal de notícias do grupo e O Globo é o jornal.",
+      "controle_fonte": "https://pt.wikipedia.org/wiki/Grupo_Globo",
+      "lado": "ordem_global",
+      "lado_confianca": "alta",
+      "lado_porque": "A TV Globo já é player da régua em ordem_global. Redação ampla e linha institucional, com checagem de fatos; o grupo costuma enquadrar populismo e ataques ao Judiciário como risco à ordem.",
+      "serve_a": [
+        "ordem_global",
+        "lula",
+        "ue"
+      ],
+      "alvos": [
+        "bolsonaro",
+        "soberanistas"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Redação grande, correções públicas e fontes oficiais citadas. Escolhe pauta e destaque conforme a linha institucional.",
+      "uso": "Referência de fato cru rápido sobre Brasil e mundo; mostra a linha do establishment brasileiro.",
+      "feeds": [
+        {
+          "url": "https://g1.globo.com/rss/g1/mundo/",
+          "secao": "Mundo",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        },
+        {
+          "url": "https://g1.globo.com/rss/g1/politica/",
+          "secao": "Política",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        },
+        {
+          "url": "https://g1.globo.com/rss/g1/tecnologia/",
+          "secao": "Tecnologia",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        }
+      ],
+      "feeds_nota": "Os endereços seguem o padrão público conhecido do G1. Página de apoio: https://g1.globo.com/ultimas-noticias/."
+    },
+    {
+      "id": "gazeta_do_povo",
+      "nome": "Gazeta do Povo",
+      "pais": "Brasil",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "gazetadopovo.com.br"
+      ],
+      "controle": "Grupo Paranaense de Comunicação (GRPCom), da família Cunha Pereira, sob Guilherme Cunha Pereira. Em 30/01/2026 a família vendeu as emissoras de TV (RPC, afiliada da Globo) e as rádios ao sócio Mariano Lemanski; o GRPCom ficou com Gazeta do Povo e Tribuna do Paraná.",
+      "controle_fonte": "https://www.paranaportal.com/destaque/familia-lemanski-assume-a-rpc-da-familia-cunha-pereira/",
+      "lado": "soberanistas",
+      "lado_confianca": "media",
+      "lado_porque": "Linha editorial conservadora e liberal na economia, com cobertura crítica ao governo federal e ao STF. Tem reportagem própria e a opinião segue a mesma direção.",
+      "serve_a": [
+        "bolsonaro",
+        "soberanistas",
+        "trump"
+      ],
+      "alvos": [
+        "lula",
+        "ordem_global"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Boa cobertura de Curitiba e Brasília; enquadramento claro na pauta e na seleção.",
+      "uso": "Leitura conservadora de política brasileira e de EUA.",
+      "feeds": [
+        {
+          "url": "https://www.gazetadopovo.com.br/feed/rss/mundo.xml",
+          "secao": "Mundo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens do mesmo dia."
+        },
+        {
+          "url": "https://www.gazetadopovo.com.br/feed/rss/republica.xml",
+          "secao": "Política",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "gb_news",
+      "nome": "GB News",
+      "pais": "Reino Unido",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "gbnews.com"
+      ],
+      "controle": "All Perspectives Ltd, de Sir Paul Marshall e da Legatum (Dubai), com cerca de 40% cada, segundo fontes secundárias. Prejuízo acima de £ 130 mi.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/GB_News",
+      "lado": "soberanistas",
+      "lado_confianca": "media",
+      "lado_porque": "Canal de TV de opinião, crítico de imigração e de metas climáticas, com espaço para políticos do Reform UK. Dono e investidores têm histórico de apoio ao Brexit.",
+      "serve_a": [
+        "soberanistas"
+      ],
+      "alvos": [
+        "ordem_global",
+        "ue"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Mistura de notícia e programas de opinião. Teve decisões do regulador britânico Ofcom contra si em casos pontuais.",
+      "uso": "Pulso da direita populista britânica.",
+      "feeds": [
+        {
+          "url": "https://www.gbnews.com/feeds/politics.rss",
+          "secao": "Política",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Redireciona para tollbit.gbnews.com, que respondeu 402 (pagamento exigido) em 20/11/2026."
+        }
+      ],
+      "feeds_nota": "A leitura por máquina é cobrada (Tollbit). Ler https://www.gbnews.com/politics."
+    },
+    {
+      "id": "global_times",
+      "nome": "Global Times",
+      "pais": "China",
+      "idiomas": [
+        "en",
+        "zh"
+      ],
+      "tipo": "estatal",
+      "sites": [
+        "globaltimes.cn",
+        "huanqiu.com"
+      ],
+      "controle": "Jornal do grupo do Diário do Povo, órgão do Comitê Central do Partido Comunista.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Global_Times",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "alta",
+      "lado_porque": "Pertence ao grupo do Diário do Povo, órgão do Partido. Tom nacionalista e combativo, com editoriais que sinalizam humor de Pequim sem ser porta-voz formal.",
+      "serve_a": [
+        "china"
+      ],
+      "alvos": [
+        "trump",
+        "ue",
+        "centro_atlantico"
+      ],
+      "fatos": "baixa",
+      "fatos_nota": "Notícia crua é misturada a opinião e a ataques a críticos. Conferir sempre com outra fonte.",
+      "uso": "Termômetro do tom nacionalista chinês.",
+      "feeds": [],
+      "feeds_nota": "Sem feed vivo. O endereço https://www.globaltimes.cn/rss/outbrain.xml responde, mas o item mais novo é de 09/10/2026 (visto em 20/11/2026 e de novo em 23/11/2026). Ler https://www.globaltimes.cn/."
+    },
+    {
+      "id": "google_deepmind",
+      "nome": "Google DeepMind (blog)",
+      "pais": "Reino Unido/EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "deepmind.google"
+      ],
+      "controle": "Google (Alphabet).",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Google_DeepMind",
+      "lado": "bancada_talento",
+      "lado_confianca": "alta",
+      "lado_porque": "Voz do laboratório da Google, que a régua põe na Bancada do Talento.",
+      "serve_a": [
+        "google"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Lançamentos exatos; avaliações são da própria empresa.",
+      "uso": "Linha oficial de Gemini e Genie.",
+      "feeds": [
+        {
+          "url": "https://deepmind.google/blog/rss.xml",
+          "secao": "IA",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026, o item mais novo era de 18/11/2026."
+        }
+      ]
+    },
+    {
+      "id": "guardian",
+      "nome": "The Guardian",
+      "pais": "Reino Unido",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "theguardian.com"
+      ],
+      "controle": "Guardian Media Group, de propriedade do Scott Trust, fundação que existe para proteger a independência do jornal.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Guardian_Media_Group",
+      "lado": "ordem_global",
+      "lado_confianca": "media",
+      "lado_porque": "Linha editorial de centro-esquerda declarada, forte em clima, migração acolhedora e regulação de big tech. Sem dono bilionário. Classificação por linha editorial, não por controle.",
+      "serve_a": [
+        "ordem_global"
+      ],
+      "alvos": [
+        "trump",
+        "musk",
+        "meta"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Apuração própria sólida e correções públicas. Enquadramento forte em clima, Gaza, Trump e big tech.",
+      "uso": "Leitura do polo azul britânico. Bom em clima, direitos e crítica a big tech.",
+      "feeds": [
+        {
+          "url": "https://www.theguardian.com/world/rss",
+          "secao": "Mundo",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        },
+        {
+          "url": "https://www.theguardian.com/technology/rss",
+          "secao": "Tecnologia",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        }
+      ]
+    },
+    {
+      "id": "haaretz",
+      "nome": "Haaretz",
+      "pais": "Israel",
+      "idiomas": [
+        "en",
+        "he"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "haaretz.com",
+        "haaretz.co.il"
+      ],
+      "controle": "Família Schocken (75%) e Leonid Nevzlin (25%).",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Haaretz",
+      "lado": "ordem_global",
+      "lado_confianca": "media",
+      "lado_porque": "Jornal liberal e crítico do governo Netanyahu e da ocupação. Israel não está na régua. Pelo voto típico (institucional, direitos, clima), o partido mais próximo é a Ordem Global.",
+      "serve_a": [
+        "ordem_global"
+      ],
+      "alvos": [
+        "soberanistas"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Investigação forte. Há paywall e pouca coisa em inglês é grátis.",
+      "uso": "Contraponto interno ao governo israelense.",
+      "feeds": [],
+      "feeds_nota": "O feed do site respondeu 404 em 20/11/2026. Ler as últimas notícias em https://www.haaretz.com/."
+    },
+    {
+      "id": "import_ai",
+      "nome": "Import AI",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "importai.substack.com",
+        "jack-clark.net"
+      ],
+      "controle": "Newsletter de Jack Clark, cofundador da Anthropic.",
+      "controle_fonte": "https://importai.substack.com/about",
+      "lado": "independentes",
+      "lado_confianca": "media",
+      "lado_porque": "O autor é cofundador de um dos laboratórios que cobre. Fica no partido da Anthropic, os Independentes. Conflito de interesse que precisa aparecer.",
+      "serve_a": [
+        "anthropic"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Resumo de artigos científicos, em geral exato. Selecionar o que entra é escolha do autor.",
+      "uso": "Pesquisa de IA, lida com o conflito em mente.",
+      "feeds": [
+        {
+          "url": "https://importai.substack.com/feed",
+          "secao": "IA",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Semanal. Em 20/11/2026, o item mais novo era de 16/11/2026."
+        }
+      ]
+    },
+    {
+      "id": "infobae",
+      "nome": "Infobae",
+      "pais": "Argentina",
+      "idiomas": [
+        "es"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "infobae.com"
+      ],
+      "controle": "Daniel Hadad, fundador e CEO, por meio de Infobae América e TXH Medios. Houve entrada de novos sócios em 2018, sem detalhe público achado.",
+      "controle_fonte": "https://www.politicheck.com.ar/guias/quien-es-el-dueno-de-infobae",
+      "lado": "independentes",
+      "lado_confianca": "baixa",
+      "lado_porque": "Portal comercial pan-regional, com linha editorial variável e pouca evidência de alinhamento fixo. Classificação provisória.",
+      "serve_a": [],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Volume alto, muita agência e notícia curta; confirmar em segunda fonte.",
+      "uso": "Manchete rápida da América Latina em espanhol.",
+      "feeds": [
+        {
+          "url": "https://www.infobae.com/arc/outboundfeeds/rss/",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens do mesmo dia."
+        },
+        {
+          "url": "https://www.infobae.com/arc/outboundfeeds/rss/category/america/",
+          "secao": "América",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "intercept_brasil",
+      "nome": "The Intercept Brasil",
+      "pais": "Brasil",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "intercept.com.br"
+      ],
+      "controle": "Organização sem fins lucrativos, independente da matriz americana desde out/2022. Vive sobretudo de doações de leitores e de apoio institucional (IFPIM até nov/2026).",
+      "controle_fonte": "https://www.intercept.com.br/sobre/",
+      "lado": "independentes",
+      "lado_confianca": "baixa",
+      "lado_porque": "Jornalismo investigativo de perspectiva progressista, mas que critica governos de qualquer lado. Por isso fica nos independentes, com baixa confiança.",
+      "serve_a": [],
+      "alvos": [
+        "bolsonaro",
+        "lula",
+        "soberanistas"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Apuração própria com documentos; viés de seleção de temas.",
+      "uso": "Vazamentos e investigação sobre poder, polícia e finanças.",
+      "feeds": [
+        {
+          "url": "https://www.intercept.com.br/feed/",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Poucos itens por dia: em 20/11/2026, o mais novo era de 19/11/2026."
+        }
+      ]
+    },
+    {
+      "id": "interfax",
+      "nome": "Interfax",
+      "pais": "Rússia",
+      "idiomas": [
+        "ru",
+        "en"
+      ],
+      "tipo": "agencia",
+      "sites": [
+        "interfax.com",
+        "interfax.ru"
+      ],
+      "controle": "Agência privada de Moscou, de propriedade do grupo Interfax, fundado por Mikhail Komissar.",
+      "controle_fonte": "https://find-and-update.company-information.service.gov.uk/company/03948706/persons-with-significant-control",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "baixa",
+      "lado_porque": "Dono privado, mas opera sob a lei e a pressão do Estado russo. Rápida com notícia oficial e de negócios. Lado inferido pelo ambiente.",
+      "serve_a": [
+        "russia"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Muito citada por mercado e comunicados. Reproduz versão oficial em guerra.",
+      "uso": "Fato rápido russo de negócios e governo.",
+      "feeds": [],
+      "feeds_nota": "Sem feed aberto achado: a página /newsroom/ redirecionou (20/11/2026). Ler https://interfax.com/."
+    },
+    {
+      "id": "irna",
+      "nome": "IRNA (Agência de Notícias da República Islâmica)",
+      "pais": "Irã",
+      "idiomas": [
+        "fa",
+        "en",
+        "ar"
+      ],
+      "tipo": "agencia",
+      "sites": [
+        "irna.ir"
+      ],
+      "controle": "Agência oficial do governo iraniano.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Islamic_Republic_News_Agency",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "alta",
+      "lado_porque": "Propriedade estatal. Publica a posição do governo e de autoridades.",
+      "serve_a": [
+        "ira"
+      ],
+      "alvos": [
+        "centro_atlantico",
+        "trump"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Boa para declarações e decisões do governo. Evita temas internos.",
+      "uso": "Linha oficial do governo do Irã.",
+      "feeds": [
+        {
+          "url": "https://en.irna.ir/rss",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "israel_hayom",
+      "nome": "Israel Hayom",
+      "pais": "Israel",
+      "idiomas": [
+        "he",
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "israelhayom.com",
+        "israelhayom.co.il"
+      ],
+      "controle": "Miriam Adelson, doadora americana. Distribuição gratuita.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Israel_Hayom",
+      "lado": "soberanistas",
+      "lado_confianca": "media",
+      "lado_porque": "É de Miriam Adelson, grande doadora de Trump e aliada da direita israelense. Em junho de 2026 publicou carta aberta do colunista Danny Zaken, dura contra o acordo de Trump com o Irã. O alinhamento é com a direita israelense, não com Trump em tudo.",
+      "serve_a": [
+        "soberanistas"
+      ],
+      "alvos": [
+        "ira"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Fato misturado com linha pró-governo. Ler a página de opinião separada.",
+      "uso": "Linha da direita israelense e do doador Adelson.",
+      "feeds": [],
+      "feeds_nota": "O feed devolveu uma página de verificação anti-robô em 20/11/2026. Ler as últimas notícias em https://www.israelhayom.com/."
+    },
+    {
+      "id": "isw",
+      "nome": "ISW (Instituto para o Estudo da Guerra)",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "think_tank",
+      "sites": [
+        "understandingwar.org"
+      ],
+      "controle": "Think tank sem fins lucrativos de Washington, com apoio de doadores e da indústria de defesa.",
+      "controle_fonte": "https://understandingwar.org/about/",
+      "lado": "centro_atlantico",
+      "lado_confianca": "media",
+      "lado_porque": "Análise de guerra com tom favorável à Ucrânia e crítico da Rússia, e doadores ligados à defesa dos EUA.",
+      "serve_a": [
+        "centro_atlantico",
+        "ue"
+      ],
+      "alvos": [
+        "russia",
+        "eixo_revisionista"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Mapa e balanço diário da guerra. Bom no detalhe do terreno. Leitura da intenção russa é analítica, não fato.",
+      "uso": "Frente de guerra na Ucrânia e avaliação diária.",
+      "feeds": [
+        {
+          "url": "https://understandingwar.org/feed/",
+          "secao": "Tudo",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Respondeu 403 (acesso barrado) na conferência de 20/11/2026."
+        },
+        {
+          "url": "https://www.understandingwar.org/rss.xml",
+          "secao": "Tudo",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Respondeu 403 (acesso barrado) na conferência de 20/11/2026."
+        }
+      ]
+    },
+    {
+      "id": "itamaraty",
+      "nome": "Itamaraty (Ministério das Relações Exteriores do Brasil)",
+      "pais": "Brasil",
+      "idiomas": [
+        "pt",
+        "en"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "gov.br"
+      ],
+      "controle": "Governo federal do Brasil, Ministério das Relações Exteriores.",
+      "controle_fonte": "https://www.gov.br/mre/pt-br",
+      "lado": "ordem_global",
+      "lado_confianca": "media",
+      "lado_porque": "Fonte oficial do governo Lula, com tradição multilateral.",
+      "serve_a": [
+        "lula",
+        "ordem_global"
+      ],
+      "alvos": [
+        "soberanistas"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Nota à imprensa sobre posição do Brasil em crises, Brics, comércio e Mercosul.",
+      "uso": "Posição brasileira em guerra, comércio e acordos.",
+      "feeds": [
+        {
+          "url": "https://www.gov.br/mre/pt-br/assuntos/noticias-e-comunicados/RSS",
+          "secao": "Comunicados",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "O gov.br pediu verificação humana (código de imagem) na conferência de 20/11/2026."
+        }
+      ]
+    },
+    {
+      "id": "jerusalem_post",
+      "nome": "The Jerusalem Post",
+      "pais": "Israel",
+      "idiomas": [
+        "en",
+        "he"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "jpost.com"
+      ],
+      "controle": "Grupo Jerusalem Post, controlado por Eli Azur. A empresa dele, Mirkaei Tikshoret, comprou o jornal em 2004 junto com a CanWest e depois ficou com tudo.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/The_Jerusalem_Post",
+      "lado": "soberanistas",
+      "lado_confianca": "baixa",
+      "lado_porque": "A linha editorial é de centro-direita e simpática a governos de Netanyahu e a Trump. Aproximação aos Soberanistas pelo voto típico (fronteiras, segurança). Confiança baixa.",
+      "serve_a": [
+        "soberanistas"
+      ],
+      "alvos": [
+        "ira"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Mistura fato e opinião na mesma home. Conferir com fonte primária.",
+      "uso": "Enquadramento da direita israelense sobre Irã e segurança.",
+      "feeds": [],
+      "feeds_nota": "Sem feed vivo. O endereço https://www.jpost.com/rss/rssfeedsheadlines.aspx responde, mas o item mais novo é de 16/06/2025 (visto em 20/11/2026 e de novo em 23/11/2026). Ler as últimas notícias em https://www.jpost.com/."
+    },
+    {
+      "id": "jovem_pan",
+      "nome": "Jovem Pan",
+      "pais": "Brasil",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "jovempan.com.br"
+      ],
+      "controle": "Grupo Jovem Pan, de capital privado e histórico familiar de Tutinha, hoje no conselho. Lançou rede de TV aberta em jan/2026.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Jovem_Pan",
+      "lado": "soberanistas",
+      "lado_confianca": "media",
+      "lado_porque": "Programação de opinião com forte presença de comentaristas de direita e crítica constante ao governo Lula e ao Supremo. Ainda tem noticiário factual em boletins.",
+      "serve_a": [
+        "bolsonaro",
+        "soberanistas"
+      ],
+      "alvos": [
+        "lula",
+        "ordem_global"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Boletins factuais servem; programas de opinião misturam fato e posição.",
+      "uso": "Termômetro da direita brasileira e do enquadramento anti-governo.",
+      "feeds": [
+        {
+          "url": "https://jovempan.com.br/feed",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "kcna",
+      "nome": "KCNA (Agência Central de Notícias da Coreia)",
+      "pais": "Coreia do Norte",
+      "idiomas": [
+        "ko",
+        "en"
+      ],
+      "tipo": "agencia",
+      "sites": [
+        "kcna.kp"
+      ],
+      "controle": "Agência estatal do governo norte-coreano.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Korean_Central_News_Agency",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "alta",
+      "lado_porque": "Propriedade estatal. Publica só o que o governo aprova.",
+      "serve_a": [
+        "coreia_do_norte"
+      ],
+      "alvos": [
+        "centro_atlantico"
+      ],
+      "fatos": "baixa",
+      "fatos_nota": "Anuncia lançamentos e visitas, mas não verifica o que alega. Confirmação em outra fonte.",
+      "uso": "Linha oficial de Pyongyang.",
+      "feeds": [],
+      "feeds_nota": "O site oficial costuma ficar bloqueado. Ler pelo KCNA Watch."
+    },
+    {
+      "id": "kcna_watch",
+      "nome": "KCNA Watch",
+      "pais": "Coreia do Sul",
+      "idiomas": [
+        "en",
+        "ko"
+      ],
+      "tipo": "dados",
+      "sites": [
+        "kcnawatch.org"
+      ],
+      "controle": "Arquivo privado de textos e imagens da mídia estatal norte-coreana, mantido pela NK News.",
+      "controle_fonte": "https://kcnawatch.org/",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "baixa",
+      "lado_porque": "Republica a mídia norte-coreana. O texto é do regime; o veículo só arquiva. Por isso o lado vem do conteúdo.",
+      "serve_a": [
+        "coreia_do_norte"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Cópia fiel de KCNA e Rodong Sinmun. Vale o texto, não o mérito.",
+      "uso": "Ler o que Pyongyang diz sem acessar o site do Estado.",
+      "feeds": [],
+      "feeds_nota": "Sem feed. O endereço https://kcnawatch.org/feed/ devolve a página do site em HTML, com itens do dia, e não um arquivo de feed (visto em 20/11/2026 e de novo em 23/11/2026). Ler https://kcnawatch.org/newsstream/."
+    },
+    {
+      "id": "kremlin",
+      "nome": "Kremlin (Presidência da Rússia)",
+      "pais": "Rússia",
+      "idiomas": [
+        "ru",
+        "en"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "kremlin.ru"
+      ],
+      "controle": "Governo da Rússia, Presidência.",
+      "controle_fonte": "https://en.kremlin.ru/",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "alta",
+      "lado_porque": "Fonte oficial: o lado é o do regime russo.",
+      "serve_a": [
+        "russia",
+        "eixo_revisionista"
+      ],
+      "alvos": [
+        "ue",
+        "centro_atlantico",
+        "ordem_global"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Registra o que Putin disse e assinou. A versão dos fatos de guerra é a do Estado russo e não serve como fato cru.",
+      "uso": "Posição oficial russa, decretos, telefonemas com outros chefes de Estado.",
+      "feeds": [
+        {
+          "url": "http://en.kremlin.ru/events/president/news/atom",
+          "secao": "Presidente",
+          "formato": "atom",
+          "conferido": false,
+          "nota": "Endereço de formato conhecido. Ficou sem resposta na conferência de 20/11/2026."
+        },
+        {
+          "url": "http://kremlin.ru/events/president/news/feed",
+          "secao": "Presidente (russo)",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Ficou sem resposta na conferência de 20/11/2026."
+        }
+      ]
+    },
+    {
+      "id": "kyiv_independent",
+      "nome": "The Kyiv Independent",
+      "pais": "Ucrânia",
+      "idiomas": [
+        "en",
+        "uk"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "kyivindependent.com"
+      ],
+      "controle": "ONG KI Media. Sem dono único. Cerca de 70% da receita de 2025 vem de leitores. Donativos e apoio de governos e fundações no passado.",
+      "controle_fonte": "https://kyivindependent.com/about/",
+      "lado": "centro_atlantico",
+      "lado_confianca": "media",
+      "lado_porque": "Veículo ucraniano de guerra, claramente do lado da Ucrânia e do Ocidente. A Ucrânia não está na régua. O voto típico é Centro Atlântico.",
+      "serve_a": [
+        "centro_atlantico",
+        "ue"
+      ],
+      "alvos": [
+        "russia"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Bom em campo e cronologia da guerra. Baixas militares ucranianas aparecem pouco, porque Kyiv não divulga os números.",
+      "uso": "Linha ucraniana em inglês, ao vivo.",
+      "feeds": [
+        {
+          "url": "https://kyivindependent.com/news-archive/rss/",
+          "secao": "Guerra",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "la_nacion",
+      "nome": "La Nación (Argentina)",
+      "pais": "Argentina",
+      "idiomas": [
+        "es"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "lanacion.com.ar"
+      ],
+      "controle": "Famílias Saguier e Mitre.",
+      "controle_fonte": "https://pt.wikipedia.org/wiki/La_Naci%C3%B3n_(Argentina)",
+      "lado": "centro_atlantico",
+      "lado_confianca": "baixa",
+      "lado_porque": "Jornal tradicional liberal-conservador. Milei insulta o jornal e seus donos, então não é aliado automático do governo.",
+      "serve_a": [
+        "centro_atlantico"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Jornal de referência; seção de opinião liberal.",
+      "uso": "Política e economia argentinas, com linha liberal institucional.",
+      "feeds": [
+        {
+          "url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/?outputType=xml",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens do mesmo dia, de todas as seções."
+        }
+      ],
+      "feeds_nota": "O feed da categoria /category/el-mundo/ trazia itens em inglês: não usar."
+    },
+    {
+      "id": "lemonde",
+      "nome": "Le Monde",
+      "pais": "França",
+      "idiomas": [
+        "fr",
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "lemonde.fr"
+      ],
+      "controle": "Grupo Le Monde. Desde abr/2024 a parte de Xavier Niel (NJJ Presse) pertence ao Fundo para a Independência da Imprensa, um fundo de dotação sem fins lucrativos cujas ações não podem ser vendidas; Niel guarda uma ação. O Polo de Independência (redatores, funcionários, leitores) tem direito de veto sobre mudança de controle. Em 18/11/2026 o grupo fechou acordo com a espanhola Prisa, que encerra a disputa sobre a fatia dela.",
+      "controle_fonte": "https://www.ccfi.asso.fr/lactionnariat-du-groupe-le-monde-en-2026/",
+      "lado": "ordem_global",
+      "lado_confianca": "media",
+      "lado_porque": "Jornal de referência da França, de centro-esquerda e pró-europeu, com estrutura de independência. As fontes divergem em detalhes de participação, e o acordo com a Prisa de 18/11/2026 pode mudar as fatias. Fica na Ordem Global pelo voto típico em clima e fala, e não no Centro Atlântico porque é menos duro em imigração.",
+      "serve_a": [
+        "ordem_global",
+        "ue",
+        "macron"
+      ],
+      "alvos": [
+        "trump",
+        "russia"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Apuração própria forte em França, União Europeia, África francófona e Oriente Médio. Edição em inglês traduz só parte.",
+      "uso": "Ótica da elite francesa e europeia. Leitura de África francófona.",
+      "feeds": [
+        {
+          "url": "https://www.lemonde.fr/en/rss/une.xml",
+          "secao": "Capa (inglês)",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        }
+      ],
+      "feeds_nota": "Há versão em francês, com feeds por seção."
+    },
+    {
+      "id": "meduza",
+      "nome": "Meduza",
+      "pais": "Letônia (redação russa no exílio)",
+      "idiomas": [
+        "ru",
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "meduza.io"
+      ],
+      "controle": "Empresa SIA Medusa Project, em Riga. Vive de doações de leitores e de apoio de organizações internacionais. Perdeu cerca de 15% do orçamento com o corte de verbas do governo dos EUA em 2025.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Meduza_(website)",
+      "lado": "ordem_global",
+      "lado_confianca": "baixa",
+      "lado_porque": "Redação russa exilada, com linha liberal e crítica ao Kremlin. A Rússia a declarou indesejável em 2023. Sem partido estrangeiro dono, então o lado é o mais próximo do voto típico.",
+      "serve_a": [
+        "ue",
+        "centro_atlantico"
+      ],
+      "alvos": [
+        "russia"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Apuração própria sobre Rússia e muitas análises de especialistas. Opina com clareza em vários textos.",
+      "uso": "Fato russo visto de fora e leitura da oposição.",
+      "feeds": [
+        {
+          "url": "https://meduza.io/rss/en/all",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens de 20 e 21/11/2026, na hora local."
+        }
+      ]
+    },
+    {
+      "id": "meta_ai",
+      "nome": "Meta AI (blog)",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "ai.meta.com"
+      ],
+      "controle": "Meta Platforms.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Meta_Platforms",
+      "lado": "bancada_talento",
+      "lado_confianca": "alta",
+      "lado_porque": "Voz da Meta, na Bancada do Talento da régua.",
+      "serve_a": [
+        "meta"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Lançamentos e dados da empresa; autodeclarado.",
+      "uso": "Linha oficial da Meta.",
+      "feeds": [],
+      "feeds_nota": "Sem feed achado. Ler https://ai.meta.com/blog/ (em 20/11/2026, a lista visível só chegava a julho de 2026; pode estar defasada)."
+    },
+    {
+      "id": "microsoft_source",
+      "nome": "Microsoft Source",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "news.microsoft.com",
+        "blogs.microsoft.com"
+      ],
+      "controle": "Microsoft, empresa de capital aberto; tem cerca de 27% da OpenAI Group PBC desde outubro de 2025.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Microsoft",
+      "lado": "bancada_talento",
+      "lado_confianca": "baixa",
+      "lado_porque": "Microsoft não está na régua. Mais próxima: Bancada do Talento (big tech que libera IA). Bill Gates não tem cargo na empresa desde 2020, e a Microsoft hoje também compete com a OpenAI com modelos próprios, então não serve a nenhum player da régua de forma clara.",
+      "serve_a": [],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Comunicados de empresa; úteis para contratos e infraestrutura.",
+      "uso": "Linha oficial da Microsoft.",
+      "feeds": [
+        {
+          "url": "https://news.microsoft.com/source/feed/",
+          "secao": "Tecnologia",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026, o item mais novo era de 20/11/2026 às 00h44 UTC (noite de 19/11 em Brasília)."
+        }
+      ]
+    },
+    {
+      "id": "middle_east_eye",
+      "nome": "Middle East Eye",
+      "pais": "Reino Unido",
+      "idiomas": [
+        "en",
+        "ar",
+        "fr"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "middleeasteye.net"
+      ],
+      "controle": "Empresa Middle East Eye Ltd, de Londres. Não divulga quem financia. Em 2017, Arábia Saudita, Emirados, Bahrein e Egito disseram que o Catar financia o site e pediram o fechamento dele. O veículo nega.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Middle_East_Eye",
+      "lado": "independentes",
+      "lado_confianca": "baixa",
+      "lado_porque": "Linha editorial documentada: crítica a Israel, aos EUA e às monarquias do Golfo (Arábia, Emirados, Egito), e simpática à Irmandade Muçulmana. Dono real não confirmado, então a confiança é baixa.",
+      "serve_a": [
+        "independentes"
+      ],
+      "alvos": [
+        "centro_atlantico"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Tem furos úteis e fontes locais. Enquadra forte contra Israel e Golfo.",
+      "uso": "Leitura crítica sobre Palestina, Golfo e política britânica do Oriente Médio.",
+      "feeds": [
+        {
+          "url": "https://www.middleeasteye.net/rss",
+          "secao": "Tudo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "mistral",
+      "nome": "Mistral AI (notícias)",
+      "pais": "França",
+      "idiomas": [
+        "en",
+        "fr"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "mistral.ai"
+      ],
+      "controle": "Mistral AI, empresa privada francesa, com investidores incluindo a ASML.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Mistral_AI",
+      "lado": "bancada_talento",
+      "lado_confianca": "baixa",
+      "lado_porque": "Não está na régua. Voto típico: defendeu IA livre contra regras da UE. Ficou na Bancada do Talento por esse voto, ainda que seja europeia.",
+      "serve_a": [
+        "macron"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Comunicados de produto.",
+      "uso": "Linha oficial da IA europeia.",
+      "feeds": [],
+      "feeds_nota": "Sem feed. Ler https://mistral.ai/news (títulos e datas na página)."
+    },
+    {
+      "id": "mit_tech_review",
+      "nome": "MIT Technology Review",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "technologyreview.com"
+      ],
+      "controle": "Publicada pelo MIT, universidade privada sem fins lucrativos.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/MIT_Technology_Review",
+      "lado": "ordem_global",
+      "lado_confianca": "media",
+      "lado_porque": "Linha de cautela com IA e clima: reportagens sobre riscos e limites. Dono acadêmico.",
+      "serve_a": [],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Reportagem e newsletter com boa checagem. Também publica patrocinado, sempre marcado.",
+      "uso": "Visão cética e técnica sobre IA, energia e clima.",
+      "feeds": [
+        {
+          "url": "https://www.technologyreview.com/feed/",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens de 19 e 20/11/2026."
+        }
+      ]
+    },
+    {
+      "id": "moscow_times",
+      "nome": "The Moscow Times",
+      "pais": "Países Baixos (redação russa no exílio)",
+      "idiomas": [
+        "en",
+        "ru"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "themoscowtimes.com"
+      ],
+      "controle": "Fundado pelo holandês Derk Sauer, que morreu em julho de 2025. Redação em Amsterdã desde 2022. A Wikipedia aponta uma empresa com 51% de Vladimir Jao e o resto com a diretora-geral e com Sauer. O dono depois da morte de Sauer não foi confirmado: em 20/11/2026 não havia notícia de novo dono. O publisher é Alexander Gubsky.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/The_Moscow_Times",
+      "lado": "ordem_global",
+      "lado_confianca": "baixa",
+      "lado_porque": "Redação em Amsterdã desde 2022. Linha crítica ao Kremlin. Rússia a declarou indesejável em 2024. Lado inferido, sem dono político.",
+      "serve_a": [
+        "ue",
+        "centro_atlantico"
+      ],
+      "alvos": [
+        "russia"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Reportagem sólida sobre economia e política russas. Opina de forma aberta.",
+      "uso": "Economia e política russa com olhar externo.",
+      "feeds": [
+        {
+          "url": "https://www.themoscowtimes.com/rss/news",
+          "secao": "Notícias",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "mre_china",
+      "nome": "Ministério das Relações Exteriores da China",
+      "pais": "China",
+      "idiomas": [
+        "zh",
+        "en"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "mfa.gov.cn",
+        "fmprc.gov.cn"
+      ],
+      "controle": "Governo da China, sob o Partido Comunista.",
+      "controle_fonte": "https://www.mfa.gov.cn/eng/",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "alta",
+      "lado_porque": "Fonte oficial: o lado é o do regime chinês.",
+      "serve_a": [
+        "china",
+        "eixo_revisionista"
+      ],
+      "alvos": [
+        "centro_atlantico",
+        "soberanistas"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Mostra a linha oficial de Pequim em Taiwan, comércio e sanção. Evita número que desfavoreça o governo.",
+      "uso": "Coletivas diárias do porta-voz e notas sobre Taiwan, EUA e comércio.",
+      "feeds": [],
+      "feeds_nota": "Sem feed. O endereço antigo, /eng/rss/, redireciona para https://www.mfa.gov.cn/web/system/index_17321.shtml, que responde como página inexistente (visto em 20/11/2026 e de novo em 23/11/2026). As notícias ficam em https://www.mfa.gov.cn/web/wjdt_674879/ (endereço não conferido)."
+    },
+    {
+      "id": "ndtv",
+      "nome": "NDTV",
+      "pais": "Índia",
+      "idiomas": [
+        "en",
+        "hi"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "ndtv.com",
+        "ndtv.in"
+      ],
+      "controle": "Grupo Adani controla cerca de 69% (subiu de 64,71% após emissão de direitos). Controle desde dezembro de 2022.",
+      "controle_fonte": "https://www.adgully.com/post/23914/adani-enterprises-to-invest-inr800-crore-in-ndtv-via-perpetual-debentures",
+      "lado": "independentes",
+      "lado_confianca": "media",
+      "lado_porque": "O dono é Gautam Adani, próximo de Modi. A linha mudou depois da compra para mais alinhada ao governo. Índia = Independentes na régua.",
+      "serve_a": [
+        "independentes"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Fato cru ok. Pauta política mais suave que antes de 2022.",
+      "uso": "Linha indiana em inglês; mercado e Adani.",
+      "feeds": [
+        {
+          "url": "https://feeds.feedburner.com/ndtvnews-world-news",
+          "secao": "Mundo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens de 20 e 21/11/2026, na hora local."
+        }
+      ]
+    },
+    {
+      "id": "new_york_post",
+      "nome": "New York Post",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "nypost.com"
+      ],
+      "controle": "News Corp, grupo da família Murdoch; Lachlan Murdoch tem o voto de controle.",
+      "controle_fonte": "https://variety.com/2025/tv/news/lachlan-murdoch-snares-fox-news-control-family-settlement-1236512157/",
+      "lado": "soberanistas",
+      "lado_confianca": "baixa",
+      "lado_porque": "Tabloide de direita do mesmo grupo da Fox News, com editoriais favoráveis a Trump. É menos doutrinário que a Fox: criticou o acordo de Trump com o Irã em 2026 (Newsweek) e o grupo Murdoch esfriou com Trump depois das eleições de nov/2026. Classificação por dono e tom, sem leitura caso a caso.",
+      "serve_a": [
+        "trump",
+        "soberanistas"
+      ],
+      "alvos": [
+        "ordem_global",
+        "biden"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Bons furos locais e de Nova York; manchetes sensacionalistas. Conferir a matéria, não só o título.",
+      "uso": "Fato cru rápido sobre EUA e Nova York, com enquadramento de direita.",
+      "feeds": [
+        {
+          "url": "https://nypost.com/news/feed/",
+          "secao": "Mundo e EUA",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        }
+      ],
+      "feeds_nota": "Se o feed falhar, ler https://nypost.com/news/ (últimas notícias)."
+    },
+    {
+      "id": "newsmax",
+      "nome": "Newsmax",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "newsmax.com"
+      ],
+      "controle": "Newsmax Inc., empresa aberta (NYSE: NMAX), fundada e dirigida por Christopher Ruddy.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Newsmax",
+      "lado": "soberanistas",
+      "lado_confianca": "alta",
+      "lado_porque": "Canal de TV e site de linha pró-Trump documentada. Concorre com a Fox: processou a Fox por concorrência em set/2025 (caso pendente na Flórida) e de novo em nov/2026, contra a compra da Roku pela Fox.",
+      "serve_a": [
+        "trump",
+        "soberanistas"
+      ],
+      "alvos": [
+        "ordem_global"
+      ],
+      "fatos": "baixa",
+      "fatos_nota": "Pagou acordos de US$ 40 mi (Smartmatic, 2024) e US$ 67 mi (Dominion, 2025) por afirmações falsas sobre eleição.",
+      "uso": "Sinal de apoio ao círculo de Trump. Usar com checagem cruzada.",
+      "feeds": [
+        {
+          "url": "https://www.newsmax.com/rss/Newsfront/16/",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto: a leitura passou do tempo nas conferências, a última em 20/11/2026."
+        }
+      ],
+      "feeds_nota": "Se o feed falhar, ler https://www.newsmax.com/newsfront/."
+    },
+    {
+      "id": "nikkei_asia",
+      "nome": "Nikkei Asia",
+      "pais": "Japão",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "asia.nikkei.com"
+      ],
+      "controle": "Nikkei Inc., maior grupo de imprensa econômica do Japão. Dono também do Financial Times.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Nikkei,_Inc.",
+      "lado": "centrao",
+      "lado_confianca": "media",
+      "lado_porque": "Jornal de negócios. Linha de mercado e de aliança EUA-Japão. Pelo voto típico, Centrão.",
+      "serve_a": [
+        "centrao"
+      ],
+      "alvos": [
+        "eixo_revisionista"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Dados e entrevistas bons. Parte atrás de paywall.",
+      "uso": "Cadeias de suprimento, chips, Japão e Sudeste Asiático.",
+      "feeds": [
+        {
+          "url": "https://asia.nikkei.com/rss/feed/nar",
+          "secao": "Tudo",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "O feed abre (RSS 1.0), mas os itens não têm data (visto em 20/11/2026): não dá para saber se são da semana."
+        }
+      ]
+    },
+    {
+      "id": "nist_caisi",
+      "nome": "NIST / CAISI",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "nist.gov"
+      ],
+      "controle": "Departamento de Comércio dos EUA; o CAISI (Centro de Padrões e Inovação em IA) é o órgão federal que avalia modelos.",
+      "controle_fonte": "https://www.nist.gov/caisi",
+      "lado": "soberanistas",
+      "lado_confianca": "media",
+      "lado_porque": "É órgão do governo Trump, que a régua põe entre os Soberanistas. Tom técnico.",
+      "serve_a": [
+        "trump"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Fonte primária de padrão e avaliação.",
+      "uso": "Linha oficial dos EUA sobre padrões de IA.",
+      "feeds": [
+        {
+          "url": "https://www.nist.gov/news-events/news/rss.xml",
+          "secao": "Tecnologia",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Feed geral do NIST, não só de IA. Em 20/11/2026 trazia itens de 18 e 19/11/2026."
+        }
+      ]
+    },
+    {
+      "id": "nk_news",
+      "nome": "NK News",
+      "pais": "Coreia do Sul",
+      "idiomas": [
+        "en",
+        "ko"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "nknews.org"
+      ],
+      "controle": "Empresa privada Korea Risk Group (NK Consulting Inc.), fundada e chefiada por Chad O'Carroll. Vive de assinaturas e anúncios.",
+      "controle_fonte": "https://www.nknews.org/about-us/",
+      "lado": "centro_atlantico",
+      "lado_confianca": "baixa",
+      "lado_porque": "Redação ocidental e sul-coreana, sem linha política de partido. Posição inferida do ambiente.",
+      "serve_a": [],
+      "alvos": [
+        "coreia_do_norte"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Muita checagem com imagens de satélite e fontes na região. Alguns textos são pagos.",
+      "uso": "Fato sobre Coreia do Norte com checagem independente.",
+      "feeds": [
+        {
+          "url": "https://www.nknews.org/feed/",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "nvidia_blog",
+      "nome": "Nvidia (blog)",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "blogs.nvidia.com",
+        "nvidianews.nvidia.com"
+      ],
+      "controle": "Nvidia, empresa de capital aberto. Jensen Huang, cofundador, renunciou em nov/2026 (aceita em 11/11, anunciada em 12/11) e o conselho o reconduziu a presidente-executivo e conselheiro em 23/11/2026; Harvey Jones preside o conselho.",
+      "controle_fonte": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director",
+      "lado": "bancada_talento",
+      "lado_confianca": "media",
+      "lado_porque": "Voz da Nvidia, na Bancada do Talento da régua. O player da régua é Jensen Huang, presidente-executivo da empresa.",
+      "serve_a": [
+        "huang_nvidia"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Produto e parcerias; faz lobby contra controle de exportação.",
+      "uso": "Linha oficial da Nvidia: chips e parcerias.",
+      "feeds": [
+        {
+          "url": "https://blogs.nvidia.com/feed/",
+          "secao": "Tecnologia",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026, o item mais novo era de 19/11/2026."
+        }
+      ]
+    },
+    {
+      "id": "nyt",
+      "nome": "The New York Times",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "nytimes.com"
+      ],
+      "controle": "Empresa de capital aberto (NYSE) controlada pela família Ochs-Sulzberger, por ações de classe B.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/The_New_York_Times_Company",
+      "lado": "ordem_global",
+      "lado_confianca": "alta",
+      "lado_porque": "Já classificado na régua como player da Ordem Global. Linha editorial e página de opinião liberais, crítica de Trump e de Musk. Processa a OpenAI por direito autoral.",
+      "serve_a": [
+        "ordem_global",
+        "centro_atlantico"
+      ],
+      "alvos": [
+        "trump",
+        "musk",
+        "altman"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Apuração própria forte e correções públicas. Enquadramento aparece na escolha de manchete e de ângulo, mais do que no fato.",
+      "uso": "Linha do establishment americano. Apuração original sobre Casa Branca, Wall Street e IA.",
+      "feeds": [
+        {
+          "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+          "secao": "Mundo",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        },
+        {
+          "url": "https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml",
+          "secao": "Tecnologia",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        }
+      ],
+      "feeds_nota": "Muito conteúdo é pago; o feed traz título e resumo."
+    },
+    {
+      "id": "onu_news",
+      "nome": "ONU News",
+      "pais": "ONU (sede em Nova York)",
+      "idiomas": [
+        "en",
+        "pt",
+        "es",
+        "fr",
+        "ar",
+        "ru",
+        "zh"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "news.un.org"
+      ],
+      "controle": "Departamento de Comunicação Global da ONU, financiado pelos Estados-membros.",
+      "controle_fonte": "https://news.un.org/",
+      "lado": "ordem_global",
+      "lado_confianca": "alta",
+      "lado_porque": "Fala pela ONU e pelo sistema multilateral. Costuma pôr a crise em termos de direitos e ajuda humanitária.",
+      "serve_a": [
+        "oms_onu",
+        "ordem_global"
+      ],
+      "alvos": [
+        "soberanistas"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Bom para número humanitário (fome, deslocados, mortos). O lado aparece no que escolhe destacar.",
+      "uso": "Fome, refugiados, guerras, pedidos de ajuda.",
+      "feeds": [
+        {
+          "url": "https://news.un.org/feed/subscribe/en/news/all/rss.xml",
+          "secao": "Tudo (inglês)",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia."
+        },
+        {
+          "url": "https://news.un.org/feed/subscribe/pt/news/all/rss.xml",
+          "secao": "Tudo (português)",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "openai_news",
+      "nome": "OpenAI (sala de imprensa)",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "openai.com"
+      ],
+      "controle": "OpenAI Group PBC (empresa de benefício público), controlada pela OpenAI Foundation, sem fins lucrativos, que nomeia o conselho. Na reestruturação de outubro de 2025: fundação com 26%, Microsoft com cerca de 27%.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/OpenAI",
+      "lado": "bancada_talento",
+      "lado_confianca": "alta",
+      "lado_porque": "Voz da empresa de Sam Altman, que a régua põe na Bancada do Talento.",
+      "serve_a": [
+        "altman"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Fatos de produto e dados da empresa são úteis; desempenho e segurança são autodeclarados.",
+      "uso": "Linha oficial de OpenAI.",
+      "feeds": [
+        {
+          "url": "https://openai.com/news/rss.xml",
+          "secao": "IA",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia. O feed é muito grande."
+        }
+      ]
+    },
+    {
+      "id": "opep",
+      "nome": "OPEP (Organização dos Países Exportadores de Petróleo)",
+      "pais": "Organismo internacional (sede em Viena)",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "opec.org"
+      ],
+      "controle": "Organização de 11 países produtores de petróleo, liderada pela Arábia Saudita. Cada membro paga a mesma cota do orçamento. Os Emirados Árabes Unidos saíram da OPEP e da OPEP+ em 1/5/2026.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/OPEC",
+      "lado": "independentes",
+      "lado_confianca": "baixa",
+      "lado_porque": "A OPEP defende o preço dos produtores e briga com a AIE pela projeção de demanda. A Rússia está só na OPEP+, não na OPEP. Em 2026 o Irã, membro, atacou vizinhos do Golfo e os Emirados saíram. A organização não vota com um partido só: fica como Independentes, com confiança baixa.",
+      "serve_a": [],
+      "alvos": [
+        "centro_atlantico"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Dá a decisão oficial de corte ou aumento de produção. Projeção de demanda é favorável aos produtores.",
+      "uso": "Reunião de produção e relatório mensal.",
+      "feeds": [],
+      "feeds_nota": "Sem feed. O endereço https://www.opec.org/opec_web/en/press_room/rss.xml responde 402 (pagamento exigido): visto em 20/11/2026 e de novo em 23/11/2026."
+    },
+    {
+      "id": "otan",
+      "nome": "OTAN",
+      "pais": "Organismo internacional (sede em Bruxelas)",
+      "idiomas": [
+        "en",
+        "fr"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "nato.int"
+      ],
+      "controle": "Aliança militar de 32 países, financiada pelos membros (EUA com a maior fatia).",
+      "controle_fonte": "https://www.nato.int/",
+      "lado": "centro_atlantico",
+      "lado_confianca": "alta",
+      "lado_porque": "Defende a ordem de segurança atlântica e aponta a Rússia como ameaça.",
+      "serve_a": [
+        "centro_atlantico",
+        "ue"
+      ],
+      "alvos": [
+        "russia",
+        "eixo_revisionista"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Bom para decisão da aliança e gasto de defesa. Avalia a ameaça pela ótica própria.",
+      "uso": "Cúpulas, gastos de defesa, apoio à Ucrânia, exercícios.",
+      "feeds": [],
+      "feeds_nota": "Sem feed. O endereço https://www.nato.int/cps/en/natolive/news.xml responde 404 (visto em 20/11/2026 e de novo em 23/11/2026), e a página de feeds da OTAN, https://www.nato.int/cps/en/natolive/rss.htm, pede verificação humana."
+    },
+    {
+      "id": "people_daily",
+      "nome": "People's Daily (Diário do Povo)",
+      "pais": "China",
+      "idiomas": [
+        "en",
+        "zh",
+        "pt"
+      ],
+      "tipo": "estatal",
+      "sites": [
+        "people.cn",
+        "people.com.cn"
+      ],
+      "controle": "Jornal oficial do Comitê Central do Partido Comunista da China.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/People%27s_Daily",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "alta",
+      "lado_porque": "É o órgão do Partido. O que publica é a linha oficial.",
+      "serve_a": [
+        "china"
+      ],
+      "alvos": [
+        "trump",
+        "ue"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Bom para o texto exato da posição oficial. Pouca checagem independente.",
+      "uso": "Linha oficial do Partido; sinal de prioridades políticas.",
+      "feeds": [],
+      "feeds_nota": "Sem feed vivo. O endereço http://en.people.cn/rss/90777.xml responde, mas o item mais novo é de 05/06/2025 (visto em 20/11/2026 e de novo em 23/11/2026). Ler http://en.people.cn/."
+    },
+    {
+      "id": "planalto",
+      "nome": "Planalto (Presidência do Brasil)",
+      "pais": "Brasil",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "gov.br"
+      ],
+      "controle": "Governo federal do Brasil (gestão Lula).",
+      "controle_fonte": "https://www.gov.br/planalto/pt-br",
+      "lado": "ordem_global",
+      "lado_confianca": "media",
+      "lado_porque": "Fonte oficial do governo Lula, que votou perto da Ordem Global nos temas da régua.",
+      "serve_a": [
+        "lula",
+        "ordem_global"
+      ],
+      "alvos": [
+        "soberanistas",
+        "bolsonaro"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Confiável para ato oficial, decreto e agenda. Dado econômico vem com leitura favorável ao governo.",
+      "uso": "Posição do Brasil, decretos, agenda do presidente.",
+      "feeds": [
+        {
+          "url": "https://www.gov.br/planalto/pt-br/RSS",
+          "secao": "Tudo",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "O gov.br pediu verificação humana (código de imagem) na conferência de 20/11/2026."
+        }
+      ]
+    },
+    {
+      "id": "platformer",
+      "nome": "Platformer",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "platformer.news"
+      ],
+      "controle": "Newsletter independente de Casey Newton, financiada por assinantes.",
+      "controle_fonte": "https://www.platformer.news/about/",
+      "lado": "ordem_global",
+      "lado_confianca": "baixa",
+      "lado_porque": "Linha editorial favorável à moderação de conteúdo e a regras de segurança; crítico de Musk e de recuos de plataformas. Autor assume a posição.",
+      "serve_a": [
+        "ordem_global"
+      ],
+      "alvos": [
+        "musk",
+        "meta"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Boa reportagem de plataformas; texto de análise com opinião explícita.",
+      "uso": "Moderação, redes sociais e política de plataformas.",
+      "feeds": [
+        {
+          "url": "https://www.platformer.news/rss/",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens de 13 a 20/11/2026."
+        }
+      ]
+    },
+    {
+      "id": "poder360",
+      "nome": "Poder360",
+      "pais": "Brasil",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "poder360.com.br"
+      ],
+      "controle": "Poder360 Jornalismo e Comunicação Ltda. Sócios em 2021: os jornalistas Fernando Rodrigues e Mariângela Gallucci (37,5% cada) e Frederico Trajano, CEO do Magazine Luiza, com 25% a título pessoal. Registro de 2025 mostra mudanças no quadro de outra empresa do grupo.",
+      "controle_fonte": "https://pt.wikipedia.org/wiki/Poder360",
+      "lado": "independentes",
+      "lado_confianca": "baixa",
+      "lado_porque": "Site de política e poder em Brasília, com foco em dados e pesquisas. Sem alinhamento claro a lado; classificação provisória.",
+      "serve_a": [],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Notícia curta, números e documentos oficiais, com pouca opinião na capa.",
+      "uso": "Agenda do poder em Brasília, pesquisas eleitorais e dados oficiais.",
+      "feeds": [
+        {
+          "url": "https://www.poder360.com.br/feed/",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        }
+      ],
+      "feeds_nota": "Página de apoio: https://www.poder360.com.br/ultimas-noticias/."
+    },
+    {
+      "id": "politico",
+      "nome": "Politico",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "politico.com",
+        "politico.eu"
+      ],
+      "controle": "Axel Springer SE, de propriedade de Friede Springer e Mathias Döpfner (95% juntos). Comprou o Politico em 2021 por cerca de US$ 1 bi. Concluiu a compra do Telegraph por £575 milhões em 30/06/2026.",
+      "controle_fonte": "https://www.axios.com/2026/03/06/telegraph-axel-springer-politico-deal",
+      "lado": "centro_atlantico",
+      "lado_confianca": "media",
+      "lado_porque": "Cobertura de bastidores de Washington e Bruxelas, em linha de centro. O grupo dono tem tradição atlantista e pró-mercado. Em 18-19/09/2026 Trump vetou o Politico, a CNN e o MS NOW na Casa Branca, e os três foram à Justiça (CNN, NPR e NBC News relataram).",
+      "serve_a": [
+        "centro_atlantico"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Bom em processo legislativo e bastidores. Muito material depende de fontes anônimas. Bom para ver o que Washington quer que se saiba.",
+      "uso": "Radar de Washington e de Bruxelas: quem negocia o quê, antes da manchete.",
+      "feeds": [
+        {
+          "url": "https://rss.politico.com/politics-news.xml",
+          "secao": "Política",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        }
+      ]
+    },
+    {
+      "id": "press_tv",
+      "nome": "Press TV",
+      "pais": "Irã",
+      "idiomas": [
+        "en",
+        "fr",
+        "ur"
+      ],
+      "tipo": "estatal",
+      "sites": [
+        "presstv.co.uk",
+        "presstv.ir"
+      ],
+      "controle": "Emissora internacional da IRIB, a radiodifusão estatal da República Islâmica.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Press_TV",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "alta",
+      "lado_porque": "Propriedade estatal. Linha oficial iraniana e alinhada ao governo do Irã.",
+      "serve_a": [
+        "ira"
+      ],
+      "alvos": [
+        "centro_atlantico",
+        "trump"
+      ],
+      "fatos": "baixa",
+      "fatos_nota": "Reproduz a versão oficial. Em conflito, afirma sem prova. Conferir em outra fonte.",
+      "uso": "Linha oficial de Teerã em inglês.",
+      "feeds": [
+        {
+          "url": "https://www.presstv.co.uk/rss.xml",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia. O item não traz data; ela só aparece no endereço do link. O certificado de presstv.ir é emitido para presstv.co.uk: é o mesmo operador."
+        }
+      ]
+    },
+    {
+      "id": "reuters",
+      "nome": "Reuters",
+      "pais": "Reino Unido/Canadá",
+      "idiomas": [
+        "en",
+        "pt",
+        "es",
+        "fr",
+        "de",
+        "ar",
+        "ja",
+        "zh"
+      ],
+      "tipo": "agencia",
+      "sites": [
+        "reuters.com"
+      ],
+      "controle": "Pertence à Thomson Reuters, empresa de capital aberto (Toronto e Nova York). A família canadense Thomson, pela Thomson Investments e pela Woodbridge, tem cerca de 70,6% das ações (registro na SEC de abr/2026). Por acordo, a Woodbridge vota a favor dos Princípios de Confiança da Thomson Reuters, que protegem a independência da redação.",
+      "controle_fonte": "https://www.sec.gov/Archives/edgar/data/1075124/000114036126015444/0001140361-26-015444-index.html",
+      "lado": "centrao",
+      "lado_confianca": "baixa",
+      "lado_porque": "O negócio é vender dados e notícias a bancos, empresas e governos, o que combina com o Centrão da régua (finança e indústria). A redação factual evita enquadramento aberto, então a classificação é fraca.",
+      "serve_a": [
+        "centrao"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Padrão de agência: texto curto, atribuído, com correções públicas. Erra pouco no fato cru. O viés aparece mais na escolha do que cobrir do que no texto.",
+      "uso": "Fato cru rápido e base de preço e mercado. Primeira confirmação de eventos de última hora.",
+      "feeds": [],
+      "feeds_nota": "Sem feed RSS público oficial ativo. Ler a página de últimas notícias, https://www.reuters.com/world/, que não abriu para leitura automática em 20/11/2026."
+    },
+    {
+      "id": "revista_forum",
+      "nome": "Revista Fórum",
+      "pais": "Brasil",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "revistaforum.com.br"
+      ],
+      "controle": "Publisher Brasil Editora Ltda., do jornalista Renato Rovai, fundador e diretor editorial. Recebeu R$ 344 mil de publicidade federal em 2023, segundo levantamento da Folha com dados da Secom.",
+      "controle_fonte": "https://pt.wikipedia.org/wiki/Renato_Rovai",
+      "lado": "ordem_global",
+      "lado_confianca": "media",
+      "lado_porque": "Linha progressista declarada, crítica ao bolsonarismo e próxima do campo petista. Ficou na Ordem Global pelo alinhamento ao governo atual.",
+      "serve_a": [
+        "lula",
+        "ordem_global"
+      ],
+      "alvos": [
+        "bolsonaro",
+        "trump",
+        "soberanistas"
+      ],
+      "fatos": "baixa",
+      "fatos_nota": "Pauta e opinião mesclados; usar com checagem.",
+      "uso": "Voz da esquerda brasileira nas redes.",
+      "feeds": [
+        {
+          "url": "https://revistaforum.com.br/feed/",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens do mesmo dia. O endereço /rss.xml respondia 404."
+        }
+      ]
+    },
+    {
+      "id": "revista_oeste",
+      "nome": "Revista Oeste",
+      "pais": "Brasil",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "revistaoeste.com"
+      ],
+      "controle": "Editora Tipuana. Fundada em 2020 por Jairo Leal (publisher), J. R. Guzzo e Augusto Nunes; Guzzo morreu em ago/2025. Diz viver de assinaturas e recusar verba estatal (declaração própria). Lançou operação de TV em 26/01/2026.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Revista_Oeste",
+      "lado": "soberanistas",
+      "lado_confianca": "alta",
+      "lado_porque": "Linha editorial conservadora declarada, com colunistas ligados à direita e crítica ao governo e ao STF. A maior parte do conteúdo é opinião.",
+      "serve_a": [
+        "bolsonaro",
+        "soberanistas",
+        "trump"
+      ],
+      "alvos": [
+        "lula",
+        "ordem_global"
+      ],
+      "fatos": "baixa",
+      "fatos_nota": "Mistura reportagem e opinião; pouco para fato cru.",
+      "uso": "Voz da direita bolsonarista no Brasil.",
+      "feeds": [
+        {
+          "url": "https://revistaoeste.com/feed/",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "ria",
+      "nome": "RIA Novosti",
+      "pais": "Rússia",
+      "idiomas": [
+        "ru"
+      ],
+      "tipo": "agencia",
+      "sites": [
+        "ria.ru"
+      ],
+      "controle": "Agência da Rossiya Segodnya, estatal.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/RIA_Novosti",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "alta",
+      "lado_porque": "Propriedade estatal. Faz o fluxo de notícias do Estado em russo.",
+      "serve_a": [
+        "russia"
+      ],
+      "alvos": [
+        "ue",
+        "centro_atlantico"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Boa para ver o que Moscou diz ao público interno. Alertas e baixas seguem a linha oficial.",
+      "uso": "Agenda interna e linha oficial russa em russo.",
+      "feeds": [
+        {
+          "url": "https://ria.ru/export/rss2/archive/index.xml",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens de 21/11/2026 na hora de Moscou, em russo."
+        }
+      ]
+    },
+    {
+      "id": "rt",
+      "nome": "RT (Russia Today)",
+      "pais": "Rússia",
+      "idiomas": [
+        "en",
+        "ru",
+        "es",
+        "fr",
+        "ar",
+        "de"
+      ],
+      "tipo": "estatal",
+      "sites": [
+        "rt-english.com",
+        "rt.com"
+      ],
+      "controle": "Financiada pelo governo russo por meio da ANO TV-Novosti.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/RT_(TV_network)",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "alta",
+      "lado_porque": "Financiamento estatal. Sancionada na UE desde 2022. Trata a mídia ocidental como propaganda e favorece a posição russa.",
+      "serve_a": [
+        "russia"
+      ],
+      "alvos": [
+        "ue",
+        "centro_atlantico"
+      ],
+      "fatos": "baixa",
+      "fatos_nota": "Mistura fato e propaganda. Usar só como linha russa e conferir fatos em outra fonte.",
+      "uso": "Linha russa em inglês e narrativa contra o Ocidente.",
+      "feeds": [
+        {
+          "url": "https://rt-english.com/rss/news/",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "O endereço rt.com/rss/news/ redireciona (301) para este, no domínio novo. Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "rumble",
+      "nome": "Rumble (RUM Group)",
+      "pais": "EUA",
+      "idiomas": [
+        "multi"
+      ],
+      "tipo": "plataforma",
+      "sites": [
+        "rumble.com"
+      ],
+      "controle": "Chris Pavlovski tem a maioria do voto: 83,2% em 30/03/2026 e cerca de 78% depois da compra da Northern Data, concluída em jun/2026. A Tether é a maior acionista das ações classe A, sem direito de indicar conselheiros.",
+      "controle_fonte": "https://everything-pr.com/rumble-the-free-speech-video-platform-at-95m-revenue",
+      "lado": "soberanistas",
+      "lado_confianca": "media",
+      "lado_porque": "Posiciona-se contra a moderação de conteúdo e hospeda criadores de direita. Brigou com reguladores da UE e do Brasil por causa da moderação. Dono não declara partido.",
+      "serve_a": [
+        "soberanistas",
+        "trump"
+      ],
+      "alvos": [
+        "ue",
+        "ordem_global"
+      ],
+      "fatos": "baixa",
+      "fatos_nota": "Plataforma de vídeo, sem redação. Qualidade depende do canal.",
+      "uso": "Onde vozes banidas ou limitadas em outras redes aparecem.",
+      "feeds": [],
+      "feeds_nota": "Sem feed geral útil. Ler canais específicos em https://rumble.com/."
+    },
+    {
+      "id": "scmp",
+      "nome": "South China Morning Post",
+      "pais": "Hong Kong (China)",
+      "idiomas": [
+        "en",
+        "zh"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "scmp.com"
+      ],
+      "controle": "Pertence ao grupo Alibaba desde 2016. O Alibaba foi fundado por Jack Ma e é presidido por Joe Tsai. Em 20/11/2026 não havia notícia de venda; textos do próprio SCMP de 2026 citam o Alibaba como dono.",
+      "controle_fonte": "https://www.alizila.com/alibaba-completes-south-china-morning-post-acquisition/",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "baixa",
+      "lado_porque": "Dono privado chinês, redação com repórteres independentes. Cobertura da China é detalhada, com limites impostos pelo ambiente de Hong Kong e de Pequim. Classificado no partido mais próximo, sem ser veículo estatal.",
+      "serve_a": [
+        "china"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Boa apuração sobre elite chinesa, economia e tecnologia. Cautela em temas muito sensíveis a Pequim.",
+      "uso": "Fato rápido sobre China e Hong Kong, com leitura de dentro.",
+      "feeds": [
+        {
+          "url": "https://www.scmp.com/rss/91/feed",
+          "secao": "Notícias",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "semafor",
+      "nome": "Semafor",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "semafor.com"
+      ],
+      "controle": "Fundada por Ben Smith e Justin Smith, com investidores privados minoritários (rodada de US$ 30 milhões em janeiro de 2026, com PSP e outros). Ações de duas classes deixam o controle com os fundadores.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Semafor_(website)",
+      "lado": "centro_atlantico",
+      "lado_confianca": "baixa",
+      "lado_porque": "Modelo que separa fato e leitura do autor. Público de elite política e de negócios do eixo EUA-Europa; sem linha partidária documentada.",
+      "serve_a": [],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Bom em bastidores de poder; separa notícia de análise.",
+      "uso": "Bastidores de política e tecnologia.",
+      "feeds": [
+        {
+          "url": "https://www.semafor.com/rss.xml",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia. Cobre política e mercado de apostas, não só IA."
+        }
+      ]
+    },
+    {
+      "id": "sipri",
+      "nome": "SIPRI (Instituto Internacional de Pesquisa para a Paz de Estocolmo)",
+      "pais": "Suécia",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "think_tank",
+      "sites": [
+        "sipri.org"
+      ],
+      "controle": "Instituto independente, financiado pelo governo sueco e por outros governos e fundações.",
+      "controle_fonte": "https://www.sipri.org/about",
+      "lado": "ordem_global",
+      "lado_confianca": "media",
+      "lado_porque": "Tom de controle de armas e paz, na linha institucional europeia.",
+      "serve_a": [
+        "ordem_global",
+        "ue"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Referência em gasto militar, comércio de armas e arsenal nuclear (anuário todo junho). Sai pouca coisa por dia.",
+      "uso": "Gasto de defesa, comércio de armas, ogivas nucleares.",
+      "feeds": [
+        {
+          "url": "https://www.sipri.org/rss/combined.xml",
+          "secao": "Tudo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens de 17, 18 e 19/11/2026."
+        }
+      ]
+    },
+    {
+      "id": "sputnik",
+      "nome": "Sputnik",
+      "pais": "Rússia",
+      "idiomas": [
+        "en",
+        "ru",
+        "es",
+        "pt",
+        "zh",
+        "ar"
+      ],
+      "tipo": "estatal",
+      "sites": [
+        "sputnikglobe.com",
+        "noticiabrasil.net.br",
+        "noticiaslatam.lat"
+      ],
+      "controle": "Parte do grupo estatal Rossiya Segodnya.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Sputnik_(news_agency)",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "alta",
+      "lado_porque": "Controle estatal russo por meio da Rossiya Segodnya. Linha pró-Moscou.",
+      "serve_a": [
+        "russia"
+      ],
+      "alvos": [
+        "ue",
+        "centro_atlantico"
+      ],
+      "fatos": "baixa",
+      "fatos_nota": "Mistura declaração oficial e propaganda. Sancionada na UE desde 2022.",
+      "uso": "Linha russa para o público do Sul global.",
+      "feeds": [
+        {
+          "url": "https://sputnikglobe.com/export/rss2/archive/index.xml",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "straits_times",
+      "nome": "The Straits Times",
+      "pais": "Singapura",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "straitstimes.com"
+      ],
+      "controle": "SPH Media Trust, entidade sem fins lucrativos. Em 2022 o governo prometeu até 900 milhões de dólares de Singapura em 5 anos (até 180 milhões por ano). O acordo vence em 2027.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/SPH_Media",
+      "lado": "centrao",
+      "lado_confianca": "baixa",
+      "lado_porque": "Linha próxima do governo, com fato bom em economia e Sudeste Asiático. Singapura é neutra e comercial: Centrão por aproximação.",
+      "serve_a": [
+        "centrao"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Rigoroso em fato. Cobertura política interna é cautelosa.",
+      "uso": "Sudeste Asiático, comércio e Mar do Sul da China.",
+      "feeds": [],
+      "feeds_nota": "O site barrou a leitura automática em 20/11/2026. Ler https://www.straitstimes.com/world."
+    },
+    {
+      "id": "stratechery",
+      "nome": "Stratechery",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "stratechery.com"
+      ],
+      "controle": "Newsletter independente de Ben Thompson, por assinatura.",
+      "controle_fonte": "https://stratechery.com/about/",
+      "lado": "bancada_talento",
+      "lado_confianca": "baixa",
+      "lado_porque": "Análise de estratégia de negócio das big techs, em geral simpática ao modelo das plataformas. Posição política mista; escolha frágil.",
+      "serve_a": [
+        "bancada_talento"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "É análise, não reportagem. Útil para entender incentivos.",
+      "uso": "Estratégia das big techs e da cadeia de chips.",
+      "feeds": [
+        {
+          "url": "https://stratechery.com/feed/",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0 (não Atom). Em 20/11/2026 trazia itens do mesmo dia. Parte do conteúdo é paga."
+        }
+      ]
+    },
+    {
+      "id": "tasnim",
+      "nome": "Tasnim News Agency",
+      "pais": "Irã",
+      "idiomas": [
+        "fa",
+        "en",
+        "ar"
+      ],
+      "tipo": "agencia",
+      "sites": [
+        "tasnimnews.ir"
+      ],
+      "controle": "Ligada ao Corpo da Guarda Revolucionária Islâmica.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Tasnim_News_Agency",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "alta",
+      "lado_porque": "Notícias próximas da Guarda Revolucionária; linha dura.",
+      "serve_a": [
+        "ira"
+      ],
+      "alvos": [
+        "centro_atlantico",
+        "trump"
+      ],
+      "fatos": "baixa",
+      "fatos_nota": "Sinaliza posição militar do Irã, mas mistura fato e propaganda.",
+      "uso": "Pulso da ala dura e da Guarda Revolucionária.",
+      "feeds": [
+        {
+          "url": "https://www.tasnimnews.ir/en/rss/feed/0/0/8/1/TopStories",
+          "secao": "Destaques",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Endereço do site novo, tasnimnews.ir, tirado da lista de feeds da agência. Em 23/11/2026 trazia 25 itens, os mais novos do mesmo dia."
+        }
+      ],
+      "feeds_nota": "A agência trocou tasnimnews.com por tasnimnews.ir em 12/01/2026. A lista de feeds fica em https://www.tasnimnews.ir/en/rss; em 23/11/2026, os feeds de todas as notícias, de mundo e de política vinham sem itens."
+    },
+    {
+      "id": "tass",
+      "nome": "TASS",
+      "pais": "Rússia",
+      "idiomas": [
+        "ru",
+        "en",
+        "es",
+        "fr",
+        "ar",
+        "zh"
+      ],
+      "tipo": "agencia",
+      "sites": [
+        "tass.com",
+        "tass.ru"
+      ],
+      "controle": "Agência estatal da Federação Russa.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/TASS",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "alta",
+      "lado_porque": "Propriedade estatal. Reproduz a posição do Kremlin e de ministérios.",
+      "serve_a": [
+        "russia"
+      ],
+      "alvos": [
+        "ue",
+        "centro_atlantico"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Boa para citações e decisões oficiais russas. Lacunas sobre baixas e dissidência.",
+      "uso": "Linha oficial do Kremlin.",
+      "feeds": [
+        {
+          "url": "https://tass.com/rss/v2.xml",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens de 20 e 21/11/2026, na hora de Moscou. O cabeçalho do XML tem um defeito que pode quebrar leitores estritos."
+        }
+      ]
+    },
+    {
+      "id": "techcrunch",
+      "nome": "TechCrunch",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "techcrunch.com"
+      ],
+      "controle": "Vendido pela Yahoo à Regent (investidora de mídia) em março de 2025; a Yahoo manteve fatia pequena.",
+      "controle_fonte": "https://variety.com/2025/digital/news/yahoo-sells-techcrunch-regent-1236344888/",
+      "lado": "bancada_talento",
+      "lado_confianca": "baixa",
+      "lado_porque": "Cobre startups, capital de risco e lançamentos com tom de ecossistema. Não há linha política formal; a proximidade com o mercado de startups sugere a Bancada do Talento.",
+      "serve_a": [
+        "bancada_talento"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Rápido para rodadas de investimento e lançamentos. Costuma repetir comunicado da empresa no primeiro texto.",
+      "uso": "Fato cru rápido sobre startups e financiamento de IA.",
+      "feeds": [
+        {
+          "url": "https://techcrunch.com/feed/",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "telegraph",
+      "nome": "The Daily Telegraph",
+      "pais": "Reino Unido",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "telegraph.co.uk"
+      ],
+      "controle": "Axel Springer (Alemanha) concluiu a compra do Telegraph Media Group em 30/06/2026, por £ 575 mi. Antes, RedBird IMI.",
+      "controle_fonte": "https://pressgazette.co.uk/news/axel-springer-promises-ai-powered-transformation-as-it-completes-telegraph-deal/",
+      "lado": "centro_atlantico",
+      "lado_confianca": "baixa",
+      "lado_porque": "Jornal tradicional do Partido Conservador britânico, favorável ao Brexit e cético com metas climáticas. A mudança de dono em 2026 pode alterar a linha; Axel Springer prometeu preservar a independência editorial.",
+      "serve_a": [
+        "centro_atlantico"
+      ],
+      "alvos": [
+        "ue",
+        "ordem_global"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Redação tradicional, boa na política britânica e na defesa. Parte do conteúdo exige assinatura.",
+      "uso": "Linha da direita institucional britânica.",
+      "feeds": [
+        {
+          "url": "https://www.telegraph.co.uk/news/world/rss.xml",
+          "secao": "Mundo",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        }
+      ],
+      "feeds_nota": "Se o feed falhar, ler https://www.telegraph.co.uk/news/ (últimas notícias)."
+    },
+    {
+      "id": "telesur",
+      "nome": "Telesur",
+      "pais": "Venezuela",
+      "idiomas": [
+        "es",
+        "pt",
+        "en"
+      ],
+      "tipo": "estatal",
+      "sites": [
+        "telesurtv.net",
+        "telesurenglish.net"
+      ],
+      "controle": "Rede estatal liderada pela Venezuela, com apoio de Cuba e Nicarágua; presidida por Patricia Villegas. A Argentina saiu da sociedade em 2016. Em jan/2026 a Entel, estatal da Bolívia, tirou o sinal; em out/2026 o governo Milei tirou o canal da TV digital aberta argentina.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Telesur",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "media",
+      "lado_porque": "Veículo estatal segue o Estado que o controla. Após a captura de Maduro pelos EUA em jan/2026, o governo interino de Delcy Rodríguez manteve o canal e sua direção, e a cobertura segue próxima de Rússia e Cuba. Mas Washington hoje controla a renda do petróleo venezuelano, e isso pode mudar a linha. Venezuela, Cuba e Nicarágua não estão na régua; ficou no Eixo Revisionista pelo voto típico.",
+      "serve_a": [
+        "eixo_revisionista",
+        "china",
+        "russia",
+        "ira"
+      ],
+      "alvos": [
+        "trump",
+        "centro_atlantico",
+        "soberanistas"
+      ],
+      "fatos": "baixa",
+      "fatos_nota": "Boa para imagens e declarações oficiais dos governos aliados; pouco confiável como fato independente.",
+      "uso": "Linha oficial de Caracas, Havana e Manágua.",
+      "feeds": [
+        {
+          "url": "https://www.telesurtv.net/rss/",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "the_decoder",
+      "nome": "The Decoder",
+      "pais": "Alemanha",
+      "idiomas": [
+        "en",
+        "de"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "the-decoder.com",
+        "the-decoder.de"
+      ],
+      "controle": "Decoder Communications, veículo independente alemão focado em IA.",
+      "controle_fonte": "https://the-decoder.com/about/",
+      "lado": "independentes",
+      "lado_confianca": "baixa",
+      "lado_porque": "Veículo especializado sem linha política documentada; noticia lançamentos e pesquisa.",
+      "serve_a": [],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Rápido e frequente; muitos textos são reescrita de comunicados e de outros veículos.",
+      "uso": "Alta frequência de notícia de IA de produto.",
+      "feeds": [
+        {
+          "url": "https://the-decoder.com/feed/",
+          "secao": "IA",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "the_hindu",
+      "nome": "The Hindu",
+      "pais": "Índia",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "thehindu.com"
+      ],
+      "controle": "THG Publishing, controlada pela Kasturi & Sons, holding da família Kasturi.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/The_Hindu",
+      "lado": "ordem_global",
+      "lado_confianca": "baixa",
+      "lado_porque": "Linha centro-esquerda e crítica ao governo de Modi em temas de liberdade civil. A Índia de Modi está como Independentes. Aproximação à Ordem Global.",
+      "serve_a": [
+        "ordem_global"
+      ],
+      "alvos": [
+        "modi"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Mesa editorial séria; checagem e corrigendas.",
+      "uso": "Leitura liberal da Índia.",
+      "feeds": [],
+      "feeds_nota": "O feed existe, mas o site barrou a leitura automática em 20/11/2026. Ler https://www.thehindu.com/news/international/."
+    },
+    {
+      "id": "the_information",
+      "nome": "The Information",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "theinformation.com"
+      ],
+      "controle": "Lessin Media Company, de Jessica Lessin, que se declara dona única. Sem capital de risco nem dono corporativo; receita de assinaturas e eventos.",
+      "controle_fonte": "https://www.theinformation.com/about",
+      "lado": "centrao",
+      "lado_confianca": "baixa",
+      "lado_porque": "Redação factual focada em negócios de tecnologia e finanças das big techs. Sem linha política documentada; ficou no Centrão pelo foco em contratos e capital.",
+      "serve_a": [
+        "bancada_talento"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Furos sobre OpenAI, Meta e Nvidia costumam se confirmar. Quase tudo atrás de assinatura.",
+      "uso": "Furo de negócio de IA; ler só o título e o resumo.",
+      "feeds": [
+        {
+          "url": "https://www.theinformation.com/feed",
+          "secao": "Tecnologia",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Endereço não aberto até 20/11/2026. Muito conteúdo é pago."
+        }
+      ],
+      "feeds_nota": "Se o feed falhar, ler https://www.theinformation.com/articles (títulos abertos)."
+    },
+    {
+      "id": "the_verge",
+      "nome": "The Verge",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "theverge.com"
+      ],
+      "controle": "PMC (Penske Media Corporation), pela divisão PMX, desde junho de 2026. Antes era da Vox Media (2011 a 2026).",
+      "controle_fonte": "https://variety.com/2026/biz/news/pmc-vox-media-ryan-pauley-verge-eater-1236784682/",
+      "lado": "ordem_global",
+      "lado_confianca": "baixa",
+      "lado_porque": "Cobertura crítica de big techs, moderação e regulação, com viés editorial favorável a regras. Sem posição formal documentada. O dono mudou em 2026 (Penske); a linha pode mudar, e isso ainda não foi medido.",
+      "serve_a": [],
+      "alvos": [
+        "musk",
+        "meta"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Reportagem de produto e política tecnológica de boa qualidade; opinião mistura-se com notícia.",
+      "uso": "Reação do público e da imprensa a lançamentos e política de tecnologia.",
+      "feeds": [
+        {
+          "url": "https://www.theverge.com/rss/index.xml",
+          "secao": "Geral",
+          "formato": "atom",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        }
+      ]
+    },
+    {
+      "id": "times_of_india",
+      "nome": "The Times of India",
+      "pais": "Índia",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "timesofindia.indiatimes.com"
+      ],
+      "controle": "Bennett, Coleman & Co., do grupo Times, família Jain.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/The_Times_of_India",
+      "lado": "independentes",
+      "lado_confianca": "baixa",
+      "lado_porque": "Maior jornal de língua inglesa da Índia. Linha comercial, simpática ao governo. O Estado indiano é Independentes na régua.",
+      "serve_a": [
+        "independentes"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Volume alto. Mistura notícia com conteúdo patrocinado e entretenimento.",
+      "uso": "Termômetro do eleitor urbano indiano.",
+      "feeds": [],
+      "feeds_nota": "O site barrou a leitura automática em 20/11/2026. Ler https://timesofindia.indiatimes.com/world."
+    },
+    {
+      "id": "times_of_israel",
+      "nome": "The Times of Israel",
+      "pais": "Israel",
+      "idiomas": [
+        "en",
+        "he",
+        "ar",
+        "fr"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "timesofisrael.com"
+      ],
+      "controle": "Fundado em 2012 pelo jornalista David Horovitz (editor fundador) e pelo investidor americano Seth Klarman, seu sócio de capital. Receita de publicidade e de membros pagantes.",
+      "controle_fonte": "https://www.timesofisrael.com/about/",
+      "lado": "centro_atlantico",
+      "lado_confianca": "media",
+      "lado_porque": "Linha de centro, pró-Israel e crítica a partes do governo. Israel não está na régua. O voto típico do centro israelense aproxima do Centro Atlântico.",
+      "serve_a": [
+        "centro_atlantico"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Cobertura factual rápida, com blog ao vivo. Opinião e blogs de colaboradores são separados.",
+      "uso": "Fato cru rápido sobre Israel, Gaza, Irã e Líbano.",
+      "feeds": [
+        {
+          "url": "https://www.timesofisrael.com/feed/",
+          "secao": "Tudo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "trt_world",
+      "nome": "TRT World",
+      "pais": "Turquia",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "estatal",
+      "sites": [
+        "trtworld.com"
+      ],
+      "controle": "Braço internacional da TRT, emissora estatal turca. Receita principal é uma taxa sobre aparelhos eletrônicos (83,6% em 2024). Desde 2018 a TRT responde à Diretoria de Comunicações da Presidência.",
+      "controle_fonte": "https://statemediamonitor.com/2026/10/turkish-radio-and-television-trt/",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "baixa",
+      "lado_porque": "Estado turco, de linha oficial de Erdoğan. A Turquia não está na régua. Contesta a ordem e mantém controle estatal em casa. Aproximação ao Eixo Revisionista, mas o país também está na Otan. Confiança baixa.",
+      "serve_a": [
+        "eixo_revisionista"
+      ],
+      "alvos": [
+        "centro_atlantico"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Fato de campo ok. Enquadramento oficial na Síria, Curdos, Gaza e Europa.",
+      "uso": "Linha oficial turca em inglês.",
+      "feeds": [],
+      "feeds_nota": "Sem feed achado (404 em 20/11/2026). Ler as últimas notícias em https://www.trtworld.com/."
+    },
+    {
+      "id": "truth_social",
+      "nome": "Truth Social",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "plataforma",
+      "sites": [
+        "truthsocial.com"
+      ],
+      "controle": "Trump Media & Technology Group (DJT). O fundo revogável de Donald Trump tem 114,75 mi de ações, cerca de 41%; Donald Trump Jr. é o administrador do fundo. Fusão com a TAE Technologies (fusão nuclear) vai a voto em 14/12/2026; se aprovada, a fatia do fundo cai para cerca de 22%.",
+      "controle_fonte": "https://www.stocktitan.net/sec-filings/DJT/424b3-trump-media-technology-group-corp-prospectus-filed-pursuant-to--e598518c9459.html",
+      "lado": "soberanistas",
+      "lado_confianca": "alta",
+      "lado_porque": "O maior acionista é o próprio Trump. A plataforma é o canal oficial dele para anúncios de política, tarifas e ataques a adversários.",
+      "serve_a": [
+        "trump"
+      ],
+      "alvos": [
+        "biden",
+        "ordem_global"
+      ],
+      "fatos": "baixa",
+      "fatos_nota": "Fonte primária do que Trump diz, e só disso. Não é fonte de fato sobre terceiros.",
+      "uso": "Linha oficial de Trump, muitas vezes antes de qualquer decreto ou comunicado.",
+      "feeds": [],
+      "feeds_nota": "Sem feed aberto. Ler a conta @realDonaldTrump em https://truthsocial.com/ ou o noticiário que reproduz os posts."
+    },
+    {
+      "id": "tucker_carlson_network",
+      "nome": "Tucker Carlson Network",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "tuckercarlson.com"
+      ],
+      "controle": "Tucker Carlson e o sócio Neil Patel (CEO), que compraram de volta todas as cotas dos investidores em 2025, segundo a Axios.",
+      "controle_fonte": "https://www.axios.com/2025/06/13/tucker-carlson-investors",
+      "lado": "soberanistas",
+      "lado_confianca": "baixa",
+      "lado_porque": "Ex-apresentador da Fox, hoje independente, com linha populista, contra imigração e contra guerras no exterior. Apoiou Trump em 2024, mas rompeu com ele por causa da guerra com o Irã (fev/2026): chamou-a de \"guerra de Israel\", pediu desculpas por ter apoiado Trump (abr/2026) e disse à NPR (set/2026) que Trump devia ser afastado. Fica nos Soberanistas pelo voto típico nos temas da régua, mas hoje ataca o player Trump.",
+      "serve_a": [
+        "soberanistas"
+      ],
+      "alvos": [
+        "trump",
+        "ordem_global",
+        "centro_atlantico"
+      ],
+      "fatos": "baixa",
+      "fatos_nota": "Entrevistas e opinião; sem redação de apuração. O valor está em ver quem ele entrevista.",
+      "uso": "Voz da ala da direita contrária à intervenção externa e, desde 2026, crítica de Trump.",
+      "feeds": [],
+      "feeds_nota": "O feed https://tuckercarlson.com/feed respondeu 403 (acesso barrado) em 20/11/2026. Ler a página inicial, https://tuckercarlson.com/, ou o canal de vídeo."
+    },
+    {
+      "id": "uk_aisi",
+      "nome": "Instituto de Segurança de IA do Reino Unido (AI Security Institute, AISI)",
+      "pais": "Reino Unido",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "aisi.gov.uk"
+      ],
+      "controle": "Governo britânico (Departamento de Ciência, Inovação e Tecnologia). Chamava-se AI Safety Institute até fevereiro de 2025, quando virou AI Security Institute, com foco em segurança nacional e crime.",
+      "controle_fonte": "https://www.aisi.gov.uk/",
+      "lado": "centro_atlantico",
+      "lado_confianca": "media",
+      "lado_porque": "O governo atual não está na régua; mais próximo pelo voto: Centro Atlântico.",
+      "serve_a": [],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Pesquisa técnica de avaliação, fonte primária.",
+      "uso": "Avaliação de segurança de modelos.",
+      "feeds": [],
+      "feeds_nota": "Sem feed. Ler https://www.aisi.gov.uk/blog (em 20/11/2026, o item mais novo era de 26/10/2026)."
+    },
+    {
+      "id": "ukrinform",
+      "nome": "Ukrinform",
+      "pais": "Ucrânia",
+      "idiomas": [
+        "en",
+        "uk",
+        "pt"
+      ],
+      "tipo": "agencia",
+      "sites": [
+        "ukrinform.net",
+        "ukrinform.ua"
+      ],
+      "controle": "Agência estatal da Ucrânia.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Ukrinform",
+      "lado": "centro_atlantico",
+      "lado_confianca": "alta",
+      "lado_porque": "Agência oficial ucraniana: comunicados do governo e do Estado-Maior.",
+      "serve_a": [
+        "centro_atlantico"
+      ],
+      "alvos": [
+        "russia"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Bom como linha oficial de Kyiv. Não é cobertura independente.",
+      "uso": "Linha oficial de Kyiv.",
+      "feeds": [
+        {
+          "url": "https://www.ukrinform.net/rss/block-lastnews",
+          "secao": "Tudo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "unherd",
+      "nome": "UnHerd",
+      "pais": "Reino Unido",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "unherd.com"
+      ],
+      "controle": "Sir Paul Marshall, gestor de fundos, dono e editor; a empresa é a Old Queen Street Media.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/UnHerd",
+      "lado": "independentes",
+      "lado_confianca": "baixa",
+      "lado_porque": "Revista de ideias heterodoxa: abriga críticos do progressismo e da guerra e vozes de esquerda e de direita. O dono também controla o GB News e a Spectator. Sem linha de partido única, por isso entra como independente.",
+      "serve_a": [],
+      "alvos": [
+        "ordem_global"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Quase só ensaio e opinião. Serve para entender argumentos, não para fato cru.",
+      "uso": "Debate de ideias da direita e do centro que questiona a ordem.",
+      "feeds": [
+        {
+          "url": "https://unherd.com/feed/",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS. Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ],
+      "feeds_nota": "Feed geral."
+    },
+    {
+      "id": "valor",
+      "nome": "Valor Econômico",
+      "pais": "Brasil",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "valor.globo.com",
+        "valorinternational.globo.com"
+      ],
+      "controle": "Grupo Globo, controlado pela família Marinho. Era sociedade com a Folha até 2016, quando a Globo comprou a parte dos Frias.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Valor_Econ%C3%B4mico",
+      "lado": "centrao",
+      "lado_confianca": "media",
+      "lado_porque": "Jornal de economia e finanças voltado ao mercado. Fica no centrao porque o público e a pauta são finança e indústria, com poucas posições políticas públicas. Dono é o mesmo da Globo.",
+      "serve_a": [
+        "centrao"
+      ],
+      "alvos": [],
+      "fatos": "alta",
+      "fatos_nota": "Dados de mercado, balanços e política econômica com boa apuração.",
+      "uso": "Câmbio, juros, commodities e política econômica; efeito prático para o leitor.",
+      "feeds": [
+        {
+          "url": "https://valor.globo.com/rss/",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        }
+      ],
+      "feeds_nota": "Boa parte do conteúdo é paga. Página de apoio: https://valor.globo.com/ultimas-noticias/."
+    },
+    {
+      "id": "venturebeat",
+      "nome": "VentureBeat",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "venturebeat.com"
+      ],
+      "controle": "Empresa privada fundada por Matt Marshall, com investidores minoritários; receita de eventos e patrocínio de empresas de tecnologia. Separou o GamesBeat em 2025 para focar em IA.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/VentureBeat",
+      "lado": "bancada_talento",
+      "lado_confianca": "baixa",
+      "lado_porque": "Cobertura de IA corporativa voltada a quem compra e vende tecnologia. Vocação comercial, sem linha política.",
+      "serve_a": [
+        "bancada_talento"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Mistura reportagem com conteúdo de parceiros; ler a marcação.",
+      "uso": "IA nas empresas: adoção, custo e produto.",
+      "feeds": [
+        {
+          "url": "https://venturebeat.com/feed/",
+          "secao": "IA",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ]
+    },
+    {
+      "id": "wapo",
+      "nome": "The Washington Post",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "washingtonpost.com"
+      ],
+      "controle": "Propriedade pessoal de Jeff Bezos desde 2013. Em 04/02/2026 demitiu cerca de um terço da equipe, em todos os setores (fechou esporte e livros). Dias depois, o presidente-executivo Will Lewis saiu.",
+      "controle_fonte": "https://www.wtap.com/2026/02/04/washington-post-says-one-third-its-staff-across-all-departments-is-being-laid-off/",
+      "lado": "bancada_talento",
+      "lado_confianca": "baixa",
+      "lado_porque": "Dono é bilionário de big tech (Amazon). Desde fev/2025 a opinião defende “liberdades pessoais e mercados livres”, por ordem do dono. A redação factual segue padrão tradicional do centro. Em maio/2026, em entrevista à CNBC, Bezos defendeu os cortes e chamou Trump de “mais maduro” no segundo mandato. Lado em disputa interna.",
+      "serve_a": [
+        "bancada_talento",
+        "centro_atlantico"
+      ],
+      "alvos": [],
+      "fatos": "media",
+      "fatos_nota": "Apuração forte em segurança nacional e política dos EUA. O corte de um terço da equipe e a saída do editor de opinião (Adam O’Neal, anunciada em 31/07/2026, efetiva em 31/08/2026) reduzem a confiança na estabilidade da linha.",
+      "uso": "Apuração sobre Washington. Barômetro da relação entre dono-bilionário e imprensa.",
+      "feeds": [
+        {
+          "url": "https://feeds.washingtonpost.com/rss/world",
+          "secao": "Mundo",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Respondeu 403 (acesso barrado) na conferência de 20/11/2026."
+        }
+      ],
+      "feeds_nota": "Página de apoio: https://www.washingtonpost.com/world/."
+    },
+    {
+      "id": "wired",
+      "nome": "Wired",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "wired.com"
+      ],
+      "controle": "Condé Nast, de propriedade da família Newhouse (Advance).",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Condé_Nast",
+      "lado": "ordem_global",
+      "lado_confianca": "media",
+      "lado_porque": "Reportagens investigativas sobre o corte de gastos federais e o poder de Musk, e sobre vigilância. Linha editorial crítica do governo Trump e das big techs.",
+      "serve_a": [],
+      "alvos": [
+        "musk",
+        "trump"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Reportagem investigativa cuidadosa; atenção a texto de opinião.",
+      "uso": "Investigação sobre poder, vigilância e IA.",
+      "feeds": [
+        {
+          "url": "https://www.wired.com/feed/rss",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Não aberto na conferência de 20/11/2026: o site barrou a leitura automática."
+        }
+      ]
+    },
+    {
+      "id": "wsj",
+      "nome": "The Wall Street Journal",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "wsj.com"
+      ],
+      "controle": "Dow Jones, subsidiária da News Corp. Desde o acordo de família de set/2025, Lachlan Murdoch controla um novo fundo com cerca de um terço dos votos da News Corp e da Fox Corp; os irmãos James, Elisabeth e Prudence saíram.",
+      "controle_fonte": "https://www.nbcnews.com/business/media/lachlan-murdoch-cements-control-fox-wsj-media-empire-new-family-deal-rcna229946",
+      "lado": "centrao",
+      "lado_confianca": "media",
+      "lado_porque": "Redação factual voltada a finanças e empresas, com perfil do Centrão da régua. A página de opinião é conservadora e pró-mercado: apoia corte de impostos e desregulação, mas critica tarifas, o que a separa do Soberanismo puro. Propriedade Murdoch também é dona da Fox News, que a régua põe nos Soberanistas.",
+      "serve_a": [
+        "centrao",
+        "soberanistas"
+      ],
+      "alvos": [
+        "ordem_global"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Redação independente da opinião. Forte em empresas, bancos, energia e tecnologia. Ler o editorial como posição, não como fato.",
+      "uso": "Fato cru de mercado e negócios. Termômetro do que preocupa o capital americano.",
+      "feeds": [
+        {
+          "url": "https://feeds.content.dowjones.io/public/rss/RSSWorldNews",
+          "secao": "Mundo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens do mesmo dia. Há itens repetidos, com o mesmo identificador (guid)."
+        }
+      ],
+      "feeds_nota": "Há outras seções no mesmo endereço (mercados, tecnologia), ainda não abertas."
+    },
+    {
+      "id": "x_plataforma",
+      "nome": "X (plataforma)",
+      "pais": "EUA",
+      "idiomas": [
+        "multi"
+      ],
+      "tipo": "plataforma",
+      "sites": [
+        "x.com",
+        "twitter.com"
+      ],
+      "controle": "Elon Musk: a X pertence à antiga xAI, que a SpaceX comprou em 02/02/2026. A marca xAI virou SpaceXAI em julho de 2026 e SpaceX Super Intelligence (SpaceXSI) em outubro de 2026. Depois da abertura de capital da SpaceX (jun/2026), Musk tem cerca de 82% dos votos da SpaceX, segundo o prospecto citado por fontes secundárias.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/SpaceXAI",
+      "lado": "soberanistas",
+      "lado_confianca": "media",
+      "lado_porque": "O dono é player soberanista da régua e usa a plataforma para apoiar Trump e atacar a regulação de fala da UE. A plataforma em si abriga todos os lados, e o algoritmo pode favorecer o dono.",
+      "serve_a": [
+        "musk",
+        "trump",
+        "soberanistas"
+      ],
+      "alvos": [
+        "ordem_global",
+        "ue"
+      ],
+      "fatos": "baixa",
+      "fatos_nota": "Sem redação. Tem notas da comunidade, mas muito conteúdo falso circula. Fato exige fonte primária.",
+      "uso": "Primeira reação de líderes e governos, em tempo real. Ver o que viraliza, não confiar no que viraliza.",
+      "feeds": [],
+      "feeds_nota": "Não há feed aberto. Ler contas oficiais por busca manual em x.com. O acesso pela API é pago e fica fora das regras do INFOCENARIUM."
+    },
+    {
+      "id": "xai",
+      "nome": "SpaceX Super Intelligence (antiga xAI)",
+      "pais": "EUA",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "oficial",
+      "sites": [
+        "x.ai"
+      ],
+      "controle": "Subsidiária integral da SpaceX desde 02/02/2026 (compra em ações). A marca xAI virou SpaceXAI em julho de 2026 e SpaceX Super Intelligence (SpaceXSI) em outubro de 2026; o nome jurídico segue SpaceXAI LLC. A SpaceX abriu capital em junho de 2026; Elon Musk tem a maioria dos votos.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/SpaceXAI",
+      "lado": "soberanistas",
+      "lado_confianca": "media",
+      "lado_porque": "Empresa controlada por Musk, via SpaceX; a régua põe Musk entre os Soberanistas.",
+      "serve_a": [
+        "musk"
+      ],
+      "alvos": [],
+      "fatos": "baixa",
+      "fatos_nota": "Comunicados curtos; benchmarks autodeclarados.",
+      "uso": "Linha oficial da empresa de IA de Musk (antiga xAI).",
+      "feeds": [],
+      "feeds_nota": "A página https://x.ai/news respondeu 403 (acesso barrado) em 20/11/2026. Ler a conta oficial da empresa no X (@SpaceXSI) ou o blog em https://x.ai/."
+    },
+    {
+      "id": "xinhua",
+      "nome": "Xinhua (Agência de Notícias Xinhua)",
+      "pais": "China",
+      "idiomas": [
+        "en",
+        "zh",
+        "pt",
+        "es",
+        "ru",
+        "fr",
+        "ar"
+      ],
+      "tipo": "agencia",
+      "sites": [
+        "news.cn",
+        "xinhuanet.com"
+      ],
+      "controle": "Agência oficial do governo chinês, ligada ao Conselho de Estado e ao Partido Comunista.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Xinhua_News_Agency",
+      "lado": "eixo_revisionista",
+      "lado_confianca": "alta",
+      "lado_porque": "Propriedade estatal direta. Segue a linha do Partido Comunista e é a fonte primária de textos oficiais.",
+      "serve_a": [
+        "china"
+      ],
+      "alvos": [
+        "ue",
+        "trump"
+      ],
+      "fatos": "media",
+      "fatos_nota": "Registra bem declarações, datas e números oficiais. Omite o que o Estado não quer divulgar.",
+      "uso": "Linha oficial de Pequim e agenda de visitas e acordos.",
+      "feeds": [],
+      "feeds_nota": "Sem feed vivo. Os endereços http://www.xinhuanet.com/english/rss/worldrss.xml e https://english.news.cn/rss/worldrss.xml respondem, mas o item mais novo é de 24/01/2018 (visto em 20/11/2026 e de novo em 23/11/2026). Ler as últimas notícias em https://english.news.cn/; em português, https://portuguese.news.cn/."
+    },
+    {
+      "id": "yonhap",
+      "nome": "Yonhap",
+      "pais": "Coreia do Sul",
+      "idiomas": [
+        "en",
+        "ko"
+      ],
+      "tipo": "agencia",
+      "sites": [
+        "yna.co.kr"
+      ],
+      "controle": "Agência nacional por lei desde 2003. Maior acionista é a comissão estatal KONAC (o presidente da Coreia nomeia os 7 diretores); KBS e MBC também são acionistas. Recebe pagamento do governo por assinatura.",
+      "controle_fonte": "https://statemediamonitor.com/2026/08/yonhap-news/",
+      "lado": "centro_atlantico",
+      "lado_confianca": "media",
+      "lado_porque": "Agência quase estatal, seguindo a linha do governo de plantão em Seul. A Coreia do Sul é aliada dos EUA. Foco em Coreia do Norte e semicondutores.",
+      "serve_a": [
+        "centro_atlantico"
+      ],
+      "alvos": [
+        "coreia_do_norte"
+      ],
+      "fatos": "alta",
+      "fatos_nota": "Texto sóbrio e rápido, estilo agência.",
+      "uso": "Fato cru sobre a península coreana.",
+      "feeds": [],
+      "feeds_nota": "O site barrou a leitura automática em 20/11/2026. Ler https://en.yna.co.kr/. Há um feed em https://en.yna.co.kr/RSS/news.xml, ainda não aberto."
+    },
+    {
+      "id": "zerohedge",
+      "nome": "ZeroHedge",
+      "pais": "Bulgária (registro do domínio)",
+      "idiomas": [
+        "en"
+      ],
+      "tipo": "privado",
+      "sites": [
+        "zerohedge.com"
+      ],
+      "controle": "Domínio registrado na Bulgária em nome da ABC Media Ltd, gerida por Krassimir Ivandjiiski; dono real é pouco transparente.",
+      "controle_fonte": "https://en.wikipedia.org/wiki/Zero_Hedge",
+      "lado": "soberanistas",
+      "lado_confianca": "baixa",
+      "lado_porque": "Blog financeiro anônimo e antissistema, cético com bancos centrais e governos. Tem simpatia por teses contrárias à OTAN. Não há dono claro, então o 'lado' vem só da linha editorial. Partido mais próximo pelo tipo de voto.",
+      "serve_a": [
+        "soberanistas"
+      ],
+      "alvos": [
+        "ordem_global",
+        "centro_atlantico"
+      ],
+      "fatos": "baixa",
+      "fatos_nota": "Mistura dados de mercado reais com especulação e teses sem comprovação. Conferir sempre na fonte primária.",
+      "uso": "Radar de narrativa de mercado e de teses de crise. Útil para saber o que circula, não para provar.",
+      "feeds": [
+        {
+          "url": "https://cms.zerohedge.com/fullrss2.xml",
+          "secao": "Geral",
+          "formato": "rss",
+          "conferido": true,
+          "nota": "RSS 2.0. Em 20/11/2026 trazia itens do mesmo dia."
+        }
+      ],
+      "feeds_nota": "Feed geral, de texto completo."
+    }
+  ]
+}

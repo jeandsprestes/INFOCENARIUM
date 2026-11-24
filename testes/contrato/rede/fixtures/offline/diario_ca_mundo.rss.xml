@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<title>Feed de exemplo</title>
+<link>https://feed.exemplo.invalid/</link>
+<description>Feed fictício, para teste.</description>
+<item>
+<title>Estreito de Brumal fechado: Zarvônia anuncia bloqueio de 17 dias</title>
+<link>https://diario-ca.exemplo.invalid/mundo/brumal-fechado</link>
+<description>Armadores desviam navios; o governo da Zarvônia fala em manobras militares.</description>
+<pubDate>Fri, 20 Nov 2026 16:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Quelmar suspende exportação de trigo por 30 dias</title>
+<link>https://diario-ca.exemplo.invalid/mundo/quelmar-trigo</link>
+<description>O decreto foi publicado na manhã de 20/11.</description>
+<pubDate>Fri, 20 Nov 2026 13:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Eleição em Tavória é marcada para 9 de dezembro</title>
+<link>https://diario-ca.exemplo.invalid/mundo/tavoria-eleicao</link>
+<description>A data foi confirmada pela comissão eleitoral.</description>
+<pubDate>Thu, 19 Nov 2026 16:00:00 -0300</pubDate>
+</item>
+</channel>
+</rss>

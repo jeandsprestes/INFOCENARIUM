@@ -1,0 +1,371 @@
+{
+  "versao": 1,
+  "atualizado_em": "2026-11-23",
+  "regra": "Catálogo dos indicadores e de onde vem cada número. Quem altera é o dono. A rotina só lê.",
+  "indicadores": [
+    {
+      "id": "brent",
+      "nome": "Petróleo Brent",
+      "unidade": "US$ por barril",
+      "dominio": "energia",
+      "obrigatorio": true,
+      "frequencia": "diaria",
+      "faixa": {
+        "min": 5,
+        "max": 400
+      },
+      "casas": 2,
+      "fontes": [
+        {
+          "nome": "Yahoo Finance",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/BZ=F?range=1mo&interval=1d",
+          "leitor": "yahoo_chart",
+          "nota": "Contrato futuro, preço do pregão do dia (pode estar em andamento). Endereço não oficial. Na troca mensal de contrato, a série pode dar um degrau que não é alta de mercado.",
+          "contratos": {
+            "modelo": "https://query1.finance.yahoo.com/v8/finance/chart/BZ{c}.NYM?range=1mo&interval=1d",
+            "meses": "FGHJKMNQUVXZ"
+          }
+        },
+        {
+          "nome": "CNBC",
+          "url": "https://ts-api.cnbc.com/harmony/app/charts/1M.json?symbol=@LCO.1",
+          "leitor": "cnbc_chart",
+          "nota": "Contrato futuro da bolsa ICE. Endereço não oficial. A barra do dia pode chegar só depois do fechamento: o último número pode ser o do pregão anterior."
+        },
+        {
+          "nome": "FRED (Fed de St. Louis)",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILBRENTEU&cosd=2026-10-01",
+          "leitor": "fred_csv",
+          "nota": "Preço à vista, medido pela EIA (agência de energia dos EUA). Atualizado uma vez por semana, em geral às quartas: o último número tem de 1 a 8 dias de atraso."
+        }
+      ]
+    },
+    {
+      "id": "wti",
+      "nome": "Petróleo WTI (EUA)",
+      "unidade": "US$ por barril",
+      "dominio": "energia",
+      "obrigatorio": false,
+      "frequencia": "diaria",
+      "faixa": {
+        "min": 5,
+        "max": 400
+      },
+      "casas": 2,
+      "fontes": [
+        {
+          "nome": "Yahoo Finance",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/CL=F?range=1mo&interval=1d",
+          "leitor": "yahoo_chart",
+          "nota": "Contrato futuro, preço do pregão do dia (pode estar em andamento). Endereço não oficial. Na troca mensal de contrato, a série pode dar um degrau que não é alta de mercado.",
+          "contratos": {
+            "modelo": "https://query1.finance.yahoo.com/v8/finance/chart/CL{c}.NYM?range=1mo&interval=1d",
+            "meses": "FGHJKMNQUVXZ"
+          }
+        },
+        {
+          "nome": "CNBC",
+          "url": "https://ts-api.cnbc.com/harmony/app/charts/1M.json?symbol=@CL.1",
+          "leitor": "cnbc_chart",
+          "nota": "Contrato futuro da bolsa de Nova York (Nymex). Endereço não oficial. A barra do dia pode chegar só depois do fechamento: o último número pode ser o do pregão anterior."
+        },
+        {
+          "nome": "FRED (Fed de St. Louis)",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DCOILWTICO&cosd=2026-10-01",
+          "leitor": "fred_csv",
+          "nota": "Preço à vista, medido pela EIA (agência de energia dos EUA). Atualizado uma vez por semana, em geral às quartas: o último número tem de 1 a 8 dias de atraso."
+        }
+      ]
+    },
+    {
+      "id": "gas_natural",
+      "nome": "Gás natural nos EUA",
+      "unidade": "US$ por milhão de BTU",
+      "dominio": "energia",
+      "obrigatorio": false,
+      "frequencia": "diaria",
+      "faixa": {
+        "min": 0.5,
+        "max": 50
+      },
+      "casas": 2,
+      "fontes": [
+        {
+          "nome": "Yahoo Finance",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/NG=F?range=1mo&interval=1d",
+          "leitor": "yahoo_chart",
+          "nota": "Contrato futuro do gás entregue no Henry Hub, o ponto de referência dos EUA. Endereço não oficial. Pode ficar bem acima ou bem abaixo do preço à vista.",
+          "contratos": {
+            "modelo": "https://query1.finance.yahoo.com/v8/finance/chart/NG{c}.NYM?range=1mo&interval=1d",
+            "meses": "FGHJKMNQUVXZ"
+          }
+        },
+        {
+          "nome": "CNBC",
+          "url": "https://ts-api.cnbc.com/harmony/app/charts/1M.json?symbol=@NG.1",
+          "leitor": "cnbc_chart",
+          "nota": "Contrato futuro do gás do Henry Hub (Nymex). Endereço não oficial. A barra do dia pode chegar só depois do fechamento: o último número pode ser o do pregão anterior."
+        },
+        {
+          "nome": "FRED (Fed de St. Louis)",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DHHNGSP&cosd=2026-10-01",
+          "leitor": "fred_csv",
+          "nota": "Preço à vista no Henry Hub, medido pela EIA (agência de energia dos EUA). Atualizado uma vez por semana, em geral às quartas: o último número tem de 1 a 8 dias de atraso."
+        }
+      ]
+    },
+    {
+      "id": "trigo",
+      "nome": "Trigo",
+      "unidade": "US$ por tonelada",
+      "dominio": "alimentos",
+      "obrigatorio": true,
+      "frequencia": "diaria",
+      "faixa": {
+        "min": 60,
+        "max": 1000
+      },
+      "casas": 1,
+      "fontes": [
+        {
+          "nome": "Yahoo Finance",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/ZW=F?range=1mo&interval=1d",
+          "leitor": "yahoo_chart",
+          "fator": 0.3674371,
+          "nota": "Contrato futuro de Chicago, em centavos de dólar por bushel (27,2 kg); o fator converte para dólares por tonelada. Endereço não oficial. Na troca de contrato, a série dá um degrau que não é alta real.",
+          "contratos": {
+            "modelo": "https://query1.finance.yahoo.com/v8/finance/chart/ZW{c}.CBT?range=1mo&interval=1d",
+            "meses": "HKNUZ"
+          }
+        },
+        {
+          "nome": "CNBC",
+          "url": "https://ts-api.cnbc.com/harmony/app/charts/1M.json?symbol=@W.1",
+          "leitor": "cnbc_chart",
+          "fator": 0.3674371,
+          "nota": "Contrato futuro de Chicago, em centavos de dólar por bushel; o mesmo fator da outra fonte converte para dólares por tonelada. Endereço não oficial. Troca de contrato em dia diferente do Yahoo."
+        }
+      ]
+    },
+    {
+      "id": "milho",
+      "nome": "Milho",
+      "unidade": "US$ por tonelada",
+      "dominio": "alimentos",
+      "obrigatorio": true,
+      "frequencia": "diaria",
+      "faixa": {
+        "min": 50,
+        "max": 700
+      },
+      "casas": 1,
+      "fontes": [
+        {
+          "nome": "Yahoo Finance",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/ZC=F?range=1mo&interval=1d",
+          "leitor": "yahoo_chart",
+          "fator": 0.3936826,
+          "nota": "Contrato futuro de Chicago, em centavos de dólar por bushel (25,4 kg); o fator converte para dólares por tonelada. Endereço não oficial. Na troca de contrato, a série dá um degrau que não é alta real.",
+          "contratos": {
+            "modelo": "https://query1.finance.yahoo.com/v8/finance/chart/ZC{c}.CBT?range=1mo&interval=1d",
+            "meses": "HKNUZ"
+          }
+        },
+        {
+          "nome": "CNBC",
+          "url": "https://ts-api.cnbc.com/harmony/app/charts/1M.json?symbol=@C.1",
+          "leitor": "cnbc_chart",
+          "fator": 0.3936826,
+          "nota": "Contrato futuro de Chicago, em centavos de dólar por bushel; o mesmo fator da outra fonte converte para dólares por tonelada. Endereço não oficial. Troca de contrato em dia diferente do Yahoo."
+        }
+      ]
+    },
+    {
+      "id": "soja",
+      "nome": "Soja",
+      "unidade": "US$ por tonelada",
+      "dominio": "alimentos",
+      "obrigatorio": true,
+      "frequencia": "diaria",
+      "faixa": {
+        "min": 120,
+        "max": 1300
+      },
+      "casas": 1,
+      "fontes": [
+        {
+          "nome": "Yahoo Finance",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/ZS=F?range=1mo&interval=1d",
+          "leitor": "yahoo_chart",
+          "fator": 0.3674371,
+          "nota": "Contrato futuro de Chicago, em centavos de dólar por bushel (27,2 kg); o fator converte para dólares por tonelada. Endereço não oficial. Na troca de contrato, a série dá um degrau que não é alta real.",
+          "contratos": {
+            "modelo": "https://query1.finance.yahoo.com/v8/finance/chart/ZS{c}.CBT?range=1mo&interval=1d",
+            "meses": "FHKNQUX"
+          }
+        },
+        {
+          "nome": "CNBC",
+          "url": "https://ts-api.cnbc.com/harmony/app/charts/1M.json?symbol=@S.1",
+          "leitor": "cnbc_chart",
+          "fator": 0.3674371,
+          "nota": "Contrato futuro de Chicago, em centavos de dólar por bushel; o mesmo fator da outra fonte converte para dólares por tonelada. Endereço não oficial. Troca de contrato em dia diferente do Yahoo."
+        }
+      ]
+    },
+    {
+      "id": "fao_ffpi",
+      "nome": "Índice de preços de alimentos da FAO",
+      "unidade": "pontos",
+      "dominio": "alimentos",
+      "obrigatorio": false,
+      "frequencia": "mensal",
+      "faixa": {
+        "min": 40,
+        "max": 400
+      },
+      "casas": 1,
+      "fontes": [
+        {
+          "nome": "FAO (agência da ONU para a alimentação)",
+          "url": "https://www.fao.org/media/docs/worldfoodsituationlibraries/wfs-library/food_price_indices_data.csv",
+          "leitor": "fao_csv",
+          "nota": "Índice mensal oficial: a média de 2014 a 2016 vale 100. Sai no começo de cada mês, com o número do mês anterior."
+        }
+      ]
+    },
+    {
+      "id": "usd_brl",
+      "nome": "Dólar em reais",
+      "unidade": "R$ por US$",
+      "dominio": "cambio",
+      "obrigatorio": true,
+      "frequencia": "diaria",
+      "faixa": {
+        "min": 2,
+        "max": 20
+      },
+      "casas": 4,
+      "fontes": [
+        {
+          "nome": "Banco Central do Brasil",
+          "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados/ultimos/20?formato=json",
+          "leitor": "bcb_sgs",
+          "nota": "Taxa oficial do dia (PTAX de venda), calculada pelo Banco Central. Sai no começo da tarde de cada dia útil no Brasil."
+        },
+        {
+          "nome": "Yahoo Finance",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/USDBRL=X?range=1mo&interval=1d",
+          "leitor": "yahoo_chart",
+          "nota": "Cotação de mercado do dia, que pode estar em andamento. Não é a taxa oficial. Endereço não oficial."
+        },
+        {
+          "nome": "FRED (Fed de St. Louis)",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=DEXBZUS&cosd=2026-10-01",
+          "leitor": "fred_csv",
+          "nota": "Taxa do meio-dia em Nova York, apurada pelo Fed (banco central dos EUA). Sai uma vez por semana, em geral às segundas: o último número tem de 3 a 10 dias de atraso."
+        }
+      ]
+    },
+    {
+      "id": "dxy",
+      "nome": "Índice do dólar contra outras moedas",
+      "unidade": "pontos",
+      "dominio": "cambio",
+      "obrigatorio": false,
+      "frequencia": "diaria",
+      "faixa": {
+        "min": 50,
+        "max": 200
+      },
+      "casas": 2,
+      "fontes": [
+        {
+          "nome": "Yahoo Finance",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=1mo&interval=1d",
+          "leitor": "yahoo_chart",
+          "nota": "Índice DXY, da bolsa ICE: o dólar contra seis moedas fortes (euro, iene, libra e outras). Endereço não oficial. Fonte única."
+        }
+      ]
+    },
+    {
+      "id": "ouro",
+      "nome": "Ouro",
+      "unidade": "US$ por onça (31,1 g)",
+      "dominio": "cambio",
+      "obrigatorio": false,
+      "frequencia": "diaria",
+      "faixa": {
+        "min": 500,
+        "max": 15000
+      },
+      "casas": 1,
+      "fontes": [
+        {
+          "nome": "Yahoo Finance",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/GC=F?range=1mo&interval=1d",
+          "leitor": "yahoo_chart",
+          "nota": "Contrato futuro da bolsa de Nova York (Comex). Endereço não oficial.",
+          "contratos": {
+            "modelo": "https://query1.finance.yahoo.com/v8/finance/chart/GC{c}.CMX?range=1mo&interval=1d",
+            "meses": "GJMQVZ"
+          }
+        },
+        {
+          "nome": "CNBC",
+          "url": "https://ts-api.cnbc.com/harmony/app/charts/1M.json?symbol=@GC.1",
+          "leitor": "cnbc_chart",
+          "nota": "Contrato futuro da bolsa de Nova York (Comex). Endereço não oficial. A barra do dia pode chegar só depois do fechamento: o último número pode ser o do pregão anterior."
+        }
+      ]
+    },
+    {
+      "id": "vix",
+      "nome": "Índice de medo da bolsa americana (VIX)",
+      "unidade": "pontos",
+      "dominio": "cambio",
+      "obrigatorio": false,
+      "frequencia": "diaria",
+      "faixa": {
+        "min": 5,
+        "max": 150
+      },
+      "casas": 2,
+      "fontes": [
+        {
+          "nome": "Yahoo Finance",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EVIX?range=1mo&interval=1d",
+          "leitor": "yahoo_chart",
+          "nota": "Valor do pregão do dia, que pode estar em andamento. Endereço não oficial."
+        },
+        {
+          "nome": "FRED (Fed de St. Louis)",
+          "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS&cosd=2026-10-01",
+          "leitor": "fred_csv",
+          "nota": "Fechamento oficial, calculado pela bolsa Cboe. Sai no dia útil seguinte."
+        }
+      ]
+    },
+    {
+      "id": "frete_seco",
+      "nome": "Frete marítimo de grãos e minério",
+      "unidade": "US$ por cota",
+      "dominio": "suprimentos",
+      "obrigatorio": false,
+      "frequencia": "diaria",
+      "faixa": {
+        "min": 1,
+        "max": 150
+      },
+      "casas": 2,
+      "fontes": [
+        {
+          "nome": "Yahoo Finance",
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/BDRY?range=1mo&interval=1d",
+          "leitor": "yahoo_chart",
+          "nota": "Não é o índice de frete Baltic Dry: é a cota do fundo BDRY, negociado em bolsa, que acompanha contratos futuros de frete de navios graneleiros. Mostra a direção do frete. Endereço não oficial."
+        }
+      ]
+    }
+  ]
+}

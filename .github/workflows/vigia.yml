@@ -1,0 +1,57 @@
+# INFOCENARIUM · vigia: avisa o dono quando a edição do dia não saiu. Não escreve nada.
+#
+# Destino no repositório: .github/workflows/vigia.yml  (OPCIONAL: o INFOCENARIUM funciona sem ele)
+# Como funciona e por quê: veja o README.md do repositório.
+#
+# Roda todo dia às 22h43 de Brasília (01h43 UTC). Olha a main. Se não há edição de hoje,
+# ou se a de hoje é uma edição de falha, a execução fica vermelha. O GitHub manda e-mail
+# de execução que falhou. Sem permissão nenhuma, sem segredo, sem action de terceiros.
+#
+# O GitHub pode atrasar uma execução agendada em horas. Por isso "hoje" é o dia de 6 horas
+# atrás, em Brasília: até as 6h da manhã, o vigia ainda confere o dia anterior. Rodado
+# pelo botão "Run workflow" depois das 6h, confere o dia corrente.
+#
+# Só ligue depois que a rotina diária estiver no ar. Para desligar sem apagar o arquivo:
+# aba Actions > vigia > "..." > Disable workflow.
+
+name: vigia
+
+on:
+  schedule:
+    - cron: '43 1 * * *'
+  workflow_dispatch:
+
+permissions: {}
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  vigia:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    steps:
+      - name: Confere se a edição de hoje está na main
+        run: |
+          set -u
+          DIA="$(TZ=America/Sao_Paulo date -d '-6 hours' +%F)"
+          git init --quiet --initial-branch=main .
+          git remote add origin "${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git"
+          git fetch --quiet --no-tags --depth=1 origin "+refs/heads/main:refs/remotes/origin/main"
+          if ! git cat-file -e "refs/remotes/origin/main:edicoes/$DIA.json" 2>/dev/null; then
+            echo "::error::Não há edição de $DIA na main. A rotina não rodou, ou a edição foi recusada. Veja a aba Actions e a tarefa agendada."
+            exit 1
+          fi
+          ESTADO="$(git cat-file blob "refs/remotes/origin/main:edicoes/$DIA.json" \
+            | python3 -I -c 'import json, sys; d = json.load(sys.stdin); print(d.get("estado") if isinstance(d, dict) else "ilegivel")' \
+            || echo ilegivel)"
+          if [[ "$ESTADO" == ilegivel ]]; then
+            echo "::error::A edição de $DIA na main não é um objeto JSON legível. O site não consegue mostrá-la."
+            exit 1
+          fi
+          if [[ "$ESTADO" == falha ]]; then
+            echo "::error::A edição de $DIA é uma edição de falha: a rotina rodou, mas não conseguiu montar o dia."
+            exit 1
+          fi
+          echo "A edição de $DIA está na main."

@@ -1,0 +1,5 @@
+{
+  "versao": 1,
+  "regra": "Registro que só cresce. Cada entrada diz para qual partido um player se deslocou, com que força (1 a 3) e por causa de qual notícia. O partido do player não muda.",
+  "vetores": []
+}

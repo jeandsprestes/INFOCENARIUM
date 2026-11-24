@@ -1,0 +1,486 @@
+# INFOCENARIUM · junta na main a edição que a rotina empurrou em claude/edicao-AAAA-MM-DD
+#
+# Destino no repositório: .github/workflows/publica-edicao.yml
+# Como funciona e por quê: veja o README.md do repositório.
+#
+# IDEIA CENTRAL: este arquivo NUNCA roda a partir da branch empurrada.
+# Os três gatilhos abaixo usam sempre o arquivo que está na main:
+#   - workflow_run: dispara quando o workflow "sinal-edicao" é pedido (ele não tem
+#     permissão nenhuma e só serve de campainha para o push em claude/edicao-*);
+#   - schedule: varredura de hora em hora, para o que a campainha perdeu;
+#   - workflow_dispatch: botão "Run workflow" do dono (também republica o site).
+# Não ponha aqui um gatilho "push" em branch: nesse evento o GitHub usaria o
+# arquivo DA BRANCH, e quem empurra a branch escolheria as regras.
+#
+# O que cada execução faz (varredura):
+#   (1) sem credencial: lista as branches claude/edicao-AAAA-MM-DD; para cada uma,
+#       confere o que ela muda (só git e o script deste arquivo), copia para uma
+#       cópia local da main só os arquivos permitidos que ela mudou (um commit novo,
+#       do robô), confere de novo o resultado e roda o validador DA MAIN;
+#   (2) com o token: empurra a main, apaga as branches juntadas e guarda as
+#       recusadas em recusada/...;
+#   (3) pede ao GitHub Pages que publique; (4) fica vermelha se recusou alguma.
+#
+# Regras de segurança:
+#   - Nenhum dado do evento é usado. Nenhuma expressão do GitHub aparece dentro de "run".
+#   - Os commits da branch não entram no histórico da main: entra um commit do robô,
+#     que só toca nos caminhos permitidos. Não há "merge" de conteúdo não conferido.
+#   - Nenhuma action de terceiros: só git, python3 e gh, que já vêm no runner.
+#   - Nada da branch é executado. O Python da conferência roda com "-I" (isolado).
+#   - O token só existe nos passos 2 e 3. O validador roda sem ele.
+#   - A saída do validador não é lida como comando do runner (stop-commands).
+
+name: publica-edicao
+
+on:
+  workflow_run:
+    workflows: [sinal-edicao]
+    types: [requested]
+  schedule:
+    - cron: '13 * * * *'   # de hora em hora, no minuto 13 (hora cheia atrasa mais)
+  workflow_dispatch:
+
+# Só o necessário. Tudo que não está listado fica "none".
+permissions:
+  contents: write   # empurrar na main, apagar e mover branches
+  pages: write      # pedir uma publicação do Pages pela API
+
+# Uma execução por vez. Se chegarem várias, fica uma só na fila: basta,
+# porque cada execução varre todas as branches de edição.
+concurrency:
+  group: publica-edicao
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash   # bash --noprofile --norc -eo pipefail {0}
+
+jobs:
+  publica:
+    # O botão "Run workflow" deixa escolher outra branch; aí o arquivo usado seria
+    # o dela. Esta trava só deixa rodar o arquivo da main.
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'   # sem __pycache__: a regra G4 do validador o veria como arquivo novo
+      # ------------------------------------------------------------------
+      # AJUSTES. Este é o ÚNICO lugar que diz o que uma edição pode mudar.
+      # A lista de caminhos é a do CONTRATO das ferramentas (regra G4).
+      # Itens separados por espaço. Pasta termina com "/".
+      # ------------------------------------------------------------------
+      PADRAO_RAMO: '^claude/edicao-[0-9]{4}-[0-9]{2}-[0-9]{2}$'
+      CAMINHOS_ARQUIVOS: 'feed.xml dados/players.json dados/vetores.json'
+      CAMINHOS_PASTAS: 'edicoes/'
+      EXTENSOES_NAS_PASTAS: '.json .md'   # nada de .html, .svg, .js: o Pages serviria como página
+      # Nome do arquivo dentro da pasta, sem subpasta: a edição do dia, o texto dela e o índice (regra G4).
+      NOMES_NAS_PASTAS: '[0-9]{4}-[0-9]{2}-[0-9]{2}\.(json|md)|indice\.json'
+      REGISTROS_QUE_SO_CRESCEM: 'dados/players.json:players dados/vetores.json:vetores'
+      NS_DO_FEED: 'http://www.w3.org/2005/Atom'   # feed.xml só com elementos Atom; vazio desliga
+      LIMITE_BYTES: '2000000'     # tamanho máximo de cada arquivo mudado
+      LIMITE_ARQUIVOS: '20'       # máximo de arquivos mudados por edição
+      LIMITE_RAMOS: '5'           # máximo de branches por execução
+      LIMITE_DIAS: '3'            # máximo de dias de edição mexidos por uma branch
+      LIMITE_VALIDADOR: '120'     # segundos para cada chamada do validador
+      PREFIXO_RECUSADA: 'recusada/'
+    steps:
+      - name: Confere e junta em cópia local (sem credencial)
+        run: |
+          set -u
+          export LC_ALL=C.UTF-8
+          TRAB="$RUNNER_TEMP/publica-edicao"
+          rm -rf "$TRAB"
+          mkdir -p "$TRAB"
+          : > "$TRAB/aprovadas"
+          : > "$TRAB/apagar"
+          : > "$TRAB/recusadas"
+          # Hoje em Brasília, uma vez por execução: nenhuma branch traz edição de dia depois dele.
+          HOJE="$(TZ=America/Sao_Paulo date +%F)"
+
+          # O script de conferência fica fora da pasta do repositório.
+          cat > "$TRAB/confere.py" <<'PY'
+          """Confere o que muda entre dois commits: python3 -I confere.py ANTES DEPOIS [LISTA].
+
+          Só usa git e a biblioteca padrão. Não abre nem executa arquivo da pasta de trabalho.
+          Se tudo está dentro do permitido e LISTA foi dada, grava nela os caminhos mudados,
+          separados por byte nulo.
+          """
+          import json
+          import os
+          import re
+          import subprocess
+          import sys
+          import xml.etree.ElementTree as ET
+
+          antes_rev, depois_rev = sys.argv[1], sys.argv[2]
+
+          ARQUIVOS = set(os.environ["CAMINHOS_ARQUIVOS"].split())
+          PASTAS = tuple(os.environ["CAMINHOS_PASTAS"].split())
+          EXTENSOES = tuple(os.environ["EXTENSOES_NAS_PASTAS"].split())
+          NOMES = re.compile(os.environ["NOMES_NAS_PASTAS"])
+          REGISTROS = [x.split(":", 1) for x in os.environ["REGISTROS_QUE_SO_CRESCEM"].split()]
+          NS_DO_FEED = os.environ.get("NS_DO_FEED", "")
+          LIMITE_BYTES = int(os.environ["LIMITE_BYTES"])
+          LIMITE_ARQUIVOS = int(os.environ["LIMITE_ARQUIVOS"])
+          # Cada parte do nome: minúsculas, números, "_" e "-"; pontos só no meio.
+          PARTE = re.compile(r"[a-z0-9][a-z0-9_-]*(?:\.[a-z0-9_-]+)*")
+
+          if not PASTAS or not EXTENSOES or any(not p.endswith("/") for p in PASTAS):
+              print("::error::AJUSTES do workflow inválidos (pastas e extensões).")
+              sys.exit(2)
+
+
+          def git(*args):
+              return subprocess.run(["git", *args], check=True, capture_output=True).stdout
+
+
+          def permitido(caminho):
+              if caminho in ARQUIVOS:
+                  return True
+              for pasta in PASTAS:
+                  if caminho.startswith(pasta):
+                      resto = caminho[len(pasta):]
+                      return (
+                          bool(resto)
+                          and "/" not in resto
+                          and PARTE.fullmatch(resto) is not None
+                          and NOMES.fullmatch(resto) is not None
+                          and resto.endswith(EXTENSOES)
+                      )
+              return False
+
+
+          erros = []
+          mudados = set()
+
+          # 1) Caminhos: só criar ou alterar arquivo comum, pequeno, nos lugares permitidos.
+          saida = git("diff-tree", "-r", "-z", "--no-renames", "--no-abbrev", antes_rev, depois_rev)
+          campos = saida.split(b"\0")
+          if campos and campos[-1] == b"":
+              campos.pop()
+          if len(campos) % 2:
+              erros.append("saída do git em formato inesperado")
+              campos = []
+          total = len(campos) // 2
+          if total > LIMITE_ARQUIVOS:
+              erros.append(f"{total} arquivos mudados; o limite é {LIMITE_ARQUIVOS}")
+          for i in range(0, len(campos), 2):
+              meta = campos[i].decode("ascii", "replace").lstrip(":").split()
+              caminho = campos[i + 1].decode("utf-8", "replace")
+              if len(meta) != 5:
+                  erros.append(f"linha do git inesperada para {caminho!r}")
+                  continue
+              modo_novo, sha_novo, estado = meta[1], meta[3], meta[4]
+              if not permitido(caminho):
+                  erros.append(f"caminho não permitido: {caminho!r}")
+              elif estado not in ("A", "M"):
+                  erros.append(f"mudança do tipo {estado} não permitida em {caminho!r} (só criar ou alterar)")
+              elif modo_novo != "100644":
+                  erros.append(f"modo {modo_novo} não permitido em {caminho!r} (só arquivo comum)")
+              else:
+                  tamanho = int(git("cat-file", "-s", sha_novo))
+                  if tamanho > LIMITE_BYTES:
+                      erros.append(f"{caminho!r} tem {tamanho} bytes; o limite é {LIMITE_BYTES}")
+                  else:
+                      mudados.add(caminho)
+          print(f"Arquivos mudados de {antes_rev[:12]} para {depois_rev[:12]}: {total}")
+
+
+          def blob(rev, caminho):
+              r = subprocess.run(["git", "cat-file", "blob", f"{rev}:{caminho}"], capture_output=True)
+              return r.stdout if r.returncode == 0 else None
+
+
+          # 2) Registros que só crescem: toda entrada antiga continua igual e no mesmo lugar.
+          #    (Ninguém sai, ninguém muda de partido, nenhum vetor antigo é reescrito.)
+          for caminho, chave in REGISTROS:
+              if caminho not in mudados:
+                  continue
+              bruto_antes = blob(antes_rev, caminho)
+              if bruto_antes is None:
+                  continue  # não existia antes: nada a proteger
+              try:
+                  antes = json.loads(bruto_antes)
+                  depois = json.loads(blob(depois_rev, caminho))
+              except (ValueError, TypeError, RecursionError) as exc:
+                  erros.append(f"{caminho}: JSON inválido ({type(exc).__name__})")
+                  continue
+              velha = antes.get(chave) if isinstance(antes, dict) else None
+              nova = depois.get(chave) if isinstance(depois, dict) else None
+              if not isinstance(velha, list):
+                  continue
+              if not isinstance(nova, list):
+                  erros.append(f"{caminho}: a lista {chave!r} sumiu")
+                  continue
+              # Compara pelo texto JSON: em Python, 1 == True == 1.0, e isso não pode passar.
+              marca = lambda itens: [json.dumps(x, sort_keys=True, ensure_ascii=True) for x in itens]
+              if marca(nova[: len(velha)]) != marca(velha):
+                  erros.append(f"{caminho}: uma entrada antiga de {chave!r} foi mudada, apagada ou trocada de lugar (o registro só cresce)")
+
+          # 3) feed.xml é o único arquivo que o navegador abre como XML.
+          #    Elemento de outro vocabulário (XHTML, SVG) rodaria script no endereço do site.
+          if NS_DO_FEED and "feed.xml" in mudados:
+              bruto = blob(depois_rev, "feed.xml") or b""
+              if b"\0" in bruto or b"<!DOCTYPE" in bruto or b"<!ENTITY" in bruto:
+                  erros.append("feed.xml: DOCTYPE, ENTITY ou byte nulo não são permitidos")
+              elif bruto.count(b"<?") > 1 or (b"<?" in bruto and not bruto.startswith(b"<?xml ")):
+                  erros.append("feed.xml: instrução de processamento não é permitida")
+              else:
+                  try:
+                      raiz = ET.fromstring(bruto)
+                  except ET.ParseError:
+                      erros.append("feed.xml: XML malformado")
+                  else:
+                      prefixo = "{" + NS_DO_FEED + "}"
+                      fora = sorted({str(e.tag) for e in raiz.iter() if not str(e.tag).startswith(prefixo)})
+                      if raiz.tag != prefixo + "feed":
+                          erros.append("feed.xml: a raiz não é <feed> do Atom")
+                      elif fora:
+                          erros.append(f"feed.xml: elemento fora do Atom: {fora[0]!r}")
+
+          if erros:
+              for e in erros[:30]:
+                  print("RECUSADO:", e)
+              print(f"Mudança fora do permitido: {len(erros)} problema(s).")
+              sys.exit(1)
+          if len(sys.argv) > 3:
+              with open(sys.argv[3], "wb") as f:
+                  f.write(b"".join(c.encode("ascii") + b"\0" for c in sorted(mudados)))
+          print("Mudanças dentro do permitido.")
+          PY
+
+          # Baixa a main sem credencial (o repositório é público).
+          git init --quiet --initial-branch=main .
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote add origin "${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git"
+          git fetch --quiet --no-tags origin "+refs/heads/main:refs/remotes/origin/main"
+          git checkout --quiet -B main refs/remotes/origin/main
+
+          # Lista as branches de edição, da mais antiga para a mais nova.
+          git ls-remote --heads origin > "$TRAB/heads"
+          RAMOS=()
+          while IFS=$'\t' read -r _ REF; do
+            RAMO="${REF#refs/heads/}"
+            if [[ "$RAMO" =~ $PADRAO_RAMO ]]; then
+              RAMOS+=("$RAMO")
+            elif [[ "$RAMO" == claude/edicao* ]]; then
+              printf 'Ignorada, nome fora do padrão: %q\n' "$RAMO"
+            fi
+          done < <(sort -k2 "$TRAB/heads")
+          echo "Branches de edição encontradas: ${#RAMOS[@]}"
+
+          recusa() {   # recusa RAMO SHA MOTIVO
+            echo "RECUSADA: $1 ($2): $3"
+            printf '%s %s %s\n' "$1" "$2" "$3" >> "$TRAB/recusadas"
+          }
+
+          desfaz() {   # volta a cópia local para o commit dado
+            git reset --quiet --hard "$1"
+            git clean --quiet -fdx
+          }
+
+          processa() {
+            local RAMO="$1" SHA ANTES BASE CAMINHO DIA FIM VALIDO FUTURO=""
+            local -a DIAS=()
+            if ! git fetch --quiet --no-tags origin "+refs/heads/$RAMO:refs/remotes/origin/$RAMO"; then
+              echo "A branch $RAMO sumiu antes de ser lida. Nada a fazer."
+              return 0
+            fi
+            SHA="$(git rev-parse --verify "refs/remotes/origin/$RAMO^{commit}")"
+            ANTES="$(git rev-parse HEAD)"
+            echo "Branch $RAMO, commit $SHA"
+
+            if git merge-base --is-ancestor "$SHA" "$ANTES"; then
+              echo "O commit já está na main. Só falta apagar a branch."
+              echo "$RAMO $SHA" >> "$TRAB/apagar"
+              return 0
+            fi
+            if ! BASE="$(git merge-base "$ANTES" "$SHA")"; then
+              recusa "$RAMO" "$SHA" "a branch não tem ancestral comum com a main"
+              return 0
+            fi
+
+            # 1ª conferência: o que a branch trouxe desde o ancestral comum.
+            # Nada da branch foi posto na pasta de trabalho até aqui.
+            rm -f "$TRAB/caminhos"
+            if ! python3 -I "$TRAB/confere.py" "$BASE" "$SHA" "$TRAB/caminhos"; then
+              recusa "$RAMO" "$SHA" "a branch muda o que não pode"
+              return 0
+            fi
+
+            # Copia para a cópia local da main só os arquivos permitidos que a branch mudou,
+            # do jeito que estão na ponta da branch. Não há merge: os commits da branch
+            # não entram no histórico da main, e o que a main tem fora da lista fica intacto.
+            if [[ -s "$TRAB/caminhos" ]]; then
+              git --literal-pathspecs checkout --quiet "$SHA" --pathspec-from-file="$TRAB/caminhos" --pathspec-file-nul
+            fi
+            if git diff --cached --quiet; then
+              desfaz "$ANTES"
+              echo "A main já tem tudo o que a branch traz. Só falta apagar a branch."
+              echo "$RAMO $SHA" >> "$TRAB/apagar"
+              return 0
+            fi
+            git commit --quiet -m "publica: $RAMO" -m "Origem: commit $SHA."
+
+            # 2ª conferência: o que esse commit muda de fato na main de agora.
+            # (Pega o caso de a main ter andado: registro que encolheria, arquivo que sumiria.)
+            if ! python3 -I "$TRAB/confere.py" "$ANTES" HEAD; then
+              desfaz "$ANTES"
+              recusa "$RAMO" "$SHA" "o resultado da junção muda o que não pode"
+              return 0
+            fi
+
+            # Validador DA MAIN: as conferências acima garantem que ferramentas/ não mudou.
+            if [[ ! -f ferramentas/valida.py ]]; then
+              echo "::error::Falta ferramentas/valida.py na main. Nada foi juntado."
+              exit 1
+            fi
+            # Toda edição que a branch cria ou altera é validada como "edição do dia" (--dia),
+            # seja qual for a data no nome da branch e a hora em que esta execução roda.
+            # Só não pode ser de dia depois de hoje em Brasília: o Painel do site abre a edição
+            # de data mais alta, e uma edição do futuro ficaria no topo até aquele dia.
+            while IFS= read -r -d '' CAMINHO; do
+              if [[ "$CAMINHO" =~ ^edicoes/([0-9]{4}-[0-9]{2}-[0-9]{2})\.(json|md)$ ]]; then
+                if [[ "${BASH_REMATCH[1]}" > "$HOJE" ]]; then
+                  FUTURO="${BASH_REMATCH[1]}"
+                fi
+                if [[ "${BASH_REMATCH[2]}" == json ]]; then
+                  DIAS+=("${BASH_REMATCH[1]}")
+                fi
+              fi
+            done < "$TRAB/caminhos"
+            if [[ -n "$FUTURO" ]]; then
+              desfaz "$ANTES"
+              recusa "$RAMO" "$SHA" "a branch traz edição de $FUTURO, dia depois de hoje ($HOJE em Brasília)"
+              return 0
+            fi
+            if (( ${#DIAS[@]} > LIMITE_DIAS )); then
+              desfaz "$ANTES"
+              recusa "$RAMO" "$SHA" "a branch mexe em edições de mais de $LIMITE_DIAS dias"
+              return 0
+            fi
+            if (( ${#DIAS[@]} == 0 )); then
+              DIAS=("")   # nenhuma edição mexida: uma chamada, sem --dia
+            fi
+            VALIDO=sim
+            # O que o validador imprime vem, em parte, do texto da edição:
+            # não pode ser lido como comando do runner.
+            FIM="fim-$(od -An -N16 -tx1 /dev/urandom | tr -d ' \n')"
+            echo "::stop-commands::$FIM"
+            for DIA in "${DIAS[@]}"; do
+              # Linha de comando do CONTRATO: --tudo, com --base (regras G1 a G4) e --dia.
+              # A base é a main de antes deste commit: só a edição aparece como mudança.
+              if ! timeout --signal=KILL "$LIMITE_VALIDADOR" \
+                  python3 ferramentas/valida.py --tudo --base "$ANTES" ${DIA:+--dia "$DIA"}; then
+                VALIDO=nao
+                break
+              fi
+            done
+            echo "::$FIM::"
+            if [[ "$VALIDO" != sim ]]; then
+              desfaz "$ANTES"
+              recusa "$RAMO" "$SHA" "o validador da main recusou (valida.py --tudo${DIA:+ --dia $DIA})"
+              return 0
+            fi
+            git reset --quiet --hard HEAD
+            git clean --quiet -fdx
+            echo "$RAMO $SHA" >> "$TRAB/aprovadas"
+            echo "APROVADA: $RAMO"
+          }
+
+          n=0
+          for RAMO in ${RAMOS[@]+"${RAMOS[@]}"}; do
+            n=$((n + 1))
+            if (( n > LIMITE_RAMOS )); then
+              echo "::warning::Há mais de $LIMITE_RAMOS branches de edição. As outras ficam para a próxima execução."
+              break
+            fi
+            echo "::group::$RAMO"
+            processa "$RAMO"
+            echo "::endgroup::"
+          done
+
+      - name: Empurra na main e arruma as branches
+        id: empurra
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -u
+          TRAB="$RUNNER_TEMP/publica-edicao"
+          # O token fica só nesta variável do shell. Não vai para o .git/config.
+          DESTINO="https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          conta() { grep -c '' "$1" || true; }
+          JUNTADAS="$(conta "$TRAB/aprovadas")"
+          RECUSADAS="$(conta "$TRAB/recusadas")"
+
+          LOCAL="$(git rev-parse HEAD)"
+          if [[ "$LOCAL" != "$(git rev-parse refs/remotes/origin/main)" ]]; then
+            # Push comum, sem forçar: só passa se a main não andou.
+            if ! git push --quiet "$DESTINO" "$LOCAL:refs/heads/main"; then
+              echo "::error::O push na main foi recusado. Nada foi publicado. Se a main andou, a próxima execução resolve. Se há regra de proteção na main, ela precisa deixar o robô do Actions empurrar."
+              exit 1
+            fi
+            echo "Main atualizada para $LOCAL."
+          fi
+
+          {
+            echo "juntadas=$JUNTADAS"
+            echo "recusadas=$RECUSADAS"
+            if [[ "$JUNTADAS" != 0 || "$GITHUB_EVENT_NAME" == workflow_dispatch ]]; then
+              echo "publicar=sim"
+            else
+              echo "publicar=nao"
+            fi
+          } >> "$GITHUB_OUTPUT"
+
+          apaga() {   # apaga RAMO SHA: só se a branch ainda aponta para o commit conferido
+            if git push --quiet --force-with-lease="refs/heads/$1:$2" "$DESTINO" ":refs/heads/$1"; then
+              echo "Branch apagada: $1"
+            else
+              echo "::warning::A branch $1 não foi apagada (mudou ou já tinha sumido). A próxima execução cuida dela."
+            fi
+          }
+
+          while read -r RAMO SHA <&3; do
+            apaga "$RAMO" "$SHA"
+          done 3< <(cat "$TRAB/aprovadas" "$TRAB/apagar")
+
+          # Edição recusada sai da fila: o commit é guardado em recusada/... para o dono ver.
+          while read -r RAMO SHA MOTIVO <&3; do
+            GUARDA="${PREFIXO_RECUSADA}${RAMO#claude/}-${SHA:0:12}"
+            if git push --quiet "$DESTINO" "$SHA:refs/heads/$GUARDA"; then
+              echo "::error::Edição recusada: $RAMO ($MOTIVO). O commit ficou guardado em $GUARDA."
+              echo "- Recusada: \`$RAMO\` ($MOTIVO). Guardada em \`$GUARDA\`." >> "$GITHUB_STEP_SUMMARY"
+              apaga "$RAMO" "$SHA"
+            else
+              echo "::error::Edição recusada: $RAMO ($MOTIVO). Não deu para guardar em $GUARDA: a branch fica onde está."
+              echo "- Recusada: \`$RAMO\` ($MOTIVO). A branch ficou onde está." >> "$GITHUB_STEP_SUMMARY"
+            fi
+          done 3< "$TRAB/recusadas"
+
+          while read -r RAMO SHA <&3; do
+            echo "- Na main: \`$RAMO\` (origem \`$SHA\`)" >> "$GITHUB_STEP_SUMMARY"
+          done 3< "$TRAB/aprovadas"
+          echo "Juntadas: $JUNTADAS. Recusadas: $RECUSADAS."
+
+      - name: Pede a publicação no GitHub Pages
+        if: steps.empurra.outputs.publicar == 'sim'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # A documentação diz que push feito com GITHUB_TOKEN não dispara o Pages.
+          # Por isso a publicação é pedida pela API (precisa de "pages: write").
+          if gh api --method POST "repos/${GITHUB_REPOSITORY}/pages/builds" --jq '"Pages: " + .status'; then
+            echo "- Pages: publicação pedida" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "::error::A main está certa, mas o pedido de publicação do Pages falhou. O site pode estar desatualizado. Rode este workflow pelo botão Run workflow."
+            echo "- Pages: o pedido de publicação FALHOU (a main está certa)" >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+
+      - name: Fica vermelha se alguma edição foi recusada
+        if: steps.empurra.outputs.recusadas != '0'
+        run: |
+          echo "::error::Há edição recusada. Veja o passo de conferência e a branch recusada/..."
+          exit 1

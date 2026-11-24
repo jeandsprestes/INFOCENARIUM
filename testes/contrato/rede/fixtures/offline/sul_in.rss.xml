@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<title>Feed de exemplo</title>
+<link>https://feed.exemplo.invalid/</link>
+<description>Feed fictício, para teste.</description>
+<item>
+<title>Zarvônia fecha estreito de Brumal por 17 dias; Nordélia pede reunião</title>
+<link>https://sul-in.exemplo.invalid/brumal-nordelia</link>
+<description>Nordélia quer uma sessão de emergência do conselho regional.</description>
+<pubDate>Fri, 20 Nov 2026 14:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Nordélia sedia cúpula de 11 países sobre água</title>
+<link>https://sul-in.exemplo.invalid/cupula-agua</link>
+<description>O encontro dura dois dias.</description>
+<pubDate>Fri, 20 Nov 2026 02:00:00 +0000</pubDate>
+</item>
+</channel>
+</rss>

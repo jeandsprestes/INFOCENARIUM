@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<title>Feed de exemplo</title>
+<link>https://feed.exemplo.invalid/</link>
+<description>Feed fictício, para teste.</description>
+<item>
+<title>Zarvônia comemora 80 anos de independência</title>
+<link>https://radio-er.exemplo.invalid/zarvonia-80-anos</link>
+<description>Notícia de três dias atrás: está fora da janela.</description>
+<pubDate>Wed, 18 Nov 2026 19:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Feira de Quelmar recebe 200 expositores</title>
+<link>https://radio-er.exemplo.invalid/feira-quelmar</link>
+<description>Notícia antiga: está fora da janela.</description>
+<pubDate>Tue, 17 Nov 2026 23:00:00 +0000</pubDate>
+</item>
+</channel>
+</rss>

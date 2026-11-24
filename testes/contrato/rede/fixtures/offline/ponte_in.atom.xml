@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>Feed de exemplo</title>
+<id>https://feed.exemplo.invalid/</id>
+<updated>2026-11-20T21:00:00Z</updated>
+<entry>
+<title>Cúpula da água em Nordélia reúne 11 países</title>
+<link rel="alternate" href="https://ponte-in.exemplo.invalid/cupula-agua-11-paises"/>
+<id>tag:feed.exemplo.invalid,2026:1</id>
+<published>2026-11-20T00:00:00Z</published>
+<updated>2026-11-20T00:00:00Z</updated>
+<summary>A pauta é o uso de rios de fronteira.</summary>
+</entry>
+</feed>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>Feed de exemplo</title>
+<id>https://feed.exemplo.invalid/</id>
+<updated>2026-11-20T21:00:00Z</updated>
+<entry>
+<title>Tavória erra ao taxar aço de Quelmar em 25%, afirma chancelaria</title>
+<link rel="alternate" href="https://jornal-er.exemplo.invalid/tavoria-erra-tarifa"/>
+<id>tag:feed.exemplo.invalid,2026:1</id>
+<published>2026-11-20T13:00:00Z</published>
+<updated>2026-11-20T13:00:00Z</updated>
+<summary>A chancelaria de Quelmar fala em retaliação.</summary>
+</entry>
+<entry>
+<title>Acordo de gás de 40 anos une Zarvônia e Quelmar</title>
+<link rel="alternate" href="https://jornal-er.exemplo.invalid/acordo-gas-40-anos"/>
+<id>tag:feed.exemplo.invalid,2026:2</id>
+<published>2026-11-19T21:00:00Z</published>
+<updated>2026-11-19T21:00:00Z</updated>
+<summary>O gasoduto terá 900 quilômetros.</summary>
+</entry>
+</feed>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>Feed de exemplo</title>
+<id>https://feed.exemplo.invalid/</id>
+<updated>2026-11-20T21:00:00Z</updated>
+<entry>
+<title>Nordélia aprova lei de inteligência artificial com 312 votos; setor reage</title>
+<link rel="alternate" href="https://tecno-bt.exemplo.invalid/ia/nordelia-lei-setor"/>
+<id>tag:feed.exemplo.invalid,2026:1</id>
+<published>2026-11-20T13:00:00Z</published>
+<updated>2026-11-20T13:00:00Z</updated>
+<summary>Empresas falam em custo de adaptação.</summary>
+</entry>
+<entry>
+<title>Fabricante Luminar lança modelo de inteligência artificial Aurora 4</title>
+<link rel="alternate" href="https://tecno-bt.exemplo.invalid/ia/luminar-aurora-4"/>
+<id>tag:feed.exemplo.invalid,2026:2</id>
+<published>2026-11-20T07:00:00Z</published>
+<updated>2026-11-20T07:00:00Z</updated>
+<summary>O modelo chega a 40 países.</summary>
+</entry>
+</feed>

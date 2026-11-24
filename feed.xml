@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>INFOCENARIUM · monitor geopolítico e de IA</title>
+  <id>https://jeandsprestes.github.io/INFOCENARIUM/</id>
+  <link href="https://jeandsprestes.github.io/INFOCENARIUM/"/>
+  <link rel="self" type="application/atom+xml" href="https://jeandsprestes.github.io/INFOCENARIUM/feed.xml"/>
+  <updated>2026-11-24T17:05:12Z</updated>
+  <author>
+    <name>INFOCENARIUM</name>
+  </author>
+  <entry>
+    <title>INFOCENARIUM 23/11/2026 · nível 2 ATENÇÃO</title>
+    <id>https://jeandsprestes.github.io/INFOCENARIUM/#/edicao/2026-11-23</id>
+    <link href="https://jeandsprestes.github.io/INFOCENARIUM/#/edicao/2026-11-23"/>
+    <updated>2026-11-24T17:05:12Z</updated>
+    <summary type="text">De 21 a 23/11: petroleiros atingidos em Ormuz, ataque do Irã ao Bahrein e nova sanção dos Estados Unidos ao Irã; a COP31 acabou sem acordo sobre combustíveis fósseis; a Nvidia trouxe Jensen Huang de volta.</summary>
+    <content type="text">1. Guerra no Golfo: petroleiros atingidos em Ormuz, ataque do Irã ao Bahrein e nova sanção dos Estados Unidos ao Irã
+Em 21/11, petroleiros foram atingidos no estreito de Ormuz; as fontes não dão nome nem bandeira, divergem sobre o número e não dizem se falam dos mesmos navios. No mesmo dia, o Irã atacou o Bahrein: o governo bareinita e a Guarda Revolucionária, força armada do regime iraniano à parte do Exército, confirmam o ataque e divergem sobre o alvo. Em 23/11, o Tesouro dos Estados Unidos sancionou mais de duas dezenas de casas de câmbio, empresas de fachada e pessoas da rede bancária paralela do Irã.</content>
+  </entry>
+</feed>

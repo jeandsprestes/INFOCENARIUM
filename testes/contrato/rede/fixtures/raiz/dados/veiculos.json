@@ -1,0 +1,703 @@
+{
+  "versao": 1,
+  "revisado_em": null,
+  "veiculos": [
+    {
+      "id": "boletim_og",
+      "nome": "Boletim das Instituições",
+      "pais": "Exemplo",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "controle": "Editora fictícia Boletim das Instituições",
+      "controle_fonte": "https://boletim-og.exemplo.invalid/quem-somos",
+      "lado": "ordem_global",
+      "serve_a": [],
+      "alvos": [],
+      "lado_confianca": "alta",
+      "lado_porque": "Veículo fictício, criado para os testes de contrato.",
+      "fatos": "alta",
+      "fatos_nota": "Nota fictícia.",
+      "uso": "Só nos testes de contrato.",
+      "sites": [
+        "boletim-og.exemplo.invalid"
+      ],
+      "feeds": [
+        {
+          "url": "https://boletim-og.exemplo.invalid/rss.xml",
+          "secao": "mundo",
+          "formato": "rss",
+          "conferido": false,
+          "nota": "Ainda não conferido."
+        }
+      ]
+    },
+    {
+      "id": "gazeta_og",
+      "nome": "Gazeta de Exemplo",
+      "pais": "Exemplo",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "controle": "Editora fictícia Gazeta de Exemplo",
+      "controle_fonte": "https://gazeta-og.exemplo.invalid/quem-somos",
+      "lado": "ordem_global",
+      "serve_a": [],
+      "alvos": [],
+      "lado_confianca": "alta",
+      "lado_porque": "Veículo fictício, criado para os testes de contrato.",
+      "fatos": "alta",
+      "fatos_nota": "Nota fictícia.",
+      "uso": "Só nos testes de contrato.",
+      "sites": [
+        "gazeta-og.exemplo.invalid"
+      ],
+      "feeds": [
+        {
+          "url": "https://gazeta-og.exemplo.invalid/rss.xml",
+          "secao": "mundo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "id": "painel_og",
+      "nome": "Painel Multilateral",
+      "pais": "Exemplo",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "publico",
+      "controle": "Editora fictícia Painel Multilateral",
+      "controle_fonte": "https://painel-og.exemplo.invalid/quem-somos",
+      "lado": "ordem_global",
+      "serve_a": [
+        "oms_onu"
+      ],
+      "alvos": [],
+      "lado_confianca": "media",
+      "lado_porque": "Veículo fictício, criado para os testes de contrato.",
+      "fatos": "media",
+      "fatos_nota": "Nota fictícia.",
+      "uso": "Só nos testes de contrato.",
+      "sites": [
+        "painel-og.exemplo.invalid"
+      ],
+      "feeds": [
+        {
+          "url": "https://painel-og.exemplo.invalid/atom.xml",
+          "secao": "mundo",
+          "formato": "atom",
+          "conferido": true,
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "id": "revista_ca",
+      "nome": "Revista do Centro",
+      "pais": "Exemplo",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "controle": "Editora fictícia Revista do Centro",
+      "controle_fonte": "https://revista-ca.exemplo.invalid/quem-somos",
+      "lado": "centro_atlantico",
+      "serve_a": [],
+      "alvos": [],
+      "lado_confianca": "baixa",
+      "lado_porque": "Veículo fictício, criado para os testes de contrato.",
+      "fatos": "media",
+      "fatos_nota": "Nota fictícia.",
+      "uso": "Só nos testes de contrato.",
+      "sites": [
+        "revista-ca.exemplo.invalid"
+      ],
+      "feeds": [
+        {
+          "url": "https://revista-ca.exemplo.invalid/rss.xml",
+          "secao": "mundo",
+          "formato": "rss",
+          "conferido": false,
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "id": "diario_ca",
+      "nome": "Diário do Atlântico",
+      "pais": "Exemplo",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "controle": "Editora fictícia Diário do Atlântico",
+      "controle_fonte": "https://diario-ca.exemplo.invalid/quem-somos",
+      "lado": "centro_atlantico",
+      "serve_a": [],
+      "alvos": [],
+      "lado_confianca": "alta",
+      "lado_porque": "Veículo fictício, criado para os testes de contrato.",
+      "fatos": "alta",
+      "fatos_nota": "Nota fictícia.",
+      "uso": "Só nos testes de contrato.",
+      "sites": [
+        "diario-ca.exemplo.invalid"
+      ],
+      "feeds": [
+        {
+          "url": "https://diario-ca.exemplo.invalid/mundo/rss.xml",
+          "secao": "mundo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": ""
+        },
+        {
+          "url": "https://diario-ca.exemplo.invalid/economia/rss.xml",
+          "secao": "economia",
+          "formato": "rss",
+          "conferido": true,
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "id": "canal_ca",
+      "nome": "Canal Europa",
+      "pais": "Exemplo",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "publico",
+      "controle": "Editora fictícia Canal Europa",
+      "controle_fonte": "https://canal-ca.exemplo.invalid/quem-somos",
+      "lado": "centro_atlantico",
+      "serve_a": [
+        "ue"
+      ],
+      "alvos": [],
+      "lado_confianca": "media",
+      "lado_porque": "Veículo fictício, criado para os testes de contrato.",
+      "fatos": "media",
+      "fatos_nota": "Nota fictícia.",
+      "uso": "Só nos testes de contrato.",
+      "sites": [
+        "canal-ca.exemplo.invalid"
+      ],
+      "feeds": [
+        {
+          "url": "https://canal-ca.exemplo.invalid/atom.xml",
+          "secao": "mundo",
+          "formato": "atom",
+          "conferido": true,
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "id": "agencia_ca",
+      "nome": "Agência sem Feed",
+      "pais": "Exemplo",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "agencia",
+      "controle": "Editora fictícia Agência sem Feed",
+      "controle_fonte": "https://agencia-ca.exemplo.invalid/quem-somos",
+      "lado": "centro_atlantico",
+      "serve_a": [],
+      "alvos": [],
+      "lado_confianca": "alta",
+      "lado_porque": "Veículo fictício, criado para os testes de contrato.",
+      "fatos": "alta",
+      "fatos_nota": "Nota fictícia.",
+      "uso": "Só nos testes de contrato.",
+      "sites": [
+        "agencia-ca.exemplo.invalid"
+      ],
+      "feeds": [],
+      "feeds_nota": "Não publica feed: as manchetes se acham por busca."
+    },
+    {
+      "id": "tecno_bt",
+      "nome": "Tecno Diário",
+      "pais": "Exemplo",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "controle": "Editora fictícia Tecno Diário",
+      "controle_fonte": "https://tecno-bt.exemplo.invalid/quem-somos",
+      "lado": "bancada_talento",
+      "serve_a": [
+        "google"
+      ],
+      "alvos": [],
+      "lado_confianca": "alta",
+      "lado_porque": "Veículo fictício, criado para os testes de contrato.",
+      "fatos": "media",
+      "fatos_nota": "Nota fictícia.",
+      "uso": "Só nos testes de contrato.",
+      "sites": [
+        "tecno-bt.exemplo.invalid"
+      ],
+      "feeds": [
+        {
+          "url": "https://tecno-bt.exemplo.invalid/atom.xml",
+          "secao": "tecnologia",
+          "formato": "atom",
+          "conferido": true,
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "id": "chip_bt",
+      "nome": "Chip Semanal",
+      "pais": "Exemplo",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "controle": "Editora fictícia Chip Semanal",
+      "controle_fonte": "https://chip-bt.exemplo.invalid/quem-somos",
+      "lado": "bancada_talento",
+      "serve_a": [],
+      "alvos": [],
+      "lado_confianca": "media",
+      "lado_porque": "Veículo fictício, criado para os testes de contrato.",
+      "fatos": "media",
+      "fatos_nota": "Nota fictícia.",
+      "uso": "Só nos testes de contrato.",
+      "sites": [
+        "chip-bt.exemplo.invalid"
+      ],
+      "feeds": [
+        {
+          "url": "https://chip-bt.exemplo.invalid/rss.xml",
+          "secao": "tecnologia",
+          "formato": "rss",
+          "conferido": true,
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "id": "nuvem_bt",
+      "nome": "Nuvem Notícias",
+      "pais": "Exemplo",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "controle": "Editora fictícia Nuvem Notícias",
+      "controle_fonte": "https://nuvem-bt.exemplo.invalid/quem-somos",
+      "lado": "bancada_talento",
+      "serve_a": [],
+      "alvos": [],
+      "lado_confianca": "media",
+      "lado_porque": "Veículo fictício, criado para os testes de contrato.",
+      "fatos": "baixa",
+      "fatos_nota": "Nota fictícia.",
+      "uso": "Só nos testes de contrato.",
+      "sites": [
+        "nuvem-bt.exemplo.invalid"
+      ],
+      "feeds": [
+        {
+          "url": "https://nuvem-bt.exemplo.invalid/rss.xml",
+          "secao": "tecnologia",
+          "formato": "rss",
+          "conferido": false,
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "id": "tribuna_so",
+      "nome": "Tribuna Soberana",
+      "pais": "Exemplo",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "controle": "Editora fictícia Tribuna Soberana",
+      "controle_fonte": "https://tribuna-so.exemplo.invalid/quem-somos",
+      "lado": "soberanistas",
+      "serve_a": [],
+      "alvos": [],
+      "lado_confianca": "alta",
+      "lado_porque": "Veículo fictício, criado para os testes de contrato.",
+      "fatos": "media",
+      "fatos_nota": "Nota fictícia.",
+      "uso": "Só nos testes de contrato.",
+      "sites": [
+        "tribuna-so.exemplo.invalid"
+      ],
+      "feeds": [
+        {
+          "url": "https://tribuna-so.exemplo.invalid/rss.xml",
+          "secao": "mundo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "id": "voz_so",
+      "nome": "Voz Nacional",
+      "pais": "Exemplo",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "controle": "Editora fictícia Voz Nacional",
+      "controle_fonte": "https://voz-so.exemplo.invalid/quem-somos",
+      "lado": "soberanistas",
+      "serve_a": [
+        "soberanistas"
+      ],
+      "alvos": [],
+      "lado_confianca": "media",
+      "lado_porque": "Veículo fictício, criado para os testes de contrato.",
+      "fatos": "baixa",
+      "fatos_nota": "Nota fictícia.",
+      "uso": "Só nos testes de contrato.",
+      "sites": [
+        "voz-so.exemplo.invalid"
+      ],
+      "feeds": [
+        {
+          "url": "https://voz-so.exemplo.invalid/atom.xml",
+          "secao": "mundo",
+          "formato": "atom",
+          "conferido": true,
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "id": "folha_so",
+      "nome": "Folha da Fronteira",
+      "pais": "Exemplo",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "controle": "Editora fictícia Folha da Fronteira",
+      "controle_fonte": "https://folha-so.exemplo.invalid/quem-somos",
+      "lado": "soberanistas",
+      "serve_a": [],
+      "alvos": [],
+      "lado_confianca": "alta",
+      "lado_porque": "Veículo fictício, criado para os testes de contrato.",
+      "fatos": "alta",
+      "fatos_nota": "Nota fictícia.",
+      "uso": "Só nos testes de contrato.",
+      "sites": [
+        "folha-so.exemplo.invalid"
+      ],
+      "feeds": [
+        {
+          "url": "https://folha-so.exemplo.invalid/rss.xml",
+          "secao": "mundo",
+          "formato": "rss",
+          "conferido": false,
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "id": "agencia_er",
+      "nome": "Agência do Leste",
+      "pais": "Exemplo",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "estatal",
+      "controle": "Editora fictícia Agência do Leste",
+      "controle_fonte": "https://agencia-er.exemplo.invalid/quem-somos",
+      "lado": "eixo_revisionista",
+      "serve_a": [
+        "russia"
+      ],
+      "alvos": [
+        "ue"
+      ],
+      "lado_confianca": "alta",
+      "lado_porque": "Veículo fictício, criado para os testes de contrato.",
+      "fatos": "media",
+      "fatos_nota": "Nota fictícia.",
+      "uso": "Só nos testes de contrato.",
+      "sites": [
+        "agencia-er.exemplo.invalid"
+      ],
+      "feeds": [
+        {
+          "url": "https://agencia-er.exemplo.invalid/rss.xml",
+          "secao": "mundo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "id": "jornal_er",
+      "nome": "Jornal do Oriente",
+      "pais": "Exemplo",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "estatal",
+      "controle": "Editora fictícia Jornal do Oriente",
+      "controle_fonte": "https://jornal-er.exemplo.invalid/quem-somos",
+      "lado": "eixo_revisionista",
+      "serve_a": [
+        "china"
+      ],
+      "alvos": [],
+      "lado_confianca": "media",
+      "lado_porque": "Veículo fictício, criado para os testes de contrato.",
+      "fatos": "baixa",
+      "fatos_nota": "Nota fictícia.",
+      "uso": "Só nos testes de contrato.",
+      "sites": [
+        "jornal-er.exemplo.invalid"
+      ],
+      "feeds": [
+        {
+          "url": "https://jornal-er.exemplo.invalid/atom.xml",
+          "secao": "mundo",
+          "formato": "atom",
+          "conferido": true,
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "id": "radio_er",
+      "nome": "Rádio Continental",
+      "pais": "Exemplo",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "estatal",
+      "controle": "Editora fictícia Rádio Continental",
+      "controle_fonte": "https://radio-er.exemplo.invalid/quem-somos",
+      "lado": "eixo_revisionista",
+      "serve_a": [],
+      "alvos": [],
+      "lado_confianca": "media",
+      "lado_porque": "Veículo fictício, criado para os testes de contrato.",
+      "fatos": "media",
+      "fatos_nota": "Nota fictícia.",
+      "uso": "Só nos testes de contrato.",
+      "sites": [
+        "radio-er.exemplo.invalid"
+      ],
+      "feeds": [
+        {
+          "url": "https://radio-er.exemplo.invalid/rss.xml",
+          "secao": "mundo",
+          "formato": "rss",
+          "conferido": false,
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "id": "mercado_ce",
+      "nome": "Mercado Hoje",
+      "pais": "Exemplo",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "controle": "Editora fictícia Mercado Hoje",
+      "controle_fonte": "https://mercado-ce.exemplo.invalid/quem-somos",
+      "lado": "centrao",
+      "serve_a": [],
+      "alvos": [],
+      "lado_confianca": "alta",
+      "lado_porque": "Veículo fictício, criado para os testes de contrato.",
+      "fatos": "alta",
+      "fatos_nota": "Nota fictícia.",
+      "uso": "Só nos testes de contrato.",
+      "sites": [
+        "mercado-ce.exemplo.invalid"
+      ],
+      "feeds": [
+        {
+          "url": "https://mercado-ce.exemplo.invalid/rss.xml",
+          "secao": "economia",
+          "formato": "rss",
+          "conferido": true,
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "id": "bolsa_ce",
+      "nome": "Bolsa em Foco",
+      "pais": "Exemplo",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "controle": "Editora fictícia Bolsa em Foco",
+      "controle_fonte": "https://bolsa-ce.exemplo.invalid/quem-somos",
+      "lado": "centrao",
+      "serve_a": [],
+      "alvos": [],
+      "lado_confianca": "baixa",
+      "lado_porque": "Veículo fictício, criado para os testes de contrato.",
+      "fatos": "alta",
+      "fatos_nota": "Nota fictícia.",
+      "uso": "Só nos testes de contrato.",
+      "sites": [
+        "bolsa-ce.exemplo.invalid"
+      ],
+      "feeds": [
+        {
+          "url": "https://bolsa-ce.exemplo.invalid/atom.xml",
+          "secao": "economia",
+          "formato": "atom",
+          "conferido": true,
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "id": "cambio_ce",
+      "nome": "Câmbio e Cia",
+      "pais": "Exemplo",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "controle": "Editora fictícia Câmbio e Cia",
+      "controle_fonte": "https://cambio-ce.exemplo.invalid/quem-somos",
+      "lado": "centrao",
+      "serve_a": [],
+      "alvos": [],
+      "lado_confianca": "media",
+      "lado_porque": "Veículo fictício, criado para os testes de contrato.",
+      "fatos": "media",
+      "fatos_nota": "Nota fictícia.",
+      "uso": "Só nos testes de contrato.",
+      "sites": [
+        "cambio-ce.exemplo.invalid"
+      ],
+      "feeds": [
+        {
+          "url": "https://cambio-ce.exemplo.invalid/rss.xml",
+          "secao": "economia",
+          "formato": "rss",
+          "conferido": false,
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "id": "sul_in",
+      "nome": "Sul Global Notícias",
+      "pais": "Exemplo",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "controle": "Editora fictícia Sul Global Notícias",
+      "controle_fonte": "https://sul-in.exemplo.invalid/quem-somos",
+      "lado": "independentes",
+      "serve_a": [],
+      "alvos": [],
+      "lado_confianca": "alta",
+      "lado_porque": "Veículo fictício, criado para os testes de contrato.",
+      "fatos": "media",
+      "fatos_nota": "Nota fictícia.",
+      "uso": "Só nos testes de contrato.",
+      "sites": [
+        "sul-in.exemplo.invalid"
+      ],
+      "feeds": [
+        {
+          "url": "https://sul-in.exemplo.invalid/rss.xml",
+          "secao": "mundo",
+          "formato": "rss",
+          "conferido": true,
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "id": "ponte_in",
+      "nome": "A Ponte",
+      "pais": "Exemplo",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "controle": "Editora fictícia A Ponte",
+      "controle_fonte": "https://ponte-in.exemplo.invalid/quem-somos",
+      "lado": "independentes",
+      "serve_a": [],
+      "alvos": [],
+      "lado_confianca": "media",
+      "lado_porque": "Veículo fictício, criado para os testes de contrato.",
+      "fatos": "media",
+      "fatos_nota": "Nota fictícia.",
+      "uso": "Só nos testes de contrato.",
+      "sites": [
+        "ponte-in.exemplo.invalid"
+      ],
+      "feeds": [
+        {
+          "url": "https://ponte-in.exemplo.invalid/atom.xml",
+          "secao": "mundo",
+          "formato": "atom",
+          "conferido": true,
+          "nota": ""
+        }
+      ]
+    },
+    {
+      "id": "portal_in",
+      "nome": "Portal sem Feed Legível",
+      "pais": "Exemplo",
+      "idiomas": [
+        "pt"
+      ],
+      "tipo": "privado",
+      "controle": "Editora fictícia Portal sem Feed Legível",
+      "controle_fonte": "https://portal-in.exemplo.invalid/quem-somos",
+      "lado": "independentes",
+      "serve_a": [],
+      "alvos": [],
+      "lado_confianca": "media",
+      "lado_porque": "Veículo fictício, criado para os testes de contrato.",
+      "fatos": "media",
+      "fatos_nota": "Nota fictícia.",
+      "uso": "Só nos testes de contrato.",
+      "sites": [
+        "portal-in.exemplo.invalid"
+      ],
+      "feeds": [
+        {
+          "url": "https://portal-in.exemplo.invalid/ultimas.html",
+          "secao": "mundo",
+          "formato": "html",
+          "conferido": true,
+          "nota": "Página de últimas notícias, sem RSS."
+        }
+      ],
+      "feeds_nota": "Só tem página em HTML: a coleta pula."
+    }
+  ]
+}

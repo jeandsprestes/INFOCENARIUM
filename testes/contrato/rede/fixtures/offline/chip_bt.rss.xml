@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<title>Feed de exemplo</title>
+<link>https://feed.exemplo.invalid/</link>
+<description>Feed fictício, para teste.</description>
+<item>
+<title>Luminar apresenta Aurora 4, novo modelo de inteligência artificial</title>
+<link>https://chip-bt.exemplo.invalid/luminar-aurora-4</link>
+<description>A empresa não divulgou preço.</description>
+<pubDate>Fri, 20 Nov 2026 08:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Fábrica de chips de Quelmar recebe 3 bilhões em investimento</title>
+<link>https://chip-bt.exemplo.invalid/quelmar-fabrica-chips</link>
+<description>A obra começa em 2027.</description>
+<pubDate>Fri, 20 Nov 2026 03:00:00 +0000</pubDate>
+</item>
+</channel>
+</rss>

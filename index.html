@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<title>INFOCENARIUM · monitor geopolítico e de IA</title>
+<meta name="description" content="Monitor diário de geopolítica e de IA: o que aconteceu, quem atirou, quem ganha e o que muda para quem se prepara.">
+<link rel="alternate" type="application/atom+xml" href="feed.xml">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="assets/estilo.css">
+<script src="assets/app.js" defer></script>
+</head>
+<body>
+<a class="pular" id="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- Símbolos dos ícones. Cada um é usado pelo script com <use href="#i-...">. -->
+<svg class="simbolos" width="0" height="0" aria-hidden="true" focusable="false">
+<symbol id="i-nivel-1" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="i-nivel-2" viewBox="0 0 16 16"><path d="M8 2.6 14 13H2Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+<symbol id="i-nivel-3" viewBox="0 0 16 16"><path d="M8 1 15 8 8 15 1 8Z" fill="currentColor"/></symbol>
+<symbol id="i-nivel-4" viewBox="0 0 16 16"><path d="M5.1 1h5.8L15 5.1v5.8L10.9 15H5.1L1 10.9V5.1Z" fill="currentColor"/></symbol>
+<symbol id="i-nivel-5" viewBox="0 0 16 16"><path d="M5.3 1.5h5.4l3.8 3.8v5.4l-3.8 3.8H5.3l-3.8-3.8V5.3Z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M6.4 4.5h3.2l1.9 1.9v3.2l-1.9 1.9H6.4L4.5 9.6V6.4Z" fill="currentColor"/></symbol>
+<symbol id="i-sobe" viewBox="0 0 16 16"><path d="M4 12 12 4M6 4h6v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-estavel" viewBox="0 0 16 16"><path d="M2 8h12M9 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-desce" viewBox="0 0 16 16"><path d="M4 4l8 8M6 12h6V6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-aviso" viewBox="0 0 16 16"><path d="M2.5 2.5h11v11h-11Z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 5v4M8 11.2v.1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+<symbol id="i-relogio" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 4.5V8l2.5 1.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+<symbol id="i-externo" viewBox="0 0 16 16"><path d="M6 3H3v10h10v-3M9 3h4v4M13 3 7 9" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-dobra" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="topo">
+<div class="topo__dentro">
+<p class="marca"><a class="marca__nome" href="#/">INFOCENARIUM</a> <span class="marca__sub">monitor geopolítico e de IA</span></p>
+<nav class="nav" id="nav" aria-label="Vistas do site">
+<a class="nav__link" href="#/" data-vista="painel" aria-current="page">Painel</a>
+<a class="nav__link" href="#/arquivo" data-vista="arquivo">Arquivo</a>
+<a class="nav__link" href="#/regua" data-vista="regua">Régua</a>
+<a class="nav__link" href="#/metodo" data-vista="metodo">Método</a>
+</nav>
+</div>
+</header>
+
+<div class="so-leitor" id="anuncio" role="status" aria-live="polite"></div>
+
+<main class="pagina" id="conteudo" tabindex="-1">
+<noscript>
+<p class="sem-script">O INFOCENARIUM precisa de JavaScript para montar o painel. Sem ele, acompanhe as edições pelo <a href="feed.xml">feed</a>.</p>
+</noscript>
+<div class="avisos" id="avisos-gerais"></div>
+<div class="vista vista--painel" id="vista" aria-busy="true">
+<h1 class="so-leitor" id="titulo-vista" tabindex="-1">Painel</h1>
+<div class="cabeca" id="s-carimbo">
+<p class="carimbo" id="carimbo">Carregando edição…</p>
+<div class="avisos" id="avisos-edicao"></div>
+</div>
+<div class="grade-painel">
+<section class="secao secao--hoje" id="s-hoje" aria-labelledby="t-hoje">
+<h2 class="secao__titulo" id="t-hoje"><span class="secao__num">01</span> HOJE</h2>
+<div class="secao__corpo"><p class="vazio">—</p></div>
+</section>
+<section class="secao secao--dominios" id="s-dominios" aria-labelledby="t-dominios">
+<h2 class="secao__titulo" id="t-dominios"><span class="secao__num">02</span> DOMÍNIOS</h2>
+<div class="secao__corpo"><p class="vazio">—</p></div>
+</section>
+<section class="secao secao--indicadores" id="s-indicadores" aria-labelledby="t-indicadores">
+<h2 class="secao__titulo" id="t-indicadores"><span class="secao__num">03</span> INDICADORES</h2>
+<div class="secao__corpo"><p class="vazio">—</p></div>
+</section>
+<section class="secao secao--principais" id="s-principais" aria-labelledby="t-principais">
+<h2 class="secao__titulo" id="t-principais"><span class="secao__num">04</span> PRINCIPAIS</h2>
+<div class="secao__corpo"><p class="vazio">—</p></div>
+</section>
+<div class="coluna-lateral">
+<section class="secao secao--placar" id="s-placar" aria-labelledby="t-placar">
+<h2 class="secao__titulo" id="t-placar"><span class="secao__num">05</span> PLACAR DO DIA</h2>
+<div class="secao__corpo"><p class="vazio">—</p></div>
+</section>
+<section class="secao secao--vigiar" id="s-vigiar" aria-labelledby="t-vigiar">
+<h2 class="secao__titulo" id="t-vigiar"><span class="secao__num">06</span> O QUE VIGIAR</h2>
+<div class="secao__corpo"><p class="vazio">—</p></div>
+</section>
+<section class="secao secao--movimentos" id="s-movimentos" aria-labelledby="t-movimentos">
+<h2 class="secao__titulo" id="t-movimentos"><span class="secao__num">07</span> MOVIMENTOS</h2>
+<div class="secao__corpo"><p class="vazio">—</p></div>
+</section>
+</div>
+<section class="secao secao--radar" id="s-radar" aria-labelledby="t-radar">
+<h2 class="secao__titulo" id="t-radar"><span class="secao__num">08</span> RADAR</h2>
+<div class="secao__corpo"><p class="vazio">—</p></div>
+</section>
+<section class="secao secao--bastidores" id="s-bastidores" aria-labelledby="t-bastidores">
+<h2 class="secao__titulo" id="t-bastidores"><span class="secao__num">09</span> BASTIDORES</h2>
+<div class="secao__corpo"><p class="vazio">—</p></div>
+</section>
+</div>
+</div>
+</main>
+
+<footer class="rodape">
+<div class="rodape__dentro">
+<p class="rodape__texto">Análises escritas por IA: o Claude, da Anthropic, que é um dos players da régua. Leia o aviso em <a href="#/metodo/conflito">Método</a>. Sem cookies, sem rastreador, nada de terceiros.</p>
+<p class="rodape__links"><span id="rodape-edicao"></span><a href="feed.xml">feed</a></p>
+</div>
+</footer>
+
+<noscript>
+<p class="sem-script">O INFOCENARIUM precisa de JavaScript para montar o painel. Sem ele, acompanhe as edições pelo <a href="feed.xml">feed</a>.</p>
+</noscript>
+</body>
+</html>

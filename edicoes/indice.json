@@ -1,0 +1,31 @@
+{
+  "versao": 1,
+  "atualizado_em": "2026-11-24T17:05:12Z",
+  "edicoes": [
+    {
+      "data": "2026-11-23",
+      "arquivo": "edicoes/2026-11-23.json",
+      "texto": "edicoes/2026-11-23.md",
+      "estado": "reduzida",
+      "nivel": 2,
+      "tendencia": "estavel",
+      "niveis": {
+        "energia": 2,
+        "alimentos": 1,
+        "cambio": 1,
+        "suprimentos": 1,
+        "conflito": 1
+      },
+      "saldos": {
+        "bancada_talento": 2,
+        "eixo_revisionista": -4
+      },
+      "eixos": {},
+      "indicadores": {},
+      "resumo": "De 21 a 23/11: petroleiros atingidos em Ormuz, ataque do Irã ao Bahrein e nova sanção dos Estados Unidos ao Irã; a COP31 acabou sem acordo sobre combustíveis fósseis; a Nvidia trouxe Jensen Huang de volta.",
+      "gerada_em": "2026-11-24T17:05:12Z",
+      "exemplo": false,
+      "corrigida_em": []
+    }
+  ]
+}

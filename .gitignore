@@ -1,0 +1,22 @@
+# Gerados pelo Python (as ferramentas e os testes não gravam, mas uma chamada sem -B grava)
+__pycache__/
+*.pyc
+*.pyo
+
+# Gerados pelo Node
+node_modules/
+
+# Pasta de trabalho da rotina, se um dia ela tiver de ficar dentro do repositório
+# (plano B do CONTRATO, seção 0: --trabalho .trabalho). A regra G4 não conta arquivo ignorado.
+.trabalho/
+
+# Arquivos temporários de editor e de sistema
+*.swp
+*~
+.DS_Store
+
+# Pasta que o ambiente de trabalho do Claude cria sozinho; não vai a público.
+# Exceção: .claude/settings.json, para quem quiser ajustar a atribuição dos commits.
+# O validador só aceita esse arquivo com a chave "attribution".
+.claude/*
+!.claude/settings.json

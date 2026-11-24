@@ -1,0 +1,702 @@
+{
+  "versao": 1,
+  "criada_em": "2026-11-20",
+  "descricao": "A régua do INFOCENARIUM: como cada player se posicionou em 5 temas (7 posições) e em que partido vota.",
+  "aviso": "O DNA e os partidos são classificação editorial de 20/11/2026, feita a partir de conhecimento geral. A situação de cada player (cargo e fatos recentes, nas notas) foi conferida na web em 20/11/2026; os itens marcados como dúvida são os menos seguros.",
+  "valores": {
+    "B": {
+      "cor": "azul",
+      "significado": "polo azul"
+    },
+    "Y": {
+      "cor": "amarelo",
+      "significado": "misto"
+    },
+    "R": {
+      "cor": "vermelho",
+      "significado": "polo vermelho"
+    },
+    "W": {
+      "cor": "branco",
+      "significado": "sem posição conhecida"
+    },
+    "K": {
+      "cor": "preto",
+      "significado": "saiu do cargo"
+    }
+  },
+  "virada": "Duas letras juntas (ex.: BR) indicam virada: a primeira é a posição de antes, a segunda é a atual.",
+  "polos": {
+    "azul": "Polo institucional: freia na saúde, na IA, na fala e nas emissões; acolhe imigrantes.",
+    "vermelho": "Polo soberanista: libera economia, IA, fala e fósseis; restringe fronteiras."
+  },
+  "temas": [
+    {
+      "id": "pandemia_inicio",
+      "nome": "Pandemia (início)",
+      "sigla": "PAN 1",
+      "azul": "alertou, 'fique em casa'",
+      "vermelho": "minimizou"
+    },
+    {
+      "id": "pandemia_depois",
+      "nome": "Pandemia (depois)",
+      "sigla": "PAN 2",
+      "azul": "manteve restrições e vacinação",
+      "vermelho": "minimizou, 'não pode parar'"
+    },
+    {
+      "id": "ia_inicio",
+      "nome": "IA (lançamento do ChatGPT)",
+      "sigla": "IA 1",
+      "azul": "proibir, pausar, regular",
+      "vermelho": "liberar, adotar, acelerar"
+    },
+    {
+      "id": "ia_depois",
+      "nome": "IA (depois)",
+      "sigla": "IA 2",
+      "azul": "regular, pôr limites",
+      "vermelho": "liberar, acelerar, desregular"
+    },
+    {
+      "id": "moderacao",
+      "nome": "Moderação de conteúdo",
+      "sigla": "FALA",
+      "azul": "regular ou remover conteúdo",
+      "vermelho": "liberar ('liberdade de expressão')"
+    },
+    {
+      "id": "clima",
+      "nome": "Mudanças climáticas",
+      "sigla": "CLIMA",
+      "azul": "cortar emissões, frear os fósseis",
+      "vermelho": "fósseis livres, minimizar o problema"
+    },
+    {
+      "id": "imigracao",
+      "nome": "Imigração",
+      "sigla": "FRONT",
+      "azul": "acolher",
+      "vermelho": "restringir"
+    }
+  ],
+  "partidos": [
+    {
+      "id": "ordem_global",
+      "nome": "Partido da Ordem Global",
+      "sigla": "OG",
+      "voto_tipico": "B B B B B B B",
+      "diante_da_ordem": "Governo: defende a ordem como ela está.",
+      "descricao": "Instituições multilaterais, imprensa tradicional e governos que freiam o vírus, a IA, a fala e as emissões."
+    },
+    {
+      "id": "centro_atlantico",
+      "nome": "Centro Atlântico",
+      "sigla": "CA",
+      "voto_tipico": "B B B R B B R",
+      "diante_da_ordem": "Governo, mas fechando as fronteiras.",
+      "descricao": "O centro político dos EUA e da Europa: mantém a ordem, mas cede na imigração."
+    },
+    {
+      "id": "bancada_talento",
+      "nome": "Bancada do Talento",
+      "sigla": "BT",
+      "voto_tipico": "B Y R R B Y B",
+      "diante_da_ordem": "Governo por interesse: libera a IA e os vistos de trabalho.",
+      "descricao": "A big tech e seus líderes: liberam tudo que é insumo do negócio (IA, talento, energia)."
+    },
+    {
+      "id": "soberanistas",
+      "nome": "Soberanistas",
+      "sigla": "SO",
+      "voto_tipico": "R R R R R R R",
+      "diante_da_ordem": "Oposição de dentro do Ocidente.",
+      "descricao": "Populistas e aceleracionistas: liberam economia, IA, fala e fósseis; fecham fronteiras."
+    },
+    {
+      "id": "eixo_revisionista",
+      "nome": "Eixo Revisionista",
+      "sigla": "ER",
+      "voto_tipico": "R Y Y Y B R R",
+      "diante_da_ordem": "Oposição de fora do Ocidente; vota azul só para censurar.",
+      "descricao": "Potências que contestam a ordem pós-1945 e mantêm controle estatal em casa."
+    },
+    {
+      "id": "centrao",
+      "nome": "Centrão",
+      "sigla": "CE",
+      "voto_tipico": "W Y R R W Y W",
+      "diante_da_ordem": "Abstém-se e só aparece quando o voto mexe com o negócio.",
+      "descricao": "Finança e indústria tradicionais: poucas posições públicas, voto pelo interesse comercial."
+    },
+    {
+      "id": "independentes",
+      "nome": "Independentes",
+      "sigla": "IN",
+      "voto_tipico": "",
+      "diante_da_ordem": "Votos pêndulo.",
+      "descricao": "Não fecham com nenhum partido: acompanham bancadas diferentes conforme a pauta."
+    }
+  ],
+  "times": [
+    {
+      "id": "manutencao",
+      "nome": "Manutenção da ordem",
+      "descricao": "Quer preservar as instituições estabelecidas, a ordem internacional pós-1945 e o multilateralismo."
+    },
+    {
+      "id": "mudanca",
+      "nome": "Mudança da ordem",
+      "descricao": "Quer mudar a ordem: populistas, potências revisionistas e aceleradores da tecnologia."
+    }
+  ],
+  "tipos": [
+    {
+      "id": "regime",
+      "nome": "Regimes autoritários"
+    },
+    {
+      "id": "governo",
+      "nome": "Governos e políticos"
+    },
+    {
+      "id": "instituicao",
+      "nome": "Instituições e mídia"
+    },
+    {
+      "id": "empresa",
+      "nome": "Empresas e bilionários"
+    }
+  ],
+  "dominios": [
+    {
+      "id": "energia",
+      "nome": "Energia",
+      "descricao": "Petróleo, gás, combustíveis e eletricidade: preço e risco de falta. Para quem está no Brasil: gasolina, diesel, gás de cozinha e conta de luz.",
+      "canal": "Petróleo mais caro lá fora encarece o diesel e a gasolina importados. O repasse à bomba depende da Petrobras e dos importadores. Diesel caro encarece frete e comida."
+    },
+    {
+      "id": "alimentos",
+      "nome": "Alimentos",
+      "descricao": "Grãos, fertilizantes e comida na prateleira: preço e risco de falta. Para quem está no Brasil: preço no mercado e custo da lavoura.",
+      "canal": "Trigo e fertilizante o Brasil compra de fora: alta ou falta lá chega ao pão e à safra seguinte. Soja e milho o Brasil vende: alta lá fora encarece ração, carne e óleo aqui."
+    },
+    {
+      "id": "cambio",
+      "nome": "Câmbio",
+      "descricao": "Dólar em reais, juros e saída de capital: o poder de compra de quem ganha em real e o preço de tudo que é importado.",
+      "canal": "Dólar mais caro encarece o que é importado: combustível, trigo, fertilizante, remédio e eletrônico."
+    },
+    {
+      "id": "suprimentos",
+      "nome": "Cadeias de suprimento",
+      "descricao": "Rotas marítimas, portos e insumos importados: chips, remédios, peças, fertilizantes e terras raras.",
+      "canal": "Rota desviada ou porto parado atrasa peça, chip, remédio e fertilizante, e encarece o frete."
+    },
+    {
+      "id": "conflito",
+      "nome": "Risco de conflito",
+      "descricao": "Guerra entre Estados, escalada militar e risco nuclear. Mede a chance de um choque que atinja os outros quatro domínios.",
+      "canal": "Guerra longe chega ao Brasil pelos outros quatro domínios: petróleo, grãos, dólar e rotas."
+    }
+  ],
+  "niveis_alerta": [
+    {
+      "nivel": 1,
+      "rotulo": "ROTINA",
+      "significado": "Nenhum gatilho cumprido. O mundo segue com os riscos de sempre: guerra antiga, sanção antiga e tarifa antiga, sem mudança, são nível 1.",
+      "prova_minima": "Não exige gatilho. É o nível de quando nada na tabela aconteceu.",
+      "criterios": {
+        "energia": {
+          "codigo": "energia.1",
+          "precos": [],
+          "eventos": [
+            "Brent com alta menor que 5% em 7 dias.",
+            "Rotas e grandes produtores de petróleo e gás operando sem ameaça nova."
+          ]
+        },
+        "alimentos": {
+          "codigo": "alimentos.1",
+          "precos": [],
+          "eventos": [
+            "Trigo, milho e soja com alta menor que 5% em 7 dias.",
+            "Grandes exportadores vendendo sem restrição nova."
+          ]
+        },
+        "cambio": {
+          "codigo": "cambio.1",
+          "precos": [],
+          "eventos": [
+            "Dólar com alta menor que 1,5% no dia e menor que 3% em 7 dias.",
+            "Nenhuma medida nova contra o Brasil."
+          ]
+        },
+        "suprimentos": {
+          "codigo": "suprimentos.1",
+          "precos": [],
+          "eventos": [
+            "Rotas marítimas e grandes portos operando como vinham operando.",
+            "Nenhum controle de exportação novo sobre insumo crítico."
+          ]
+        },
+        "conflito": {
+          "codigo": "conflito.1",
+          "precos": [],
+          "eventos": [
+            "Guerras em curso sem frente nova.",
+            "Nenhum ultimato nem mobilização nova entre Estados."
+          ]
+        }
+      }
+    },
+    {
+      "nivel": 2,
+      "rotulo": "ATENÇÃO",
+      "significado": "Há ameaça, anúncio ou movimento de preço fora do comum. Nada mudou ainda no abastecimento.",
+      "prova_minima": "Indicador do dia, ou item da edição (principal ou radar) com a fonte mínima e confiança média ou alta.",
+      "criterios": {
+        "energia": {
+          "codigo": "energia.2",
+          "precos": [
+            {
+              "indicador": "brent",
+              "janela": "7d",
+              "alta_minima_pct": 5,
+              "texto": "Petróleo Brent sobe 5% ou mais em 7 dias."
+            }
+          ],
+          "eventos": [
+            "Ameaça oficial a rota de petróleo ou gás, ou a grande produtor.",
+            "Sanção ou embargo anunciado contra grande exportador de petróleo ou gás.",
+            "Corte de produção anunciado pela OPEP+ (grupo dos grandes exportadores de petróleo).",
+            "Autoridade brasileira admite risco de falta de combustível ou de eletricidade, ou anuncia medida preventiva."
+          ]
+        },
+        "alimentos": {
+          "codigo": "alimentos.2",
+          "precos": [
+            {
+              "indicador": "trigo",
+              "janela": "7d",
+              "alta_minima_pct": 5,
+              "texto": "Trigo sobe 5% ou mais em 7 dias."
+            },
+            {
+              "indicador": "milho",
+              "janela": "7d",
+              "alta_minima_pct": 5,
+              "texto": "Milho sobe 5% ou mais em 7 dias."
+            },
+            {
+              "indicador": "soja",
+              "janela": "7d",
+              "alta_minima_pct": 5,
+              "texto": "Soja sobe 5% ou mais em 7 dias."
+            }
+          ],
+          "eventos": [
+            "Grande exportador anuncia restrição à exportação de grão ou de fertilizante.",
+            "Quebra de safra confirmada por órgão oficial em grande produtor.",
+            "Sanção anunciada sobre fertilizante ou sobre grande fornecedor de fertilizante."
+          ]
+        },
+        "cambio": {
+          "codigo": "cambio.2",
+          "precos": [
+            {
+              "indicador": "usd_brl",
+              "janela": "1d",
+              "alta_minima_pct": 1.5,
+              "texto": "Dólar em reais sobe 1,5% ou mais no dia."
+            },
+            {
+              "indicador": "usd_brl",
+              "janela": "7d",
+              "alta_minima_pct": 3,
+              "texto": "Dólar em reais sobe 3% ou mais em 7 dias."
+            }
+          ],
+          "eventos": [
+            "Decisão de juros no Brasil ou nos EUA diferente do que o mercado esperava, segundo agência de notícias.",
+            "Tarifa ou sanção anunciada contra o Brasil."
+          ]
+        },
+        "suprimentos": {
+          "codigo": "suprimentos.2",
+          "precos": [],
+          "eventos": [
+            "Greve, bloqueio ou ameaça oficial anunciados em grande porto ou rota marítima.",
+            "Tarifa ou controle de exportação anunciado por grande economia sobre insumo crítico (chips, terras raras, remédios, fertilizantes)."
+          ]
+        },
+        "conflito": {
+          "codigo": "conflito.2",
+          "precos": [],
+          "eventos": [
+            "Mobilização ou deslocamento de tropa para fronteira ou zona de disputa.",
+            "Ultimato com prazo.",
+            "Ruptura de relações diplomáticas ou de negociação de paz.",
+            "Teste de míssil balístico intercontinental.",
+            "Ameaça de uso de arma nuclear feita por chefe de Estado ou de governo.",
+            "Ataque militar direto entre Estados que não trocavam fogo, sem potência nuclear, país do G20 (grupo das 20 maiores economias) nem player da régua envolvido."
+          ]
+        }
+      }
+    },
+    {
+      "nivel": 3,
+      "rotulo": "TENSÃO",
+      "significado": "Houve fato consumado: ataque, medida que entrou em vigor ou alta forte de preço. Se e como chega ao Brasil está na leitura de cada domínio.",
+      "prova_minima": "Indicador do dia, com a alta confirmada por segunda fonte, ou principal com confiança média ou alta. Ameaça e declaração não bastam: exige fato consumado.",
+      "criterios": {
+        "energia": {
+          "codigo": "energia.3",
+          "precos": [
+            {
+              "indicador": "brent",
+              "janela": "7d",
+              "alta_minima_pct": 10,
+              "texto": "Petróleo Brent sobe 10% ou mais em 7 dias."
+            }
+          ],
+          "eventos": [
+            "Ataque atingiu navio-tanque, oleoduto, refinaria ou terminal de exportação e parou a operação.",
+            "Embargo ou sanção nova entrou em vigor contra grande exportador de petróleo ou gás.",
+            "Oferta de um grande produtor interrompida em parte.",
+            "Medida de emergência em combustível ou eletricidade entrou em vigor no Brasil, sem racionamento."
+          ]
+        },
+        "alimentos": {
+          "codigo": "alimentos.3",
+          "precos": [
+            {
+              "indicador": "trigo",
+              "janela": "7d",
+              "alta_minima_pct": 10,
+              "texto": "Trigo sobe 10% ou mais em 7 dias."
+            },
+            {
+              "indicador": "milho",
+              "janela": "7d",
+              "alta_minima_pct": 10,
+              "texto": "Milho sobe 10% ou mais em 7 dias."
+            },
+            {
+              "indicador": "soja",
+              "janela": "7d",
+              "alta_minima_pct": 10,
+              "texto": "Soja sobe 10% ou mais em 7 dias."
+            }
+          ],
+          "eventos": [
+            "Proibição ou cota nova de exportação de grão entrou em vigor em grande exportador.",
+            "Rota de grãos ou de fertilizante interrompida.",
+            "Entrega de fertilizante ao Brasil travada por sanção, guerra ou bloqueio."
+          ]
+        },
+        "cambio": {
+          "codigo": "cambio.3",
+          "precos": [
+            {
+              "indicador": "usd_brl",
+              "janela": "1d",
+              "alta_minima_pct": 3,
+              "texto": "Dólar em reais sobe 3% ou mais no dia."
+            },
+            {
+              "indicador": "usd_brl",
+              "janela": "7d",
+              "alta_minima_pct": 6,
+              "texto": "Dólar em reais sobe 6% ou mais em 7 dias."
+            }
+          ],
+          "eventos": [
+            "Intervenção extraordinária do Banco Central do Brasil no câmbio.",
+            "Tarifa ou sanção nova contra o Brasil entrou em vigor.",
+            "Controle de capitais (limite para tirar dinheiro do país) novo decretado em país do G20 (grupo das 20 maiores economias)."
+          ]
+        },
+        "suprimentos": {
+          "codigo": "suprimentos.3",
+          "precos": [],
+          "eventos": [
+            "Rota marítima passou a ser desviada, ou grande porto parou.",
+            "Estreito ou canal passou a ter tráfego restrito.",
+            "Tarifa ou controle de exportação novo entrou em vigor entre grandes economias sobre insumo crítico."
+          ]
+        },
+        "conflito": {
+          "codigo": "conflito.3",
+          "precos": [],
+          "eventos": [
+            "Ataque militar direto entre Estados que não trocavam fogo, quando um deles é potência nuclear, país do G20 (grupo das 20 maiores economias) ou player da régua.",
+            "Frente nova em guerra em curso.",
+            "Teste de arma nuclear.",
+            "Ataque ou sabotagem que parou infraestrutura crítica (energia, porto, cabo, banco) de país que não está em guerra aberta, atribuído por governo a outro Estado."
+          ]
+        }
+      }
+    },
+    {
+      "nivel": 4,
+      "rotulo": "CRISE",
+      "significado": "Ruptura em curso numa rota, num mercado ou entre potências. Se e como chega ao Brasil está na leitura de cada domínio.",
+      "prova_minima": "Indicador do dia, com a alta confirmada por segunda fonte, ou principal com confiança alta. O critério de evento é um estado: vale em cada dia em que uma fonte do dia confirma que ele continua.",
+      "criterios": {
+        "energia": {
+          "codigo": "energia.4",
+          "precos": [
+            {
+              "indicador": "brent",
+              "janela": "7d",
+              "alta_minima_pct": 20,
+              "texto": "Petróleo Brent sobe 20% ou mais em 7 dias."
+            }
+          ],
+          "eventos": [
+            "Estreito ou rota de petróleo fechada à navegação (Ormuz, Bab el-Mandeb, Suez).",
+            "Racionamento oficial de combustível em país do G20 (grupo das 20 maiores economias).",
+            "Falta de combustível em um estado do Brasil, confirmada por autoridade."
+          ]
+        },
+        "alimentos": {
+          "codigo": "alimentos.4",
+          "precos": [
+            {
+              "indicador": "trigo",
+              "janela": "7d",
+              "alta_minima_pct": 20,
+              "texto": "Trigo sobe 20% ou mais em 7 dias."
+            },
+            {
+              "indicador": "milho",
+              "janela": "7d",
+              "alta_minima_pct": 20,
+              "texto": "Milho sobe 20% ou mais em 7 dias."
+            },
+            {
+              "indicador": "soja",
+              "janela": "7d",
+              "alta_minima_pct": 20,
+              "texto": "Soja sobe 20% ou mais em 7 dias."
+            }
+          ],
+          "eventos": [
+            "Proibição de exportação de grão em vigor em 2 ou mais grandes exportadores ao mesmo tempo, sendo ao menos uma nova.",
+            "Corredor de grãos fechado por guerra ou bloqueio.",
+            "Governo brasileiro decreta medida de emergência de abastecimento de alimentos."
+          ]
+        },
+        "cambio": {
+          "codigo": "cambio.4",
+          "precos": [
+            {
+              "indicador": "usd_brl",
+              "janela": "1d",
+              "alta_minima_pct": 5,
+              "texto": "Dólar em reais sobe 5% ou mais no dia."
+            },
+            {
+              "indicador": "usd_brl",
+              "janela": "7d",
+              "alta_minima_pct": 10,
+              "texto": "Dólar em reais sobe 10% ou mais em 7 dias."
+            }
+          ],
+          "eventos": [
+            "Reunião extraordinária do Copom (comitê de juros do Banco Central do Brasil).",
+            "Negociação da bolsa brasileira interrompida por queda forte."
+          ]
+        },
+        "suprimentos": {
+          "codigo": "suprimentos.4",
+          "precos": [],
+          "eventos": [
+            "2 ou mais rotas marítimas interrompidas ao mesmo tempo.",
+            "Bloqueio naval ou aéreo de Taiwan.",
+            "Fábricas paradas por falta de insumo em 2 países ou mais, ou num setor inteiro no Brasil, com confirmação de empresa ou de autoridade.",
+            "Transporte de carga parado no Brasil por 3 dias ou mais."
+          ]
+        },
+        "conflito": {
+          "codigo": "conflito.4",
+          "precos": [],
+          "eventos": [
+            "Choque militar direto entre potências nucleares.",
+            "Forças nucleares em alerta oficial.",
+            "Cláusula de defesa coletiva invocada (artigo 5 da OTAN, a aliança militar do Atlântico Norte).",
+            "Guerra entre Estados em território da América do Sul."
+          ]
+        }
+      }
+    },
+    {
+      "nivel": 5,
+      "rotulo": "EMERGÊNCIA",
+      "significado": "Efeito direto no Brasil, confirmado por autoridade, ou guerra entre potências nucleares.",
+      "prova_minima": "Principal com confiança alta e confirmação de autoridade em fonte primária (do Brasil, quando o critério é do Brasil). O critério é um estado: vale em cada dia em que uma fonte do dia confirma que ele continua.",
+      "criterios": {
+        "energia": {
+          "codigo": "energia.5",
+          "precos": [],
+          "eventos": [
+            "Racionamento oficial de combustível ou de eletricidade no Brasil.",
+            "Falta de combustível em vários estados do Brasil, confirmada por autoridade."
+          ]
+        },
+        "alimentos": {
+          "codigo": "alimentos.5",
+          "precos": [],
+          "eventos": [
+            "Falta de alimento básico em vários estados do Brasil, confirmada por autoridade.",
+            "Racionamento oficial de alimento no Brasil."
+          ]
+        },
+        "cambio": {
+          "codigo": "cambio.5",
+          "precos": [],
+          "eventos": [
+            "Controle de capitais (limite para tirar dinheiro do país) no Brasil.",
+            "Limite de saque, bloqueio de depósitos ou feriado bancário de emergência no Brasil."
+          ]
+        },
+        "suprimentos": {
+          "codigo": "suprimentos.5",
+          "precos": [],
+          "eventos": [
+            "Falta generalizada de remédio, peça ou insumo essencial no Brasil, confirmada por autoridade."
+          ]
+        },
+        "conflito": {
+          "codigo": "conflito.5",
+          "precos": [],
+          "eventos": [
+            "Uso de arma nuclear.",
+            "Guerra aberta entre potências nucleares.",
+            "Ataque militar ao território do Brasil."
+          ]
+        }
+      }
+    }
+  ],
+  "campos": [
+    {
+      "id": "ordem",
+      "nome": "Campo da ordem",
+      "partidos": [
+        "ordem_global",
+        "centro_atlantico"
+      ],
+      "descricao": "Veículos dos partidos que governam a ordem mundial."
+    },
+    {
+      "id": "contestacao",
+      "nome": "Campo da contestação",
+      "partidos": [
+        "soberanistas",
+        "eixo_revisionista"
+      ],
+      "descricao": "Veículos dos partidos que fazem oposição à ordem, de dentro e de fora do Ocidente."
+    }
+  ],
+  "forcas": [
+    {
+      "forca": 1,
+      "nome": "sinal",
+      "o_que_conta": "Declaração, promessa, ameaça ou ganho só de narrativa. Nada material mudou."
+    },
+    {
+      "forca": 2,
+      "nome": "ato reversível",
+      "o_que_conta": "Contrato assinado, sanção ou tarifa anunciada com data, lei aprovada numa casa, tropa deslocada, votação."
+    },
+    {
+      "forca": 3,
+      "nome": "difícil de desfazer",
+      "o_que_conta": "Lei em vigor, tratado ratificado, território tomado, eleição decidida, aliança rompida."
+    }
+  ],
+  "evidencias": [
+    {
+      "id": "preco",
+      "o_que_conta": "Preço, câmbio, juro, ação."
+    },
+    {
+      "id": "tropa",
+      "o_que_conta": "Tropa, arma, ataque, território."
+    },
+    {
+      "id": "contrato",
+      "o_que_conta": "Contrato, acordo, tratado, compra, investimento."
+    },
+    {
+      "id": "lei",
+      "o_que_conta": "Lei, decreto, regra, decisão de tribunal."
+    },
+    {
+      "id": "voto",
+      "o_que_conta": "Eleição, votação em parlamento ou organismo."
+    },
+    {
+      "id": "sancao",
+      "o_que_conta": "Sanção, tarifa, embargo, controle de exportação."
+    },
+    {
+      "id": "narrativa",
+      "o_que_conta": "Só fala: nada material mudou. Vale só força 1 e não entra no saldo."
+    }
+  ],
+  "times_avanco": {
+    "manutencao": "Avança quando uma instituição ou regra estabelecida decide e é obedecida (ONU, OMC, OTAN, tribunal, tratado, lei em vigor).",
+    "mudanca": "Avança quando a decisão é tomada por fora delas ou contra elas, ou quando uma delas perde poder (saída, veto ignorado, regra revogada).",
+    "nao_move": "Preço que sobe e contrato comum não movem time: nesses casos, não se cita time."
+  },
+  "conflito": {
+    "regra": "O INFOCENARIUM é escrito por um modelo de IA da Anthropic. Item de IA, ou item que envolva um destes players ou cite um destes termos, sai com aviso de conflito de interesse e confiança no máximo média. Lista inicial de 23/11/2026: o dono confere e acrescenta investidores e fornecedores da Anthropic.",
+    "players": [
+      "anthropic",
+      "altman",
+      "google",
+      "meta",
+      "musk"
+    ],
+    "termos": [
+      "Anthropic",
+      "Claude",
+      "OpenAI",
+      "ChatGPT",
+      "Google",
+      "Gemini",
+      "DeepMind",
+      "xAI",
+      "Grok"
+    ]
+  },
+  "sites_oficiais": {
+    "regra": "Sufixos de endereço de sites oficiais. Fonte fora do mapa só pode ser marcada como primária se o nome do site é igual a um sufixo ou termina em ponto mais o sufixo. Lista inicial de 23/11/2026, a conferir e ampliar pelo dono. O sufixo oficial.exemplo.invalid não existe na internet: serve só à edição de exemplo e aos testes.",
+    "brasil": [
+      "gov.br",
+      "leg.br",
+      "jus.br",
+      "mil.br"
+    ],
+    "outros": [
+      "gov",
+      "mil",
+      "europa.eu",
+      "un.org",
+      "who.int",
+      "imf.org",
+      "nato.int",
+      "gov.uk",
+      "gouv.fr",
+      "gov.cn",
+      "gov.ru",
+      "kremlin.ru",
+      "go.jp",
+      "gov.in",
+      "oficial.exemplo.invalid"
+    ]
+  }
+}

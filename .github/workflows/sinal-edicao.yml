@@ -1,0 +1,29 @@
+# INFOCENARIUM · campainha: avisa que chegou uma branch de edição. Não faz mais nada.
+#
+# Destino no repositório: .github/workflows/sinal-edicao.yml
+# Como funciona e por quê: veja o README.md do repositório.
+#
+# Num push de branch, o GitHub usa o arquivo de workflow DA BRANCH empurrada.
+# Por isso este arquivo não tem permissão nenhuma, não baixa o repositório e não
+# roda nada da branch. Quem trabalha é o publica-edicao.yml, que o GitHub dispara
+# (gatilho workflow_run) sempre com o arquivo que está na main.
+#
+# NUNCA dê permissão a este arquivo, nem acrescente passos que leiam a branch:
+# toda versão antiga dele continua valendo para branches criadas de commits antigos.
+
+name: sinal-edicao
+
+on:
+  push:
+    branches:
+      - 'claude/edicao-*'   # "*" não casa com "/"
+
+permissions: {}
+
+jobs:
+  sinal:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    steps:
+      - name: Avisa
+        run: echo "Branch de edição recebida. O workflow publica-edicao, da main, confere e junta."

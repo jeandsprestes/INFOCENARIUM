@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>Feed de exemplo</title>
+<id>https://feed.exemplo.invalid/</id>
+<updated>2026-11-20T21:00:00Z</updated>
+<entry>
+<title>Aço de Quelmar perde mercado com tarifa de 25% de Tavória</title>
+<link rel="alternate" href="https://bolsa-ce.exemplo.invalid/aco-quelmar-tarifa"/>
+<id>tag:feed.exemplo.invalid,2026:1</id>
+<published>2026-11-20T11:00:00Z</published>
+<updated>2026-11-20T11:00:00Z</updated>
+<summary>Siderúrgicas de Quelmar caíram 4% na bolsa.</summary>
+</entry>
+</feed>

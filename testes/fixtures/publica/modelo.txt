@@ -1,0 +1,249 @@
+// MODELO DO RASCUNHO · copie a forma para /tmp/info/rascunho.json
+// Linha que começa com // é comentário: não copie. Número entre aspas é o tamanho máximo do texto.
+// Campo marcado (opcional) ou (só se …) sai quando não se aplica. Lista sem item fica [].
+// O que não está aqui é calculado pelo publica.py: lado, saldo, indicadores, gatilho de preço, níveis e tendências.
+{
+  // o `dia` do contexto
+  "data": "AAAA-MM-DD",
+  // completa: 3 principais (1 ou mais de geopolítica) e 6 a 12 no radar (3 ou mais de IA).
+  // reduzida: 1 a 3 principais e 3 a 12 no radar
+  "estado": "completa",
+  // o dia em uma frase
+  "resumo": "240",
+  "alerta": {
+    // o que explica o nível geral: o gatilho mais alto de hoje, ou a origem do nível mantido. Não descreva a regra de descida
+    "motivo": "400",
+    // os 5 domínios, nesta ordem: energia, alimentos, cambio, suprimentos, conflito
+    "dominios": [
+      {
+        "id": "energia",
+        // 0 a 4 gatilhos seus. Os de preço entram sozinhos
+        "gatilhos": [
+          {
+            // o código da célula da régua: dominio.nivel, com nível de 2 a 5
+            "criterio": "energia.3",
+            // o id do item de hoje que prova
+            "ref": "p1",
+            // o que houve, com número ou data. Estado que continua: "Segue em DD/MM: …"
+            "texto": "200",
+            // (opcional) true: fato grave fora da tabela, que equivale ao nível. Só nível 2 ou 3; 1 por edição; explique a equivalência no texto
+            "excecao": true,
+            // (opcional) true: acabou o estado que segurava o nível 4 ou 5. Pede ref de principal com confiança alta
+            "alivio": true
+          }
+        ],
+        // primeiro o que as notícias de hoje mudam; depois, o caminho até o Brasil (o `canal` do domínio, na régua).
+        // Nível mantido sem gatilho: comece pela `origem`, com a data. Sem previsão de preço e sem ordem ao leitor
+        "leitura": "300",
+        // o próximo sinal que mudaria o nível
+        "vigiar": "200"
+      }
+    ]
+  },
+  "principais": [
+    {
+      // p1, p2, p3
+      "id": "p1",
+      // geopolitica ou ia
+      "categoria": "geopolitica",
+      // descritivo, sem adjetivo
+      "titulo": "120",
+      // quem, o quê, onde, quando, quanto: só o que os dois campos afirmam igual ou um documento primário mostra
+      "fato": "500",
+      // (opcional) 0 a 3; cada um começa com "Segundo "
+      "nao_confirmado": ["240"],
+      // 2 a 4, de 2 partidos ou mais
+      "ataques": [
+        {
+          // id do mapa; nunca "outro". Em principal, veículo de lado incerto (?) não atira
+          "veiculo": "id",
+          // quem sai mal no título e no primeiro parágrafo: id de player, id de partido, "outro" ou "nenhum" (o texto só relata ou só promove)
+          "alvo": "id",
+          // (só se alvo é "outro") o nome do alvo
+          "alvo_nome": "60",
+          // o que o veículo destacou e com que palavras. Só viu título e resumo: comece com "No título: ".
+          // Alvo "nenhum": diga quem sai bem ("Promove a China: …").
+          // Veículo que serve a player que é parte da notícia: comece avisando ("Agência do Estado russo, que é parte: …")
+          // Valendo os dois, junte: "No título: agência do Estado russo, que é parte: …"
+          "enquadramento": "240",
+          // (opcional) o que está no fato e a página não traz. Só de página aberta nesta execução
+          "omite": "200",
+          // a página do veículo. A mesma URL entra em fontes, com o mesmo veiculo
+          "url": "https://…"
+        }
+      ],
+      // o dossiê: de 800 a 1.500 caracteres, em texto corrido, numa linha só
+      "realmente": "1500",
+      // 1 a 4; só mudança medida. Se nada mudou, um item só: "Nada mudou na prática até DD/MM: só declarações."
+      "na_pratica": ["200"],
+      // (só se dominios não é vazia) o que tende a encarecer, baratear, faltar ou atrasar no Brasil, e por qual caminho.
+      // Prazo só com fonte do dia; sem fonte, não dê prazo.
+      "no_brasil": "240",
+      // (opcional) o tema da régua em que um ato da notícia mexe.
+      // tema: pandemia_depois, ia_depois, moderacao, clima ou imigracao. sentido: azul ou vermelho. porque: o ato
+      "eixo": {"tema": "clima", "sentido": "vermelho", "porque": "160"},
+      // 0 a 4; uma linha por partido. Item de confiança baixa não tem placar
+      "placar": [
+        {
+          "partido": "id",
+          // ganha ou perde
+          "efeito": "ganha",
+          // 1, 2 ou 3 (a escala está em regua.json, chave forcas). No radar, 3 só com fonte forte
+          "forca": 2,
+          // preco, tropa, contrato, lei, voto, sancao ou narrativa (narrativa só com força 1)
+          "evidencia": "sancao",
+          // quem ganhou ou perdeu, pelo nome, e o quê; ou "Na pauta de [tema]: …"; em narrativa, qual veículo usou o fato
+          "porque": "200"
+        }
+      ],
+      // (só se placar é []) por que ninguém ganha nem perde ainda, e o que teria de acontecer
+      "sem_placar": "160",
+      // 0 a 2 na edição inteira
+      "vetores": [
+        {
+          // id de players.json (o player novo do dia não vale)
+          "player": "id",
+          // id de partido; nunca o do player, nunca independentes
+          "para": "id",
+          // 1, 2 ou 3, na mesma escala do placar
+          "forca": 1,
+          // pandemia_depois, ia_depois, moderacao, clima, imigracao ou ordem
+          "tema": "clima",
+          // o ato do player
+          "porque": "240",
+          // a prova: URL de fonte forte que está em fontes; em notícia com conflito de interesse, de fonte primária.
+          // O item precisa de fontes de 2 partidos
+          "url": "https://…"
+        }
+      ],
+      // 0 a 5 domínios que a notícia toca
+      "dominios": ["energia"],
+      // 1 a 3 perguntas de sim ou não, cada uma com "?" e data limite DD/MM. A data limite é a última DD/MM
+      // do texto: ponha-a por último, em até 30 dias.
+      // A primeira é a que derruba o dossiê: é ela que o INFOCENARIUM responde quando o prazo chega
+      "vigiar": ["200"],
+      // alta ou media
+      "confianca": "alta",
+      // (opcional) true se você vê conflito de interesse com a Anthropic que a máquina não marca.
+      // Notícia de IA e notícia que cita a lista `conflito` da régua, o publica.py marca sozinho
+      "conflito_de_interesse": true,
+      // (opcional) o item anterior que este continua: AAAA-MM-DD/p1 ou AAAA-MM-DD/r4
+      "continuacao_de": "AAAA-MM-DD/p1",
+      // 3 a 8
+      "fontes": [
+        {
+          // id do mapa, ou "outro". É o dono do site da url
+          "veiculo": "id",
+          // (só se veiculo é "outro") quem publicou
+          "nome": "80",
+          // o título original, como foi publicado
+          "titulo": "200",
+          "url": "https://…",
+          // a data que aparece na página ou na mesa: de 2 dias antes da edição a 1 depois
+          "publicado_em": "AAAA-MM-DD",
+          // (opcional) true: documento primário, de veículo de tipo oficial ou dados, ou de site oficial
+          "primaria": true
+        }
+      ]
+    }
+  ],
+  "radar": [
+    {
+      // r1, r2, … em ordem
+      "id": "r1",
+      "categoria": "ia",
+      "titulo": "120",
+      "fato": "300",
+      // um só, com os campos de um item de ataques
+      "ataque": {"veiculo": "id", "alvo": "id", "alvo_nome": "60", "enquadramento": "240", "omite": "200", "url": "https://…"},
+      // (opcional) como na principal
+      "eixo": {"tema": "ia_depois", "sentido": "azul", "porque": "160"},
+      // 0 a 2 linhas, com os campos do placar da principal
+      "placar": [],
+      // (só se placar é [])
+      "sem_placar": "160",
+      // 0 ou 1
+      "vetores": [],
+      "dominios": [],
+      // alta, media ou baixa (baixa: o núcleo vem de fonte anônima)
+      "confianca": "media",
+      // (opcional)
+      "conflito_de_interesse": true,
+      // (opcional)
+      "continuacao_de": "AAAA-MM-DD/r1",
+      // 1 a 4, com os campos das fontes da principal
+      "fontes": [{"veiculo": "id", "nome": "80", "titulo": "200", "url": "https://…", "publicado_em": "AAAA-MM-DD", "primaria": true}]
+    }
+  ],
+  // uma frase para cada partido que aparece em algum placar
+  "placar_do_dia": [{"partido": "id", "frase": "160"}],
+  // 0 ou 1
+  "novos_players": [
+    {
+      "id": "slug",
+      "nome": "60",
+      // governo, instituicao ou empresa (nunca regime)
+      "tipo": "governo",
+      // o partido de voto_tipico com mais posições iguais às do dna; empate dá independentes
+      "partido": "id",
+      // manutencao ou mudanca
+      "time": "mudanca",
+      // sempre true: quem confirma o time é o dono
+      "time_discutivel": true,
+      // B, R, Y ou W. Só posição sustentada por página aberta nesta execução; 4 ou mais diferentes de W
+      "dna": {"pandemia_inicio": "W", "pandemia_depois": "Y", "ia_inicio": "W", "ia_depois": "B", "moderacao": "R", "clima": "W", "imigracao": "R"},
+      // uma URL para cada posição diferente de W, e só para elas
+      "dna_fontes": {"pandemia_depois": "https://…", "ia_depois": "https://…", "moderacao": "https://…", "imigracao": "https://…"},
+      // temas de posição incerta; pode ser []
+      "duvidas": ["moderacao"],
+      // quem é, em uma linha
+      "nota": "200",
+      // por que entrou hoje e por que esse partido
+      "justificativa": "400",
+      "url": "https://…"
+    }
+  ],
+  // 0 a 5: fato de edição anterior que uma fonte de hoje desmente
+  "errata": [
+    {
+      "edicao": "AAAA-MM-DD",
+      // (opcional) o id do item corrigido
+      "item": "p2",
+      "erro": "300",
+      "correcao": "300",
+      // (opcional; obrigatória com anula_vetor)
+      "url": "https://…",
+      // (opcional) o id, em vetores_recentes, do vetor que o fato desmentido sustentava
+      "anula_vetor": "AAAA-MM-DD_p2_id"
+    }
+  ],
+  // 0 a 3: uma para cada pergunta de vigiar_vencendo, no contexto
+  "respostas": [
+    {
+      "edicao": "AAAA-MM-DD",
+      "item": "p1",
+      // cópia da pergunta
+      "pergunta": "200",
+      // sim, nao ou sem_dado
+      "resposta": "sim",
+      // o que houve, com data. Se desmente o dossiê daquele dia: "O INFOCENARIUM leu errado em DD/MM: …"
+      "texto": "240",
+      // (obrigatória com sim e com nao)
+      "url": "https://…"
+    }
+  ],
+  "bastidores": {
+    // feeds, ou busca (a coleta falhou)
+    "modo": "feeds",
+    "paginas_lidas": 0,
+    "buscas": 0,
+    "minutos": 0,
+    "injecoes_ignoradas": 0,
+    // 0 a 5 atores centrais sem ficha na régua; use o mesmo id do contexto
+    "candidatos": [{"id": "slug", "nome": "60", "motivo": "160"}],
+    // 0 a 5 veículos fora do mapa que fizeram falta
+    "veiculos_sugeridos": ["Nome (dominio.com)"],
+    // o que não deu para conferir hoje, e que campo ficou em silêncio; nunca vazio
+    "limites": "500"
+  }
+}

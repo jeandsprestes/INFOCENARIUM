@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<title>Feed de exemplo</title>
+<link>https://feed.exemplo.invalid/</link>
+<description>Feed fictício, para teste.</description>
+<item>
+<title>Fechamento de Brumal por 17 dias pela Zarvônia encarece frete</title>
+<link>https://mercado-ce.exemplo.invalid/brumal-frete</link>
+<description>O frete de contêiner subiu 8% no dia.</description>
+<pubDate>Fri, 20 Nov 2026 19:00:00 +0000</pubDate>
+</item>
+<item>
+<title>Trigo sobe após Quelmar suspender exportação por 30 dias</title>
+<link>https://mercado-ce.exemplo.invalid/trigo-quelmar</link>
+<description>O contrato futuro fechou em alta de 3%.</description>
+<pubDate>Fri, 20 Nov 2026 14:00:00 +0000</pubDate>
+</item>
+</channel>
+</rss>

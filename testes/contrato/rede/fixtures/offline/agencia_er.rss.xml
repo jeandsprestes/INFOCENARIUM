@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+<title>Feed de exemplo</title>
+<link>https://feed.exemplo.invalid/</link>
+<description>Feed fictício, para teste.</description>
+<item>
+<title>Zarvônia garante segurança em Brumal durante 17 dias de manobras</title>
+<link>https://agencia-er.exemplo.invalid/zarvonia-manobras</link>
+<description>O ministério da Defesa diz que a navegação civil será avisada.</description>
+<pubDate>Fri, 20 Nov 2026 15:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Quelmar suspende exportação de trigo por 30 dias para proteger mercado interno</title>
+<link>https://agencia-er.exemplo.invalid/quelmar-trigo-mercado</link>
+<description>O governo cita a quebra de safra.</description>
+<pubDate>Fri, 20 Nov 2026 12:00:00 GMT</pubDate>
+</item>
+<item>
+<title>Zarvônia e Quelmar assinam acordo de 40 anos para gás</title>
+<link>https://agencia-er.exemplo.invalid/zarvonia-quelmar-gas</link>
+<description>O contrato prevê entrega a partir de 2028.</description>
+<pubDate>Thu, 19 Nov 2026 20:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

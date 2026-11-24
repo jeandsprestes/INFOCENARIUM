@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<title>Feed de exemplo</title>
+<id>https://feed.exemplo.invalid/</id>
+<updated>2026-11-20T21:00:00Z</updated>
+<entry>
+<title>Tarifa de 25% de Tavória sobre o aço de Quelmar protege empregos, diz governo</title>
+<link rel="alternate" href="https://voz-so.exemplo.invalid/tavoria-tarifa-empregos"/>
+<id>tag:feed.exemplo.invalid,2026:1</id>
+<published>2026-11-20T14:00:00Z</published>
+<updated>2026-11-20T14:00:00Z</updated>
+<summary>Sindicatos de Tavória apoiam a medida.</summary>
+</entry>
+<entry>
+<title>Nordélia corta 12% do imposto de combustível</title>
+<link rel="alternate" href="https://voz-so.exemplo.invalid/nordelia-corta-imposto"/>
+<id>tag:feed.exemplo.invalid,2026:2</id>
+<published>2026-11-20T04:00:00Z</published>
+<updated>2026-11-20T04:00:00Z</updated>
+<summary>O preço na bomba deve cair em uma semana, diz o governo.</summary>
+</entry>
+</feed>
