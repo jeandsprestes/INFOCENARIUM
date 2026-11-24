@@ -1,0 +1,1012 @@
+{
+  "versao": 1,
+  "data": "2026-11-24",
+  "gerada_em": "2026-11-24T22:53:06Z",
+  "estado": "completa",
+  "resumo": "Em 24/11: a Marinha do Irã anuncia petroleiros sem movimento em Ormuz e avisa que o estreito não reabre; aviões russos chegam à beira do espaço aéreo da Coreia do Sul; hutitas ferem 11 em Riade; a Anthropic cai abaixo do preço de estreia.",
+  "alerta": {
+    "nivel": 2,
+    "tendencia": "estavel",
+    "motivo": "Nível 2 (atenção) pela energia e pelo conflito: em 24/11, a Marinha do Irã anunciou dois petroleiros sem movimento ao bater em minas em Ormuz e avisou que o estreito não reabre sem as exigências do Irã; aviões de guerra russos chegaram à beira do espaço aéreo da Coreia do Sul, que deu alerta de ataque aéreo. Preços em queda: nenhum gatilho de preço.",
+    "dominios": [
+      {
+        "id": "energia",
+        "nivel": 2,
+        "tendencia": "estavel",
+        "desde": "2026-11-23",
+        "sem_preco": [],
+        "gatilhos": [
+          {
+            "criterio": "energia.2",
+            "ref": "p1",
+            "texto": "Em 24/11, a Marinha do Irã, grande exportador de petróleo, anunciou dois petroleiros sem movimento ao bater em minas em Ormuz e avisou que o estreito não reabre sem as exigências do Irã."
+          }
+        ],
+        "leitura": "Em 24/11, o Irã anunciou 2 petroleiros sem movimento em Ormuz; o Brent caiu 3,5% em 23/11, para 89,37 dólares. Petróleo mais caro lá fora encarece o diesel e a gasolina importados. O repasse depende da Petrobras e dos importadores. Diesel caro encarece frete e comida.",
+        "vigiar": "Petroleiro identificado por nome e bandeira por fonte fora do Irã, rota desviada por grande armador, ou Brent com alta de 10% ou mais em 7 dias."
+      },
+      {
+        "id": "alimentos",
+        "nivel": 1,
+        "tendencia": "estavel",
+        "desde": "2026-11-23",
+        "sem_preco": [],
+        "gatilhos": [],
+        "leitura": "Em 24/11, trigo, milho e soja sem alta de 5% em 7 dias e nenhuma restrição nova de exportador na mesa. Trigo e fertilizante o Brasil compra de fora: alta ou falta lá chega ao pão e à safra seguinte. Soja e milho o Brasil vende: alta lá fora encarece ração, carne e óleo aqui.",
+        "vigiar": "Trigo, milho ou soja com alta de 5% ou mais em 7 dias, ou restrição nova de exportador de grão ou fertilizante."
+      },
+      {
+        "id": "cambio",
+        "nivel": 1,
+        "tendencia": "estavel",
+        "desde": "2026-11-23",
+        "sem_preco": [],
+        "gatilhos": [],
+        "leitura": "Em 24/11, o dólar caiu 1,9%, para 5,8573 reais, e está 1,2% acima em 7 dias; nenhuma medida nova contra o Brasil nas páginas lidas. Dólar mais caro encarece o que é importado: combustível, trigo, fertilizante, remédio e eletrônico.",
+        "vigiar": "Dólar com alta de 1,5% ou mais no dia, ou tarifa ou sanção anunciada contra o Brasil."
+      },
+      {
+        "id": "suprimentos",
+        "nivel": 1,
+        "tendencia": "estavel",
+        "desde": "2026-11-23",
+        "sem_preco": [],
+        "gatilhos": [],
+        "leitura": "Em Ormuz, o Irã mantém a regra de passagem e navios foram atingidos em 24/11, segundo o Irã; os Estados Unidos mantêm bloqueio naval aos portos iranianos, diz a CNBC. Rota desviada ou porto parado atrasa peça, chip, remédio e fertilizante, e encarece o frete.",
+        "vigiar": "Estreito ou rota fechada à navegação, ou controle de exportação novo sobre insumo crítico por grande economia."
+      },
+      {
+        "id": "conflito",
+        "nivel": 2,
+        "tendencia": "subindo",
+        "desde": "2026-11-24",
+        "sem_preco": [],
+        "gatilhos": [
+          {
+            "criterio": "conflito.2",
+            "ref": "p2",
+            "texto": "Em 24/11, aviões de guerra russos entraram na zona de identificação de defesa aérea da Coreia do Sul e chegaram à beira do espaço aéreo da ilha de Ulleung; o país levantou caças e deu alerta aéreo."
+          }
+        ],
+        "leitura": "Em 24/11, aviões russos chegaram à beira do espaço aéreo da Coreia do Sul, sem invasão; hutitas feriram 11 em Riade. A Ucrânia confirmou o ataque a cargueiro russo no golfo da Finlândia, ato anterior a 23/11. Guerra longe chega ao Brasil pelos outros quatro domínios: petróleo, grãos, dólar e rotas.",
+        "vigiar": "Avião russo dentro do espaço aéreo territorial da Coreia do Sul, ou retaliação militar consumada de um dos lados."
+      }
+    ]
+  },
+  "indicadores": [
+    {
+      "id": "brent",
+      "nome": "Petróleo Brent",
+      "dominio": "energia",
+      "valor": 89.37,
+      "unidade": "US$ por barril",
+      "variacao_pct": -3.5,
+      "variacao_7d_pct": -3.3,
+      "data": "2026-11-23",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "CNBC",
+        "url": "https://ts-api.cnbc.com/harmony/app/charts/1M.json?symbol=@LCO.1"
+      }
+    },
+    {
+      "id": "wti",
+      "nome": "Petróleo WTI (EUA)",
+      "dominio": "energia",
+      "valor": 80.17,
+      "unidade": "US$ por barril",
+      "variacao_pct": -4.5,
+      "variacao_7d_pct": -6.5,
+      "data": "2026-11-23",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "CNBC",
+        "url": "https://ts-api.cnbc.com/harmony/app/charts/1M.json?symbol=@CL.1"
+      }
+    },
+    {
+      "id": "gas_natural",
+      "nome": "Gás natural nos EUA",
+      "dominio": "energia",
+      "valor": 3.18,
+      "unidade": "US$ por milhão de BTU",
+      "variacao_pct": -6.7,
+      "variacao_7d_pct": 2.0,
+      "data": "2026-11-23",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "CNBC",
+        "url": "https://ts-api.cnbc.com/harmony/app/charts/1M.json?symbol=@NG.1"
+      }
+    },
+    {
+      "id": "trigo",
+      "nome": "Trigo",
+      "dominio": "alimentos",
+      "valor": 218.8,
+      "unidade": "US$ por tonelada",
+      "variacao_pct": 0.6,
+      "variacao_7d_pct": -0.9,
+      "data": "2026-11-23",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "CNBC",
+        "url": "https://ts-api.cnbc.com/harmony/app/charts/1M.json?symbol=@W.1"
+      }
+    },
+    {
+      "id": "milho",
+      "nome": "Milho",
+      "dominio": "alimentos",
+      "valor": 177.1,
+      "unidade": "US$ por tonelada",
+      "variacao_pct": 0.2,
+      "variacao_7d_pct": 0.2,
+      "data": "2026-11-23",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "CNBC",
+        "url": "https://ts-api.cnbc.com/harmony/app/charts/1M.json?symbol=@C.1"
+      }
+    },
+    {
+      "id": "soja",
+      "nome": "Soja",
+      "dominio": "alimentos",
+      "valor": 451.5,
+      "unidade": "US$ por tonelada",
+      "variacao_pct": 0.7,
+      "variacao_7d_pct": 0.0,
+      "data": "2026-11-23",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "CNBC",
+        "url": "https://ts-api.cnbc.com/harmony/app/charts/1M.json?symbol=@S.1"
+      }
+    },
+    {
+      "id": "fao_ffpi",
+      "nome": "Índice de preços de alimentos da FAO",
+      "dominio": "alimentos",
+      "valor": 133.9,
+      "unidade": "pontos",
+      "variacao_pct": -1.3,
+      "variacao_7d_pct": null,
+      "data": "2026-10-01",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "FAO (agência da ONU para a alimentação)",
+        "url": "https://www.fao.org/media/docs/worldfoodsituationlibraries/wfs-library/food_price_indices_data.csv"
+      }
+    },
+    {
+      "id": "usd_brl",
+      "nome": "Dólar em reais",
+      "dominio": "cambio",
+      "valor": 5.8573,
+      "unidade": "R$ por US$",
+      "variacao_pct": -1.9,
+      "variacao_7d_pct": 1.2,
+      "data": "2026-11-24",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Banco Central do Brasil",
+        "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados/ultimos/20?formato=json"
+      }
+    },
+    {
+      "id": "dxy",
+      "nome": "Índice do dólar contra outras moedas",
+      "dominio": "cambio",
+      "valor": null,
+      "unidade": "pontos",
+      "variacao_pct": null,
+      "variacao_7d_pct": null,
+      "data": null,
+      "defasado": true,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Yahoo Finance",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=1mo&interval=1d"
+      }
+    },
+    {
+      "id": "ouro",
+      "nome": "Ouro",
+      "dominio": "cambio",
+      "valor": 3651.4,
+      "unidade": "US$ por onça (31,1 g)",
+      "variacao_pct": 3.9,
+      "variacao_7d_pct": -5.2,
+      "data": "2026-11-23",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "CNBC",
+        "url": "https://ts-api.cnbc.com/harmony/app/charts/1M.json?symbol=@GC.1"
+      }
+    },
+    {
+      "id": "vix",
+      "nome": "Índice de medo da bolsa americana (VIX)",
+      "dominio": "cambio",
+      "valor": 26.62,
+      "unidade": "pontos",
+      "variacao_pct": -25.8,
+      "variacao_7d_pct": 16.2,
+      "data": "2026-11-23",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "FRED (Fed de St. Louis)",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS&cosd=2026-10-01"
+      }
+    },
+    {
+      "id": "frete_seco",
+      "nome": "Frete marítimo de grãos e minério",
+      "dominio": "suprimentos",
+      "valor": null,
+      "unidade": "US$ por cota",
+      "variacao_pct": null,
+      "variacao_7d_pct": null,
+      "data": null,
+      "defasado": true,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Yahoo Finance",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/BDRY?range=1mo&interval=1d"
+      }
+    }
+  ],
+  "principais": [
+    {
+      "id": "p1",
+      "categoria": "geopolitica",
+      "titulo": "Golfo: Irã anuncia dois petroleiros sem movimento em Ormuz e diz que o estreito não reabre sem as exigências dele",
+      "fato": "Em 24/11, a Marinha do Irã anunciou que dois petroleiros bateram em minas na parte leste do estreito de Ormuz naquela manhã, pegaram fogo e ficaram sem movimento, e avisou que o estreito não reabre enquanto as exigências do Irã não forem atendidas e que os armadores devem combinar antes a passagem com as forças armadas do país. No mesmo dia, a UKMTO, agência marítima britânica, registrou um cargueiro perto de Dibba, nos Emirados Árabes Unidos, atingido por projétil não identificado.",
+      "nao_confirmado": [
+        "Segundo a Guarda Revolucionária do Irã, citada pela Tasnim e pela CNBC, em 23/11 três petroleiros bateram em minas em Ormuz, um perto da costa sul e dois no leste, sob escolta dos Estados Unidos; fora do Irã ninguém confirma as minas.",
+        "Segundo a IRNA, agência do Estado iraniano, um quarto petroleiro explodiu e pegou fogo ao bater em mina a leste do estreito em 24/11; o número de navios varia entre as fontes iranianas.",
+        "Segundo a Guarda Revolucionária, citada pela Anadolu, um porta-contêineres foi alvo ao norte do porto de Khasab por cruzar rota proibida; as fontes não dizem se é o cargueiro registrado pela UKMTO."
+      ],
+      "ataques": [
+        {
+          "veiculo": "yonhap",
+          "lado": "centro_atlantico",
+          "alvo": "outro",
+          "alvo_nome": "Navios no estreito de Ormuz",
+          "enquadramento": "Põe no título 2 petroleiros em minas e um cargueiro atingido perto dos Emirados Árabes Unidos. Atribui a versão da mina à Marinha do Irã, que alega entrada sem autorização, e soma o aviso da UKMTO, agência marítima britânica.",
+          "omite": "Não dá nome, bandeira nem nacionalidade dos navios, e não diz se o cargueiro dos Emirados é o porta-contêineres que a Guarda Revolucionária diz ter atacado.",
+          "url": "https://yna.co.kr/view/AKR20261124170500079"
+        },
+        {
+          "veiculo": "tasnim",
+          "lado": "eixo_revisionista",
+          "alvo": "outro",
+          "alvo_nome": "Petroleiros sem autorização iraniana",
+          "enquadramento": "Agência iraniana, que é parte: chama de infratores (violating) os petroleiros, diz que eles ficaram impossibilitados de se mover e dá como aviso da Marinha que o estreito nunca reabrirá até as exigências do Irã serem atendidas.",
+          "omite": "Não nomeia os petroleiros nem diz de que país são, e não menciona o cargueiro registrado pela UKMTO.",
+          "url": "https://www.tasnimnews.ir/en/news/2026/11/24/3757033/iranian-navy-two-more-tankers-hit-naval-mines-in-strait-of-hormuz"
+        },
+        {
+          "veiculo": "fox_news",
+          "lado": "soberanistas",
+          "alvo": "nenhum",
+          "enquadramento": "No título: promove Trump, que interrompe o perdão do peru do Dia de Ação de Graças para saudar as tropas que guardam o estreito de Ormuz; o resumo corta o que ele chamou de o maior.",
+          "url": "https://www.foxnews.com/politics/trump-pauses-turkey-pardon-salute-us-troops-guarding-strait-hormuz-watch-over-protect"
+        }
+      ],
+      "realmente": "Manchete e chão: as agências iranianas dão como grande uma sequência de petroleiros explodindo em minas, dois, três ou quatro conforme a fonte e o dia. O chão é mais fino. Fora do Irã, o que se confirma é um registro da UKMTO, agência marítima britânica: um cargueiro ancorado perto de Dibba, nos Emirados Árabes Unidos, atingido no lado esquerdo por projétil não identificado. Nenhuma fonte fora do Irã nomeia petroleiro, bandeira ou armador, e ninguém diz se o cargueiro dos Emirados é o porta-contêineres que a Guarda Revolucionária diz ter atacado ao norte de Khasab. O que o chão mostra e ninguém pôs na manchete: o petróleo cai. O Brent fechou a 89,37 dólares em 23/11, 3,5% abaixo do ponto anterior, e a CNBC descreve investidores olhando por cima dos ataques, com oferta maior na região. Quem levou o quê: o Irã avisou os armadores de que o estreito não reabre sem as exigências dele e, se as minas estiverem onde ele diz, mostrou que a escolta americana não garante a passagem. Os Estados Unidos mantêm três porta-aviões no Golfo e o bloqueio aos portos iranianos, e Trump saudou em público as tropas que guardam Ormuz. Ninguém cedeu nada que se possa medir: por enquanto é foto. O desenho na assembleia é o de costume desde fevereiro: os Soberanistas, que governam os Estados Unidos, contra o Eixo Revisionista, do Irã. Se uma fonte fora do Irã identificar um petroleiro atingido por nome e bandeira, cai esta leitura, a de uma guerra de avisos que o mercado não está precificando.",
+      "na_pratica": [
+        "Em 24/11, a Marinha do Irã anunciou que dois petroleiros ficaram sem movimento ao bater em minas no leste do estreito de Ormuz.",
+        "Em 24/11, a UKMTO registrou um cargueiro atingido por projétil não identificado perto de Dibba, nos Emirados Árabes Unidos.",
+        "Em 23/11, a Guarda Revolucionária do Irã anunciou que três petroleiros bateram em minas em Ormuz sob escolta dos Estados Unidos."
+      ],
+      "no_brasil": "Se os ataques em Ormuz reduzirem a passagem de petróleo, o efeito vem pelo Brent, que caiu 3,5% em 23/11, para 89,37 dólares. Chega ao Brasil pelo diesel e pela gasolina importados e, pelo diesel, no frete e na comida. Sem prazo com fonte.",
+      "placar": [],
+      "sem_placar": "Só nota do Irã em 24/11: minas e petroleiros vêm do Irã; fora dele só há um cargueiro atingido sem autor. Haveria placar com navio identificado fora do Irã.",
+      "vetores": [],
+      "dominios": [
+        "energia",
+        "suprimentos",
+        "conflito"
+      ],
+      "vigiar": [
+        "Alguma fonte fora do Irã identificará por nome e bandeira um petroleiro atingido em Ormuz desde 21/11 até 24/12?",
+        "O Brent terá alta de 10% ou mais em 7 dias até 24/12?",
+        "Estados Unidos e Irã anunciarão acordo sobre a passagem de navios em Ormuz até 24/12?"
+      ],
+      "confianca": "media",
+      "continuacao_de": "2026-11-23/p1",
+      "fontes": [
+        {
+          "veiculo": "yonhap",
+          "titulo": "호르무즈서 유조선 2척 기뢰 충돌…UAE 인근에선 화물선 피격",
+          "url": "https://yna.co.kr/view/AKR20261124170500079",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "tasnim",
+          "titulo": "Iranian Navy: Two More Tankers Hit Naval Mines in Strait of Hormuz",
+          "url": "https://www.tasnimnews.ir/en/news/2026/11/24/3757033/iranian-navy-two-more-tankers-hit-naval-mines-in-strait-of-hormuz",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "outro",
+          "nome": "CNBC",
+          "titulo": "Iran says three tankers hit mines in Hormuz despite U.S. escort, as Treasury widens sanctions",
+          "url": "https://www.cnbc.com/2026/11/24/iran-trump-hormuz-crude-.html",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "irna",
+          "titulo": "Fourth violating oil tanker explodes after hitting mine east of Strait of Hormuz",
+          "url": "https://en.irna.ir/news/86331453/Fourth-violating-oil-tanker-explodes-after-hitting-mine-east",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "anadolu",
+          "titulo": "Iran says 'offending vessel' targeted in southern Strait of Hormuz",
+          "url": "https://www.aa.com.tr/en/middle-east/iran-says-offending-vessel-targeted-in-southern-strait-of-hormuz/4136377",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "fox_news",
+          "titulo": "Trump pauses turkey pardon to salute US troops guarding Strait of Hormuz: 'Watch over and protect'",
+          "url": "https://www.foxnews.com/politics/trump-pauses-turkey-pardon-salute-us-troops-guarding-strait-hormuz-watch-over-protect",
+          "publicado_em": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "categoria": "geopolitica",
+      "titulo": "Aviões de guerra russos chegam à beira do espaço aéreo da Coreia do Sul, que levanta caças e dá alerta",
+      "fato": "Em 24/11, de manhã, vários aviões de guerra russos entraram na zona de identificação de defesa aérea da Coreia do Sul (KADIZ), sobre o mar do Japão, e se aproximaram da ilha de Ulleung sem entrar no espaço aéreo territorial. A Coreia do Sul levantou caças e emitiu alerta preventivo na ilha, com aviso de evacuação aos moradores, retirado minutos depois; os aviões saíram da zona. A Rússia não reconhece a zona, que não é espaço aéreo territorial.",
+      "nao_confirmado": [
+        "Segundo a Yonhap, eram cerca de cinco aviões, que ficaram 20 minutos na zona e vieram mais perto do que os de março do ano passado, a 20 quilômetros do seu espaço aéreo; a RIA fala só em vários e não dá tempo nem distância.",
+        "Segundo a Yonhap, a Defesa da Coreia do Sul entregou protesto ao adido militar russo no mesmo dia, e foi o 1º alerta preventivo de ataque aéreo por aviões russos; a RIA, publicada antes, diz que o ministério pretendia convocar o adido.",
+        "Segundo a embaixada da Rússia em Seul, citada pela Yonhap, os aviões não violaram a lei internacional, porque Seul estabeleceu a zona de modo unilateral."
+      ],
+      "ataques": [
+        {
+          "veiculo": "yonhap",
+          "lado": "centro_atlantico",
+          "alvo": "russia",
+          "enquadramento": "Põe no título o alerta na ilha após a aproximação russa e abre pelo risco de invasão; dá a distância recorde, os 20 minutos, o protesto ao adido e a frase do comando de que as entradas repetidas são inaceitáveis.",
+          "url": "https://en.yna.co.kr/view/AEN20261124002255315?section=national/defense"
+        },
+        {
+          "veiculo": "ria",
+          "lado": "eixo_revisionista",
+          "alvo": "nenhum",
+          "enquadramento": "Agência do Estado russo, que é parte: promove a Rússia: abre dizendo que os aviões não violaram o espaço aéreo, trata a aproximação como suposta e lembra que os militares sul-coreanos já disseram que a Rússia não fere norma oficial.",
+          "omite": "Não dá o número de aviões, a distância nem os 20 minutos de permanência, e não traz o alerta preventivo inédito nem o protesto entregue ao adido militar.",
+          "url": "https://ria.ru/20261124/koreya-2133525728.html"
+        }
+      ],
+      "realmente": "Manchete e chão: os títulos falam em aviões russos à beira do espaço aéreo sul-coreano e em alerta de ataque aéreo. O chão, nas duas agências, é mais estreito: nenhum avião entrou no espaço aéreo territorial, a zona de identificação não é território, e a Rússia e a China não a reconhecem. O que o chão mostra e fica fora da manchete: o próprio governo sul-coreano errou duas vezes no mesmo dia, o ministério do Interior avisou invasão e a província falou em drone norte-coreano, e as duas notas foram corrigidas; e não é a primeira entrada, houve outra na semana anterior e uma em agosto. Quem levou o quê: a Rússia manteve aviões na zona por cerca de 20 minutos, na conta da Yonhap, e virou para o Japão quando os caças F-15K subiram. A Coreia do Sul levantou caças, deu alerta preventivo, pela primeira vez para aviões russos, e entregou protesto ao adido militar russo. Ninguém cedeu nada que se possa medir: por enquanto é foto. O desenho na assembleia é o de costume: agência da Coreia do Sul, do campo da ordem, contra agência do Estado russo, do campo da contestação. Na régua, só a Rússia tem ficha; a Coreia do Sul não tem. Se um avião russo entrar no espaço aéreo territorial, ou se a Coreia do Sul responder com medida militar ou diplomática nova, além de protesto, cai esta leitura, a de um teste sem invasão.",
+      "na_pratica": [
+        "Em 24/11, cerca de cinco aviões de guerra russos ficaram cerca de 20 minutos na zona de identificação de defesa aérea da Coreia do Sul, sem invadir o espaço aéreo territorial.",
+        "Em 24/11, a Coreia do Sul levantou caças, deu alerta de ataque aéreo na ilha de Ulleung e protestou ao adido militar da Rússia."
+      ],
+      "no_brasil": "Sem caminho direto no curto prazo. Se a tensão na Coreia do Sul escalar, chega ao Brasil pelos outros quatro domínios: petróleo, grãos, dólar e rotas. Não há fonte do dia para prazo.",
+      "placar": [],
+      "sem_placar": "Aviões entraram em zona que não é espaço aéreo e saíram sem invasão; haveria placar com violação do espaço aéreo territorial ou retaliação medida.",
+      "vetores": [],
+      "dominios": [
+        "conflito"
+      ],
+      "vigiar": [
+        "Avião militar russo entrará no espaço aéreo territorial da Coreia do Sul até 24/12?",
+        "A Coreia do Sul anunciará, até 24/12, medida militar ou diplomática nova em resposta a entradas russas na zona, além de protesto?",
+        "Rússia e Coreia do Sul anunciarão, até 24/12, reativação da linha direta entre suas forças aéreas?"
+      ],
+      "confianca": "alta",
+      "fontes": [
+        {
+          "veiculo": "yonhap",
+          "titulo": "(5th LD) S. Korea briefly issues alert on eastern island after Russian warplanes near airspace",
+          "url": "https://en.yna.co.kr/view/AEN20261124002255315?section=national/defense",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "ria",
+          "titulo": "Южная Корея заявила, что российские самолеты вошли в опознавательную зону ПВО",
+          "url": "https://ria.ru/20261124/koreya-2133525728.html",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "moscow_times",
+          "titulo": "South Korea Says Russian Military Planes Entered Its Air Defense Zone",
+          "url": "https://www.themoscowtimes.com/2026/11/24/south-korea-says-russian-military-planes-entered-its-air-defense-zone-a94358",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "al_jazeera",
+          "titulo": "Russian jets spark air raid alert in South Korea",
+          "url": "https://www.aljazeera.com/video/newsfeed/2026/11/24/aje-onl-nf_russian-jets-spark-air-raid-alert-in-south-korea-241126?traffic_source=rss",
+          "publicado_em": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "categoria": "geopolitica",
+      "titulo": "Hutitas do Iêmen atingem pela segunda vez em uma semana a torre do fundo soberano saudita em Riade, com 11 feridos",
+      "fato": "Em 24/11, o grupo hutita do Iêmen atacou um prédio do distrito financeiro King Abdullah, em Riade, na Arábia Saudita: a torre do Fundo de Investimento Público, a mais alta da cidade e sede do fundo soberano. A Defesa Civil saudita contou 11 feridos. Foi o segundo ataque à torre em uma semana: em 19/11, quinta-feira, o prédio foi atingido sem feridos.",
+      "nao_confirmado": [
+        "Segundo o resumo do Financial Times, o ataque veio quando o reino divulgava seu primeiro orçamento desde o conflito com os rebeldes apoiados pelo Irã; a página não abriu, e as demais fontes não trazem orçamento."
+      ],
+      "ataques": [
+        {
+          "veiculo": "nyt",
+          "lado": "ordem_global",
+          "alvo": "outro",
+          "alvo_nome": "Hutitas do Iêmen",
+          "enquadramento": "No título: põe o grupo hutita como autor e o número de feridos, com a ressalva de que são as autoridades que informam; o resumo já o chama de milícia apoiada pelo Irã.",
+          "url": "https://www.nytimes.com/2026/11/24/world/middleeast/saudi-skyscraper-houthi-strike.html"
+        },
+        {
+          "veiculo": "ft",
+          "lado": "centro_atlantico",
+          "alvo": "outro",
+          "alvo_nome": "Hutitas do Iêmen",
+          "enquadramento": "No título: dá o alvo pelo nome, a torre do Fundo de Investimento Público, e os 11 feridos; no resumo, liga o ataque ao orçamento e ao conflito com rebeldes apoiados pelo Irã.",
+          "url": "https://www.ft.com/content/ecdf59b6-c78b-4703-bc26-8d085d7b9d24?syn-25a6b1a6=1"
+        },
+        {
+          "veiculo": "xinhua",
+          "lado": "eixo_revisionista",
+          "alvo": "outro",
+          "alvo_nome": "Hutitas do Iêmen",
+          "enquadramento": "Agência estatal chinesa: abre pelo balanço da Defesa Civil saudita, 11 feridos, e pela repetição, segunda vez em uma semana; em três parágrafos não cita o Irã, nem reivindicação dos hutitas, nem reação da coalizão saudita.",
+          "omite": "Não traz o orçamento saudita que o Financial Times põe no resumo, nem a ligação do grupo com o Irã.",
+          "url": "https://www.news.cn/20261125/0c5c224cbd944a67992103929ba9002c/c.html"
+        }
+      ],
+      "realmente": "Manchete e chão: o título é um só nos dois campos, ataque hutita à torre mais alta de Riade, 11 feridos. O chão tem uma origem só: as fontes lidas repetem a nota da Defesa Civil saudita, e os resumos lidos não trazem reivindicação dos hutitas nem reação militar da coalizão liderada pela Arábia Saudita. O que o chão mostra e ninguém pôs na manchete: é a segunda vez em uma semana que o mesmo prédio é atingido, a primeira em 19/11, sem feridos; e a nota fala em feridos, não em mortos. Quem levou o quê: os hutitas atingiram de novo a sede do fundo soberano saudita e deixaram 11 feridos; a Arábia Saudita contou os feridos e, nas fontes lidas, não respondeu com ato medido. Ninguém cedeu nada que se possa medir: por enquanto é foto. O desenho na assembleia é o de costume: os veículos do campo da ordem chamam o grupo de milícia apoiada pelo Irã; a agência estatal chinesa, do campo da contestação, repete a nota saudita em três parágrafos sem citar o Irã. Hutitas e Arábia Saudita não têm ficha na régua, e nenhum player agiu. Se a Arábia Saudita anunciar operação nova contra os hutitas, ou se a Defesa Civil saudita corrigir o número de feridos, cai esta leitura, a de um desgaste sem retaliação registrada.",
+      "na_pratica": [
+        "Em 24/11, a torre do Fundo de Investimento Público, em Riade, foi atingida pela segunda vez em uma semana, com 11 feridos, segundo a Defesa Civil saudita.",
+        "Em 19/11, o mesmo prédio havia sido atingido, sem feridos."
+      ],
+      "no_brasil": "Sem caminho direto. Se o confronto entre a Arábia Saudita e os hutitas alcançar portos do mar Vermelho ou instalações de petróleo sauditas, chega ao Brasil pelo petróleo e pelo frete; não há fonte do dia que registre isso.",
+      "placar": [],
+      "sem_placar": "Hutitas e Arábia Saudita não têm ficha na régua; nenhum player agiu. Haveria placar com sanção, retaliação ou acordo envolvendo um player.",
+      "vetores": [],
+      "dominios": [
+        "conflito"
+      ],
+      "vigiar": [
+        "A Arábia Saudita anunciará, até 24/12, operação militar nova contra os hutitas em resposta ao ataque de 24/11?",
+        "Hutitas voltarão a atingir a torre do Fundo de Investimento Público em Riade até 24/12?",
+        "Porto saudita do mar Vermelho será atingido até 24/12?"
+      ],
+      "confianca": "alta",
+      "fontes": [
+        {
+          "veiculo": "xinhua",
+          "titulo": "沙特首都最高建筑一周内再次遭袭 11人受伤",
+          "url": "https://www.news.cn/20261125/0c5c224cbd944a67992103929ba9002c/c.html",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "nyt",
+          "titulo": "Houthi Attack on Skyscraper in Saudi Capital Wounds 11, Officials Say",
+          "url": "https://www.nytimes.com/2026/11/24/world/middleeast/saudi-skyscraper-houthi-strike.html",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "ft",
+          "titulo": "Houthi attack on Riyadh’s PIF Tower injures 11",
+          "url": "https://www.ft.com/content/ecdf59b6-c78b-4703-bc26-8d085d7b9d24?syn-25a6b1a6=1",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "wsj",
+          "titulo": "Yemen’s Houthis Take Second Swipe at Tallest Tower in Saudi Capital",
+          "url": "https://www.wsj.com/world/middle-east/yemens-houthis-take-second-swipe-at-tallest-tower-in-saudi-capital-11cc288c?mod=rss_worldnews",
+          "publicado_em": "2026-11-24"
+        }
+      ]
+    }
+  ],
+  "radar": [
+    {
+      "id": "r1",
+      "categoria": "geopolitica",
+      "titulo": "Zelensky confirma que a Ucrânia atacou cargueiro russo no golfo da Finlândia",
+      "fato": "Em 24/11, o presidente da Ucrânia, Volodymyr Zelensky, confirmou que a Ucrânia atacou com drones o cargueiro Sparta II, russo, no golfo da Finlândia, e disse que todo navio com bandeira russa é alvo legítimo. O ataque já tinha saído na edição de 23/11.",
+      "ataque": {
+        "veiculo": "kyiv_independent",
+        "lado": "centro_atlantico",
+        "alvo": "russia",
+        "enquadramento": "No título: dá a confirmação como ato do presidente ucraniano; no resumo, ele defende o direito de atacar o navio e admite que o ataque pode ter gerado preocupação, sem dizer de quem.",
+        "url": "https://kyivindependent.com/zelensky-confirms-ukrainian-attack-on-russian-ship-in-gulf-of-finland/"
+      },
+      "placar": [],
+      "sem_placar": "O ataque é de antes de 23/11 e já entrou no placar daquela edição; a confirmação de 24/11 é declaração. Haveria linha com novo navio atingido.",
+      "vetores": [],
+      "dominios": [
+        "conflito"
+      ],
+      "confianca": "media",
+      "continuacao_de": "2026-11-23/r2",
+      "fontes": [
+        {
+          "veiculo": "kyiv_independent",
+          "titulo": "Zelensky confirms Ukrainian attack on Russian ship in Gulf of Finland",
+          "url": "https://kyivindependent.com/zelensky-confirms-ukrainian-attack-on-russian-ship-in-gulf-of-finland/",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "moscow_times",
+          "titulo": "Zelensky Confirms Ukraine Was Behind Drone Attack on Russian Cargo Ship in Gulf of Finland",
+          "url": "https://www.themoscowtimes.com/2026/11/24/zelensky-confirms-ukraine-was-behind-drone-attack-on-russian-cargo-ship-in-gulf-of-finland-a94364",
+          "publicado_em": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": "r2",
+      "categoria": "geopolitica",
+      "titulo": "Democrata vence republicano de oito mandatos no Tennessee e amplia maioria na Câmara dos EUA",
+      "fato": "Em 24/11, a democrata Victoria Broderick venceu a eleição da Câmara dos Representantes dos Estados Unidos no Tennessee contra o republicano Scott DesJarlais, que cumpria o oitavo mandato. Segundo o Newsmax, os democratas chegam a 259 cadeiras; segundo o Guardian, é a maior maioria em três décadas.",
+      "ataque": {
+        "veiculo": "guardian",
+        "lado": "ordem_global",
+        "alvo": "outro",
+        "alvo_nome": "Republicanos",
+        "enquadramento": "No título: a vitória de uma democrata sobre um titular de oito mandatos; no resumo, a ampliação da maioria, a maior em três décadas.",
+        "url": "https://www.theguardian.com/us-news/2026/nov/24/democrat-victoria-broderick-election-win-tennesee-midterms"
+      },
+      "placar": [],
+      "sem_placar": "Eleição de um distrito decidida em 24/11; as fontes não citam Trump nem outro player da régua. Haveria placar com voto na Câmara que atinja um.",
+      "vetores": [],
+      "dominios": [],
+      "confianca": "media",
+      "fontes": [
+        {
+          "veiculo": "guardian",
+          "titulo": "Democrat Victoria Broderick unseats eight-term Republican incumbent in Tennessee to win election",
+          "url": "https://www.theguardian.com/us-news/2026/nov/24/democrat-victoria-broderick-election-win-tennesee-midterms",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "newsmax",
+          "titulo": "Dems' House Tally Hits 259 After Win in Tennessee",
+          "url": "https://www.newsmax.com/newsfront/victoria-broderick-house-tennessee/2026/11/24/id/1277406",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "anadolu",
+          "titulo": "US Democrat unseats Republican in Tennessee, gives party largest House majority in 3 decades: Report",
+          "url": "https://www.aa.com.tr/en/americas/us-democrat-unseats-republican-in-tennessee-gives-party-largest-house-majority-in-3-decades-report/4136382",
+          "publicado_em": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": "r3",
+      "categoria": "geopolitica",
+      "titulo": "Intrusão expõe dados de sistema não classificado da CIA, agência de inteligência dos EUA, diz NYT",
+      "fato": "Segundo o New York Times, citado pelo G1 e pelo Clarín em 24/11, uma intrusão informática expôs dados de análise de inteligência de fontes abertas dos Estados Unidos e atingiu um sistema não classificado da CIA, a agência central de inteligência do país. As fontes não apontam autor.",
+      "ataque": {
+        "veiculo": "g1_globo",
+        "lado": "ordem_global",
+        "alvo": "outro",
+        "alvo_nome": "CIA, agência de inteligência dos Estados Unidos",
+        "enquadramento": "No título: dá o ataque e a exposição de dados como fato, com a fonte no fim, diz NYT; o resumo é só a legenda da foto.",
+        "url": "https://g1.globo.com/mundo/noticia/2026/11/24/cia-e-agencia-de-inteligencia-dos-eua-sofrem-ataque-cibernetico-e-tem-dados-expostos-diz-nyt.ghtml"
+      },
+      "placar": [],
+      "sem_placar": "Sem autor apontado nas fontes do dia: ninguém ganhou nem perdeu de forma medida. Haveria placar com atribuição oficial a um Estado.",
+      "vetores": [],
+      "dominios": [],
+      "confianca": "media",
+      "fontes": [
+        {
+          "veiculo": "g1_globo",
+          "titulo": "CIA e agência de inteligência dos EUA sofrem ataque cibernético e têm dados expostos, diz NYT",
+          "url": "https://g1.globo.com/mundo/noticia/2026/11/24/cia-e-agencia-de-inteligencia-dos-eua-sofrem-ataque-cibernetico-e-tem-dados-expostos-diz-nyt.ghtml",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "clarin",
+          "titulo": "La CIA sufrió una intrusión informática que expuso información no clasificada, según NYT",
+          "url": "https://www.clarin.com/estados-unidos/la-cia-sufrio-una-intrusion-informatica-que-expuso-informacion-no-clasificada-segun-nyt_0_yskGAnPb0r.html",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "ndtv",
+          "titulo": "Unclassified CIA System Breached In Cyberattack: Report",
+          "url": "https://www.ndtv.com/world-news/unclassified-cia-system-breached-in-cyberattack-report-12372775",
+          "publicado_em": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": "r4",
+      "categoria": "geopolitica",
+      "titulo": "Carro-bomba deixa ao menos 23 feridos em Villavicencio, na Colômbia",
+      "fato": "Em 24/11, um carro-bomba explodiu em frente a prédios do governo regional em Villavicencio, na Colômbia, e deixou ao menos 23 feridos, segundo as autoridades. A explosão danificou prédios e uma catedral e ocorreu nos dez anos do acordo de paz com a guerrilha das FARC. As fontes não apontam autor.",
+      "ataque": {
+        "veiculo": "dw",
+        "lado": "centro_atlantico",
+        "alvo": "outro",
+        "alvo_nome": "Colômbia",
+        "enquadramento": "No título: o país e o número de feridos; no resumo, liga a explosão aos dez anos do acordo de paz com as FARC, sem apontar autor.",
+        "url": "https://www.dw.com/en/colombia-car-bomb-attack-injures-at-least-23/a-80033956?maca=en-rss-en-all-1573-xml-mrss"
+      },
+      "placar": [],
+      "sem_placar": "Sem autor apontado e sem player da régua na história; haveria placar com atribuição oficial a organização ou Estado.",
+      "vetores": [],
+      "dominios": [],
+      "confianca": "media",
+      "fontes": [
+        {
+          "veiculo": "dw",
+          "titulo": "Colombia: Car bomb attack injures at least 23",
+          "url": "https://www.dw.com/en/colombia-car-bomb-attack-injures-at-least-23/a-80033956?maca=en-rss-en-all-1573-xml-mrss",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "anadolu",
+          "titulo": "Colombia car bomb attack injures 23 in Villavicencio, damages cathedral",
+          "url": "https://www.aa.com.tr/en/world/colombia-car-bomb-attack-injures-23-in-villavicencio-damages-cathedral/4136274",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "telesur",
+          "titulo": "Coche bomba deja 23 heridos frente a la Gobernación de Meta en Colombia",
+          "url": "https://www.telesurtv.net/coche-bomba-23-heridos-meta-colombia/",
+          "publicado_em": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": "r5",
+      "categoria": "geopolitica",
+      "titulo": "Expectativa de vida em Cuba cai pela primeira vez em quase 80 anos, alerta a OMS",
+      "fato": "Em 24/11, a Organização Mundial da Saúde (OMS), agência de saúde da ONU, alertou que a expectativa de vida em Cuba caiu pela primeira vez em quase 80 anos; segundo o Estadão, a queda passa de quatro anos.",
+      "ataque": {
+        "veiculo": "g1_globo",
+        "lado": "ordem_global",
+        "alvo": "outro",
+        "alvo_nome": "Cuba",
+        "enquadramento": "No título: a queda como alerta da OMS; o resumo é só a legenda de foto de arquivo.",
+        "url": "https://g1.globo.com/mundo/noticia/2026/11/24/expectativa-de-vida-em-cuba-cai-pela-primeira-vez-em-quase-80-anos-alerta-oms.ghtml"
+      },
+      "placar": [],
+      "sem_placar": "Dado de saúde de um país sem ficha na régua; não muda medida de nenhum player.",
+      "vetores": [],
+      "dominios": [],
+      "confianca": "media",
+      "fontes": [
+        {
+          "veiculo": "g1_globo",
+          "titulo": "Expectativa de vida em Cuba cai pela 1ª vez em quase 80 anos, alerta OMS",
+          "url": "https://g1.globo.com/mundo/noticia/2026/11/24/expectativa-de-vida-em-cuba-cai-pela-primeira-vez-em-quase-80-anos-alerta-oms.ghtml",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "estadao",
+          "titulo": "Expectativa de vida em Cuba cai pela 1ª vez em quase 80 anos, alerta OMS",
+          "url": "https://www.estadao.com.br/internacional/expectativa-de-vida-em-cuba-cai-pela-1-vez-em-quase-80-anos-alerta-oms-npr/",
+          "publicado_em": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": "r6",
+      "categoria": "geopolitica",
+      "titulo": "México diz que vai julgar no país acusado de tráfico preso com drone dos EUA, apesar de pedido de extradição",
+      "fato": "Em 24/11, o México disse que vai julgar no país um homem acusado de tráfico de drogas nos Estados Unidos, apesar do pedido de extradição americano. Segundo o Newsmax, um drone de vigilância dos Estados Unidos sobrevoou o México, a pedido do governo mexicano, para ajudar na captura.",
+      "ataque": {
+        "veiculo": "el_pais_america",
+        "lado": "ordem_global",
+        "alvo": "outro",
+        "alvo_nome": "Acusado de tráfico",
+        "enquadramento": "No título: Washington espera o acusado com uma lista de antigos comparsas dispostos a incriminá-lo; o resumo fala em oportunidade de ouro para negociar informação.",
+        "url": "https://elpais.com/us/2026-11-24/washington-aguarda-al-chapo-isidro-con-una-lista-de-antiguos-complices-dispuestos-a-hundirlo.html"
+      },
+      "placar": [],
+      "sem_placar": "O drone americano ajudou na prisão, mas o México recusou a extradição em 24/11: efeitos em sentidos opostos, sem medida. Haveria placar com decisão judicial.",
+      "vetores": [],
+      "dominios": [],
+      "confianca": "media",
+      "fontes": [
+        {
+          "veiculo": "el_pais_america",
+          "titulo": "Washington aguarda al Chapo Isidro con una lista de antiguos cómplices dispuestos a hundirlo",
+          "url": "https://elpais.com/us/2026-11-24/washington-aguarda-al-chapo-isidro-con-una-lista-de-antiguos-complices-dispuestos-a-hundirlo.html",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "newsmax",
+          "titulo": "US Drone Helped Mexico Capture 'El Chapo Isidro'",
+          "url": "https://www.newsmax.com/newsfront/fausto-isidro-meza-flores-claudia-sheinbaum-mexico/2026/11/24/id/1277410",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "daily_sabah",
+          "titulo": "Mexico defies US extradition bid for drug lord 'El Chapo Isidro'",
+          "url": "https://www.dailysabah.com/world/americas/mexico-defies-us-extradition-bid-for-drug-lord-el-chapo-isidro",
+          "publicado_em": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": "r7",
+      "categoria": "geopolitica",
+      "titulo": "Presidente do Senado autoriza Advocacia a atuar no STF em defesa de deputado que pode virar réu",
+      "fato": "Em 24/11, o presidente do Senado, Davi Alcolumbre, autorizou a Advocacia do Senado a atuar no Supremo Tribunal Federal (STF) em defesa do deputado Marcel van Hattem, que pode virar réu por injúria e calúnia contra delegado da Polícia Federal. Atende a pedido do líder da oposição no Senado.",
+      "ataque": {
+        "veiculo": "gazeta_do_povo",
+        "lado": "soberanistas",
+        "alvo": "nenhum",
+        "enquadramento": "Promove a atuação do Senado: dá no título a autorização de Alcolumbre e, no resumo, a garantia de que ele vai proteger as prerrogativas parlamentares.",
+        "url": "https://www.gazetadopovo.com.br/vida-e-cidadania/alcolumbre-autoriza-advocacia-do-senado-a-atuar-em-defesa-de-marcel-van-hattem/"
+      },
+      "placar": [],
+      "sem_placar": "Medida processual de 24/11, sem efeito medido em player da régua; haveria placar com decisão do STF sobre a prerrogativa.",
+      "vetores": [],
+      "dominios": [],
+      "confianca": "media",
+      "fontes": [
+        {
+          "veiculo": "gazeta_do_povo",
+          "titulo": "Alcolumbre autoriza Advocacia do Senado a atuar em defesa de Van Hattem",
+          "url": "https://www.gazetadopovo.com.br/vida-e-cidadania/alcolumbre-autoriza-advocacia-do-senado-a-atuar-em-defesa-de-marcel-van-hattem/",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "jovem_pan",
+          "titulo": "Alcolumbre aciona Advocacia do Senado no STF por caso Van Hattem",
+          "url": "https://jovempan.com.br/politica/alcolumbre-aciona-advocacia-do-senado-no-stf-por-caso-van-hattem/",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "poder360",
+          "titulo": "Oposição cobra reação de Alcolumbre e Motta em ação contra Van Hattem",
+          "url": "https://www.poder360.com.br/poder-congresso/oposicao-cobra-reacao-de-alcolumbre-e-motta-em-acao-contra-van-hattem/",
+          "publicado_em": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": "r8",
+      "categoria": "ia",
+      "titulo": "Ações da Anthropic, laboratório de IA, caem abaixo do preço de estreia na bolsa",
+      "fato": "Em 24/11, as ações da Anthropic, laboratório de inteligência artificial (IA), caíram abaixo do preço da oferta pública inicial (IPO): 10 minutos depois da abertura, estavam a 80,14 dólares, 8,6% abaixo, segundo a NDTV. O TechCrunch chama a queda de sinal preocupante para as startups de IA.",
+      "ataque": {
+        "veiculo": "ft",
+        "lado": "centro_atlantico",
+        "alvo": "anthropic",
+        "enquadramento": "No título: as ações fecham abaixo do preço da estreia e passa o alívio pela volta de Jensen Huang ao comando da Nvidia; põe a queda no fim do rali da tecnologia.",
+        "url": "https://www.ft.com/content/c0cb932a-076e-4471-8009-91749fde5f47?syn-25a6b1a6=1"
+      },
+      "placar": [
+        {
+          "partido": "independentes",
+          "efeito": "perde",
+          "forca": 2,
+          "evidencia": "preco",
+          "porque": "Anthropic: ações a 80,14 dólares em 24/11, 8,6% abaixo, abaixo do preço de 83 dólares da oferta pública inicial."
+        }
+      ],
+      "vetores": [],
+      "dominios": [],
+      "confianca": "media",
+      "conflito_de_interesse": true,
+      "fontes": [
+        {
+          "veiculo": "ndtv",
+          "titulo": "Anthropic Stock Drops Below $83 IPO Price On Day 4 Of Trading",
+          "url": "https://www.ndtv.com/world-news/anthropic-stock-drops-below-83-ipo-price-on-day-4-of-trading-12372365",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "ft",
+          "titulo": "Anthropic closes below IPO price as tech rally fades",
+          "url": "https://www.ft.com/content/c0cb932a-076e-4471-8009-91749fde5f47?syn-25a6b1a6=1",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "g1_globo",
+          "titulo": "Anthropic cai abaixo do preço do IPO apenas cinco dias após estreia recorde na bolsa",
+          "url": "https://g1.globo.com/economia/noticia/2026/11/24/acoes-da-anthropic.ghtml",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "techcrunch",
+          "titulo": "Anthropic shares fall below IPO price, a worrying sign for AI startups",
+          "url": "https://techcrunch.com/2026/11/24/anthropic-shares-fall-below-ipo-price-a-worrying-sign-for-ai-startups/",
+          "publicado_em": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": "r9",
+      "categoria": "ia",
+      "titulo": "Procurador-geral dos EUA diz que a Justiça examina caso de Jensen Huang, da Nvidia, e não confirma investigação",
+      "fato": "Em 24/11, o procurador-geral dos Estados Unidos, Todd Blanche, disse que o Departamento de Justiça examina o caso de Jensen Huang, presidente-executivo da Nvidia, sem caráter necessariamente criminal, e não confirmou a investigação que Trump disse ter sido minuciosa.",
+      "ataque": {
+        "veiculo": "nyt",
+        "lado": "ordem_global",
+        "alvo": "huang_nvidia",
+        "enquadramento": "No título: o procurador-geral diminui as perguntas sobre a Nvidia enquanto os clientes da empresa ficam sob escrutínio; o resumo corta a frase.",
+        "url": "https://www.nytimes.com/2026/11/24/us/politics/nvidia-justice-department-todd-blanche.html"
+      },
+      "placar": [],
+      "sem_placar": "Só declaração do procurador-geral em 24/11: não há indiciamento nem arquivamento. Haveria placar com acusação formal.",
+      "vetores": [],
+      "dominios": [],
+      "confianca": "media",
+      "conflito_de_interesse": true,
+      "fontes": [
+        {
+          "veiculo": "nyt",
+          "titulo": "Blanche Downplays Questions Over Nvidia as Company’s Customers Come Under Scrutiny",
+          "url": "https://www.nytimes.com/2026/11/24/us/politics/nvidia-justice-department-todd-blanche.html",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "al_jazeera",
+          "titulo": "Todd Blanche declines to confirm if Nvidia’s Jensen Huang was investigated",
+          "url": "https://www.aljazeera.com/news/2026/11/24/todd-blanche-declines-to-confirm-if-nvidias-jensen-huang-was-investigated?traffic_source=rss",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "newsmax",
+          "titulo": "AG Blanche Calls Nvidia 'Good Corporate Citizen'",
+          "url": "https://www.newsmax.com/newsfront/todd-blanche-nvidia-jensen-huang/2026/11/24/id/1277423",
+          "publicado_em": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": "r10",
+      "categoria": "ia",
+      "titulo": "Meta leva assistente de IA Muse para as conversas do Instagram e fecha parceria com o Walmart",
+      "fato": "Em 24/11, a Meta, dona do Instagram, passou a oferecer o Muse, seu assistente de inteligência artificial (IA), dentro das conversas diretas do Instagram. Segundo o TechCrunch, o Walmart também passou a deixar clientes comprar as ofertas da Black Friday pelo Muse.",
+      "ataque": {
+        "veiculo": "bbc",
+        "lado": "centro_atlantico",
+        "alvo": "meta",
+        "enquadramento": "No título: teste da editora de tecnologia da BBC com o Muse antes da estreia no Reino Unido, útil mas atrapalhado; no resumo, a ambição da Meta de fazer pelo assistente o que o WhatsApp fez pelas mensagens.",
+        "url": "https://www.bbc.co.uk/news/articles/c9gkld2l38y6o?at_medium=RSS&at_campaign=rss"
+      },
+      "placar": [
+        {
+          "partido": "bancada_talento",
+          "efeito": "ganha",
+          "forca": 2,
+          "evidencia": "contrato",
+          "porque": "Meta: Walmart passa a vender ofertas da Black Friday pelo assistente Muse em 24/11, e o Muse entra nas conversas diretas do Instagram."
+        }
+      ],
+      "vetores": [],
+      "dominios": [],
+      "confianca": "media",
+      "conflito_de_interesse": true,
+      "fontes": [
+        {
+          "veiculo": "bbc",
+          "titulo": "Helpful but awkward: My week with Meta's Muse ahead of its UK launch",
+          "url": "https://www.bbc.co.uk/news/articles/c9gkld2l38y6o?at_medium=RSS&at_campaign=rss",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "techcrunch",
+          "titulo": "Walmart teams up with Meta to bring Black Friday deals to AI agent Muse",
+          "url": "https://techcrunch.com/2026/11/24/walmart-teams-up-with-meta-to-bring-black-friday-deals-to-ai-agent-muse/",
+          "publicado_em": "2026-11-24"
+        },
+        {
+          "veiculo": "techcrunch",
+          "titulo": "Meta brings its Muse AI assistant directly into Instagram DMs",
+          "url": "https://techcrunch.com/2026/11/24/meta-brings-its-muse-ai-assistant-directly-into-instagram-dms/",
+          "publicado_em": "2026-11-24"
+        }
+      ]
+    },
+    {
+      "id": "r11",
+      "categoria": "ia",
+      "titulo": "Dell eleva pela terceira vez a previsão de vendas anuais com demanda de servidores para IA",
+      "fato": "Em 24/11, a Dell elevou pela terceira vez a previsão de receita do ano fiscal, puxada pela construção rápida de centros de dados de inteligência artificial (IA), segundo a Bloomberg.",
+      "ataque": {
+        "veiculo": "bloomberg",
+        "lado": "centrao",
+        "alvo": "nenhum",
+        "enquadramento": "No título: promove a Dell, com a alta da previsão de vendas repetida e a causa, a demanda por servidores para IA.",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-24/dell-ups-annual-sales-forecast-again-on-rising-ai-server-demand"
+      },
+      "placar": [],
+      "sem_placar": "Previsão de empresa sem ficha na régua; sem efeito medido em player. Haveria placar com contrato com player.",
+      "vetores": [],
+      "dominios": [],
+      "confianca": "media",
+      "conflito_de_interesse": true,
+      "fontes": [
+        {
+          "veiculo": "bloomberg",
+          "titulo": "Dell Raises Annual Sales Forecast Again on AI Server Demand",
+          "url": "https://www.bloomberg.com/news/articles/2026-11-24/dell-ups-annual-sales-forecast-again-on-rising-ai-server-demand",
+          "publicado_em": "2026-11-24"
+        }
+      ]
+    }
+  ],
+  "placar_do_dia": [
+    {
+      "partido": "bancada_talento",
+      "saldo": 2,
+      "narrativa": 0,
+      "frase": "Meta: Walmart passa a vender pelo assistente Muse e o Muse entra nas conversas do Instagram em 24/11."
+    },
+    {
+      "partido": "independentes",
+      "saldo": -2,
+      "narrativa": 0,
+      "frase": "Anthropic: ações a 80,14 dólares em 24/11, 8,6% abaixo e abaixo do preço da oferta pública inicial."
+    }
+  ],
+  "novos_players": [],
+  "errata": [],
+  "respostas": [],
+  "bastidores": {
+    "modo": "feeds",
+    "veiculos_consultados": 29,
+    "feeds_ok": 102,
+    "feeds_falhos": 20,
+    "paginas_lidas": 10,
+    "buscas": 10,
+    "minutos": 20,
+    "injecoes_ignoradas": 0,
+    "candidatos": [
+      {
+        "id": "arabia_saudita",
+        "nome": "Arábia Saudita",
+        "motivo": "Torre do seu fundo soberano atingida em Riade em 19/11 e 24/11; Defesa Civil deu o saldo de feridos. Sem ficha na régua."
+      },
+      {
+        "id": "coreia_do_sul",
+        "nome": "Coreia do Sul",
+        "motivo": "Levantou caças, deu alerta e protestou ao adido russo em 24/11; sem ficha na régua."
+      },
+      {
+        "id": "huti",
+        "nome": "Hutitas (Ansar Allah)",
+        "motivo": "Atacaram a torre do fundo soberano saudita em 24/11, com 11 feridos; sem ficha na régua."
+      },
+      {
+        "id": "ucrania",
+        "nome": "Ucrânia",
+        "motivo": "Zelensky confirmou em 24/11 o ataque ao cargueiro Sparta II; age fora da frente; sem ficha na régua."
+      },
+      {
+        "id": "mexico",
+        "nome": "México",
+        "motivo": "Recusou por ora a extradição de acusado de tráfico preso com drone dos Estados Unidos; sem ficha na régua."
+      }
+    ],
+    "veiculos_sugeridos": [
+      "CNBC (cnbc.com)",
+      "UKMTO (ukmto.org)",
+      "The War Zone (twz.com)",
+      "Yeni Şafak (yenisafak.com)"
+    ],
+    "limites": "Ormuz: minas e número de petroleiros vêm só do Estado iraniano; fora dele só há o registro da UKMTO de um cargueiro atingido por projétil sem autor, então a energia ficou em 2. FT, Al Arabiya e IRNA não abriram: título e resumo da mesa. O campo da ordem não tinha atirador em Ormuz na mesa; a Yonhap entrou por busca. Conflito em 2 por leitura da zona de identificação como zona de disputa. Golfo da Finlândia: ato anterior a 23/11, sem gatilho hoje."
+  }
+}

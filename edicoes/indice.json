@@ -1,7 +1,43 @@
 {
   "versao": 1,
-  "atualizado_em": "2026-11-24T17:05:12Z",
+  "atualizado_em": "2026-11-24T22:53:06Z",
   "edicoes": [
+    {
+      "data": "2026-11-24",
+      "arquivo": "edicoes/2026-11-24.json",
+      "texto": "edicoes/2026-11-24.md",
+      "estado": "completa",
+      "nivel": 2,
+      "tendencia": "estavel",
+      "niveis": {
+        "energia": 2,
+        "alimentos": 1,
+        "cambio": 1,
+        "suprimentos": 1,
+        "conflito": 2
+      },
+      "saldos": {
+        "bancada_talento": 2,
+        "independentes": -2
+      },
+      "eixos": {},
+      "indicadores": {
+        "brent": 89.37,
+        "wti": 80.17,
+        "gas_natural": 3.18,
+        "trigo": 218.8,
+        "milho": 177.1,
+        "soja": 451.5,
+        "fao_ffpi": 133.9,
+        "usd_brl": 5.8573,
+        "ouro": 3651.4,
+        "vix": 26.62
+      },
+      "resumo": "Em 24/11: a Marinha do Irã anuncia petroleiros sem movimento em Ormuz e avisa que o estreito não reabre; aviões russos chegam à beira do espaço aéreo da Coreia do Sul; hutitas ferem 11 em Riade; a Anthropic cai abaixo do preço de estreia.",
+      "gerada_em": "2026-11-24T22:53:06Z",
+      "exemplo": false,
+      "corrigida_em": []
+    },
     {
       "data": "2026-11-23",
       "arquivo": "edicoes/2026-11-23.json",
