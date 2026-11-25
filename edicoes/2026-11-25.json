@@ -1,0 +1,891 @@
+{
+  "versao": 1,
+  "data": "2026-11-25",
+  "gerada_em": "2026-11-25T21:31:22Z",
+  "estado": "completa",
+  "resumo": "Em 25/11: hutitas e coalizão saudita trocam ataques a portos e a terminal de petróleo; a FCC autoriza 1 milhão de satélites de IA da SpaceX; o Irã reforça o controle em Ormuz; salvadorenho alvo de Trump chega à Espanha.",
+  "alerta": {
+    "nivel": 2,
+    "tendencia": "estavel",
+    "motivo": "Nível 2 (atenção) pela energia: em 25/11, o Exército do Irã, grande exportador de petróleo, anunciou reforço de vigilância e controle em Ormuz e avisou que navios devem combinar a passagem com as forças armadas iranianas; agências iranianas reportaram petroleiro em mina. No conflito, sem fato novo em 25/11: segue desde 24/11, aviões russos à beira do espaço aéreo da Coreia do Sul.",
+    "dominios": [
+      {
+        "id": "energia",
+        "nivel": 2,
+        "tendencia": "estavel",
+        "desde": "2026-11-23",
+        "sem_preco": [],
+        "gatilhos": [
+          {
+            "criterio": "energia.2",
+            "ref": "r1",
+            "texto": "Em 25/11, o Exército do Irã, grande exportador de petróleo, anunciou reforço de vigilância e controle em Ormuz e avisou que navios devem combinar a passagem com as forças armadas iranianas."
+          }
+        ],
+        "leitura": "Em 25/11, o Irã reforçou a vigilância em Ormuz e reportou petroleiro em mina; Brent a 90,69 dólares, 1,4% abaixo em 7 dias. Petróleo mais caro lá fora encarece o diesel e a gasolina importados. O repasse depende da Petrobras e dos importadores. Diesel caro encarece frete e comida.",
+        "vigiar": "Petroleiro identificado por nome e bandeira por fonte fora do Irã, Ormuz fechado à navegação, ou Brent com alta de 10% ou mais em 7 dias."
+      },
+      {
+        "id": "alimentos",
+        "nivel": 1,
+        "tendencia": "estavel",
+        "desde": "2026-11-23",
+        "sem_preco": [],
+        "gatilhos": [],
+        "leitura": "Em 25/11, trigo 3,4% abaixo em 7 dias, milho 0,8% e soja 0,7% acima, sem alta de 5% e sem restrição nova na mesa. Trigo e fertilizante o Brasil compra de fora: alta ou falta lá chega ao pão e à safra seguinte. Soja e milho o Brasil vende: alta lá fora encarece ração, carne e óleo aqui.",
+        "vigiar": "Trigo, milho ou soja com alta de 5% ou mais em 7 dias, ou restrição nova de exportador de grão ou fertilizante."
+      },
+      {
+        "id": "cambio",
+        "nivel": 1,
+        "tendencia": "estavel",
+        "desde": "2026-11-23",
+        "sem_preco": [],
+        "gatilhos": [],
+        "leitura": "Em 25/11, o dólar subiu 0,4%, para 5,8825 reais, e está 1,2% acima em 7 dias; nenhuma medida nova contra o Brasil na mesa. Dólar mais caro encarece o que é importado: combustível, trigo, fertilizante, remédio e eletrônico.",
+        "vigiar": "Dólar com alta de 1,5% ou mais no dia, ou tarifa ou sanção anunciada contra o Brasil."
+      },
+      {
+        "id": "suprimentos",
+        "nivel": 1,
+        "tendencia": "estavel",
+        "desde": "2026-11-23",
+        "sem_preco": [],
+        "gatilhos": [],
+        "leitura": "Em 25/11, hutitas disseram que atacaram portos sauditas; a coalizão registrou dano leve em Jizan e drone perto de Jidá, sem parada de porto confirmada. Rota desviada ou porto parado atrasa peça, chip, remédio e fertilizante, e encarece o frete.",
+        "vigiar": "Porto saudita do mar Vermelho parado, ou ataque a navio em rota, confirmado por fonte fora dos hutitas."
+      },
+      {
+        "id": "conflito",
+        "nivel": 2,
+        "tendencia": "estavel",
+        "desde": "2026-11-24",
+        "sem_preco": [],
+        "gatilhos": [],
+        "leitura": "Desde 24/11: aviões russos à beira do espaço aéreo da Coreia do Sul, que deu alerta aéreo. Em 25/11, sem fato novo: hutitas e coalizão saudita trocam ataques em frente já aberta. Guerra longe chega ao Brasil pelos outros quatro domínios: petróleo, grãos, dólar e rotas.",
+        "vigiar": "Avião russo no espaço aéreo da Coreia do Sul, ruptura de relações diplomáticas confirmada, ou ultimato com prazo."
+      }
+    ]
+  },
+  "indicadores": [
+    {
+      "id": "brent",
+      "nome": "Petróleo Brent",
+      "dominio": "energia",
+      "valor": 90.69,
+      "unidade": "US$ por barril",
+      "variacao_pct": -0.8,
+      "variacao_7d_pct": -1.4,
+      "data": "2026-11-25",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Yahoo Finance",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/BZ=F?range=1mo&interval=1d"
+      }
+    },
+    {
+      "id": "wti",
+      "nome": "Petróleo WTI (EUA)",
+      "dominio": "energia",
+      "valor": 82.05,
+      "unidade": "US$ por barril",
+      "variacao_pct": 2.3,
+      "variacao_7d_pct": -4.6,
+      "data": "2026-11-24",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "CNBC",
+        "url": "https://ts-api.cnbc.com/harmony/app/charts/1M.json?symbol=@CL.1"
+      }
+    },
+    {
+      "id": "gas_natural",
+      "nome": "Gás natural nos EUA",
+      "dominio": "energia",
+      "valor": 3.32,
+      "unidade": "US$ por milhão de BTU",
+      "variacao_pct": 4.4,
+      "variacao_7d_pct": 3.6,
+      "data": "2026-11-24",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "CNBC",
+        "url": "https://ts-api.cnbc.com/harmony/app/charts/1M.json?symbol=@NG.1"
+      }
+    },
+    {
+      "id": "trigo",
+      "nome": "Trigo",
+      "dominio": "alimentos",
+      "valor": 216.5,
+      "unidade": "US$ por tonelada",
+      "variacao_pct": -1.0,
+      "variacao_7d_pct": -3.4,
+      "data": "2026-11-24",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "CNBC",
+        "url": "https://ts-api.cnbc.com/harmony/app/charts/1M.json?symbol=@W.1"
+      }
+    },
+    {
+      "id": "milho",
+      "nome": "Milho",
+      "dominio": "alimentos",
+      "valor": 177.3,
+      "unidade": "US$ por tonelada",
+      "variacao_pct": 0.1,
+      "variacao_7d_pct": 0.8,
+      "data": "2026-11-24",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "CNBC",
+        "url": "https://ts-api.cnbc.com/harmony/app/charts/1M.json?symbol=@C.1"
+      }
+    },
+    {
+      "id": "soja",
+      "nome": "Soja",
+      "dominio": "alimentos",
+      "valor": 453.4,
+      "unidade": "US$ por tonelada",
+      "variacao_pct": 0.4,
+      "variacao_7d_pct": 0.7,
+      "data": "2026-11-24",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "CNBC",
+        "url": "https://ts-api.cnbc.com/harmony/app/charts/1M.json?symbol=@S.1"
+      }
+    },
+    {
+      "id": "fao_ffpi",
+      "nome": "Índice de preços de alimentos da FAO",
+      "dominio": "alimentos",
+      "valor": 133.9,
+      "unidade": "pontos",
+      "variacao_pct": -1.3,
+      "variacao_7d_pct": null,
+      "data": "2026-10-01",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "FAO (agência da ONU para a alimentação)",
+        "url": "https://www.fao.org/media/docs/worldfoodsituationlibraries/wfs-library/food_price_indices_data.csv"
+      }
+    },
+    {
+      "id": "usd_brl",
+      "nome": "Dólar em reais",
+      "dominio": "cambio",
+      "valor": 5.8825,
+      "unidade": "R$ por US$",
+      "variacao_pct": 0.4,
+      "variacao_7d_pct": 1.2,
+      "data": "2026-11-25",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Banco Central do Brasil",
+        "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.1/dados/ultimos/20?formato=json"
+      }
+    },
+    {
+      "id": "dxy",
+      "nome": "Índice do dólar contra outras moedas",
+      "dominio": "cambio",
+      "valor": null,
+      "unidade": "pontos",
+      "variacao_pct": null,
+      "variacao_7d_pct": null,
+      "data": null,
+      "defasado": true,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Yahoo Finance",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/DX-Y.NYB?range=1mo&interval=1d"
+      }
+    },
+    {
+      "id": "ouro",
+      "nome": "Ouro",
+      "dominio": "cambio",
+      "valor": 3561.9,
+      "unidade": "US$ por onça (31,1 g)",
+      "variacao_pct": -2.5,
+      "variacao_7d_pct": -7.8,
+      "data": "2026-11-24",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "CNBC",
+        "url": "https://ts-api.cnbc.com/harmony/app/charts/1M.json?symbol=@GC.1"
+      }
+    },
+    {
+      "id": "vix",
+      "nome": "Índice de medo da bolsa americana (VIX)",
+      "dominio": "cambio",
+      "valor": 26.36,
+      "unidade": "pontos",
+      "variacao_pct": -1.0,
+      "variacao_7d_pct": 3.5,
+      "data": "2026-11-24",
+      "defasado": false,
+      "confirmado": false,
+      "fonte": {
+        "nome": "FRED (Fed de St. Louis)",
+        "url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=VIXCLS&cosd=2026-10-01"
+      }
+    },
+    {
+      "id": "frete_seco",
+      "nome": "Frete marítimo de grãos e minério",
+      "dominio": "suprimentos",
+      "valor": null,
+      "unidade": "US$ por cota",
+      "variacao_pct": null,
+      "variacao_7d_pct": null,
+      "data": null,
+      "defasado": true,
+      "confirmado": false,
+      "fonte": {
+        "nome": "Yahoo Finance",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/BDRY?range=1mo&interval=1d"
+      }
+    }
+  ],
+  "principais": [
+    {
+      "id": "p1",
+      "categoria": "geopolitica",
+      "titulo": "Iêmen e Arábia Saudita: hutitas dizem que atacaram dois portos sauditas e coalizão confirma ataque a Hodeida",
+      "fato": "Em 25/11, a coalizão liderada pela Arábia Saudita disse que um projétil disparado pelo grupo hutita do Iêmen causou dano leve ao porto de Jizan, sem vítimas civis, e que derrubou um drone hutita perto do porto de Jidá. Os hutitas disseram que atacaram os portos de Jidá e Jizan em retaliação, depois de a coalizão anunciar ataque à cidade portuária iemenita de Hodeida; a coalizão confirmou esse ataque em 25/11 e disse ter destruído 4 drones sobre o terminal de petróleo de Ras Tanura.",
+      "nao_confirmado": [
+        "Segundo o Telesur, citando as forças hutitas, os ataques a Ras Tanura e ao centro financeiro de Riade foram retaliação aos bombardeios da coalizão no porto e no aeroporto de Hodeida; a coalizão só diz ter destruído drones sobre o terminal.",
+        "Segundo a Fox News, um militar iemenita diz que especialistas da Guarda Revolucionária iraniana e do Hezbollah dirigem os ataques hutitas a navios perto de Bab el-Mandeb; as demais fontes não citam o Irã.",
+        "Segundo o Middle East Eye, o exército do governo iemenita diz ter feito 654 ataques aos hutitas em poucas horas."
+      ],
+      "ataques": [
+        {
+          "veiculo": "tass",
+          "lado": "eixo_revisionista",
+          "alvo": "outro",
+          "alvo_nome": "Hutitas do Iêmen",
+          "enquadramento": "Abre pelo dano leve e a ausência de vítimas civis em Jizan, na voz da coalizão; dá como aviso da agência hutita SABA a retaliação e a promessa de continuar atingindo instalações marítimas sauditas; não cita o Irã.",
+          "omite": "Não traz o drone derrubado perto do porto de Jidá nem a versão hutita de que os ataques respondem ao bombardeio do aeroporto de Hodeida.",
+          "url": "https://tass.com/world/2224889"
+        },
+        {
+          "veiculo": "wsj",
+          "lado": "centrao",
+          "alvo": "outro",
+          "alvo_nome": "Hutitas do Iêmen",
+          "enquadramento": "No título: dá o grupo hutita como autor da segunda investida à torre mais alta da capital saudita; no resumo, lembra o ataque anterior de quinta-feira.",
+          "url": "https://www.wsj.com/world/middle-east/yemens-houthis-take-second-swipe-at-tallest-tower-in-saudi-capital-11cc288c?mod=rss_worldnews"
+        },
+        {
+          "veiculo": "fox_news",
+          "lado": "soberanistas",
+          "alvo": "ira",
+          "enquadramento": "No título: põe um militar iemenita a chamar o Irã de padrinho dos hutitas e a dizer que Teerã dirige a guerra; no resumo, atribui às forças armadas iemenitas a direção iraniana e do Hezbollah dos ataques a navios perto de Bab el-Mandeb.",
+          "url": "https://www.foxnews.com/world/yemeni-military-official-brands-iran-houthis-godfather-says-tehran-directing-war"
+        }
+      ],
+      "realmente": "Manchete e chão: os títulos falam em escalada e em ataques hutitas a portos sauditas. O chão, no que as fontes confirmam, é mais estreito: no porto de Jizan houve dano leve e nenhuma vítima civil, segundo a coalizão; a coalizão diz ter derrubado um drone perto do porto de Jidá; e nenhuma fonte lida diz que porto saudita parou ou que navio foi atingido. O que o chão mostra e ninguém pôs na manchete: a ordem dos golpes. Na conta da agência hutita SABA, o ataque a Jizan foi retaliação a um ataque ao porto de Hodeida, relatado pelos hutitas em 24/11 e confirmado pela coalizão em 25/11; e o Telesur, citando os hutitas, apresenta o ataque ao centro financeiro de Riade como resposta ao bombardeio do porto e do aeroporto de Hodeida. Quem levou o quê: os hutitas atingiram um porto saudita e disseram ter atacado outro; a coalizão liderada pela Arábia Saudita confirmou ataque ao porto de Hodeida e disse ter destruído 4 drones sobre o terminal de petróleo de Ras Tanura. Ninguém cedeu nada que se possa medir: por enquanto é foto. O desenho na assembleia: só veículos do campo da contestação e o Wall Street Journal, do Centrão da régua, deram a troca de ataques; os veículos do campo da ordem calaram, e a Fox News, dos Soberanistas, põe o Irã como mandante pela boca de um militar iemenita. Nenhum player da régua agiu conforme as fontes. Se um porto saudita parar, ou se uma fonte ligar os ataques a ordem iraniana, cai esta leitura, a de um desgaste trocado sem parada de rota.",
+      "na_pratica": [
+        "Em 25/11, a coalizão liderada pela Arábia Saudita confirmou ataque ao porto iemenita de Hodeida e disse ter destruído 4 drones sobre o terminal de petróleo de Ras Tanura.",
+        "Em 25/11, a coalizão registrou dano leve no porto saudita de Jizan por projétil hutita, sem vítimas civis; os hutitas disseram ter atacado Jidá e Jizan."
+      ],
+      "no_brasil": "Se ataques hutitas pararem porto saudita, sobem frete e atraso de peça, chip, remédio e fertilizante; se atingirem Ras Tanura, o Brent sobe e chega ao diesel e à gasolina importados. Sem parada confirmada em 25/11 e sem prazo com fonte.",
+      "placar": [],
+      "sem_placar": "Arábia Saudita e hutitas não têm ficha na régua; o Irã aparece só por acusação de militar iemenita. Haveria placar com ato de player da régua.",
+      "vetores": [],
+      "dominios": [
+        "energia",
+        "suprimentos",
+        "conflito"
+      ],
+      "vigiar": [
+        "Porto saudita ficará parado por ataque hutita até 25/12?",
+        "Ataque hutita parará a operação do terminal de petróleo de Ras Tanura até 25/12?",
+        "A Arábia Saudita anunciará operação militar nova contra os hutitas em resposta ao ataque de 24/11 até 25/12?"
+      ],
+      "confianca": "media",
+      "continuacao_de": "2026-11-24/p3",
+      "fontes": [
+        {
+          "veiculo": "tass",
+          "titulo": "Houthi attack causes minor damage to Saudi port of Jizan — coalition",
+          "url": "https://tass.com/world/2224889",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "wsj",
+          "titulo": "Yemen’s Houthis Take Second Swipe at Tallest Tower in Saudi Capital",
+          "url": "https://www.wsj.com/world/middle-east/yemens-houthis-take-second-swipe-at-tallest-tower-in-saudi-capital-11cc288c?mod=rss_worldnews",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "ndtv",
+          "titulo": "Houthis Say They Attacked Two Saudi Ports In Retaliatory Strikes",
+          "url": "https://www.ndtv.com/world-news/houthis-say-they-attacked-two-saudi-ports-jeddah-and-jazan-in-retaliatory-strikes-12377687",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "middle_east_eye",
+          "titulo": "Saudi-led coalition says it intercepts Houthi drone near Jeddah Islamic Port",
+          "url": "https://www.middleeasteye.net/live-blog/live-blog-update/saudi-led-coalition-says-it-intercepts-houthi-drone-near-jeddah-islamic",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "telesur",
+          "titulo": "Ataques a instalaciones estratégicas marcan escalada entre Yemen y Arabia Saudí",
+          "url": "https://www.telesurtv.net/ataques-instalaciones-yemen-arabia-saudi/",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "fox_news",
+          "titulo": "Yemeni military official brands Iran Houthis’ ‘godfather,’ says Tehran is directing war",
+          "url": "https://www.foxnews.com/world/yemeni-military-official-brands-iran-houthis-godfather-says-tehran-directing-war",
+          "publicado_em": "2026-11-25"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "categoria": "ia",
+      "titulo": "EUA: FCC autoriza a SpaceX, de Elon Musk, a implantar até 1 milhão de satélites com computadores de IA",
+      "fato": "Em 25/11, a FCC (Comissão Federal de Comunicações, agência reguladora dos Estados Unidos) autorizou a SpaceX, empresa de Elon Musk, a implantar até 1 milhão de satélites com computadores para inteligência artificial (IA), no projeto Starmind. Segundo o Le Monde, a autorização vale até 2040. Segundo o TechCrunch, a FCC afastou parte das objeções dos opositores por entender que estavam fora de sua autoridade regulatória.",
+      "nao_confirmado": [
+        "Segundo o ZeroHedge, democratas sinalizam moratórias a centros de dados de IA; as demais fontes não trazem projeto nesse sentido."
+      ],
+      "ataques": [
+        {
+          "veiculo": "lemonde",
+          "lado": "ordem_global",
+          "alvo": "nenhum",
+          "enquadramento": "No título: só relata a autorização, o teto de 1 milhão e o prazo até 2040; o resumo a insere na corrida de empresas por energia solar contínua no espaço.",
+          "url": "https://www.lemonde.fr/en/science/article/2026/11/25/us-clears-spacex-to-launch-up-to-one-million-orbital-data-center-satellites_6788575_10.html"
+        },
+        {
+          "veiculo": "newsmax",
+          "lado": "soberanistas",
+          "alvo": "nenhum",
+          "enquadramento": "No título: promove Elon Musk: dá a aprovação da FCC aos centros de dados espaciais; no resumo, liga o projeto ao apoio de Donald Trump e à liderança americana.",
+          "url": "https://www.newsmax.com/newsfront/fcc-elon-musk-ai/2026/11/25/id/1277534"
+        }
+      ],
+      "realmente": "Manchete e chão: os títulos dão como grande um império de 1 milhão de satélites de inteligência artificial no espaço. O chão é uma decisão de agência: em 25/11, a FCC autorizou a SpaceX a implantar até 1 milhão de satélites, número que é teto, não frota; segundo o Le Monde, a autorização vale até 2040; e segundo o Ars Technica, a constelação multiplicaria por cerca de 50 os satélites em órbita. O que o chão mostra e não está na manchete: segundo o TechCrunch, a FCC afastou parte das principais objeções dos opositores por entender que estavam fora de sua autoridade regulatória. Quem levou o quê: Elon Musk levou a licença para o Starmind; os opositores, que o resumo não nomeia, levaram a objeção em parte afastada; Donald Trump sai no resumo do Newsmax como apoiador do projeto. Ninguém cedeu nada que se possa medir além da própria licença: por enquanto é foto. O desenho na assembleia é o de costume no tema de inteligência artificial: a agência reguladora dos Estados Unidos autoriza, veículo dos Soberanistas promove, e veículos da Ordem Global e da Bancada do Talento noticiam sem ataque. Se a SpaceX lançar os primeiros satélites do Starmind até 25/12, ou se o Congresso dos Estados Unidos votar limite a esses centros de dados em órbita, cai esta leitura, a de uma licença de número-teto e prazo longo.",
+      "na_pratica": [
+        "Em 25/11, a FCC autorizou a SpaceX a implantar até 1 milhão de satélites do projeto Starmind, com computadores de IA; segundo o Le Monde, a autorização vale até 2040."
+      ],
+      "eixo": {
+        "tema": "ia_depois",
+        "sentido": "vermelho",
+        "porque": "Em 25/11, a FCC autorizou até 1 milhão de satélites de IA e afastou objeções de opositores como fora de sua alçada, segundo o TechCrunch."
+      },
+      "placar": [
+        {
+          "partido": "soberanistas",
+          "efeito": "ganha",
+          "forca": 2,
+          "evidencia": "lei",
+          "porque": "Elon Musk: a FCC autorizou, em 25/11, até 1 milhão de satélites do projeto Starmind da SpaceX, com validade até 2040, segundo o Le Monde."
+        }
+      ],
+      "vetores": [],
+      "dominios": [],
+      "vigiar": [
+        "A SpaceX lançará os primeiros satélites do Starmind até 25/12?",
+        "O Congresso dos Estados Unidos votará limite a centros de dados de IA em órbita até 25/12?",
+        "Democratas apresentarão, até 25/12, projeto de moratória a centros de dados de IA?"
+      ],
+      "confianca": "media",
+      "conflito_de_interesse": true,
+      "fontes": [
+        {
+          "veiculo": "lemonde",
+          "titulo": "US clears SpaceX to launch up to one million orbital data center satellites",
+          "url": "https://www.lemonde.fr/en/science/article/2026/11/25/us-clears-spacex-to-launch-up-to-one-million-orbital-data-center-satellites_6788575_10.html",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "newsmax",
+          "titulo": "FCC Approves Musk's Space-Based AI Data Centers",
+          "url": "https://www.newsmax.com/newsfront/fcc-elon-musk-ai/2026/11/25/id/1277534",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "ars_technica",
+          "titulo": "The FCC has authorized SpaceX to deploy 1 million satellites",
+          "url": "https://arstechnica.com/space/2026/11/the-fcc-has-authorized-spacex-to-deploy-1-million-satellites/",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "the_verge",
+          "titulo": "FCC signs off on SpaceX’s plan to put up to 1 million data center satellites into space",
+          "url": "https://www.theverge.com/science/1042278/spacex-fcc-starmind-ai-space-data-centers",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "techcrunch",
+          "titulo": "FCC approves SpaceX plan to put AI data centers in space",
+          "url": "https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space/",
+          "publicado_em": "2026-11-25"
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "categoria": "geopolitica",
+      "titulo": "Salvadorenho alvo da política de imigração de Trump deixa os Estados Unidos e chega à Espanha",
+      "fato": "Em 25/11, um salvadorenho alvo da política de imigração do governo de Donald Trump chegou à Espanha depois de deixar os Estados Unidos por conta própria, após acordo com as autoridades federais. Segundo o Washington Post, funcionários dos EUA retiraram o aparelho de rastreamento por GPS, de posicionamento por satélite, que ele usava havia quase um ano, e o governo tinha ameaçado deportá-lo para a Libéria. Segundo o Le Monde, ele resistia a uma segunda deportação.",
+      "nao_confirmado": [
+        "Segundo o Guardian e o Le Monde, a deportação dele para El Salvador foi um erro administrativo; segundo o Daily Wire, ele é acusado de integrar a gangue MS-13; os resumos não trazem decisão judicial.",
+        "Segundo o Daily Wire, ele já planeja voltar aos Estados Unidos; as demais fontes não trazem isso."
+      ],
+      "ataques": [
+        {
+          "veiculo": "guardian",
+          "lado": "ordem_global",
+          "alvo": "trump",
+          "enquadramento": "No título: põe a partida como escolha dele, com ‘saiu feliz’; no resumo, liga o caso à política de Trump e à deportação anterior para El Salvador por erro administrativo.",
+          "url": "https://www.theguardian.com/us-news/2026/nov/25/kilmar-abrego-garcia-spain"
+        },
+        {
+          "veiculo": "daily_wire",
+          "lado": "soberanistas",
+          "alvo": "outro",
+          "alvo_nome": "Salvadorenho alvo da política de imigração",
+          "enquadramento": "No título: chama-o de acusado de integrar a gangue MS-13 e diz que ele já mira a volta aos EUA; no resumo, dá a saída como voluntária, depois de acordo com as autoridades federais.",
+          "url": "https://www.dailywire.com/news/accused-ms-13-gangbanger-abrego-garcia-lands-in-spain-already-eyeing-way-back-to-u-s"
+        }
+      ],
+      "realmente": "Manchete e chão: o campo da ordem anuncia a chegada à Espanha de um homem que, segundo o Guardian, foi deportado para El Salvador por erro administrativo, e o campo da contestação anuncia que um acusado de gangue se autodeportou e já mira a volta. O chão, no que os dois campos afirmam igual, é curto: em 25/11 ele chegou à Espanha e saiu dos Estados Unidos por conta própria, depois de um acordo com as autoridades federais. O que o chão mostra e ninguém pôs na manchete: o preço do acordo. Segundo o Washington Post, funcionários retiraram o aparelho de rastreamento por GPS que ele usava havia quase um ano, e o governo tinha ameaçado deportá-lo para a Libéria; segundo o Le Monde, ele resistia a uma segunda deportação para país africano proposto pelo Departamento de Segurança Interna. Quem levou o quê: o governo Trump levou o alvo da política de imigração para fora do país, e o salvadorenho levou a Espanha em vez da Libéria. A Espanha aparece só como destino: as fontes não dizem que o governo espanhol negociou algo. Ninguém cedeu nada além disso que se possa medir: por enquanto é foto. O desenho na assembleia é o de costume no tema de imigração: os veículos da Ordem Global lembram o erro administrativo, e o Daily Wire, dos Soberanistas, chama de acusado. Se ele voltar aos Estados Unidos, ou se a Espanha anunciar que não o aceita, cai esta leitura, a de um caso encerrado por acordo e sem mudança de regra.",
+      "na_pratica": [
+        "Em 25/11, o salvadorenho deixou os Estados Unidos e chegou à Espanha, depois de acordo com as autoridades federais; funcionários retiraram o aparelho de rastreamento, segundo o Washington Post."
+      ],
+      "placar": [
+        {
+          "partido": "soberanistas",
+          "efeito": "ganha",
+          "forca": 2,
+          "evidencia": "contrato",
+          "porque": "Donald Trump: acordo com as autoridades federais levou os EUA, em 25/11, a liberar do rastreamento o alvo da política de imigração, que foi para a Espanha."
+        }
+      ],
+      "vetores": [],
+      "dominios": [],
+      "vigiar": [
+        "O salvadorenho voltará aos Estados Unidos até 25/12?",
+        "A Espanha anunciará, até 25/12, o estatuto legal do salvadorenho?",
+        "O governo Trump anunciará, até 25/12, acordo novo de deportação com a Espanha?"
+      ],
+      "confianca": "alta",
+      "fontes": [
+        {
+          "veiculo": "guardian",
+          "titulo": "Kilmar Ábrego García, target of Trump’s immigration crackdown, lands in Spain after ‘leaving happy’",
+          "url": "https://www.theguardian.com/us-news/2026/nov/25/kilmar-abrego-garcia-spain",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "lemonde",
+          "titulo": "Kilmar Abrego Garcia, who fought being deported to El Salvador, arrives in Spain from US",
+          "url": "https://www.lemonde.fr/en/international/article/2026/11/25/kilmar-abrego-garcia-who-fought-being-mistakenly-sent-to-el-salvador-is-self-deporting-to-spain_6787783_4.html",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "wapo",
+          "titulo": "Kilmar Abrego García arrives in Spain, ending deportation battle with U.S.",
+          "url": "https://www.washingtonpost.com/immigration/2026/11/24/kilmar-abrego-garcia/",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "daily_wire",
+          "titulo": "Accused MS-13 Gangbanger Abrego Garcia Lands In Spain Already Eyeing Way Back To U.S.",
+          "url": "https://www.dailywire.com/news/accused-ms-13-gangbanger-abrego-garcia-lands-in-spain-already-eyeing-way-back-to-u-s",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "bloomberg",
+          "titulo": "Abrego Garcia Can ‘Breathe Freely’ After He Arrives in Spain",
+          "url": "https://www.bloomberg.com/news/articles/2026-11-25/abrego-garcia-can-breathe-freely-after-he-arrives-in-spain",
+          "publicado_em": "2026-11-25"
+        }
+      ]
+    }
+  ],
+  "radar": [
+    {
+      "id": "r1",
+      "categoria": "geopolitica",
+      "titulo": "Irã reforça vigilância e controle em Ormuz e relata petroleiro em mina, sem confirmação fora do país",
+      "fato": "Em 25/11, o Exército do Irã anunciou que reforçou a vigilância e o controle do estreito de Ormuz e avisou que os navios devem combinar a passagem com as forças armadas iranianas. Agências iranianas disseram que um petroleiro bateu em mina e pegou fogo em zona restrita; a Reuters não pôde verificar.",
+      "ataque": {
+        "veiculo": "irna",
+        "lado": "eixo_revisionista",
+        "alvo": "outro",
+        "alvo_nome": "Navios sem autorização iraniana",
+        "enquadramento": "Agência do Estado iraniano, que é parte: no título, dá o reforço de vigilância como informação do Exército; no resumo, o porta-voz Mohammad Akraminia avisa que os navios devem combinar a passagem com as forças armadas iranianas.",
+        "url": "https://en.irna.ir/news/86332270/Iran-tightens-security-measures-in-Strait-of-Hormuz-Army"
+      },
+      "placar": [],
+      "sem_placar": "Só nota do Irã em 25/11; fora do país, a Reuters não verificou o petroleiro. Haveria placar com navio identificado ou rota desviada por armador.",
+      "vetores": [],
+      "dominios": [
+        "energia",
+        "suprimentos",
+        "conflito"
+      ],
+      "confianca": "media",
+      "continuacao_de": "2026-11-24/p1",
+      "fontes": [
+        {
+          "veiculo": "irna",
+          "titulo": "Iran tightens security measures in Strait of Hormuz: Army",
+          "url": "https://en.irna.ir/news/86332270/Iran-tightens-security-measures-in-Strait-of-Hormuz-Army",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "middle_east_eye",
+          "titulo": "Iran's army says an oil tanker hit a naval mine and caught fire in the Strait of Hormuz, Fars reports",
+          "url": "https://www.middleeasteye.net/live-blog/live-blog-update/irans-army-says-oil-tanker-hit-naval-mine-and-caught-fire-strait-hormuz",
+          "publicado_em": "2026-11-25"
+        }
+      ]
+    },
+    {
+      "id": "r2",
+      "categoria": "ia",
+      "titulo": "Vance diz que Jensen Huang não precisa de perdão, depois de Trump dizer que perdoá-lo é uma opção",
+      "fato": "Em 25/11, o vice-presidente dos EUA, JD Vance, disse que Jensen Huang, presidente-executivo da Nvidia, fabricante de chips para inteligência artificial (IA), não precisa de perdão e nunca esteve sob investigação criminal, depois de Donald Trump dizer que perdoá-lo é uma opção.",
+      "ataque": {
+        "veiculo": "guardian",
+        "lado": "ordem_global",
+        "alvo": "trump",
+        "enquadramento": "No título: põe Vance contra a fala de Trump e dá a Vance a palavra final; no resumo, diz que Vance apoia a recondução de Huang depois de garantias de altos funcionários de que ele não estava sob investigação.",
+        "url": "https://www.theguardian.com/us-news/2026/nov/25/trump-open-to-pardoning-jensen-huang-nvidia"
+      },
+      "placar": [
+        {
+          "partido": "bancada_talento",
+          "efeito": "ganha",
+          "forca": 1,
+          "evidencia": "narrativa",
+          "porque": "Guardian: Vance disse em 25/11 que Jensen Huang nunca esteve sob investigação criminal e não precisa de perdão, a favor do presidente-executivo da Nvidia."
+        }
+      ],
+      "vetores": [],
+      "dominios": [],
+      "confianca": "media",
+      "conflito_de_interesse": true,
+      "continuacao_de": "2026-11-24/r9",
+      "fontes": [
+        {
+          "veiculo": "guardian",
+          "titulo": "Vance says Jensen Huang doesn’t need pardon after Trump says ‘it’s an option’",
+          "url": "https://www.theguardian.com/us-news/2026/nov/25/trump-open-to-pardoning-jensen-huang-nvidia",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "scmp",
+          "titulo": "US finds no evidence China told Alice Huang to spy on Nvidia’s Jensen Huang, report says",
+          "url": "https://www.scmp.com/news/world/united-states-canada/article/3375812/us-finds-no-evidence-china-told-tech-exec-spy-nvidias-jensen-huang-report-says",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "bloomberg",
+          "titulo": "Vance Defends Huang’s Nvidia Return, Blames ‘Anonymous Sources’",
+          "url": "https://www.bloomberg.com/news/articles/2026-11-25/vance-defends-huang-s-nvidia-return-blames-anonymous-sources",
+          "publicado_em": "2026-11-25"
+        }
+      ]
+    },
+    {
+      "id": "r3",
+      "categoria": "ia",
+      "titulo": "Presidente-executivo da Anthropic rejeita entregar decisões à IA e rebate relato do Axios",
+      "fato": "Em 25/11, Dario Amodei, presidente-executivo da Anthropic, laboratório de inteligência artificial (IA), rebateu o relato do Axios de que parte dos funcionários de empresas de IA crê que a humanidade entregará o poder a sistemas superinteligentes; para ele, governar pela IA seria ideia ruim.",
+      "ataque": {
+        "veiculo": "techcrunch",
+        "lado": "bancada_talento",
+        "alvo": "outro",
+        "alvo_nome": "Rivais da Anthropic",
+        "enquadramento": "No título: dá a réplica do presidente-executivo da Anthropic e chama de acusações as falas de rivais; no resumo, diz que as empresas de IA automatizam cada vez mais a própria pesquisa.",
+        "url": "https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/"
+      },
+      "placar": [
+        {
+          "partido": "independentes",
+          "efeito": "ganha",
+          "forca": 1,
+          "evidencia": "narrativa",
+          "porque": "TechCrunch: dá em 25/11 a réplica de Dario Amodei às acusações de rivais, a favor da Anthropic, que ele comanda."
+        }
+      ],
+      "vetores": [],
+      "dominios": [],
+      "confianca": "media",
+      "conflito_de_interesse": true,
+      "fontes": [
+        {
+          "veiculo": "axios",
+          "titulo": "Anthropic CEO pushes back on Axios reporting on AI and free will",
+          "url": "https://www.axios.com/2026/11/25/anthropic-dario-amodei-ai-free-will-contro-axios",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "techcrunch",
+          "titulo": "Anthropic’s Dario Amodei calls accusations of surrendering human control to AI ‘absurd’",
+          "url": "https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "the_decoder",
+          "titulo": "Anthropic CEO Dario Amodei says letting AI govern society would be \"a bad idea\"",
+          "url": "https://the-decoder.com/anthropic-ceo-dario-amodei-says-letting-ai-govern-society-would-be-a-bad-idea/",
+          "publicado_em": "2026-11-25"
+        }
+      ]
+    },
+    {
+      "id": "r4",
+      "categoria": "ia",
+      "titulo": "S&P põe nota AA da Nvidia em observação negativa por risco de gestão e governança",
+      "fato": "Em 25/11, a S&P Global Ratings, agência de classificação de risco, colocou a nota de crédito AA da Nvidia em observação negativa, citando riscos de gestão e governança depois da saída e da volta do presidente-executivo Jensen Huang; poderá rebaixar a nota em até 90 dias, segundo a CNN Brasil.",
+      "ataque": {
+        "veiculo": "bloomberg",
+        "lado": "centrao",
+        "alvo": "huang_nvidia",
+        "enquadramento": "No título: diz que a S&P pode cortar o crédito da Nvidia por preocupações com a gestão e a governança, e liga o alerta à saída e à volta de Jensen Huang.",
+        "url": "https://www.bloomberg.com/news/articles/2026-11-25/s-p-says-it-may-downgrade-nvidia-s-ratings-on-governance-worries"
+      },
+      "placar": [
+        {
+          "partido": "bancada_talento",
+          "efeito": "perde",
+          "forca": 2,
+          "evidencia": "preco",
+          "porque": "Nvidia: a S&P pôs a nota AA em observação negativa em 25/11 e poderá rebaixá-la em até 90 dias, segundo a CNN Brasil."
+        }
+      ],
+      "vetores": [],
+      "dominios": [],
+      "confianca": "media",
+      "conflito_de_interesse": true,
+      "fontes": [
+        {
+          "veiculo": "the_information",
+          "titulo": "S&P Global Puts Nvidia on ‘CreditWatch Negative’ Due to Governance Risks",
+          "url": "https://www.theinformation.com/briefings/s-p-global-puts-nvidia-creditwatch-negative-due-governance-risks",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "bloomberg",
+          "titulo": "S&P Says It May Downgrade Nvidia’s Ratings on Governance Worries",
+          "url": "https://www.bloomberg.com/news/articles/2026-11-25/s-p-says-it-may-downgrade-nvidia-s-ratings-on-governance-worries",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "cnn_brasil",
+          "titulo": "S&P Global Ratings coloca nota “AA” da Nvidia em observação negativa",
+          "url": "https://www.cnnbrasil.com.br/economia/money/negocios/sp-global-ratings-coloca-nota-aa-da-nvidia-em-observacao-negativa/",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "zerohedge",
+          "titulo": "AA, For Now: S&P Threatens Nvidia Downgrade As CDS Blows Out To Record Wide",
+          "url": "https://www.zerohedge.com/markets/aa-now-sp-threatens-nvidia-downgrade-cds-blows-out-record-wide",
+          "publicado_em": "2026-11-25"
+        }
+      ]
+    },
+    {
+      "id": "r5",
+      "categoria": "ia",
+      "titulo": "Acusado de gravar conversas em sala da OpenAI é solto sob fiança de 1 milhão de dólares",
+      "fato": "Em 25/11, um cidadão saudita acusado de gravar conversas em sala de reunião da OpenAI, empresa de inteligência artificial (IA), foi solto sob fiança de 1 milhão de dólares; segundo a NDTV, declarou-se inocente e o julgamento está marcado para 20 de janeiro.",
+      "ataque": {
+        "veiculo": "newsmax",
+        "lado": "soberanistas",
+        "alvo": "outro",
+        "alvo_nome": "Acusado de gravação",
+        "enquadramento": "No título: destaca a nacionalidade saudita do acusado, a OpenAI como alvo e o valor da fiança; no resumo, a chegada tarde da tentativa dos promotores.",
+        "url": "https://www.newsmax.com/newsfront/abdulrahman-alfozan-openai-saudi-arabia/2026/11/25/id/1277547"
+      },
+      "placar": [],
+      "sem_placar": "Decisão de fiança de 25/11, sem efeito medido em player da régua. Haveria placar com condenação ou arquivamento.",
+      "vetores": [],
+      "dominios": [],
+      "confianca": "media",
+      "conflito_de_interesse": true,
+      "fontes": [
+        {
+          "veiculo": "newsmax",
+          "titulo": "Saudi Accused of Bugging OpenAI Freed on $1 Million Bond",
+          "url": "https://www.newsmax.com/newsfront/abdulrahman-alfozan-openai-saudi-arabia/2026/11/25/id/1277547",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "ndtv",
+          "titulo": "\"No Spy Story\": Saudi Man Who Bugged OpenAI Office In US Gets Bail",
+          "url": "https://www.ndtv.com/world-news/no-spy-story-saudi-man-who-bugged-openai-office-in-us-gets-bail-12374664",
+          "publicado_em": "2026-11-25"
+        }
+      ]
+    },
+    {
+      "id": "r6",
+      "categoria": "geopolitica",
+      "titulo": "Coreia do Norte expulsa diplomatas suíços depois de sanção da Suíça a acampamento de jovens",
+      "fato": "Em 25/11, a Coreia do Norte expulsou diplomatas suíços, depois de a Suíça sancionar o acampamento de Songdowon, acusado de receber crianças ucranianas para doutrinação. Segundo a BBC, a Suíça mantém as relações pela embaixada da Coreia do Norte em Berna e pela sua embaixada em Pequim.",
+      "ataque": {
+        "veiculo": "nyt",
+        "lado": "ordem_global",
+        "alvo": "coreia_do_norte",
+        "enquadramento": "No título: põe a expulsão como ato da Coreia do Norte em briga ligada à guerra na Ucrânia; no resumo, explica a sanção suíça ao acampamento acusado de doutrinar crianças ucranianas.",
+        "url": "https://www.nytimes.com/2026/11/25/world/asia/north-korea-switzerland-diplomats.html"
+      },
+      "placar": [],
+      "sem_placar": "A Suíça manteve a sanção e as relações por outras vias: a expulsão não rendeu concessão medida à Coreia do Norte. Haveria placar com ruptura ou fim da sanção.",
+      "vetores": [],
+      "dominios": [],
+      "confianca": "media",
+      "fontes": [
+        {
+          "veiculo": "nyt",
+          "titulo": "North Korea Kicks Out Swiss Diplomats in Spat Linked to Ukraine War",
+          "url": "https://www.nytimes.com/2026/11/25/world/asia/north-korea-switzerland-diplomats.html",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "bbc",
+          "titulo": "North Korea expels Swiss diplomat in sanctions row",
+          "url": "https://www.bbc.co.uk/news/articles/cq0l34e4kkr5o?at_medium=RSS&at_campaign=rss",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "ft",
+          "titulo": "North Korea closes Swiss diplomatic office in row over children’s camp",
+          "url": "https://www.ft.com/content/5b320dc9-ff58-4036-9f84-b4cb66cf9556?syn-25a6b1a6=1",
+          "publicado_em": "2026-11-25"
+        }
+      ]
+    },
+    {
+      "id": "r7",
+      "categoria": "geopolitica",
+      "titulo": "Brasil decide que embaixador não volta à Argentina e estuda outro representante no lugar de Milei na posse de Lula",
+      "fato": "Em 25/11, o governo brasileiro decidiu que o embaixador do Brasil na Argentina, Julio Bitelli, não deve retomar as funções e vai a Buenos Aires só buscar pertences. O assessor da Presidência Celso Amorim disse que o governo estuda outro representante da Argentina no lugar de Milei na posse de Lula.",
+      "ataque": {
+        "veiculo": "jovem_pan",
+        "lado": "soberanistas",
+        "alvo": "outro",
+        "alvo_nome": "Governo da Argentina",
+        "enquadramento": "No título: ata a decisão à Argentina de Milei; no resumo, soma que o chanceler argentino questionou, sem provas, a eleição brasileira.",
+        "url": "https://jovempan.com.br/politica/brasil-decide-que-embaixador-nao-deve-voltar-a-argentina-de-milei/"
+      },
+      "placar": [],
+      "sem_placar": "Gesto diplomático de 25/11, sem sanção, acordo ou voto. Haveria placar com rompimento formal ou retaliação argentina medida.",
+      "vetores": [],
+      "dominios": [],
+      "confianca": "media",
+      "fontes": [
+        {
+          "veiculo": "agencia_brasil",
+          "titulo": "Brasil decide que embaixador não deve voltar à Argentina de Milei",
+          "url": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/brasil-decide-que-embaixador-nao-deve-mais-voltar-argentina-de-milei",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "estadao",
+          "titulo": "Celso Amorim diz que Brasil busca representante da Argentina alternativo a Milei para posse de Lula",
+          "url": "https://www.estadao.com.br/internacional/celso-amorim-diz-que-brasil-busca-representante-da-argentina-alternativo-a-milei-para-posse-de-lula-npr/",
+          "publicado_em": "2026-11-25"
+        },
+        {
+          "veiculo": "jovem_pan",
+          "titulo": "Brasil decide que embaixador não deve voltar à Argentina de Milei",
+          "url": "https://jovempan.com.br/politica/brasil-decide-que-embaixador-nao-deve-voltar-a-argentina-de-milei/",
+          "publicado_em": "2026-11-25"
+        }
+      ]
+    }
+  ],
+  "placar_do_dia": [
+    {
+      "partido": "soberanistas",
+      "saldo": 4,
+      "narrativa": 0,
+      "frase": "Ganhou na regulação da IA: a FCC autorizou até 1 milhão de satélites da SpaceX; e no caso do salvadorenho que deixou os EUA por acordo."
+    },
+    {
+      "partido": "independentes",
+      "saldo": 0,
+      "narrativa": 1,
+      "frase": "Só narrativa: veículos dão a réplica do presidente-executivo da Anthropic às acusações de rivais."
+    },
+    {
+      "partido": "bancada_talento",
+      "saldo": -2,
+      "narrativa": 1,
+      "frase": "Perdeu na classificação de crédito: a S&P pôs a nota da Nvidia em observação negativa; ganhou só em narrativa, com Vance defendendo Huang."
+    }
+  ],
+  "novos_players": [],
+  "errata": [],
+  "respostas": [
+    {
+      "edicao": "2026-11-24",
+      "item": "p3",
+      "pergunta": "A Arábia Saudita anunciará, até 24/12, operação militar nova contra os hutitas em resposta ao ataque de 24/11?",
+      "resposta": "sem_dado",
+      "texto": "Em 25/11, a coalizão liderada pela Arábia Saudita confirmou ataque ao porto de Hodeida e disse ter destruído 4 drones sobre Ras Tanura. As fontes não ligam o ataque ao de 24/11: os hutitas dizem que o de Riade respondeu a esse bombardeio.",
+      "url": "https://tass.com/world/2224889"
+    }
+  ],
+  "bastidores": {
+    "modo": "feeds",
+    "veiculos_consultados": 28,
+    "feeds_ok": 102,
+    "feeds_falhos": 20,
+    "paginas_lidas": 3,
+    "buscas": 5,
+    "minutos": 22,
+    "injecoes_ignoradas": 0,
+    "candidatos": [
+      {
+        "id": "arabia_saudita",
+        "nome": "Arábia Saudita",
+        "motivo": "Coalizão que lidera confirmou ataque a Hodeida e registrou dano leve em Jizan em 25/11; sem ficha na régua."
+      },
+      {
+        "id": "huti",
+        "nome": "Hutitas (Ansar Allah)",
+        "motivo": "Disseram ter atacado os portos sauditas de Jidá e Jizan em 25/11; sem ficha na régua."
+      },
+      {
+        "id": "suica",
+        "nome": "Suíça",
+        "motivo": "Sancionou acampamento na Coreia do Norte e teve diplomatas expulsos em 25/11; sem ficha na régua."
+      },
+      {
+        "id": "argentina",
+        "nome": "Argentina",
+        "motivo": "Fica sem embaixador brasileiro no país, por decisão do Brasil de 25/11; sem ficha na régua."
+      }
+    ],
+    "veiculos_sugeridos": [
+      "CNBC (cnbc.com)"
+    ],
+    "limites": "Leitor de página bloqueado três vezes seguidos (Le Monde, Newsmax e PDF da FCC): não abriu mais páginas. Só a TASS e o Middle East Eye abriram; a IRNA devolveu só tela de transferência. O resto vem do título e do resumo da mesa. Hormuz ficou sem fonte forte e desceu ao radar; a nota e a ordem da FCC não foram lidas. Veículos do campo da ordem não apareceram na mesa nos ataques hutitas. Sem página para DNA: nenhum player novo. Empate de nota entre quatro histórias resolvido pela ordem da mesa."
+  }
+}

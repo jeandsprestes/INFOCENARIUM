@@ -1,7 +1,49 @@
 {
   "versao": 1,
-  "atualizado_em": "2026-11-24T22:53:06Z",
+  "atualizado_em": "2026-11-25T21:31:22Z",
   "edicoes": [
+    {
+      "data": "2026-11-25",
+      "arquivo": "edicoes/2026-11-25.json",
+      "texto": "edicoes/2026-11-25.md",
+      "estado": "completa",
+      "nivel": 2,
+      "tendencia": "estavel",
+      "niveis": {
+        "energia": 2,
+        "alimentos": 1,
+        "cambio": 1,
+        "suprimentos": 1,
+        "conflito": 2
+      },
+      "saldos": {
+        "soberanistas": 4,
+        "independentes": 0,
+        "bancada_talento": -2
+      },
+      "eixos": {
+        "ia_depois": {
+          "azul": 0,
+          "vermelho": 1
+        }
+      },
+      "indicadores": {
+        "brent": 90.69,
+        "wti": 82.05,
+        "gas_natural": 3.32,
+        "trigo": 216.5,
+        "milho": 177.3,
+        "soja": 453.4,
+        "fao_ffpi": 133.9,
+        "usd_brl": 5.8825,
+        "ouro": 3561.9,
+        "vix": 26.36
+      },
+      "resumo": "Em 25/11: hutitas e coalizão saudita trocam ataques a portos e a terminal de petróleo; a FCC autoriza 1 milhão de satélites de IA da SpaceX; o Irã reforça o controle em Ormuz; salvadorenho alvo de Trump chega à Espanha.",
+      "gerada_em": "2026-11-25T21:31:22Z",
+      "exemplo": false,
+      "corrigida_em": []
+    },
     {
       "data": "2026-11-24",
       "arquivo": "edicoes/2026-11-24.json",
